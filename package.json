@@ -4,12 +4,12 @@
 	"scripts": {
 		"app:install": "cd app && npm install",
 		"app:dev": "cd app && npm run dev",
-		"app:build": "cd app && npm run build",
+		"app:build": "cd app-vue && npm run build",
 		"app:generate": "cd app && npm run generate",
 		"post:distribute": "node post.distribution.js",
 		"install": "npm run app:install",
 		"start": "npm run app:dev",
-		"build": "npm run app:generate && npm run post:distribute",
+		"build": "npm run app:build && npm run post:distribute",
 		"format": "prettier --config .prettierrc \"**/*.{js,ts,vue,json,css,scss,md}\""
 	},
 	"author": "Sahil David",
