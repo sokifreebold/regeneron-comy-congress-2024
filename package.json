@@ -2,10 +2,9 @@
 	"name": "regeneron-ash-microsite",
 	"version": "1.0.0",
 	"scripts": {
-		"app:install": "cd app-vue && npm install",
+		"app:install": "cd app && npm install",
 		"app:dev": "cd app && npm run dev",
-		"app:build": "cd app-vue && npm run build",
-		"app:generate": "cd app && npm run generate",
+		"app:build": "cd app && npm run build",
 		"post:distribute": "node post.distribution.js",
 		"install": "npm run app:install",
 		"start": "npm run app:dev",
