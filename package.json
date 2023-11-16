@@ -1,0 +1,27 @@
+{
+	"name": "regeneron-ash-microsite",
+	"version": "1.0.0",
+	"scripts": {
+		"app:install": "cd app && npm install",
+		"app:dev": "cd app && npm run dev",
+		"app:build": "cd app && npm run build",
+		"app:generate": "cd app && npm run generate",
+		"post:distribute": "node post.distribution.js",
+		"install": "npm run app:install",
+		"start": "npm run app:dev",
+		"build": "npm run app:generate && npm run post:distribute",
+		"format": "prettier --config .prettierrc \"**/*.{js,ts,vue,json,css,scss,md}\""
+	},
+	"author": "Sahil David",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^8.48.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"prettier": "^3.0.3",
+		"prettier-eslint": "^15.0.1"
+	},
+	"dependencies": {
+		"fs-extra": "^11.1.1"
+	}
+}
