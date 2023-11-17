@@ -36,6 +36,39 @@ button {
 			@include bg-contain();
 		}
 	}
+
+	&.secondary {
+		width: 100%;
+		border: 2px solid $primary-2;
+		color: $primary-2;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	&.primary {
+		width: 100%;
+		border: 2px solid $primary-2;
+		color: $white;
+		background: $primary-2;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		position: relative;
+
+		&:after {
+			background: url('@/assets/icons/chevron-next-white.svg');
+			@include bg-contain();
+			width: $unit * 2;
+
+			position: absolute;
+			right: $unit * 2;
+		}
+	}
 }
 
 .button-wrapper {

@@ -1,10 +1,14 @@
 <template>
-	{{ externalLink }}
+	<Teleport to="body">
+		<overlay-external-link v-if="externalLink" />
+	</Teleport>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useAppStore } from '@/stores/app';
+
+import OverlayExternalLink from './OverlayExternalLink.vue';
 
 const store = useAppStore();
 

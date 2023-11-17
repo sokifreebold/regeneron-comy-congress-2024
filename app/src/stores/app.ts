@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 
 export const useAppStore = defineStore('appStore', {
 	state: () => ({
-		externalLink: 'http;//google.com',
+		externalLink: '',
 	}),
 	getters: {
 		get_externalLink: (state) => state.externalLink,

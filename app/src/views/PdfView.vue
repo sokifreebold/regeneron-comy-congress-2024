@@ -11,7 +11,7 @@
 
 			<div v-if="pdfLink" class="trials__pdf">
 				<iframe
-					:src="`./pdfs/${pdfLink}.pdf#toolbar=0`"
+					:src="`./pdfs/${pdfLink}.pdf`"
 					width="100%"
 					height="100%"
 					frameborder="0"

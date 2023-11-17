@@ -28,7 +28,11 @@
 						>
 							{{ $t('misc.seeTrialInfo') }}
 						</button>
-						<button v-if="item.type === 'external'" class="simple-white">
+						<button
+							v-if="item.type === 'external'"
+							class="simple-white"
+							@click="navigateToExternalLink(item)"
+						>
 							{{ $t('misc.seeClincialGov') }}
 						</button>
 					</div>
@@ -48,10 +52,19 @@ import type { ITrialsRecords, ITrials } from '@/@types/data';
 const route = useRoute();
 const router = useRouter();
 
+import { useAppStore } from '@/stores/app';
+const store = useAppStore();
+
 const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
 
 function navigateToTrialCard(item: ITrials) {
 	router.push(`/trials/${item.categoryId}/${item.id}`);
+}
+
+function navigateToExternalLink(item: ITrials) {
+	if (item.externalLink) {
+		store.axn_updateExternalLink(item.externalLink);
+	}
 }
 </script>
 
