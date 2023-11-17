@@ -34,8 +34,8 @@ function closeOverlay() {
 }
 
 function submitRequest() {
-	closeOverlay();
 	window.open(externalLink.value, '_blank');
+	closeOverlay();
 }
 </script>
 
