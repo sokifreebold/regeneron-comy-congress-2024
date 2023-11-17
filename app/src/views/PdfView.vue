@@ -10,7 +10,12 @@
 			</div>
 
 			<div v-if="pdfLink" class="trials__pdf">
-				<embed :src="`./pdfs/${pdfLink}.pdf#toolbar=0`" width="100%" height="100%" />
+				<iframe
+					:src="`./pdfs/${pdfLink}.pdf#toolbar=0`"
+					width="100%"
+					height="100%"
+					frameborder="0"
+				/>
 			</div>
 			<div v-else class="trials__no-pdf">
 				{{ $t('misc.noPdf') }}
@@ -84,7 +89,7 @@ function navigateBack() {
 		min-height: 100vh;
 		display: flex;
 
-		embed {
+		iframe {
 			min-height: 100vh;
 		}
 	}
