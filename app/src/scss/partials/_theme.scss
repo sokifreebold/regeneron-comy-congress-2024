@@ -1,0 +1,26 @@
+// Icons
+.ui-icon {
+	&-lymphoma {
+		background: url('@/assets/icons/lymphoma.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+
+	&-myleoma {
+		background: url('@/assets/icons/myleoma.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+
+	&-classical-hematology {
+		background: url('@/assets/icons/classical-hematology.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+
+	&-solid-tumor {
+		background: url('@/assets/icons/solid-tumor.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+}

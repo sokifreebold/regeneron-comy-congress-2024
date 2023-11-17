@@ -1,0 +1,28 @@
+header,
+main,
+footer {
+	padding: $unit * 3 $unit * 2;
+
+	@include desktop {
+		padding: $unit * 3 $unit * 5;
+	}
+}
+
+footer {
+	margin-top: $unit * 3;
+	margin-bottom: $unit * 5;
+	padding-bottom: $unit * 3;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+
+	@include desktop {
+		max-width: 1000px;
+	}
+
+	@include large-desktop {
+		max-width: 1260px;
+	}
+}

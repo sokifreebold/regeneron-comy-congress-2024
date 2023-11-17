@@ -1,0 +1,77 @@
+@mixin center() {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin center-x() {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin center-y() {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin bg-contain() {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+@mixin bg-cover() {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin tablet {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin large-desktop {
+	@media screen and (min-width: 1260px) {
+		@content;
+	}
+}
+
+@mixin extra-large-desktop {
+	@media screen and (min-width: 1600px) {
+		@content;
+	}
+}
+
+@mixin k-desktop {
+	@media screen and (min-width: 1930px) {
+		@content;
+	}
+}
+
+@mixin scrollbar-light() {
+	&::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+		border-radius: 40px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: rgba($copy, 0.1);
+		border: 0px solid;
+		border-radius: 40px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(#000, 0.3);
+		outline: none;
+		border-radius: 40px;
+	}
+}

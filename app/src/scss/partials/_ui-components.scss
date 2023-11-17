@@ -1,0 +1,39 @@
+.ui-logo {
+	&-regeneron {
+		max-width: 140px;
+	}
+}
+
+// Native
+button {
+	display: flex;
+	align-items: center;
+	padding: $unit * 1.5 $unit * 3;
+	border: 2px solid transparent;
+	border-radius: $radius * 2;
+	font-family: 'RobotoCondensed-Bold';
+	font-size: 1em;
+	color: $secondary;
+	background: none;
+	cursor: pointer;
+
+	&:after {
+		display: flex;
+		content: '';
+		width: $unit * 1.5;
+		aspect-ratio: 1;
+		background: url('@/assets/icons/chevron-right-gradient.svg');
+		@include bg-contain();
+		margin-left: $unit * 1;
+	}
+}
+
+.button-wrapper {
+	background: $linear-gradient-01;
+	border-radius: $radius * 2;
+	padding: 2px;
+
+	button {
+		background: $white;
+	}
+}

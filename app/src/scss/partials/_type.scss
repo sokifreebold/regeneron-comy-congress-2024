@@ -1,0 +1,16 @@
+.type-heading {
+	&-h1 {
+		margin: $unit * 3 0;
+		font-size: 2.75em;
+		font-family: 'RobotoCondensed-Bold';
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $primary;
+	}
+}
+
+.type-font {
+	&-condensed {
+		font-family: 'RobotoCondensed-Bold';
+	}
+}

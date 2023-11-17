@@ -1,0 +1,135 @@
+// Resets
+/**
+ * Reset
+ * =================================
+ */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	text-size-adjust: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-y: auto;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+sup {
+	font-size: 0.7em;
+	position: relative;
+	top: -5px;
+}
+
+sub {
+	font-size: 0.8em;
+	position: relative;
+	top: 2px;
+}
+
+strong {
+	font-weight: 600;
+}
+em {
+	font-style: italic;
+}
+
+p {
+	margin-bottom: $unit * 0.5;
+	line-height: 1.2;
+}
+
+// Base
+body {
+	width: 100vw;
+	overflow-x: hidden;
+	font-family: 'Roboto-Regular', Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+html {
+	max-width: 100vw;
+	overflow-x: hidden;
+}

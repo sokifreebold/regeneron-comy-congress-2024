@@ -12,4 +12,14 @@ export default defineConfig({
 			'@': fileURLToPath(new URL('./src', import.meta.url)),
 		},
 	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: `
+					@import "./src/scss/preload/_vars.scss";
+					@import "./src/scss/preload/_mixins.scss";
+				`,
+			},
+		},
+	},
 });

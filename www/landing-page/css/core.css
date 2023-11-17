@@ -161,10 +161,10 @@ h3 {
 	}
 
 	body:before {
-		width: 600px;
+		width: 50%;
 	}
 	body:after {
-		width: 800px;
+		width: 40%;
 		left: 5%;
 		bottom: -400px;
 	}
