@@ -18,7 +18,7 @@
 			<h1 class="type-heading-h1 trials__title" v-html="$t(`titles.trials.${trialId}`)" />
 
 			<!-- Overlay -->
-			<div v-if="['lymphoma', 'myleoma'].includes(trialId)" class="trials__overlay">
+			<div v-if="['lymphoma', 'myeloma'].includes(trialId)" class="trials__overlay">
 				<button class="btn-overlay" @click="openTrialOverlay">
 					{{ $t(`trials.overlay.${trialId}`) }}
 				</button>
@@ -47,7 +47,7 @@ const route = useRoute();
 const router = useRouter();
 const store = useAppStore();
 
-const trialId = computed(() => route.params.trialIdn as string);
+const trialId = computed(() => route.params.trialId as string);
 
 function navigateHome() {
 	router.push('/');

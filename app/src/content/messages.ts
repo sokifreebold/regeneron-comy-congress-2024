@@ -13,7 +13,7 @@ export default {
 		titles: {
 			trials: {
 				lymphoma: 'Lymphoma',
-				myleoma: 'Myleoma',
+				myeloma: 'Myeloma',
 				'classical-hematology': 'Classical Hematology',
 				'solid-tumor': 'Solid Tumor',
 			},
@@ -111,7 +111,7 @@ export default {
 		trials: {
 			overlay: {
 				lymphoma: 'LEARN ABOUT ODRONEXTAMAB',
-				myleoma: 'LEARN ABOUT linvoseltamab',
+				myeloma: 'LEARN ABOUT linvoseltamab',
 			},
 			footer: {
 				meta: 'Odronextamab is an investigational drug and has not been fully evaluated by any regulatory authority.',

@@ -34,10 +34,10 @@
 				</div>
 			</div>
 
-			<div v-if="popup === 'myleoma'">
+			<div v-if="popup === 'myeloma'">
 				<div class="overlay__meta">
 					<div class="overlay__meta-top">
-						<img src="@/assets/images/myleoma-overlay.png" alt="Myleoma" />
+						<img src="@/assets/images/myeloma-overlay.png" alt="myeloma" />
 
 						<p>
 							Linvosteltamab is an investigational agent and has not been fully

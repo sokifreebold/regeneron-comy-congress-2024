@@ -4,7 +4,7 @@
 	</Teleport>
 
 	<Teleport to="body">
-		<overlay-lymphoma v-if="['lymphoma', 'myleoma'].includes(popup)" />
+		<overlay-lymphoma v-if="['lymphoma', 'myeloma'].includes(popup)" />
 	</Teleport>
 </template>
 
