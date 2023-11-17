@@ -45,7 +45,7 @@ export default {
 			nonInterventional: 'Non-Interventional',
 			seeTrialInfo: 'See Trial Info',
 			seeClincialGov: 'See ClinicalTrials.gov',
-			noPdf: 'No trial card PDF found. Please try again later.',
+			noPdf: 'No Trial card PDF found. Please try again later.',
 		},
 		trials: {
 			footer: {

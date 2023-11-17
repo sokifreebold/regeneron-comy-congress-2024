@@ -10,7 +10,7 @@
 			</div>
 
 			<div v-if="pdfLink" class="trials__pdf">
-				<embed :src="`/pdfs/${pdfLink}.pdf#toolbar=0`" width="100%" height="100%" />
+				<embed :src="`./pdfs/${pdfLink}.pdf#toolbar=0`" width="100%" height="100%" />
 			</div>
 			<div v-else class="trials__no-pdf">
 				{{ $t('misc.noPdf') }}
@@ -36,7 +36,7 @@ const router = useRouter();
 const trialId = computed(() => route.params.trialId);
 const id = computed(() => route.params.id);
 
-const pdfLink = computed(() => (pdfData as any)[id.value as string]);
+const pdfLink = computed(() => (pdfData as any)[id.value as string] || pdfData.default);
 
 function navigateBack() {
 	router.push(`/trials/${trialId.value}`);
