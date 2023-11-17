@@ -7,7 +7,7 @@ const path = require('path');
 console.log('[Distribution]: Starting the distribution process');
 
 // Define the paths for the input and output directories
-const inputPath = path.join(__dirname, 'app-vue/dist');
+const inputPath = path.join(__dirname, 'app/dist');
 const outputPath = path.join(__dirname, 'www/app');
 
 // Check if the input directory exists

@@ -39,6 +39,9 @@ import { useRouter } from 'vue-router';
 import { categories } from '@/content/data';
 import type { ICategories } from '@/@types/data';
 
+import UtilsMolecule from '@/components/UtilsMolecule.vue';
+import FooterHome from '@/components/FooterHome.vue';
+
 const router = useRouter();
 
 function navigateToTrial(trial: ICategories) {
