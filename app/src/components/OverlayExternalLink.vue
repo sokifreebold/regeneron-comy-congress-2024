@@ -96,6 +96,7 @@ function submitRequest() {
 		aspect-ratio: 1;
 		background: url('@/assets/icons/close-icon.svg');
 		@include bg-contain();
+		cursor: pointer;
 	}
 }
 </style>

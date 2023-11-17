@@ -9,12 +9,17 @@
 </template>
 
 <script setup lang="ts">
+import { watch } from 'vue';
 import { useRoute } from 'vue-router';
 
 import TheHeader from './components/TheHeader.vue';
 import GlobalOverlay from './components/GlobalOverlay.vue';
 
 const route = useRoute();
+
+watch(route, () => {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 </script>
 
 <style lang="scss" scoped>

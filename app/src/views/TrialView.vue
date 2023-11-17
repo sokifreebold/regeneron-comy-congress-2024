@@ -11,11 +11,13 @@
 				</div>
 			</div>
 
-			<!-- Trial Icon -->
-			<div :class="['trials__icon', `ui-icon-${trialId}-white`]" />
+			<div class="trials__header">
+				<!-- Trial Icon -->
+				<div :class="['trials__icon', `ui-icon-${trialId}-white`]" />
 
-			<!-- Page Title -->
-			<h1 class="type-heading-h1 trials__title" v-html="$t(`titles.trials.${trialId}`)" />
+				<!-- Page Title -->
+				<h1 class="type-heading-h1 trials__title" v-html="$t(`titles.trials.${trialId}`)" />
+			</div>
 
 			<!-- Overlay -->
 			<div v-if="['lymphoma', 'myeloma'].includes(trialId)" class="trials__overlay">
@@ -23,10 +25,10 @@
 					{{ $t(`trials.overlay.${trialId}`) }}
 				</button>
 			</div>
-			<div class="trials__developer-note">Dev Note: Desktop view build in progress</div>
 
 			<!-- Content -->
-			<trial-cards />
+			<trial-cards class="trials__view--mobile" />
+			<trial-cards-desktop class="trials__view--desktop" />
 		</div>
 	</main>
 
@@ -42,6 +44,7 @@ import { useAppStore } from '@/stores/app';
 import UtilsMolecule from '@/components/UtilsMolecule.vue';
 import FooterHome from '@/components/FooterHome.vue';
 import TrialCards from '@/components/TrialCards.vue';
+import TrialCardsDesktop from '@/components/TrialCardsDesktop.vue';
 
 const route = useRoute();
 const router = useRouter();
@@ -67,17 +70,17 @@ function openTrialOverlay() {
 		&--secondary {
 			right: 0px;
 			top: auto;
-			bottom: 0;
+			bottom: -10%;
 			width: 600px;
 			display: none;
 		}
 
 		&--tertiary {
 			right: auto;
-			left: 5%;
+			left: -40px;
 			top: 40%;
 			width: 250px;
-			filter: blur(3px);
+			filter: blur(6px);
 		}
 
 		@include desktop {
@@ -86,6 +89,13 @@ function openTrialOverlay() {
 			&--secondary {
 				display: flex;
 			}
+		}
+	}
+
+	&__header {
+		@include desktop {
+			display: flex;
+			align-items: center;
 		}
 	}
 
@@ -98,6 +108,11 @@ function openTrialOverlay() {
 		display: flex;
 		width: $unit * 10;
 		aspect-ratio: 1;
+
+		@include desktop {
+			width: $unit * 8;
+			margin-right: $unit * 2;
+		}
 	}
 
 	&__back {
@@ -133,6 +148,21 @@ function openTrialOverlay() {
 		@include large-desktop {
 			display: flex;
 			justify-content: flex-end;
+		}
+	}
+
+	&__view {
+		&--desktop {
+			display: none;
+		}
+
+		@include large-desktop {
+			&--mobile {
+				display: none;
+			}
+			&--desktop {
+				display: flex;
+			}
 		}
 	}
 }

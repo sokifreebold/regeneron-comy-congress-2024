@@ -1,0 +1,247 @@
+<template>
+	<div class="trial-cards">
+		<!-- base -->
+		<div class="trial-cards__base trial-cards__base--header trial-cols">
+			<div class="trial-cards__base-col-1 trial-col trial-col--base"></div>
+			<div class="trial-cards__base-col-2 trial-col trial-col--mute">
+				<label>Phase</label><strong>1</strong>
+			</div>
+			<div class="trial-cards__base-col-3 trial-col trial-col--mute">
+				<label>Phase</label><strong>2</strong>
+			</div>
+			<div class="trial-cards__base-col-4 trial-col trial-col--mute">
+				<label>Phase</label><strong>3</strong>
+			</div>
+			<div class="trial-cards__base-col-5 trial-col trial-col--mute">NON-INTERVENTIONAL</div>
+		</div>
+
+		<div
+			v-for="(section, sectionIndex) in datum"
+			:key="sectionIndex"
+			class="trial-cards__section"
+		>
+			<div
+				v-if="section.id"
+				class="trial-cards__section-title"
+				v-html="$t(`titles.cardsSection.${section.id}`)"
+			/>
+			<div
+				v-for="(item, index) in section.trials"
+				:key="index"
+				:class="['trial-cards__trial', { 'is-non-interventional': item.nonInterventional }]"
+			>
+				<div class="trial-cards__base trial-cols">
+					<div class="trial-col trial-col--category"></div>
+					<div
+						v-if="item.phase"
+						:class="['trial-col trial-col--data', `phase-${item.phase}`]"
+					>
+						<div
+							class="trial-cards__trial-title"
+							v-html="$t(`titles.cards.${item.id}`)"
+						/>
+
+						<div v-if="item.type" class="trial-cards__trial-control">
+							<button
+								v-if="item.type === 'card'"
+								class="simple-white"
+								@click="navigateToTrialCard(item)"
+							>
+								{{ $t('misc.seeTrialInfo') }}
+							</button>
+							<button
+								v-if="item.type === 'external'"
+								class="simple-white"
+								@click="navigateToExternalLink(item)"
+							>
+								{{ $t('misc.seeClincialGov') }}
+							</button>
+						</div>
+					</div>
+					<div class="trial-col trial-col--blank">
+						<div
+							v-if="item.nonInterventional || item.phase === 0"
+							class="trial-cards__trial-title"
+							v-html="$t(`titles.cards.${item.id}`)"
+						/>
+
+						<div
+							v-if="item.type && (item.nonInterventional || item.phase === 0)"
+							class="trial-cards__trial-control"
+						>
+							<button
+								v-if="item.type === 'card'"
+								class="simple-white"
+								@click="navigateToTrialCard(item)"
+							>
+								{{ $t('misc.seeTrialInfo') }}
+							</button>
+							<button
+								v-if="item.type === 'external'"
+								class="simple-white"
+								@click="navigateToExternalLink(item)"
+							>
+								{{ $t('misc.seeClincialGov') }}
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script setup lang="ts">
+import { useRoute, useRouter } from 'vue-router';
+import { computed } from 'vue';
+import { trialsData } from '@/content/data';
+
+import type { ITrialsRecords, ITrials } from '@/@types/data';
+
+const route = useRoute();
+const router = useRouter();
+
+import { useAppStore } from '@/stores/app';
+const store = useAppStore();
+
+const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
+
+function navigateToTrialCard(item: ITrials) {
+	router.push(`/trials/${item.categoryId}/${item.id}`);
+}
+
+function navigateToExternalLink(item: ITrials) {
+	if (item.externalLink) {
+		store.axn_updateExternalLink(item.externalLink);
+	}
+}
+</script>
+
+<style lang="scss" scoped>
+.trial-cards {
+	display: flex;
+	flex-direction: column;
+	margin: $unit * 3 0;
+
+	&__section {
+		margin-bottom: $unit * 3;
+		&-title {
+			font-size: 1.5em;
+			font-family: 'RobotoCondensed-Bold';
+			text-transform: uppercase;
+			margin-bottom: $unit;
+			margin-top: $unit * 4;
+		}
+	}
+
+	&__base {
+		display: flex;
+		font-family: 'RobotoCondensed-Bold';
+		background: rgba($primary, 0.2);
+		backdrop-filter: blur(7px);
+		border-radius: 0 $radius * 0.5;
+
+		&--header {
+			height: 100px;
+		}
+
+		& > div {
+			flex: 1;
+			margin: 0 $unit $unit 0;
+			padding: $unit * 3 $unit;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		label {
+			font-size: 1em;
+			text-transform: uppercase;
+		}
+
+		strong {
+			font-size: 3em;
+		}
+	}
+
+	.trial-col {
+		margin: 0 $unit $unit 0;
+		border-radius: $radius * 0.5;
+		min-height: 200px;
+
+		&--base {
+			width: 200px;
+			max-width: 200px;
+			background: none;
+		}
+
+		&--category {
+			flex-shrink: 0;
+			width: 200px;
+			max-width: 200px;
+			border-radius: 0 $radius * 0.5;
+			background: $white;
+		}
+
+		&--data {
+			flex: 0;
+			min-width: 62%;
+			background: $linear-gradient-02;
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			padding: $unit * 2;
+
+			&.phase-1 {
+				min-width: 20%;
+			}
+
+			&.phase-2 {
+				min-width: 41%;
+			}
+		}
+
+		&--blank {
+			background: rgba($primary, 0.5);
+			backdrop-filter: blur(7px);
+			text-align: left;
+			align-items: flex-start;
+
+			.trial-cards__trial-title {
+				text-align: left;
+				max-width: 100%;
+			}
+		}
+		&--mute {
+			background: none;
+			min-height: auto;
+		}
+	}
+
+	&__trial {
+		&-title {
+			max-width: 250px;
+			font-size: 1.3em;
+			font-family: 'RobotoCondensed-Bold';
+			text-align: right;
+
+			:deep() strong {
+				color: $accent;
+			}
+
+			@include tablet {
+				max-width: 350px;
+			}
+		}
+
+		&-control {
+			margin-top: $unit * 2;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+}
+</style>
