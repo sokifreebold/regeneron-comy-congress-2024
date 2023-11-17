@@ -17,10 +17,35 @@ export default {
 				'classical-hematology': 'Classical Hematology',
 				'solid-tumor': 'Solid Tumor',
 			},
+			cards: {
+				'olympia-2':
+					'<strong>OLYMPIA-2</strong> Odronextamab (CD20xCD3 Bispecific) + Chemotherapy',
+				'olympia-5':
+					'<strong>OLYMPIA-5</strong> Odronextamab (CD20xCD3 Bispecific) + Chemotherapy',
+				'olympia-1': '<strong>OLYMPIA-1</strong> Odronextamab (CD20xCD3 Bispecific)',
+				'olympia-3':
+					'<strong>OLYMPIA-3</strong> Odronextamab (CD20xCD3 Bispecific) + Chemotherapy',
+				'olympia-4': '<strong>OLYMPIA-4</strong> Odronextamab (CD20xCD3 Bispecific)',
+				'elm-2': '<strong>ELM-2</strong> Odronextamab (CD20xCD3 bispecific)',
+				'elm-1': '<strong>ELM-1</strong> Odronextamab (CD20xCD3 bispecific)',
+				'athena-1':
+					'<strong>ATHENA-1</strong> Odronextamab (CD20xCD3 bispecific) + REGN5837 (CD22xCD28 bispecific)',
+				'clio-1':
+					'<strong>CLIO-1</strong> Odronextamab (CD20xCD3 bispecific) + Cemiplimab (PD-1 monoclonal)',
+				orchid: '<strong>ORCHID</strong> Non-interventional real-world experience',
+				flora: '<strong>FLORA</strong> Non-interventional real-world experience',
+			},
 		},
 		misc: {
 			clinicalTrials: 'Clinical trials',
 			explore: 'Explore',
+			back: 'Back',
+			backToTrials: 'Back To Trials',
+			phase: 'Phase',
+			nonInterventional: 'Non-Interventional',
+			seeTrialInfo: 'See Trial Info',
+			seeClincialGov: 'See ClinicalTrials.gov',
+			noPdf: 'No trial card PDF found. Please try again later.',
 		},
 		trials: {
 			footer: {

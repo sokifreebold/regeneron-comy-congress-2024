@@ -23,4 +23,28 @@
 		@include bg-contain();
 		background-position: top;
 	}
+
+	&-lymphoma-white {
+		background: url('@/assets/icons/lymphoma-white.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+
+	&-myleoma-white {
+		background: url('@/assets/icons/myleoma-white.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+
+	&-classical-hematology-white {
+		background: url('@/assets/icons/classical-hematology-white.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+
+	&-solid-tumor-white {
+		background: url('@/assets/icons/solid-tumor-white.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 }

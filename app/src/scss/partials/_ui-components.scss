@@ -26,6 +26,16 @@ button {
 		@include bg-contain();
 		margin-left: $unit * 1;
 	}
+
+	&.simple-white {
+		color: $white;
+		border: 2px solid $white;
+
+		&:after {
+			background: url('@/assets/icons/chevron-right-white.svg');
+			@include bg-contain();
+		}
+	}
 }
 
 .button-wrapper {

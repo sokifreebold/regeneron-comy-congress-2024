@@ -15,7 +15,9 @@ const route = useRoute();
 
 <style lang="scss" scoped>
 .app {
-	&.trials {
+	&.trials,
+	&.pdf {
+		color: $white;
 		background: url('@/assets/backgrounds/trials.png');
 		@include bg-cover();
 	}

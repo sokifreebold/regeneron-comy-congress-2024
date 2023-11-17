@@ -2,6 +2,8 @@ header,
 main,
 footer {
 	padding: $unit * 3 $unit * 2;
+	position: relative;
+	z-index: 1;
 
 	@include desktop {
 		padding: $unit * 3 $unit * 5;

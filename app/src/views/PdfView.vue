@@ -4,21 +4,17 @@
 		<div class="container">
 			<!-- Back Icon -->
 			<div class="trials__back">
-				<div class="trials__back-button" @click="navigateHome">
-					{{ $t('misc.back') }}
+				<div class="trials__back-button" @click="navigateBack">
+					{{ $t('misc.backToTrials') }}
 				</div>
 			</div>
 
-			<!-- Trial Icon -->
-			<div :class="['trials__icon', `ui-icon-${trialId}-white`]" />
-
-			<!-- Page Title -->
-			<h1 class="type-heading-h1 trials__title" v-html="$t(`titles.trials.${trialId}`)" />
-
-			<!-- TODO: Overlay -->
-
-			<!-- Content -->
-			<trial-cards />
+			<div v-if="pdfLink" class="trials__pdf">
+				<embed :src="`/pdfs/${pdfLink}.pdf#toolbar=0`" width="100%" height="100%" />
+			</div>
+			<div v-else class="trials__no-pdf">
+				{{ $t('misc.noPdf') }}
+			</div>
 		</div>
 	</main>
 
@@ -29,18 +25,21 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import pdfData from '@/content/pdfs';
 
 import UtilsMolecule from '@/components/UtilsMolecule.vue';
 import FooterHome from '@/components/FooterHome.vue';
-import TrialCards from '@/components/TrialCards.vue';
 
 const route = useRoute();
 const router = useRouter();
 
 const trialId = computed(() => route.params.trialId);
+const id = computed(() => route.params.id);
 
-function navigateHome() {
-	router.push('/');
+const pdfLink = computed(() => (pdfData as any)[id.value as string]);
+
+function navigateBack() {
+	router.push(`/trials/${trialId.value}`);
 }
 </script>
 
@@ -79,6 +78,25 @@ function navigateHome() {
 			@include bg-contain();
 			margin-right: $unit * 1.5;
 		}
+	}
+
+	&__pdf {
+		min-height: 100vh;
+		display: flex;
+
+		embed {
+			min-height: 100vh;
+		}
+	}
+
+	&__no-pdf {
+		background: rgba($black, 0.5);
+		border-radius: $radius;
+		padding: $unit * 4;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
 </style>

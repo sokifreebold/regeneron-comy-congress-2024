@@ -48,7 +48,8 @@ const route = useRoute();
 		}
 	}
 
-	&.trials {
+	&.trials,
+	&.pdf {
 		color: $white;
 	}
 }
