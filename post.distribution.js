@@ -10,23 +10,27 @@ console.log('[Distribution]: Starting the distribution process');
 const inputPath = path.join(__dirname, 'app/dist');
 const outputPath = path.join(__dirname, 'www/app');
 
-// Check if the input directory exists
-if (fs.existsSync(inputPath)) {
-	console.log('[Distribution]: Source directory found.');
+try {
+	// Check if the input directory exists
+	if (fs.existsSync(inputPath)) {
+		console.log('[Distribution]: Source directory found.');
 
-	// Ensure that the output directory exists, create it if it doesn't
-	if (!fs.existsSync(outputPath)) {
-		console.log('[Distribution]: Output directory not found. Creating...');
-		fs.mkdirSync(outputPath);
+		// Ensure that the output directory exists, create it if it doesn't
+		if (!fs.existsSync(outputPath)) {
+			console.log('[Distribution]: Output directory not found. Creating...');
+			fs.mkdirSync(outputPath);
+		}
+
+		// Perform the copy operation
+		console.log('[Distribution]: Copying files...');
+		fs.copySync(inputPath, outputPath);
+
+		console.log('[Distribution]: Files copied successfully');
+	} else {
+		console.log('[Distribution]: Source directory does not exist. Aborting process.');
 	}
-
-	// Perform the copy operation
-	console.log('[Distribution]: Copying files...');
-	fs.copySync(inputPath, outputPath);
-
-	console.log('[Distribution]: Files copied successfully');
-} else {
-	console.log('[Distribution]: Source directory does not exist. Aborting process.');
+} catch (error) {
+	console.log(error);
 }
 
 console.log('[Distribution]: Process completed.');
