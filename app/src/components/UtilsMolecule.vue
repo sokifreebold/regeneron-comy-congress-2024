@@ -9,7 +9,7 @@
 	aspect-ratio: 1;
 	background: url('@/assets/images/image-mol.png');
 	@include bg-contain();
-	z-index: -1;
+	z-index: 0;
 	pointer-events: none;
 }
 </style>

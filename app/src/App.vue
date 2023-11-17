@@ -1,4 +1,23 @@
 <template>
-	<the-header />
-	<RouterView />
+	<div :class="['app', route.name]">
+		<the-header />
+		<RouterView />
+	</div>
 </template>
+
+<script setup lang="ts">
+import { useRoute } from 'vue-router';
+
+import TheHeader from './components/TheHeader.vue';
+
+const route = useRoute();
+</script>
+
+<style lang="scss" scoped>
+.app {
+	&.trials {
+		background: url('@/assets/backgrounds/trials.png');
+		@include bg-cover();
+	}
+}
+</style>
