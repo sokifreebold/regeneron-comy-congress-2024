@@ -2,6 +2,8 @@
 	<div :class="['app', route.name]">
 		<the-header />
 		<RouterView />
+
+		<!-- Overlays -->
 	</div>
 </template>
 

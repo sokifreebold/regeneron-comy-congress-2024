@@ -127,6 +127,10 @@ h3 {
 	cursor: pointer;
 }
 
+.desktop-only {
+	display: none;
+}
+
 @media only screen and (min-width: 1024px) {
 	body main {
 		display: flex;
@@ -150,6 +154,10 @@ h3 {
 
 	.app-navigation {
 		justify-content: center;
+	}
+
+	.desktop-only {
+		display: flex;
 	}
 }
 
