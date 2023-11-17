@@ -69,6 +69,18 @@ button {
 			right: $unit * 2;
 		}
 	}
+
+	&.btn-overlay {
+		background: $linear-gradient-02;
+		border: 2px solid $white;
+		color: $white;
+		text-transform: uppercase;
+
+		&:after {
+			background: url('@/assets/icons/chevron-right-white.svg');
+			@include bg-contain();
+		}
+	}
 }
 
 .button-wrapper {

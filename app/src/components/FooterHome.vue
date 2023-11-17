@@ -41,6 +41,7 @@ const route = useRoute();
 
 	&__copy {
 		margin-top: $unit * 4;
+		max-width: 1024px;
 
 		p {
 			font-size: 0.75em;

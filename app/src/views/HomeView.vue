@@ -1,5 +1,7 @@
 <template>
 	<utils-molecule class="home__molecule" />
+	<utils-molecule class="home__molecule home__molecule--secondary" />
+	<utils-molecule class="home__molecule home__molecule--tertiary" />
 	<main>
 		<div class="container">
 			<!-- Page Title -->
@@ -54,6 +56,30 @@ function navigateToTrial(trial: ICategories) {
 	&__molecule {
 		right: -150px;
 		top: -5%;
+
+		&--secondary {
+			right: 0px;
+			top: auto;
+			bottom: 5%;
+			width: 600px;
+			display: none;
+		}
+
+		&--tertiary {
+			right: auto;
+			left: 10%;
+			top: 30%;
+			width: 250px;
+			filter: blur(3px);
+		}
+
+		@include desktop {
+			right: 0;
+
+			&--secondary {
+				display: flex;
+			}
+		}
 	}
 
 	&__title {
@@ -66,7 +92,7 @@ function navigateToTrial(trial: ICategories) {
 			display: flex;
 			padding: $unit * 3;
 			margin-bottom: $unit * 3;
-			background: $white;
+			background: rgba($white, 0.8);
 			border-radius: 0px $radius;
 			border: 1px solid rgba($black, 0.09);
 			box-shadow: $box-shadow-01;

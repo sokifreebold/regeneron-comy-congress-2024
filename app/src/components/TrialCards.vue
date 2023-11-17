@@ -6,12 +6,17 @@
 			class="trial-cards__section"
 		>
 			<div
+				v-if="section.id"
+				class="trial-cards__section-title"
+				v-html="$t(`titles.cardsSection.${section.id}`)"
+			/>
+			<div
 				v-for="(item, index) in section.trials"
 				:key="index"
 				:class="['trial-cards__trial', { 'is-non-interventional': item.nonInterventional }]"
 			>
 				<div>
-					<div v-if="item.phase" class="trial-cards__trial-phase">
+					<div v-if="'phase' in item" class="trial-cards__trial-phase">
 						{{ $t('misc.phase') }} {{ item.phase }}
 					</div>
 					<div v-else-if="item.nonInterventional" class="trial-cards__trial-phase">
@@ -84,8 +89,9 @@ function navigateToExternalLink(item: ITrials) {
 		border-radius: $radius * 0.5;
 
 		&.is-non-interventional {
-			background: rgba(6, 91, 170, 0.5);
+			background: rgba(6, 91, 170, 0.7);
 			background-blend-mode: multiply;
+			backdrop-filter: blur(7px);
 		}
 
 		&-phase {
@@ -109,11 +115,23 @@ function navigateToExternalLink(item: ITrials) {
 				max-width: 350px;
 			}
 		}
+
 		&-control {
 			margin-top: $unit * 2;
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+		}
+	}
+
+	&__section {
+		margin-bottom: $unit * 3;
+		&-title {
+			font-size: 1.5em;
+			font-family: 'RobotoCondensed-Bold';
+			text-transform: uppercase;
+			margin-bottom: $unit;
+			margin-top: $unit * 4;
 		}
 	}
 }

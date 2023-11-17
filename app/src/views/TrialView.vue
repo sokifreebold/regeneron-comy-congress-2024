@@ -1,5 +1,7 @@
 <template>
 	<utils-molecule class="trials__molecule" />
+	<utils-molecule class="trials__molecule trials__molecule--secondary" />
+	<utils-molecule class="trials__molecule trials__molecule--tertiary" />
 	<main>
 		<div class="container">
 			<!-- Back Icon -->
@@ -15,7 +17,13 @@
 			<!-- Page Title -->
 			<h1 class="type-heading-h1 trials__title" v-html="$t(`titles.trials.${trialId}`)" />
 
-			<!-- TODO: Overlay -->
+			<!-- Overlay -->
+			<div v-if="['lymphoma', 'myleoma'].includes(trialId)" class="trials__overlay">
+				<button class="btn-overlay" @click="openTrialOverlay">
+					{{ $t(`trials.overlay.${trialId}`) }}
+				</button>
+			</div>
+			<div class="trials__developer-note">Dev Note: Desktop view build in progress</div>
 
 			<!-- Content -->
 			<trial-cards />
@@ -29,6 +37,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { useAppStore } from '@/stores/app';
 
 import UtilsMolecule from '@/components/UtilsMolecule.vue';
 import FooterHome from '@/components/FooterHome.vue';
@@ -36,11 +45,16 @@ import TrialCards from '@/components/TrialCards.vue';
 
 const route = useRoute();
 const router = useRouter();
+const store = useAppStore();
 
-const trialId = computed(() => route.params.trialId);
+const trialId = computed(() => route.params.trialIdn as string);
 
 function navigateHome() {
 	router.push('/');
+}
+
+function openTrialOverlay() {
+	store.axn_updatePopup(trialId.value as string);
 }
 </script>
 
@@ -49,6 +63,30 @@ function navigateHome() {
 	&__molecule {
 		right: -50px;
 		top: -5%;
+
+		&--secondary {
+			right: 0px;
+			top: auto;
+			bottom: 0;
+			width: 600px;
+			display: none;
+		}
+
+		&--tertiary {
+			right: auto;
+			left: 5%;
+			top: 40%;
+			width: 250px;
+			filter: blur(3px);
+		}
+
+		@include desktop {
+			right: 0;
+
+			&--secondary {
+				display: flex;
+			}
+		}
 	}
 
 	&__title {
@@ -78,6 +116,23 @@ function navigateHome() {
 			background: url('@/assets/icons/back-arrow.svg');
 			@include bg-contain();
 			margin-right: $unit * 1.5;
+		}
+	}
+
+	&__overlay {
+		margin-bottom: $unit * 5;
+	}
+
+	&__developer-note {
+		color: $accent;
+		font-family: 'RobotoCondensed-Bold';
+		text-align: right;
+		opacity: 0.5;
+		display: none;
+
+		@include large-desktop {
+			display: flex;
+			justify-content: flex-end;
 		}
 	}
 }

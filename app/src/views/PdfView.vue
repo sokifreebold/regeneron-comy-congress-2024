@@ -1,5 +1,7 @@
 <template>
 	<utils-molecule class="trials__molecule" />
+	<utils-molecule class="trials__molecule trials__molecule--secondary" />
+	<utils-molecule class="trials__molecule trials__molecule--tertiary" />
 	<main>
 		<div class="container">
 			<!-- Back Icon -->
@@ -10,6 +12,9 @@
 			</div>
 
 			<div v-if="pdfLink" class="trials__pdf">
+				<a :href="`./pdfs/${pdfLink}.pdf`" target="_blank"
+					>Link to PDF (For Testing Purpose)</a
+				>
 				<iframe
 					:src="`./pdfs/${pdfLink}.pdf`"
 					width="100%"
@@ -53,6 +58,30 @@ function navigateBack() {
 	&__molecule {
 		right: -50px;
 		top: -5%;
+
+		&--secondary {
+			right: 0px;
+			top: auto;
+			bottom: 0;
+			width: 600px;
+			display: none;
+		}
+
+		&--tertiary {
+			right: auto;
+			left: 10%;
+			top: 30%;
+			width: 250px;
+			filter: blur(3px);
+		}
+
+		@include desktop {
+			right: 0;
+
+			&--secondary {
+				display: flex;
+			}
+		}
 	}
 
 	&__title {
@@ -88,9 +117,16 @@ function navigateBack() {
 	&__pdf {
 		min-height: 100vh;
 		display: flex;
+		flex-direction: column;
 
 		iframe {
 			min-height: 100vh;
+		}
+
+		a {
+			display: flex;
+			font-size: 14px;
+			padding-bottom: $unit;
 		}
 	}
 
