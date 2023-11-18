@@ -5,7 +5,8 @@
 }
 
 // Native
-button {
+button,
+.btn {
 	display: flex;
 	align-items: center;
 	padding: $unit * 1.5 $unit * 3;

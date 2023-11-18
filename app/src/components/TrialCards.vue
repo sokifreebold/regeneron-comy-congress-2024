@@ -26,13 +26,14 @@
 					<div class="trial-cards__trial-title" v-html="$t(`titles.cards.${item.id}`)" />
 
 					<div v-if="item.type" class="trial-cards__trial-control">
-						<button
+						<a
 							v-if="item.type === 'card'"
-							class="simple-white"
-							@click="navigateToTrialCard(item)"
+							:href="getPdfLink(item)"
+							target="_blank"
+							class="btn simple-white mobile-only"
 						>
 							{{ $t('misc.seeTrialInfo') }}
-						</button>
+						</a>
 						<button
 							v-if="item.type === 'external'"
 							class="simple-white"
@@ -51,6 +52,7 @@
 import { useRoute, useRouter } from 'vue-router';
 import { computed } from 'vue';
 import { trialsData } from '@/content/data';
+import pdfData from '@/content/pdfs';
 
 import type { ITrialsRecords, ITrials } from '@/@types/data';
 
@@ -70,6 +72,11 @@ function navigateToExternalLink(item: ITrials) {
 	if (item.externalLink) {
 		store.axn_updateExternalLink(item.externalLink);
 	}
+}
+
+function getPdfLink(item: ITrials) {
+	const pdfLink = (pdfData as any)[item.id] || pdfData.default;
+	return `./pdfs/${pdfLink}.pdf`;
 }
 </script>
 

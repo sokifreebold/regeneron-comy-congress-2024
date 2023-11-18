@@ -12,15 +12,8 @@
 			</div>
 
 			<div v-if="pdfLink" class="trials__pdf">
-				<a :href="`./pdfs/${pdfLink}.pdf`" target="_blank"
-					>Link to PDF (For Testing Purpose)</a
-				>
-				<iframe
-					:src="`./pdfs/${pdfLink}.pdf`"
-					width="100%"
-					height="100%"
-					frameborder="0"
-				></iframe>
+				<a :href="`./pdfs/${pdfLink}.pdf`" target="_blank">Open in new tab</a>
+				<embed :src="`./pdfs/${pdfLink}.pdf#toolbar=0`" width="100%" height="100%" />
 			</div>
 			<div v-else class="trials__no-pdf">
 				{{ $t('misc.noPdf') }}
@@ -117,16 +110,23 @@ function navigateBack() {
 	&__pdf {
 		min-height: 100vh;
 		display: flex;
+		align-items: flex-end;
 		flex-direction: column;
 
-		iframe {
+		embed {
 			min-height: 100vh;
 		}
 
 		a {
+			position: absolute;
 			display: flex;
 			font-size: 14px;
-			padding-bottom: $unit;
+			margin-top: -$unit * 5;
+			margin-bottom: $unit;
+			padding: $unit;
+			border-radius: $radius * 0.5;
+			background: rgba($primary, 0.1);
+			backdrop-filter: blur(7px);
 		}
 	}
 
