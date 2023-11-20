@@ -39,7 +39,7 @@
 							class="simple-white"
 							@click="navigateToExternalLink(item)"
 						>
-							{{ $t('misc.seeClincialGov') }}
+							{{ $t('misc.seeTrialInfo') }}
 						</button>
 					</div>
 				</div>
@@ -49,24 +49,18 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { computed } from 'vue';
 import { trialsData } from '@/content/data';
-import pdfData from '@/content/pdfs';
 
 import type { ITrialsRecords, ITrials } from '@/@types/data';
 
 const route = useRoute();
-const router = useRouter();
 
 import { useAppStore } from '@/stores/app';
 const store = useAppStore();
 
 const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
-
-function navigateToTrialCard(item: ITrials) {
-	router.push(`/trials/${item.categoryId}/${item.id}`);
-}
 
 function navigateToExternalLink(item: ITrials) {
 	if (item.externalLink) {
@@ -75,7 +69,7 @@ function navigateToExternalLink(item: ITrials) {
 }
 
 function getPdfLink(item: ITrials) {
-	const pdfLink = (pdfData as any)[item.id] || pdfData.default;
+	const pdfLink = item.trialCardPdf;
 	return `./pdfs/${pdfLink}.pdf`;
 }
 </script>

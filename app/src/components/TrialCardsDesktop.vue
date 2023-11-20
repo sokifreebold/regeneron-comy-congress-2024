@@ -48,19 +48,20 @@
 						/>
 
 						<div v-if="item.type" class="trial-cards__trial-control">
-							<button
+							<a
 								v-if="item.type === 'card'"
-								class="simple-white"
-								@click="navigateToTrialCard(item)"
+								:href="getPdfLink(item)"
+								target="_blank"
+								class="btn simple-white mobile-only"
 							>
 								{{ $t('misc.seeTrialInfo') }}
-							</button>
+							</a>
 							<button
 								v-if="item.type === 'external'"
 								class="simple-white"
 								@click="navigateToExternalLink(item)"
 							>
-								{{ $t('misc.seeClincialGov') }}
+								{{ $t('misc.seeTrialInfo') }}
 							</button>
 						</div>
 					</div>
@@ -75,19 +76,20 @@
 							v-if="item.type && (item.nonInterventional || item.phase === 0)"
 							class="trial-cards__trial-control"
 						>
-							<button
+							<a
 								v-if="item.type === 'card'"
-								class="simple-white"
-								@click="navigateToTrialCard(item)"
+								:href="getPdfLink(item)"
+								target="_blank"
+								class="btn simple-white mobile-only"
 							>
 								{{ $t('misc.seeTrialInfo') }}
-							</button>
+							</a>
 							<button
 								v-if="item.type === 'external'"
 								class="simple-white"
 								@click="navigateToExternalLink(item)"
 							>
-								{{ $t('misc.seeClincialGov') }}
+								{{ $t('misc.seeTrialInfo') }}
 							</button>
 						</div>
 					</div>
@@ -98,28 +100,27 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { computed } from 'vue';
 import { trialsData } from '@/content/data';
 
 import type { ITrialsRecords, ITrials } from '@/@types/data';
 
 const route = useRoute();
-const router = useRouter();
-
 import { useAppStore } from '@/stores/app';
 const store = useAppStore();
 
 const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
 
-function navigateToTrialCard(item: ITrials) {
-	router.push(`/trials/${item.categoryId}/${item.id}`);
-}
-
 function navigateToExternalLink(item: ITrials) {
 	if (item.externalLink) {
 		store.axn_updateExternalLink(item.externalLink);
 	}
+}
+
+function getPdfLink(item: ITrials) {
+	const pdfLink = item.trialCardPdf;
+	return `./pdfs/${pdfLink}.pdf`;
 }
 </script>
 

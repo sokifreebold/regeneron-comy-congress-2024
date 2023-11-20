@@ -10,7 +10,10 @@
 			/>
 
 			<div class="overlay__copy">
-				<h3>You are now leaving [domainname.com]</h3>
+				<h3>
+					You are now leaving
+					<span class="ui-domain">{{ host }}</span>
+				</h3>
 				<p>We encourage you to read the privacy policy of every website you visit.</p>
 			</div>
 
@@ -23,10 +26,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, shallowRef } from 'vue';
 import { useAppStore } from '@/stores/app';
 const store = useAppStore();
 
+const host = shallowRef<string>(location.host);
 const externalLink = computed(() => store.get_externalLink);
 
 function closeOverlay() {
@@ -75,6 +79,7 @@ function submitRequest() {
 		margin-top: $unit * 5;
 		h3 {
 			font-size: 1.1em;
+			line-height: 1.5;
 			font-weight: 800;
 			margin-bottom: $unit * 2;
 		}

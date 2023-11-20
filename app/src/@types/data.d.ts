@@ -12,6 +12,8 @@ export interface ITrials {
 	phase?: number;
 	nonInterventional?: boolean;
 	externalLink?: string;
+	nct?: string;
+	trialCardPdf?: string;
 }
 
 export interface ITrialsRecords {

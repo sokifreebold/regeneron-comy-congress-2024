@@ -94,6 +94,12 @@ button,
 	}
 }
 
+.ui-domain {
+	white-space: nowrap;
+	color: $primary;
+	border-bottom: 1px dotted $primary;
+}
+
 // Icons
 .ui-trial-icon {
 	&.olympia-2 {
