@@ -126,6 +126,11 @@ function closeOverlay() {
 		overflow-y: auto;
 		padding: $unit * 2;
 		@include scrollbar-light();
+		margin-top: $unit * 6;
+
+		@include desktop {
+			margin-top: 0;
+		}
 	}
 
 	&__copy {

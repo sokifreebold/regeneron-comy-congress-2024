@@ -31,7 +31,13 @@
 				:class="['trial-cards__trial', { 'is-non-interventional': item.nonInterventional }]"
 			>
 				<div class="trial-cards__base trial-cols">
-					<div class="trial-col trial-col--category"></div>
+					<div class="trial-col trial-col--category">
+						<div :class="['trial-col--category-icon ui-trial-icon', item.id]" />
+						<div
+							class="trial-col--category-title"
+							v-html="$t(`titles.tags.${item.id}`)"
+						/>
+					</div>
 					<div
 						v-if="item.phase"
 						:class="['trial-col trial-col--data', `phase-${item.phase}`]"
@@ -183,6 +189,22 @@ function navigateToExternalLink(item: ITrials) {
 			max-width: 200px;
 			border-radius: 0 $radius * 0.5;
 			background: $white;
+			color: $black;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			&-icon {
+				width: 70%;
+				aspect-ratio: 1;
+				margin-bottom: $unit * 3;
+			}
+			&-title {
+				text-transform: uppercase;
+				text-align: center;
+				padding: 0 $unit * 2;
+			}
 		}
 
 		&--data {

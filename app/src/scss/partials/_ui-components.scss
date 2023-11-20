@@ -93,3 +93,193 @@ button,
 		background: $white;
 	}
 }
+
+// Icons
+.ui-trial-icon {
+	&.olympia-2 {
+		background: url('@/assets/icons/trials/olympia-2.svg');
+		@include bg-contain();
+	}
+	&.olympia-5 {
+		background: url('@/assets/icons/trials/olympia-5.svg');
+		@include bg-contain();
+	}
+	&.olympia-1 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/olympia-1.svg');
+		@include bg-contain();
+	}
+	&.olympia-3 {
+		background: url('@/assets/icons/trials/olympia-3.svg');
+		@include bg-contain();
+	}
+	&.olympia-4 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/olympia-4.svg');
+		@include bg-contain();
+	}
+	&.elm-2 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/elm-2.svg');
+		@include bg-contain();
+	}
+	&.elm-1 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/elm-1.svg');
+		@include bg-contain();
+	}
+	&.athena-1 {
+		background: url('@/assets/icons/trials/athena-1.svg');
+		@include bg-contain();
+	}
+	&.clio-1 {
+		background: url('@/assets/icons/trials/clio-1.svg');
+		@include bg-contain();
+	}
+	&.orchid {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/orchid.svg');
+		@include bg-contain();
+	}
+	&.flora {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/flora.svg');
+		@include bg-contain();
+	}
+
+	&.linker-mm3,
+	&.linker-mm4,
+	&.linker-mm1,
+	&.linker-smm1 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/linker-mm3.svg');
+		@include bg-contain();
+	}
+
+	&.linker-mm2 {
+		background: url('@/assets/icons/trials/linker-mm2.svg');
+		@include bg-contain();
+	}
+
+	&.nct05673967 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/nct05673967.svg');
+		@include bg-contain();
+	}
+
+	&.access-1 {
+		background: url('@/assets/icons/trials/access-1.svg');
+		@include bg-contain();
+	}
+
+	&.nct04409080 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/nct04409080.svg');
+		@include bg-contain();
+	}
+	&.nct05618808 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/nct05618808.svg');
+		@include bg-contain();
+	}
+	&.nct04601051 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/nct04601051.svg');
+		@include bg-contain();
+	}
+	&.nct05481333 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/nct05481333.svg');
+		@include bg-contain();
+	}
+	&.honey-b {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/honey-b.svg');
+		@include bg-contain();
+	}
+
+	&.pd-1-monoclonal-p3,
+	&.pd-1-monoclonal-p2,
+	&.pd-1-monoclonal-p1,
+	&.pd-1-monoclonal-non-interventional {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/skin-cancer.svg');
+		@include bg-contain();
+	}
+
+	&.solid-tumor-lung-cancer-01 {
+		background: url('@/assets/icons/trials/solid-tumor-lung-cancer-01.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-lung-cancer-02 {
+		background: url('@/assets/icons/trials/solid-tumor-lung-cancer-02.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-lung-cancer-03 {
+		background: url('@/assets/icons/trials/solid-tumor-lung-cancer-03.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-lung-cancer-04 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/solid-tumor-lung-cancer-04.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-lung-cancer-05 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/solid-tumor-lung-cancer-05.svg');
+		@include bg-contain();
+	}
+
+	&.solid-tumor-melanoma-01,
+	&.solid-tumor-melanoma-02 {
+		background: url('@/assets/icons/trials/melanoma.svg');
+		@include bg-contain();
+	}
+
+	&.solid-tumor-prostate-01 {
+		background: url('@/assets/icons/trials/solid-tumor-prostate-01.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-prostate-02 {
+		background: url('@/assets/icons/trials/solid-tumor-prostate-02.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-ovarian-01 {
+		background: url('@/assets/icons/trials/solid-tumor-ovarian-01.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-ovarian-02 {
+		background: url('@/assets/icons/trials/solid-tumor-ovarian-02.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-ovarian-03 {
+		background: url('@/assets/icons/trials/solid-tumor-ovarian-03.svg');
+		@include bg-contain();
+	}
+
+	&.solid-tumor-multiple-tumors-01 {
+		background: url('@/assets/icons/trials/solid-tumor-multiple-tumors-01.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-multiple-tumors-02 {
+		background: url('@/assets/icons/trials/solid-tumor-multiple-tumors-02.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-multiple-tumors-03 {
+		background: url('@/assets/icons/trials/solid-tumor-multiple-tumors-03.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-multiple-tumors-04 {
+		width: 50% !important;
+		background: url('@/assets/icons/trials/solid-tumor-multiple-tumors-04.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-multiple-tumors-05 {
+		background: url('@/assets/icons/trials/solid-tumor-multiple-tumors-05.svg');
+		@include bg-contain();
+	}
+	&.solid-tumor-multiple-tumors-06 {
+		background: url('@/assets/icons/trials/solid-tumor-multiple-tumors-06.svg');
+		@include bg-contain();
+	}
+}
