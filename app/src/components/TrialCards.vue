@@ -36,7 +36,7 @@
 						</a>
 						<button
 							v-if="item.type === 'external'"
-							class="simple-white"
+							:class="['simple-white', item.type]"
 							@click="navigateToExternalLink(item)"
 						>
 							{{ $t('misc.seeTrialInfo') }}
@@ -113,7 +113,7 @@ function getPdfLink(item: ITrials) {
 			}
 
 			@include tablet {
-				max-width: 350px;
+				max-width: 450px;
 			}
 		}
 

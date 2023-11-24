@@ -11,7 +11,7 @@
 
 			<div class="overlay__copy">
 				<h3>
-					You are now leaving
+					You are now leaving the site
 					<span class="ui-domain">{{ host }}</span>
 				</h3>
 				<p>We encourage you to read the privacy policy of every website you visit.</p>

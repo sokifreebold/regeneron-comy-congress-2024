@@ -32,9 +32,21 @@ button,
 		color: $white;
 		border: 2px solid $white;
 
+		&:hover {
+			border: 3px solid $white;
+		}
+
 		&:after {
 			background: url('@/assets/icons/chevron-right-white.svg');
 			@include bg-contain();
+		}
+
+		&.external {
+			&:after {
+				width: $unit * 2;
+				background: url('@/assets/icons/external-link.svg');
+				@include bg-contain();
+			}
 		}
 	}
 
@@ -91,6 +103,10 @@ button,
 
 	button {
 		background: $white;
+	}
+
+	&:hover {
+		padding: 3px;
 	}
 }
 

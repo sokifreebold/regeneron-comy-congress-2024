@@ -8,7 +8,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 3,
 				nct: 'NCT05133531',
-				trialCardPdf: 'NCT05133531 (ACCESS 1)_R15_POZ-CEM-EM-0010_353061533400',
+				trialCardPdf: 'NCT05133531 (ACCESS 1)_R15_POZ-CEM-EM-0010_844REGN-MID (1)',
 			},
 			{
 				id: 'nct04409080',
@@ -24,8 +24,7 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 2,
 				nct: 'NCT05102136',
-				externalLink:
-					'https://clinicaltrials.gov/study/NCT05102136?term=NCT05102136&rank=1',
+				externalLink: 'https://clinicaltrials.gov/study/NCT05618808',
 			},
 			{
 				id: 'nct04601051',
@@ -33,8 +32,7 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 1,
 				nct: 'NCT04601051',
-				externalLink:
-					'https://clinicaltrials.gov/study/NCT04601051?term=NCT04601051&rank=1',
+				externalLink: 'https://clinicaltrials.gov/study/NCT04601051',
 			},
 			{
 				id: 'nct05481333',
@@ -42,8 +40,7 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 1,
 				nct: 'NCT05481333',
-				externalLink:
-					'https://clinicaltrials.gov/study/NCT05481333?term=NCT05481333%20&rank=1',
+				externalLink: 'https://clinicaltrials.gov/study/NCT05481333',
 			},
 			{
 				id: 'honey-b',
@@ -51,8 +48,7 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 0,
 				nct: 'NCT05568459',
-				externalLink:
-					'https://clinicaltrials.gov/study/NCT05568459?term=NCT05568459&rank=1',
+				externalLink: 'https://clinicaltrials.gov/study/NCT05568459',
 			},
 		],
 	},

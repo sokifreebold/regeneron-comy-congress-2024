@@ -58,7 +58,7 @@
 							</a>
 							<button
 								v-if="item.type === 'external'"
-								class="simple-white"
+								:class="['simple-white', item.type]"
 								@click="navigateToExternalLink(item)"
 							>
 								{{ $t('misc.seeTrialInfo') }}
@@ -86,7 +86,7 @@
 							</a>
 							<button
 								v-if="item.type === 'external'"
-								class="simple-white"
+								:class="['simple-white', item.type]"
 								@click="navigateToExternalLink(item)"
 							>
 								{{ $t('misc.seeTrialInfo') }}
@@ -144,8 +144,6 @@ function getPdfLink(item: ITrials) {
 	&__base {
 		display: flex;
 		font-family: 'RobotoCondensed-Bold';
-		background: rgba($primary, 0.2);
-		backdrop-filter: blur(7px);
 		border-radius: 0 $radius * 0.5;
 
 		&--header {
@@ -231,6 +229,7 @@ function getPdfLink(item: ITrials) {
 			backdrop-filter: blur(7px);
 			text-align: left;
 			align-items: flex-start;
+			padding-left: $unit * 3;
 
 			.trial-cards__trial-title {
 				text-align: left;
@@ -245,7 +244,7 @@ function getPdfLink(item: ITrials) {
 
 	&__trial {
 		&-title {
-			max-width: 250px;
+			max-width: 450px;
 			font-size: 1.3em;
 			font-family: 'RobotoCondensed-Bold';
 			text-align: right;
@@ -254,8 +253,8 @@ function getPdfLink(item: ITrials) {
 				color: $accent;
 			}
 
-			@include tablet {
-				max-width: 350px;
+			@include large-desktop {
+				max-width: 100%;
 			}
 		}
 

@@ -4,7 +4,7 @@ export default {
 			name: 'ASH Microsite 2023',
 		},
 		home: {
-			title: 'Our<br />Pipeline',
+			title: 'Our Pipeline',
 			footer: {
 				jobCode: 'UNB-EM-0239 November 2023',
 				copyright: '&copy; 2023 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
@@ -19,31 +19,31 @@ export default {
 			},
 			cards: {
 				'olympia-2':
-					'<strong>OLYMPIA-2</strong> Odronextamab (CD20xCD3 Bispecific) + Chemotherapy',
+					'<strong>OLYMPIA-2</strong> Odronextamab (CD20xCD3 bispecific) + Chemotherapy',
 				'olympia-5':
-					'<strong>OLYMPIA-5</strong> Odronextamab (CD20xCD3 Bispecific) + Chemotherapy',
-				'olympia-1': '<strong>OLYMPIA-1</strong> Odronextamab (CD20xCD3 Bispecific)',
+					'<strong>OLYMPIA-5</strong> Odronextamab (CD20xCD3 bispecific) + Chemotherapy',
+				'olympia-1': '<strong>OLYMPIA-1</strong> Odronextamab (CD20xCD3 bispecific)',
 				'olympia-3':
-					'<strong>OLYMPIA-3</strong> Odronextamab (CD20xCD3 Bispecific) + Chemotherapy',
-				'olympia-4': '<strong>OLYMPIA-4</strong> Odronextamab (CD20xCD3 Bispecific)',
+					'<strong>OLYMPIA-3</strong> Odronextamab (CD20xCD3 bispecific) + Chemotherapy',
+				'olympia-4': '<strong>OLYMPIA-4</strong> Odronextamab (CD20xCD3 bispecific)',
 				'elm-2': '<strong>ELM-2</strong> Odronextamab (CD20xCD3 bispecific)',
 				'elm-1': '<strong>ELM-1</strong> Odronextamab (CD20xCD3 bispecific)',
 				'athena-1':
-					'<strong>ATHENA-1</strong> Odronextamab (CD20xCD3 bispecific) + REGN5837 (CD22xCD28 bispecific)',
+					'<strong>ATHENA-1</strong> Odronextamab (CD20xCD3 bispecific) REGN5837 (CD22xCD28 bispecific)',
 				'clio-1':
-					'<strong>CLIO-1</strong> Odronextamab (CD20xCD3 bispecific) + Cemiplimab (PD-1 monoclonal)',
+					'<strong>CLIO-1</strong> Odronextamab (CD20xCD3 bispecific) Cemiplimab (PD-1 monoclonal)',
 				orchid: '<strong>ORCHID</strong> Non-interventional real-world experience',
 				flora: '<strong>FLORA</strong> Non-interventional real-world experience',
 				'linker-mm3': '<strong>LINKER-MM3</strong> Linvoseltamab (BCMAxCD3 bispecific)',
 				'linker-mm4': '<strong>LINKER-MM4</strong> Linvoseltamab (BCMAxCD3 bispecific)',
 				'linker-mm1': '<strong>LINKER-MM1</strong> Linvoseltamab (BCMAxCD3 bispecific)',
-				'linker-smm1': '<strong>LINKER-SMM1</strong>  Linvoseltamab (BCMAxCD3 bispecific)',
+				'linker-smm1': '<strong>LINKER-SMM1</strong> Linvoseltamab (BCMAxCD3 bispecific)',
 				'linker-mm2':
 					'<strong>LINKER-MM2</strong> Linvoseltamab (BCMAxCD3 bispecific) + Other Cancer Treatments',
 				nct05673967:
 					'<strong>NCT05673967</strong> Non-interventional real-world experience',
 				'access-1':
-					'<strong>ACCESS-1</strong> Pozelimab (C5 monoclonal) + Cemidiran (C5 RNAi)',
+					'<strong>ACCESS-1</strong> Pozelimab (C5 monoclonal) Cemdisiran (C5 RNAi)',
 				nct04409080: '<strong>NCT04409080</strong> REGN7257 (IL2RG blocking antibody)',
 				nct05618808: '<strong>NCT05618808</strong> REGN9933 (Factor XI Antibody)',
 				nct04601051: '<strong>NCT04601051</strong> NTLA-2001 (Gene editing)',

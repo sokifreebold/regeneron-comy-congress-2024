@@ -13,10 +13,8 @@ const datum: ITrialsRecords[] = [
 			{
 				id: 'olympia-5',
 				categoryId: 'lymphoma',
-				type: 'card',
 				phase: 3,
 				nct: '',
-				trialCardPdf: 'OLYMPIA-5_R6_NOT_FINALIZED',
 			},
 			{
 				id: 'olympia-1',
@@ -37,10 +35,8 @@ const datum: ITrialsRecords[] = [
 			{
 				id: 'olympia-4',
 				categoryId: 'lymphoma',
-				type: 'card',
 				phase: 3,
 				nct: '',
-				trialCardPdf: 'OLYMPIA-4_R10_NOT_FINALIZED',
 			},
 			{
 				id: 'elm-2',
@@ -48,7 +44,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 2,
 				nct: 'NCT03888105',
-				trialCardPdf: 'NCT03888105_ELM2_R17_NOT_FINALIZED',
+				trialCardPdf: 'NCT03888105 (ELM 2)_R19_Odronextamab-EM-0009_844REGN-MID',
 			},
 			{
 				id: 'elm-1',
@@ -56,7 +52,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 1,
 				nct: 'NCT02290951',
-				trialCardPdf: 'NCT02290951_ELM1_R14_NOT_FINALIZED',
+				trialCardPdf: 'NCT02290951 (ELM 1)_R16_Odronextamab-EM-0008_844REGN-MID',
 			},
 			{
 				id: 'athena-1',
@@ -64,7 +60,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 1,
 				nct: 'NCT05685173',
-				trialCardPdf: 'NCT05685173_ATHENA1_R13',
+				trialCardPdf: 'NCT05685173 (ATHENA 1)_R13_Odronextamab-EM-0010_844REGN-MID (1)',
 			},
 			{
 				id: 'clio-1',
@@ -72,25 +68,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 1,
 				nct: 'NCT02651662',
-				trialCardPdf: 'NCT02651662_CLIO1_R10_NOT_FINALIZED',
-			},
-			{
-				id: 'orchid',
-				categoryId: 'lymphoma',
-				nonInterventional: true,
-				type: 'external',
-				nct: 'NCT05338892',
-				externalLink:
-					'https://clinicaltrials.gov/study/NCT05338892?term=NCT05338892&rank=1',
-			},
-			{
-				id: 'flora',
-				categoryId: 'lymphoma',
-				nonInterventional: true,
-				type: 'external',
-				nct: 'NCT05338879',
-				externalLink:
-					'https://clinicaltrials.gov/study/NCT05338879?term=NCT05338879&rank=1',
+				trialCardPdf: 'NCT02651662 CLIO 1_R12_Odronextamab-EM-0011_844REGN-MID',
 			},
 		],
 	},
