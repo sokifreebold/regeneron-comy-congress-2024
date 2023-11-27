@@ -32,7 +32,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 2,
 				nct: 'NCT05955508',
-				trialCardPdf: 'NCT03761108 (LINKER-MM1)_R17_LNVO-EM-0001_844REGN-MID (1) (1)',
+				trialCardPdf: 'NCT05955508_Smoldering_MM_R18_844REGN-MID (1)',
 			},
 			{
 				id: 'linker-mm2',

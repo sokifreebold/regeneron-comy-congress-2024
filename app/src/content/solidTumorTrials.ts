@@ -38,7 +38,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 3,
 				nct: 'NCT05785767',
-				trialCardPdf: 'NCT03916627_R19_CEM-EM-0029_844REGN-MID (1)',
+				trialCardPdf: 'NCT05785767_R22_FIA-EM-0010_844REGN-MID',
 			},
 			{
 				id: 'solid-tumor-lung-cancer-02',
@@ -125,18 +125,10 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 2,
 				nct: 'NCT03564340',
-				trialCardPdf: 'NCT04590326_R18_REGN4018-EM-0003_844REGN-MID',
+				trialCardPdf: 'NCT03564340_R13_REGN4018-EM-0002_844REGN-MID (1)',
 			},
 			{
 				id: 'solid-tumor-ovarian-02',
-				categoryId: 'solid-tumor',
-				type: 'card',
-				phase: 2,
-				nct: 'NCT04590326',
-				trialCardPdf: 'NCT04590326_R18_REGN4018-EM-0003_844REGN-MID (1)',
-			},
-			{
-				id: 'solid-tumor-ovarian-03',
 				categoryId: 'solid-tumor',
 				type: 'card',
 				phase: 2,

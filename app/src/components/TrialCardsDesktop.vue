@@ -203,6 +203,9 @@ function getPdfLink(item: ITrials) {
 				text-transform: uppercase;
 				text-align: center;
 				padding: 0 $unit * 2;
+				font-size: 14px;
+				line-height: 16px;
+				font-family: 'RobotoCondensed-Bold';
 			}
 		}
 

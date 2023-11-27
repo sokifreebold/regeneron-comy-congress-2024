@@ -19,73 +19,102 @@ export default {
 			},
 			cards: {
 				'olympia-2':
-					'<strong>OLYMPIA-2</strong> Odronextamab (CD20xCD3 bispecific) + Chemotherapy',
+					'<strong>OLYMPIA-2</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
 				'olympia-5':
-					'<strong>OLYMPIA-5</strong> Odronextamab (CD20xCD3 bispecific) + Chemotherapy',
-				'olympia-1': '<strong>OLYMPIA-1</strong> Odronextamab (CD20xCD3 bispecific)',
+					'<strong>OLYMPIA-5</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
+				'olympia-1':
+					'<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
 				'olympia-3':
-					'<strong>OLYMPIA-3</strong> Odronextamab (CD20xCD3 bispecific) + Chemotherapy',
-				'olympia-4': '<strong>OLYMPIA-4</strong> Odronextamab (CD20xCD3 bispecific)',
-				'elm-2': '<strong>ELM-2</strong> Odronextamab (CD20xCD3 bispecific)',
-				'elm-1': '<strong>ELM-1</strong> Odronextamab (CD20xCD3 bispecific)',
+					'<strong>OLYMPIA-3</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
+				'olympia-4':
+					'<strong>OLYMPIA-4</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
+				'elm-2':
+					'<strong>ELM-2</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
+				'elm-1':
+					'<strong>ELM-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
 				'athena-1':
-					'<strong>ATHENA-1</strong> Odronextamab (CD20xCD3 bispecific) REGN5837 (CD22xCD28 bispecific)',
+					'<strong>ATHENA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> REGN5837 <span class="ui-one-word">(CD22xCD28 bispecific)</span>',
 				'clio-1':
-					'<strong>CLIO-1</strong> Odronextamab (CD20xCD3 bispecific) Cemiplimab (PD-1 monoclonal)',
+					'<strong>CLIO-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+
 				orchid: '<strong>ORCHID</strong> Non-interventional real-world experience',
 				flora: '<strong>FLORA</strong> Non-interventional real-world experience',
-				'linker-mm3': '<strong>LINKER-MM3</strong> Linvoseltamab (BCMAxCD3 bispecific)',
-				'linker-mm4': '<strong>LINKER-MM4</strong> Linvoseltamab (BCMAxCD3 bispecific)',
-				'linker-mm1': '<strong>LINKER-MM1</strong> Linvoseltamab (BCMAxCD3 bispecific)',
-				'linker-smm1': '<strong>LINKER-SMM1</strong> Linvoseltamab (BCMAxCD3 bispecific)',
+
+				'linker-mm3':
+					'<strong>LINKER-MM3</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
+				'linker-mm4':
+					'<strong>LINKER-MM4</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
+				'linker-mm1':
+					'<strong>LINKER-MM1</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
+				'linker-smm1':
+					'<strong>LINKER-SMM1</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
 				'linker-mm2':
-					'<strong>LINKER-MM2</strong> Linvoseltamab (BCMAxCD3 bispecific) + Other Cancer Treatments',
+					'<strong>LINKER-MM2</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span> + Other Cancer Treatments',
 				nct05673967:
-					'<strong>NCT05673967</strong> Non-interventional real-world experience',
+					'<strong>NCT05673967</strong> <span class="ui-one-word">Non-interventional</span> <span class="ui-one-word">real-world</span> experience',
+
 				'access-1':
-					'<strong>ACCESS-1</strong> Pozelimab (C5 monoclonal) Cemdisiran (C5 RNAi)',
-				nct04409080: '<strong>NCT04409080</strong> REGN7257 (IL2RG blocking antibody)',
-				nct05618808: '<strong>NCT05618808</strong> REGN9933 (Factor XI Antibody)',
-				nct04601051: '<strong>NCT04601051</strong> NTLA-2001 (Gene editing)',
-				nct05481333: '<strong>NCT05481333</strong> REGN7999 (TMPRSS6 antagonist)',
-				'honey-b': '<strong>HONEY-B</strong> Lead in, non-interventional study',
-				'pd-1-monoclonal-p3': 'Cemiplimab (PD-1 monoclonal)',
-				'pd-1-monoclonal-p2': 'Cemiplimab (PD-1 monoclonal)',
-				'pd-1-monoclonal-p1': 'Cemiplimab (PD-1 monoclonal)',
-				'pd-1-monoclonal-non-interventional': 'Cemiplimab (PD-1 monoclonal)',
+					'<strong>ACCESS-1</strong> Pozelimab <span class="ui-one-word">(C5 monoclonal)</span> Cemdisiran <span class="ui-one-word">(C5 RNAi)</span>',
+				nct04409080:
+					'<strong>NCT04409080</strong> REGN7257 <span class="ui-one-word">(IL2RG blocking antibody)</span>',
+				nct05618808:
+					'<strong>NCT05618808</strong> REGN9933 <span class="ui-one-word">(Factor XI antibody)</span>',
+				nct04601051:
+					'<strong>NCT04601051</strong> <span class="ui-one-word">NTLA-2001</span> <span class="ui-one-word">(Gene editing)</span>',
+				nct05481333:
+					'<strong>NCT05481333</strong> REGN7999 <span class="ui-one-word">(TMPRSS6 antagonist)</span>',
+				'honey-b':
+					'<strong>HONEY-B</strong> Lead in, <span class="ui-one-word">non-interventional</span> <span class="ui-one-word">real-world</span> experience',
+
+				'pd-1-monoclonal-p3':
+					'Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+				'pd-1-monoclonal-p2':
+					'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+				'pd-1-monoclonal-p1':
+					'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+				'pd-1-monoclonal-non-interventional':
+					'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+
 				'solid-tumor-lung-cancer-01':
-					'Fianlimab (LAG-3 monoclonal) + Cemiplimab (PD-1 monoclonal)',
+					'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 				'solid-tumor-lung-cancer-02':
-					'Fianlimab (LAG-3 monoclonal) + Cemiplimab (PD-1 monoclonal) + Chemotherapy',
+					'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span> + Chemotherapy',
 				'solid-tumor-lung-cancer-03':
-					'Ipilimumab (CTLA-4 monoclonal) + Cemiplimab (PD-1 monoclonal) + Chemotherapy',
-				'solid-tumor-lung-cancer-04': 'REGN5093 (METxMET biparatopic)',
-				'solid-tumor-lung-cancer-05': 'REGN5093-M114 (METxMET biparatopic ADC)',
+					'Ipilimumab <span class="ui-one-word">(CTLA-4 monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span> + <span class="ui-one-word">Platinum-based</span> Doublet Chemotherapy',
+				'solid-tumor-lung-cancer-04':
+					'REGN5093 <span class="ui-one-word">(METxMET biparatopic)</span>',
+				'solid-tumor-lung-cancer-05':
+					'<span class="ui-one-word">REGN5093-M114</span> (METxMET antibody-drug conjugate)',
+
 				'solid-tumor-melanoma-01':
-					'Fianlimab (LAG-3 monoclonal) + Cemiplimab (PD-1 monoclonal)',
+					'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 				'solid-tumor-melanoma-02':
-					'Fianlimab (LAG-3 monoclonal) + Cemiplimab (PD-1 monoclonal)',
+					'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+
 				'solid-tumor-prostate-01':
-					'REGN4336 (PSMAxCD3 bispecific) + Cemiplimab (PD-1 monoclonal)',
+					'REGN4336 <span class="ui-one-word">(PSMAxCD3 bispecific)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 				'solid-tumor-prostate-02':
-					'REGN5678 (PSMAxCD28 bispecific) + Cemiplimab (PD-1 monoclonal)',
+					'REGN5678 <span class="ui-one-word">(PSMAxCD28 bispecific)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+
 				'solid-tumor-ovarian-01':
-					'Ubamatamab (MUC16xCD3 bispecific) + Cemiplimab (PD-1 monoclonal)',
+					'Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 				'solid-tumor-ovarian-02':
-					'REGN5668 (MUC16xCD28 bispecific) + Cemiplimab (PD-1 monoclonal)',
+					'REGN5668 <span class="ui-one-word">(MUC16xCD28 bispecific)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span> Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',
 				'solid-tumor-ovarian-03':
-					'REGN5668 (MUC16xCD28 bispecific) + Ubamatamab (MUC16xCD3 bispecific)',
+					'REGN5668 <span class="ui-one-word">(MUC16xCD28 bispecific)</span> + Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',
+
 				'solid-tumor-multiple-tumors-01':
-					'REGN7075 (EGFRxCD28 bispecific) + Cemiplimab (PD-1 monoclonal)',
+					'REGN7075 <span class="ui-one-word">(EGFRxCD28 bispecific)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 				'solid-tumor-multiple-tumors-02':
-					'Vidutolimod (TLR9 agonist) + Cemiplimab (PD-1 monoclonal)',
+					'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 				'solid-tumor-multiple-tumors-03':
-					'Fianlimab (LAG-3 monoclonal) + Cemiplimab (PD-1 monoclonal)',
-				'solid-tumor-multiple-tumors-04': 'Cemiplimab (PD-1 monoclonal)',
+					'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+				'solid-tumor-multiple-tumors-04':
+					'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span> + Other Agents',
 				'solid-tumor-multiple-tumors-05':
-					'REGN6569 (GITR monoclonal) + Cemiplimab (PD-1 monoclonal)',
+					'REGN6569 <span class="ui-one-word">(GITR monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 				'solid-tumor-multiple-tumors-06':
-					'89Zr-DFOREGN5054 (CD8 monoclonal) + Cemiplimab (PD-1 monoclonal)',
+					'89Zr-DFOREGN5054 <span class="ui-one-word">(CD8 monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 			},
 			cardsSection: {
 				'skin-cancer': 'non-melanoma skin cancer',
@@ -96,51 +125,76 @@ export default {
 				'multiple-tumors': 'multiple tumors',
 			},
 			tags: {
-				'olympia-2': 'Relapsed/refractory follicular lymphoma',
+				'olympia-2': 'untreated or relapsed/refractory follicular lymphoma',
 				'olympia-5': 'Relapsed/refractory follicular lymphoma',
-				'olympia-1': 'Relapsed/refractory follicular lymphoma',
-				'olympia-3': 'untreated diffuse large b-cell lymphoma',
-				'olympia-4': 'relapsed/refractory DIFFUSE LARGE B-CELL LYMPHOMA',
-				'elm-2': 'B-cell non-Hodgkin Lymphoma',
-				'elm-1': 'B-CELL MALIGNANCIES',
-				'athena-1': 'aggressive B-cell non-hodgkin lymphomas',
-				'clio-1': 'b-cell malignancies',
+				'olympia-1': 'previously untreated follicular lymphoma',
+				'olympia-3':
+					'untreated diffuse large <span class="ui-one-word">b-cell</span> lymphoma',
+				'olympia-4':
+					'relapsed/refractory DIFFUSE LARGE <span class="ui-one-word">B-CELL</span> LYMPHOMA',
+				'elm-2':
+					'relapsed/refractory <span class="ui-one-word">B-cell</span> non-Hodgkin Lymphoma',
+				'elm-1': '<span class="ui-one-word">B-CELL</span> MALIGNANCIES',
+				'athena-1':
+					'aggressive <span class="ui-one-word">B-cell</span> <span class="ui-one-word">non-hodgkin</span> lymphoma',
+				'clio-1':
+					'Relapsed/refractory aggressive <span class="ui-one-word">b-cell</span> <span class="ui-one-word">non-hodgkin</span> lymphoma',
+
 				orchid: 'Relapsed/refractory diffuse large b-cell lymphoma',
 				flora: 'Relapsed/refractory follicular lymphoma',
-				'linker-mm3': 'Relapsed/refractory',
-				'linker-mm4': 'Newly diagnosed',
-				'linker-mm1': 'Relapsed/refractory',
-				'linker-smm1': 'high risk Smoldering',
-				'linker-mm2': 'Relapsed/refractory',
-				nct05673967: 'Relapsed/refractory',
+
+				'linker-mm3': 'relapsed/refractory Multiple Myeloma',
+				'linker-mm4': 'previously untreated symptomatic multiple myeloma',
+				'linker-mm1': 'relapsed/refractory Multiple Myeloma',
+				'linker-smm1': 'high-risk smoldering multiple myeloma',
+				'linker-mm2': 'relapsed/refractory Multiple Myeloma',
+				nct05673967: 'relapsed/refractory Multiple Myeloma',
+
 				'access-1': 'PAROXYSMAL NOCTURNAL HEMOGLOBINURIA',
-				nct04409080: 'APLASTIC ANEMIA',
+				nct04409080: 'SEVERE APLASTIC ANEMIA',
 				nct05618808: 'THROMBOTIC DISORDERS',
-				nct04601051: 'AMYLOIDOSIS',
-				nct05481333: 'Transfusion dependent iron overload',
+				nct04601051: 'TRANSTHYRETIN AMYLOIDOSIS',
+				nct05481333: 'Transfusion-dependent iron overload',
 				'honey-b': 'Hemophilia B',
-				'pd-1-monoclonal-p3': 'NON-MELANOMA SKIN CANCER',
-				'pd-1-monoclonal-p2': 'non-melanoma skin cancer',
-				'pd-1-monoclonal-p1': 'non-Melanoma Skin Cancer',
-				'pd-1-monoclonal-non-interventional': 'NON-MELANOMA SKIN CANCER',
-				'solid-tumor-lung-cancer-01': 'Non-Small Cell Lung Cancer ',
-				'solid-tumor-lung-cancer-02': 'Non-Small Cell Lung Cancer ',
-				'solid-tumor-lung-cancer-03': 'Non-Small Cell Lung Cancer ',
-				'solid-tumor-lung-cancer-04': 'Non-Small Cell Lung Cancer ',
-				'solid-tumor-lung-cancer-05': 'Non-Small Cell Lung Cancer ',
-				'solid-tumor-melanoma-01': 'Melanoma',
-				'solid-tumor-melanoma-02': 'Melanoma',
-				'solid-tumor-prostate-01': 'prostate',
-				'solid-tumor-prostate-02': 'prostate',
-				'solid-tumor-ovarian-01': 'Ovarian',
-				'solid-tumor-ovarian-02': 'Ovarian',
+
+				'pd-1-monoclonal-p3':
+					'<span class="ui-one-word">high-risk</span> cutaneous squamous cell carcinoma',
+				'pd-1-monoclonal-p2': 'stage II to IV cutaneous squamous cell carcinoma',
+				'pd-1-monoclonal-p1': 'cutaneous squamous cell carcinoma or basal cell carcinoma',
+				'pd-1-monoclonal-non-interventional':
+					'<span class="ui-one-word">NON-MELANOMA</span> SKIN CANCER',
+
+				'solid-tumor-lung-cancer-01':
+					'advanced <span class="ui-one-word">non-small</span> cell lung cancer with <span class="ui-one-word">PD-L1</span> expression > 50%',
+				'solid-tumor-lung-cancer-02':
+					'advanced <span class="ui-one-word">non-small</span> cell lung cancer',
+				'solid-tumor-lung-cancer-03':
+					'advanced or metastatic <span class="ui-one-word">non-small</span> cell lung cancer',
+				'solid-tumor-lung-cancer-04':
+					'<span class="ui-one-word">MET-altered</span> advanced <span class="ui-one-word">non-small</span> cell lung cancer',
+				'solid-tumor-lung-cancer-05':
+					'<span class="ui-one-word">MET-overexpressing</span> <span class="ui-one-word">non-small</span> cell lung cancer',
+
+				'solid-tumor-melanoma-01': 'advanced or metastatic melanoma',
+				'solid-tumor-melanoma-02':
+					'adjuvant use in completely resected <span class="ui-one-word">high-risk</span> melanoma',
+
+				'solid-tumor-prostate-01':
+					'metastatic <span class="ui-one-word">castration-resistant</span> prostate CANCER',
+				'solid-tumor-prostate-02':
+					'metastatic <span class="ui-one-word">castration-resistant</span> prostate CANCER',
+
+				'solid-tumor-ovarian-01':
+					'<span class="ui-one-word">platinum-resistant</span> ovarian CANCER',
+				'solid-tumor-ovarian-02': 'recurrent ovarian CANCER',
 				'solid-tumor-ovarian-03': 'Ovarian',
-				'solid-tumor-multiple-tumors-01': 'multiple tumors',
-				'solid-tumor-multiple-tumors-02': 'multiple tumors',
-				'solid-tumor-multiple-tumors-03': 'multiple tumors',
-				'solid-tumor-multiple-tumors-04': 'multiple tumors',
-				'solid-tumor-multiple-tumors-05': 'multiple tumors',
-				'solid-tumor-multiple-tumors-06': 'multiple tumors',
+
+				'solid-tumor-multiple-tumors-01': 'advanced solid tumors',
+				'solid-tumor-multiple-tumors-02': 'advanced/metastatic tumors',
+				'solid-tumor-multiple-tumors-03': 'advanced malignancies',
+				'solid-tumor-multiple-tumors-04': 'advanced malignancies (Japanese patients)',
+				'solid-tumor-multiple-tumors-05': 'advanced solid tumors',
+				'solid-tumor-multiple-tumors-06': 'advanced and metastatic solid tumors',
 			},
 		},
 		misc: {
