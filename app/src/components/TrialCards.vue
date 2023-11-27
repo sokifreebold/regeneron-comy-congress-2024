@@ -90,7 +90,7 @@ function getPdfLink(item: ITrials) {
 		border-radius: $radius * 0.5;
 
 		&.is-non-interventional {
-			background: rgba(6, 91, 170, 0.7);
+			background: rgba($dark-blue, 0.7);
 			background-blend-mode: multiply;
 			backdrop-filter: blur(7px);
 		}

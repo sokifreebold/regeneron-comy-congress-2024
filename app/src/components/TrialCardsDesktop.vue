@@ -228,7 +228,7 @@ function getPdfLink(item: ITrials) {
 		}
 
 		&--blank {
-			background: rgba($primary, 0.5);
+			background: rgba($dark-blue, 0.5);
 			backdrop-filter: blur(7px);
 			text-align: left;
 			align-items: flex-start;

@@ -138,7 +138,7 @@ function openTrialOverlay() {
 			&:before {
 				content: '';
 				display: flex;
-				width: $unit * 2.5;
+				width: $unit * 3;
 				aspect-ratio: 1;
 				background: url('@/assets/icons/back-arrow.svg');
 				@include bg-contain();
