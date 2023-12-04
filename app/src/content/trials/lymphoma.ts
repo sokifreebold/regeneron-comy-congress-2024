@@ -13,8 +13,11 @@ const datum: ITrialsRecords[] = [
 			{
 				id: 'olympia-5',
 				categoryId: 'lymphoma',
+				type: 'external',
 				phase: 3,
-				nct: '',
+				nct: 'NCT06149286',
+				externalLink:
+					'https://clinicaltrials.gov/study/NCT06149286?term=olympia-5&checkSpell=false&rank=1',
 			},
 			{
 				id: 'olympia-1',
