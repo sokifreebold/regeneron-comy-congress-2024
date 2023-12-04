@@ -12,21 +12,6 @@
 			</div>
 
 			<div v-if="pdfLink" class="trials__pdf">
-				<!-- <a :href="`./pdfs/${pdfLink}.pdf`" target="_blank">Open in new tab</a>
-				<embed :src="`./pdfs/${pdfLink}.pdf#toolbar=0`" width="100%" height="100%" />
-
-				Embed
-				<embed :src="`./pdfs/${pdfLink}.pdf`" width="100%" height="100%" />
-
-				Object
-				<object :data="`./pdfs/${pdfLink}.pdf`">
-					<p>Oops! Your browser doesn't support PDFs!</p>
-					<p><a :href="`./pdfs/${pdfLink}.pdf`">Download Instead</a></p>
-				</object> -->
-
-				<!-- <pdf :src="`./pdfs/${p
-				dfLink}.pdf`"></pdf> -->
-
 				<iframe
 					title="PDF"
 					width="100%"
@@ -133,9 +118,11 @@ function navigateBack() {
 		flex-direction: column;
 
 		embed,
-		object {
+		object,
+		iframe {
 			width: 100%;
 			min-height: 100vh;
+			border: none;
 		}
 
 		a {
