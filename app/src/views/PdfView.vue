@@ -52,8 +52,6 @@ import pdfData from '@/content/pdfs';
 import UtilsMolecule from '@/components/UtilsMolecule.vue';
 import FooterHome from '@/components/FooterHome.vue';
 
-import pdf from 'vue-pdf';
-
 const route = useRoute();
 const router = useRouter();
 
