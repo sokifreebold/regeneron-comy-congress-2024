@@ -134,6 +134,12 @@ function navigateToExternalLink(item: ITrials) {
 			value: item.externalLink,
 		});
 
+		event('link', {
+			event_category: 'clinicaltrials.gov',
+			event_label: item.categoryId,
+			value: item.externalLink,
+		});
+
 		store.axn_updateExternalLink(item.externalLink);
 	}
 }
