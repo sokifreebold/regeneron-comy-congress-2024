@@ -48,15 +48,13 @@
 						/>
 
 						<div v-if="item.type" class="trial-cards__trial-control">
-							<a
+							<button
 								v-if="item.type === 'card'"
-								:href="getPdfLink(item)"
-								target="_blank"
 								class="btn simple-white mobile-only"
-								@click="trackClickedTrialPdf(item)"
+								@click="navigateToTrialCard(item)"
 							>
 								{{ $t('misc.seeTrialInfo') }}
-							</a>
+							</button>
 							<button
 								v-if="item.type === 'external'"
 								:class="['simple-white', item.type]"
@@ -77,15 +75,13 @@
 							v-if="item.type && (item.nonInterventional || item.phase === 0)"
 							class="trial-cards__trial-control"
 						>
-							<a
+							<button
 								v-if="item.type === 'card'"
-								:href="getPdfLink(item)"
-								target="_blank"
 								class="btn simple-white mobile-only"
-								@click="trackClickedTrialPdf(item)"
+								@click="navigateToTrialCard(item)"
 							>
 								{{ $t('misc.seeTrialInfo') }}
-							</a>
+							</button>
 							<button
 								v-if="item.type === 'external'"
 								:class="['simple-white', item.type]"
@@ -102,7 +98,7 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { computed } from 'vue';
 import { trialsData } from '@/content/data';
 import { event } from 'vue-gtag';
@@ -111,17 +107,20 @@ import { useAppStore } from '@/stores/app';
 import type { ITrialsRecords, ITrials } from '@/@types/data';
 
 const route = useRoute();
+const router = useRouter();
 const store = useAppStore();
 
 const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
 
-function trackClickedTrialPdf(item: ITrials) {
-	if (item.externalLink) {
-		event('trial_card_visited', {
+function navigateToTrialCard(item: ITrials) {
+	if (item.trialCardPdf) {
+		event('link', {
 			event_category: 'trial-pdf',
 			event_label: item.categoryId,
 			value: item.trialCardPdf,
 		});
+
+		router.push(`/trials/${item.categoryId}/${item.id}`);
 	}
 }
 

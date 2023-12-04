@@ -15,7 +15,7 @@
 				<iframe
 					title="PDF"
 					width="100%"
-					height="1000px"
+					height="100%"
 					:src="`./pdfjs-4.0.269-dist/web/viewer.html?file=../../pdfs/${pdfLink}.pdf`"
 				></iframe>
 			</div>
@@ -112,17 +112,23 @@ function navigateBack() {
 	}
 
 	&__pdf {
-		min-height: 100vh;
 		display: flex;
 		align-items: flex-end;
 		flex-direction: column;
 
 		embed,
-		object,
-		iframe {
+		object {
 			width: 100%;
 			min-height: 100vh;
+		}
+
+		iframe {
+			min-height: 70vh;
 			border: none;
+
+			@include large-desktop {
+				min-height: 100vh;
+			}
 		}
 
 		a {

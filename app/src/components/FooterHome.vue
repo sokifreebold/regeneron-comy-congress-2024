@@ -68,7 +68,8 @@ const trialId = computed(() => route.params.trialId as string);
 	}
 
 	&.trials,
-	&.pdf {
+	&.pdf,
+	&.trial-card {
 		color: $white;
 	}
 }

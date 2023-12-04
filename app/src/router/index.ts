@@ -20,7 +20,7 @@ const router = createRouter({
 		},
 		{
 			path: '/trials/:trialId/:id',
-			name: 'pdf',
+			name: 'trial-card',
 			component: PdfView,
 		},
 	],

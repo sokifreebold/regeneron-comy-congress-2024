@@ -25,7 +25,8 @@ watch(route, () => {
 <style lang="scss" scoped>
 .app {
 	&.trials,
-	&.pdf {
+	&.pdf,
+	&.trial-card {
 		color: $white;
 		background: url('@/assets/backgrounds/trials.png');
 		@include bg-cover();
