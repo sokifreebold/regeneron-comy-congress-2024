@@ -55,10 +55,9 @@ const trialId = computed(() => route.params.trialId as string);
 		max-width: 768px;
 
 		p {
-			font-size: 0.75em;
-			line-height: 1.4em;
+			@include px-to-em(12px);
+			line-height: 18px;
 			margin: $unit 0;
-			// text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 		}
 
 		&--logo {

@@ -6,7 +6,7 @@ export default {
 		home: {
 			title: 'Our Pipeline',
 			footer: {
-				jobCode: 'UNB-EM-0239 November 2023',
+				jobCode: 'UNB-EM-0239 December 2023',
 				copyright: '&copy; 2023 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
 				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein are investigational and have not been evaluated by any regulatory authority.',
 			},
@@ -217,7 +217,7 @@ export default {
 			},
 			footer: {
 				meta: 'Odronextamab is an investigational drug and has not been fully evaluated by any regulatory authority.',
-				jobCode: 'UNB-EM-0239. November 2023',
+				jobCode: 'UNB-EM-0239. December 2023',
 				enclosed:
 					'The enclosed materials are being provided in response to your unsolicited request and are for your information only. The product discussed herein is an investigational agent and has not been fully evaluated or approved by the US Food and Drug Administration or any other regulatory agency worldwide. Reactive Use Only.',
 				copyright: '&copy; 2023 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',

@@ -26,6 +26,30 @@
 	background-position: center;
 }
 
+@mixin px-to-em($pixels, $property: 'font-size', $context: 16px) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	#{$property}: calc($pixels / $context) * 1em;
+}
+
+@mixin line-height($pixel-value, $base-font-size: 16px) {
+	@if (unitless($pixel-value)) {
+		$pixel-value: $pixel-value * 1px;
+	}
+
+	@if (unitless($base-font-size)) {
+		$base-font-size: $base-font-size * 1px;
+	}
+
+	line-height: calc($pixel-value / $base-font-size);
+}
+
 @mixin tablet {
 	@media screen and (min-width: 768px) {
 		@content;
