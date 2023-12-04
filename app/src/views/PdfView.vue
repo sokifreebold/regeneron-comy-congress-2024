@@ -12,7 +12,7 @@
 			</div>
 
 			<div v-if="pdfLink" class="trials__pdf">
-				<a :href="`./pdfs/${pdfLink}.pdf`" target="_blank">Open in new tab</a>
+				<!-- <a :href="`./pdfs/${pdfLink}.pdf`" target="_blank">Open in new tab</a>
 				<embed :src="`./pdfs/${pdfLink}.pdf#toolbar=0`" width="100%" height="100%" />
 
 				Embed
@@ -22,7 +22,17 @@
 				<object :data="`./pdfs/${pdfLink}.pdf`">
 					<p>Oops! Your browser doesn't support PDFs!</p>
 					<p><a :href="`./pdfs/${pdfLink}.pdf`">Download Instead</a></p>
-				</object>
+				</object> -->
+
+				<!-- <pdf :src="`./pdfs/${p
+				dfLink}.pdf`"></pdf> -->
+
+				<iframe
+					title="PDF"
+					width="100%"
+					height="1000px"
+					:src="`./pdfjs-4.0.269-dist/web/viewer.html?file=../../pdfs/${pdfLink}.pdf`"
+				></iframe>
 			</div>
 			<div v-else class="trials__no-pdf">
 				{{ $t('misc.noPdf') }}
@@ -41,6 +51,8 @@ import pdfData from '@/content/pdfs';
 
 import UtilsMolecule from '@/components/UtilsMolecule.vue';
 import FooterHome from '@/components/FooterHome.vue';
+
+import pdf from 'vue-pdf';
 
 const route = useRoute();
 const router = useRouter();
