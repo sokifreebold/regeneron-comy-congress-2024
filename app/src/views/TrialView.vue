@@ -44,9 +44,12 @@ import UtilsMolecule from '@/components/UtilsMolecule.vue';
 import FooterHome from '@/components/FooterHome.vue';
 import TrialCards from '@/components/TrialCards.vue';
 
+import { useGtag } from 'vue-gtag-next';
+
 const route = useRoute();
 const router = useRouter();
 const store = useAppStore();
+const { event, pageview } = useGtag();
 
 const trialId = computed(() => route.params.trialId as string);
 
@@ -55,6 +58,13 @@ function navigateHome() {
 }
 
 function openTrialOverlay() {
+	event('trial_overlay', {
+		event_category: 'trial_overlay',
+		event_label: trialId.value,
+		value: trialId.value,
+	});
+
+	pageview({ page_path: `/trials/${trialId.value}/?overlay` });
 	store.axn_updatePopup(trialId.value as string);
 }
 </script>

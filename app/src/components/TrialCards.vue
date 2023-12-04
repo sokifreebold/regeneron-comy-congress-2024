@@ -53,6 +53,7 @@
 								:href="getPdfLink(item)"
 								target="_blank"
 								class="btn simple-white mobile-only"
+								@click="trackClickedTrialPdf(item)"
 							>
 								{{ $t('misc.seeTrialInfo') }}
 							</a>
@@ -81,6 +82,7 @@
 								:href="getPdfLink(item)"
 								target="_blank"
 								class="btn simple-white mobile-only"
+								@click="trackClickedTrialPdf(item)"
 							>
 								{{ $t('misc.seeTrialInfo') }}
 							</a>
@@ -103,17 +105,35 @@
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
 import { trialsData } from '@/content/data';
+import { useGtag } from 'vue-gtag-next';
+import { useAppStore } from '@/stores/app';
 
 import type { ITrialsRecords, ITrials } from '@/@types/data';
 
 const route = useRoute();
-import { useAppStore } from '@/stores/app';
 const store = useAppStore();
+const { event } = useGtag();
 
 const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
 
+function trackClickedTrialPdf(item: ITrials) {
+	if (item.externalLink) {
+		event('trial_card_visited', {
+			event_category: 'trial-pdf',
+			event_label: item.categoryId,
+			value: item.trialCardPdf,
+		});
+	}
+}
+
 function navigateToExternalLink(item: ITrials) {
 	if (item.externalLink) {
+		event('trial_card_visited', {
+			event_category: 'clinicaltrials.gov',
+			event_label: item.categoryId,
+			value: item.externalLink,
+		});
+
 		store.axn_updateExternalLink(item.externalLink);
 	}
 }
