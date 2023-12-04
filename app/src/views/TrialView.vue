@@ -27,8 +27,7 @@
 			</div>
 
 			<!-- Content -->
-			<trial-cards class="trials__view--mobile" />
-			<trial-cards-desktop class="trials__view--desktop" />
+			<trial-cards />
 		</div>
 	</main>
 
@@ -44,7 +43,6 @@ import { useAppStore } from '@/stores/app';
 import UtilsMolecule from '@/components/UtilsMolecule.vue';
 import FooterHome from '@/components/FooterHome.vue';
 import TrialCards from '@/components/TrialCards.vue';
-import TrialCardsDesktop from '@/components/TrialCardsDesktop.vue';
 
 const route = useRoute();
 const router = useRouter();
@@ -72,6 +70,7 @@ function openTrialOverlay() {
 			top: auto;
 			bottom: -20%;
 			width: 600px;
+			opacity: 0.5;
 			display: none;
 		}
 
@@ -149,34 +148,6 @@ function openTrialOverlay() {
 
 	&__overlay {
 		margin-bottom: $unit * 5;
-	}
-
-	&__developer-note {
-		color: $accent;
-		font-family: 'RobotoCondensed-Bold';
-		text-align: right;
-		opacity: 0.5;
-		display: none;
-
-		@include large-desktop {
-			display: flex;
-			justify-content: flex-end;
-		}
-	}
-
-	&__view {
-		&--desktop {
-			display: none;
-		}
-
-		@include large-desktop {
-			&--mobile {
-				display: none;
-			}
-			&--desktop {
-				display: flex;
-			}
-		}
 	}
 }
 </style>

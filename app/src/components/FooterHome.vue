@@ -1,38 +1,49 @@
 <template>
 	<footer :class="['footer', route.name]">
 		<div v-if="route.name === 'home'" class="container">
-			<img
-				class="ui-logo-regeneron"
-				src="../assets/images/regeneron-logo-dark.svg"
-				alt="Regeneron"
-			/>
-
 			<div class="footer__copy">
+				<p v-html="$t('home.footer.copy')" />
 				<p v-html="$t('home.footer.jobCode')" />
+			</div>
+
+			<div class="footer__copy footer__copy--logo">
+				<img
+					class="ui-logo-regeneron"
+					src="../assets/images/regeneron-logo-dark.svg"
+					alt="Regeneron"
+				/>
 				<p v-html="$t('home.footer.copyright')" />
 			</div>
 		</div>
 		<div v-else class="container">
-			<img
-				class="ui-logo-regeneron"
-				src="../assets/images/regeneron-logo-white.svg"
-				alt="Regeneron"
-			/>
+			<div v-if="$te(`trials.footer.${trialId}`)" class="footer__copy">
+				<p v-html="$t(`trials.footer.${trialId}`)" />
+			</div>
 
 			<div class="footer__copy">
-				<p v-html="$t('trials.footer.meta')" />
+				<p v-html="$t('trials.footer.copy')" />
 				<p v-html="$t('trials.footer.jobCode')" />
-				<p v-html="$t('trials.footer.enclosed')" />
-				<p v-html="$t('trials.footer.copyright')" />
+			</div>
+
+			<div class="footer__copy footer__copy--logo">
+				<img
+					class="ui-logo-regeneron"
+					src="../assets/images/regeneron-logo-white.svg"
+					alt="Regeneron"
+				/>
+				<p v-html="$t('home.footer.copyright')" />
 			</div>
 		</div>
 	</footer>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
+
+const trialId = computed(() => route.params.trialId as string);
 </script>
 
 <style lang="scss" scoped>
@@ -41,11 +52,19 @@ const route = useRoute();
 
 	&__copy {
 		margin-top: $unit * 4;
-		max-width: 1024px;
+		max-width: 768px;
 
 		p {
 			font-size: 0.75em;
-			margin: $unit * 2 0;
+			line-height: 1.4em;
+			margin: $unit 0;
+			// text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+		}
+
+		&--logo {
+			img {
+				margin-bottom: $unit * 0.25;
+			}
 		}
 	}
 

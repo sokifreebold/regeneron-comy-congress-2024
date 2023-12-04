@@ -11,6 +11,7 @@
 // Native
 button,
 .btn {
+	position: relative;
 	display: flex;
 	align-items: center;
 	padding: $unit * 1.5 $unit * 3;
@@ -21,6 +22,25 @@ button,
 	color: $secondary;
 	background: none;
 	cursor: pointer;
+	transition: all 0.5s ease;
+
+	&:before {
+		content: '';
+		position: absolute;
+		border: 2px solid $white;
+		width: 100%;
+		height: 100%;
+		border-radius: $radius * 2;
+		transition: all 0.2s ease;
+		left: 0;
+		top: 0;
+	}
+
+	&:hover {
+		&:before {
+			border: 3px solid $white;
+		}
+	}
 
 	&:after {
 		display: flex;
@@ -34,11 +54,6 @@ button,
 
 	&.simple-white {
 		color: $white;
-		border: 2px solid $white;
-
-		&:hover {
-			border: 3px solid $white;
-		}
 
 		&:after {
 			background: url('@/assets/icons/chevron-right-white.svg');
@@ -89,9 +104,19 @@ button,
 
 	&.btn-overlay {
 		background: $linear-gradient-02;
-		border: 2px solid $white;
+		border: 1px solid $white;
 		color: $white;
 		text-transform: uppercase;
+
+		&:before {
+			border: 1px solid $white;
+		}
+
+		&:hover {
+			&:before {
+				border: 2px solid $white;
+			}
+		}
 
 		&:after {
 			background: url('@/assets/icons/chevron-right-white.svg');
@@ -104,13 +129,20 @@ button,
 	background: $linear-gradient-01;
 	border-radius: $radius * 2;
 	padding: 2px;
+	transition: all 0.2s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	button {
 		background: $white;
 	}
 
 	&:hover {
-		padding: 3px;
+		button {
+			width: calc(100% - 1px);
+			height: calc(100% - 1px);
+		}
 	}
 }
 

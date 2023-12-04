@@ -16,7 +16,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 2,
 				nct: 'NCT04409080',
-				trialCardPdf: 'NCT04409080_R11_NOT_FINALIZED',
+				trialCardPdf: 'NCT04409080_R13_REGN7257-EM-0004_844REGN-MID',
 			},
 			{
 				id: 'nct05618808',

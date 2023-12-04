@@ -88,7 +88,7 @@ function closeOverlay() {
 	height: 100%;
 	z-index: 9;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 
 	&__close {
@@ -98,22 +98,21 @@ function closeOverlay() {
 		aspect-ratio: 1;
 
 		button {
-			border: 2px solid $white;
 			color: $white;
 			text-transform: uppercase;
+			padding-left: $unit * 5;
 
 			&:after {
-				display: none;
-			}
-
-			&:before {
 				display: flex;
 				content: '';
 				width: $unit * 1.5;
 				aspect-ratio: 1;
 				background: url('@/assets/icons/close-white.svg');
 				@include bg-contain();
-				margin-right: $unit * 1;
+				margin-left: $unit * 1;
+				border: none;
+				position: absolute;
+				left: $unit;
 			}
 		}
 	}
@@ -126,10 +125,10 @@ function closeOverlay() {
 		overflow-y: auto;
 		padding: $unit * 2;
 		@include scrollbar-light();
-		margin-top: $unit * 6;
+		margin-top: $unit * 10;
 
 		@include desktop {
-			margin-top: 0;
+			margin-top: $unit * 15;
 		}
 	}
 

@@ -8,6 +8,7 @@ export default {
 			footer: {
 				jobCode: 'UNB-EM-0239 November 2023',
 				copyright: '&copy; 2023 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
+				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein are investigational and have not been evaluated by any regulatory authority.',
 			},
 		},
 		titles: {
@@ -54,17 +55,17 @@ export default {
 					'<strong>NCT05673967</strong> <span class="ui-one-word">Non-interventional</span> <span class="ui-one-word">real-world</span> experience',
 
 				'access-1':
-					'<strong>ACCESS-1</strong> Pozelimab <span class="ui-one-word">(C5 monoclonal)</span> Cemdisiran <span class="ui-one-word">(C5 RNAi)</span>',
+					'<strong>ACCESS-1</strong> Pozelimab <span class="ui-one-word">(C5 monoclonal antibody)</span> Cemdisiran <span class="ui-one-word">(C5 RNAi)<sup>†</sup></span>',
 				nct04409080:
 					'<strong>NCT04409080</strong> REGN7257 <span class="ui-one-word">(IL2RG blocking antibody)</span>',
 				nct05618808:
 					'<strong>NCT05618808</strong> REGN9933 <span class="ui-one-word">(Factor XI antibody)</span>',
 				nct04601051:
-					'<strong>NCT04601051</strong> <span class="ui-one-word">NTLA-2001</span> <span class="ui-one-word">(Gene editing)</span>',
+					'<strong>NCT04601051</strong> <span class="ui-one-word">NTLA-2001</span> <span class="ui-one-word">(TTR Gene editing)<sup>††</sup></span>',
 				nct05481333:
 					'<strong>NCT05481333</strong> REGN7999 <span class="ui-one-word">(TMPRSS6 antagonist)</span>',
 				'honey-b':
-					'<strong>HONEY-B</strong> Lead in, <span class="ui-one-word">non-interventional</span> <span class="ui-one-word">real-world</span> experience',
+					'<strong>HONEY-B</strong> <span class="ui-one-word">Lead-in,</span> <span class="ui-one-word">non-interventional</span> <span class="ui-one-word">real-world</span> study',
 
 				'pd-1-monoclonal-p3':
 					'Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
@@ -110,7 +111,7 @@ export default {
 				'solid-tumor-multiple-tumors-03':
 					'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 				'solid-tumor-multiple-tumors-04':
-					'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span> + Other Agents',
+					'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span> <span class="ui-one-word">+ Other Agent</span>',
 				'solid-tumor-multiple-tumors-05':
 					'REGN6569 <span class="ui-one-word">(GITR monoclonal)</span> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 				'solid-tumor-multiple-tumors-06':
@@ -126,17 +127,17 @@ export default {
 			},
 			tags: {
 				'olympia-2': 'untreated or relapsed/refractory follicular lymphoma',
-				'olympia-5': 'Relapsed/refractory follicular lymphoma',
+				'olympia-5': 'Relapsed/refractory follicular lymphoma and marginal zone lymphoma',
 				'olympia-1': 'previously untreated follicular lymphoma',
 				'olympia-3':
 					'untreated diffuse large <span class="ui-one-word">b-cell</span> lymphoma',
 				'olympia-4':
-					'relapsed/refractory DIFFUSE LARGE <span class="ui-one-word">B-CELL</span> LYMPHOMA',
+					'Relapsed/Refractory DIFFUSE LARGE <span class="ui-one-word">B-CELL</span> LYMPHOMA',
 				'elm-2':
 					'relapsed/refractory <span class="ui-one-word">B-cell</span> non-Hodgkin Lymphoma',
 				'elm-1': '<span class="ui-one-word">B-CELL</span> MALIGNANCIES',
 				'athena-1':
-					'aggressive <span class="ui-one-word">B-cell</span> <span class="ui-one-word">non-hodgkin</span> lymphoma',
+					'aggressive <span class="ui-one-word">B-cell</span> non-hodgkin lymphoma',
 				'clio-1':
 					'Relapsed/refractory aggressive <span class="ui-one-word">b-cell</span> <span class="ui-one-word">non-hodgkin</span> lymphoma',
 
@@ -165,7 +166,7 @@ export default {
 					'<span class="ui-one-word">NON-MELANOMA</span> SKIN CANCER',
 
 				'solid-tumor-lung-cancer-01':
-					'advanced <span class="ui-one-word">non-small</span> cell lung cancer with <span class="ui-one-word">PD-L1</span> expression > 50%',
+					'advanced <span class="ui-one-word">non-small</span> cell lung cancer with <span class="ui-one-word">PD-L1</span> expression &gt; 50%',
 				'solid-tumor-lung-cancer-02':
 					'advanced <span class="ui-one-word">non-small</span> cell lung cancer',
 				'solid-tumor-lung-cancer-03':
@@ -220,6 +221,9 @@ export default {
 				enclosed:
 					'The enclosed materials are being provided in response to your unsolicited request and are for your information only. The product discussed herein is an investigational agent and has not been fully evaluated or approved by the US Food and Drug Administration or any other regulatory agency worldwide. Reactive Use Only.',
 				copyright: '&copy; 2023 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
+				copy: 'The uses of all agents described herein are investigational and have not been evaluated by any regulatory authority. This information is intended for investigators interested in active clinical trials.',
+				'classical-hematology':
+					'<sup>†</sup> In collaboration with Alnylam Pharmaceuticals.<br><sup>††</sup> In collaboration with Intellia.',
 			},
 		},
 	},

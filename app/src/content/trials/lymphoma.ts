@@ -8,7 +8,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 3,
 				nct: 'NCT06097364',
-				trialCardPdf: 'OLYMPIA-2_R11_NOT_FINALIZED',
+				trialCardPdf: 'OLYMPIA-2',
 			},
 			{
 				id: 'olympia-5',
@@ -22,7 +22,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 3,
 				nct: 'NCT06091254',
-				trialCardPdf: 'OLYMPIA-R15_NOT_FINALIZED',
+				trialCardPdf: 'OLYMPIA-1',
 			},
 			{
 				id: 'olympia-3',
@@ -30,7 +30,7 @@ const datum: ITrialsRecords[] = [
 				type: 'card',
 				phase: 3,
 				nct: 'NCT06091865',
-				trialCardPdf: 'OLYMPIA-3_R13_NOT_FINALIZED',
+				trialCardPdf: 'OLYMPIA-3',
 			},
 			{
 				id: 'olympia-4',

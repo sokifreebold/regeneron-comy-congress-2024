@@ -1,8 +1,8 @@
 import type { ICategories } from '@/@types/data';
-import lymphomaTrials from './lymphomaTrials';
-import myelomaTrials from './myelomaTrials';
-import classicalHematologyTrials from './classicalHematologyTrials';
-import solidTumorTrials from './solidTumorTrials';
+import lymphomaTrials from './trials/lymphoma';
+import myelomaTrials from './trials/myeloma';
+import classicalHematologyTrials from './trials/classicalHematology';
+import solidTumorTrials from './trials/solidTumor';
 
 export const categories: ICategories[] = [
 	{ id: 'lymphoma', trials: 9 },
