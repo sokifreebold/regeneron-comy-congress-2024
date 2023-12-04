@@ -11,12 +11,12 @@
 				</div>
 			</div>
 
-			<div v-if="pdfLink" class="trials__pdf">
+			<div v-if="pdfData && pdfData.trialCardPdf" class="trials__pdf">
 				<iframe
 					title="PDF"
 					width="100%"
 					height="100%"
-					:src="`./pdfjs-4.0.269-dist/web/viewer.html?file=../../pdfs/${pdfLink}.pdf`"
+					:src="`./pdfjs-4.0.269-dist/web/viewer.html?file=../../pdfs/${pdfData.trialCardPdf}.pdf`"
 				></iframe>
 			</div>
 			<div v-else class="trials__no-pdf">
@@ -32,7 +32,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import pdfData from '@/content/pdfs';
+import { trialsData } from '@/content/data';
+
+import type { ITrialsRecords, ITrials } from '@/@types/data';
 
 import UtilsMolecule from '@/components/UtilsMolecule.vue';
 import FooterHome from '@/components/FooterHome.vue';
@@ -43,7 +45,19 @@ const router = useRouter();
 const trialId = computed(() => route.params.trialId);
 const id = computed(() => route.params.id);
 
-const pdfLink = computed(() => (pdfData as any)[id.value as string] || pdfData.default);
+const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
+const pdfData = computed<ITrials>(() => {
+	let obj: any = {};
+
+	datum.value.forEach((record: ITrialsRecords) => {
+		const existingRecord = record.trials.find((_: ITrials) => _.id === id.value);
+		if (existingRecord) {
+			obj = existingRecord;
+		}
+	});
+
+	return obj;
+});
 
 function navigateBack() {
 	router.push(`/trials/${trialId.value}`);
