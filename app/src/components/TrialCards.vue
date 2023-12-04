@@ -105,14 +105,13 @@
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
 import { trialsData } from '@/content/data';
-import { useGtag } from 'vue-gtag-next';
+import { event } from 'vue-gtag';
 import { useAppStore } from '@/stores/app';
 
 import type { ITrialsRecords, ITrials } from '@/@types/data';
 
 const route = useRoute();
 const store = useAppStore();
-const { event } = useGtag();
 
 const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
 

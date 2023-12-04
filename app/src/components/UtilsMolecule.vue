@@ -11,5 +11,6 @@
 	@include bg-contain();
 	z-index: 0;
 	pointer-events: none;
+	opacity: 0.7;
 }
 </style>

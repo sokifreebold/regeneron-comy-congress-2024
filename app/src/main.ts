@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-import VueGtag from 'vue-gtag-next';
+import VueGtag from 'vue-gtag';
 
 import App from './App.vue';
 import router from './router';
@@ -14,11 +14,23 @@ app.use(createPinia());
 app.use(router);
 app.use(i18n);
 
-app.use(VueGtag, {
-	property: { id: 'G-DB0JMEGR0Q' },
-});
+// app.use(
+// 	VueGtag,
+// 	{
+// 		config: { id: 'G-DB0JMEGR0Q' },
+// 	},
+// 	router,
+// );
 
-// Components
+app.use(
+	VueGtag,
+	{
+		config: { id: 'G-DB0JMEGR0Q' },
+	},
+	router,
+);
+
+// Components G-EGZS0XZTS2
 app.mount('#app');
 // import components from './components';
 // components(app).then(() => {

@@ -21,7 +21,7 @@
 
 			<!-- Overlay -->
 			<div v-if="['lymphoma', 'myeloma'].includes(trialId)" class="trials__overlay">
-				<button class="btn-overlay" @click="openTrialOverlay">
+				<button class="btn-overlay" @click="() => openTrialOverlay()">
 					{{ $t(`trials.overlay.${trialId}`) }}
 				</button>
 			</div>
@@ -35,8 +35,8 @@
 	<footer-home />
 </template>
 
-<script setup lang="ts">
-import { computed } from 'vue';
+<script lang="ts">
+import { computed, defineComponent } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useAppStore } from '@/stores/app';
 
@@ -44,29 +44,39 @@ import UtilsMolecule from '@/components/UtilsMolecule.vue';
 import FooterHome from '@/components/FooterHome.vue';
 import TrialCards from '@/components/TrialCards.vue';
 
-import { useGtag } from 'vue-gtag-next';
+import { event, pageview } from 'vue-gtag';
 
-const route = useRoute();
-const router = useRouter();
-const store = useAppStore();
-const { event, pageview } = useGtag();
+export default defineComponent({
+	components: {
+		UtilsMolecule,
+		FooterHome,
+		TrialCards,
+	},
+	setup() {
+		const route = useRoute();
+		const router = useRouter();
+		const store = useAppStore();
 
-const trialId = computed(() => route.params.trialId as string);
+		const trialId = computed(() => route.params.trialId as string);
 
-function navigateHome() {
-	router.push('/');
-}
+		function navigateHome() {
+			router.push('/');
+		}
 
-function openTrialOverlay() {
-	event('trial_overlay', {
-		event_category: 'trial_overlay',
-		event_label: trialId.value,
-		value: trialId.value,
-	});
+		function openTrialOverlay() {
+			event('trial_overlay', {
+				event_category: 'trial_overlay',
+				event_label: trialId.value,
+				value: trialId.value,
+			});
 
-	pageview({ page_path: `/trials/${trialId.value}/?overlay` });
-	store.axn_updatePopup(trialId.value as string);
-}
+			pageview({ page_path: `/trials/${trialId.value}/?overlay` });
+			store.axn_updatePopup(trialId.value as string);
+		}
+
+		return { trialId, navigateHome, openTrialOverlay };
+	},
+});
 </script>
 
 <style lang="scss" scoped>

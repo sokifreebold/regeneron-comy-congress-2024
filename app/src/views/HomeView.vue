@@ -84,6 +84,8 @@ function navigateToTrial(trial: ICategories) {
 
 	&__title {
 		margin-top: $unit * 3;
+		@include px-to-em(60px);
+		line-height: 64px;
 	}
 
 	// Links

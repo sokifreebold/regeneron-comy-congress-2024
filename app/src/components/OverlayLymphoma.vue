@@ -27,8 +27,8 @@
 						lymphocytic leukemia and lymphomas.
 					</p>
 					<p>
-						Odronextamab is designed to bridge CD20 on cancer cells with CD3 on T cells
-						to facilitate local T-cell activation and cytotoxicity.
+						Odronextamab is designed to simultaneously engage CD20 on cancer cells and
+						CD3 on T cells to facilitate local T-cell activation and cytotoxicity.
 					</p>
 					<small>Note: Healthy cells may be targeted</small>
 				</div>
@@ -57,8 +57,8 @@
 						compared with normal plasma cells.
 					</p>
 					<p>
-						Linvoseltamab is designed to bridge BCMA on cancer cells with CD3 on T cells
-						to facilitate local T-cell activation and cytotoxicity.
+						Linvoseltamab is designed to simultaneously engage BCMA on cancer cells and
+						CD3 on T cells to facilitate local T-cell activation and cytotoxicity.
 					</p>
 					<small>Note: Healthy cells may be targeted</small>
 				</div>
@@ -83,7 +83,7 @@ function closeOverlay() {
 .overlay {
 	position: fixed;
 	inset: 0;
-	background: rgba($black, 1);
+	background: rgba($black, 0.93);
 	width: 100%;
 	height: 100%;
 	z-index: 9;
