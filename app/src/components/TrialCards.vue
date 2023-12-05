@@ -42,6 +42,13 @@
 						v-if="item.phase"
 						:class="['trial-col trial-col--data', `phase-${item.phase}`]"
 					>
+						<div v-if="item.phase" class="trial-cards__trial-phase">
+							{{ $t('misc.phase') }} {{ item.phase }}
+						</div>
+						<div v-else-if="item.nonInterventional" class="trial-cards__trial-phase">
+							{{ $t('misc.nonInterventional') }}
+						</div>
+
 						<div
 							class="trial-cards__trial-title"
 							v-html="$t(`titles.cards.${item.id}`)"
@@ -67,6 +74,12 @@
 						</div>
 					</div>
 					<div class="trial-col trial-col--blank">
+						<div v-if="item.phase" class="trial-cards__trial-phase">
+							{{ $t('misc.phase') }} {{ item.phase }}
+						</div>
+						<div v-else-if="item.nonInterventional" class="trial-cards__trial-phase">
+							{{ $t('misc.nonInterventional') }}
+						</div>
 						<div
 							v-if="item.nonInterventional || item.phase === 0"
 							class="trial-cards__trial-title"
@@ -109,8 +122,6 @@ import { event, pageview } from 'vue-gtag';
 import { useAppStore } from '@/stores/app';
 
 import type { ITrialsRecords, ITrials } from '@/@types/data';
-
-import { changeToSentenceCase } from '@/utils';
 
 export default defineComponent({
 	setup() {
@@ -295,6 +306,17 @@ export default defineComponent({
 	}
 
 	&__trial {
+		&-phase {
+			opacity: 0.6;
+			font-size: 1.3em;
+			font-weight: 800;
+			text-transform: uppercase;
+			margin-bottom: $unit;
+
+			@include large-desktop {
+				display: none;
+			}
+		}
 		&-title {
 			max-width: 250px;
 			font-size: 1.3em;
