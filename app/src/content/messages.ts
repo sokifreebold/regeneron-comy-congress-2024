@@ -121,8 +121,8 @@ export default {
 				'skin-cancer': 'non-melanoma skin cancer',
 				'lung-cancer': 'Non-Small Cell Lung Cancer ',
 				melanoma: 'Melanoma',
-				prostate: 'Prostate',
-				ovarian: 'Ovarian',
+				prostate: 'Prostate Cancer',
+				ovarian: 'Ovarian Cancer',
 				'multiple-tumors': 'multiple tumors',
 			},
 			tags: {
