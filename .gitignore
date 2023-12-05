@@ -145,5 +145,7 @@ dist
 # Custom
 www/app
 www/package
+www_bc/app
+www_bc/package
 
 # End of https://www.toptal.com/developers/gitignore/api/node
