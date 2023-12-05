@@ -141,21 +141,15 @@ function navigateToExternalLink(item: ITrials) {
 		store.axn_updateExternalLink(item.externalLink);
 	}
 }
-
-function getPdfLink(item: ITrials) {
-	const pdfLink = item.trialCardPdf;
-	return `./pdfs/${pdfLink}.pdf`;
-}
 </script>
 
 <style lang="scss" scoped>
 .trial-cards {
 	display: flex;
 	flex-direction: column;
-	margin: $unit * 3 0;
+	margin: $unit * 3 0 0 0;
 
 	&__section {
-		margin-bottom: $unit * 3;
 		&-title {
 			font-size: 1.5em;
 			font-family: 'RobotoCondensed-Bold';

@@ -16,7 +16,10 @@
 			</div>
 		</div>
 		<div v-else class="container">
-			<div v-if="$te(`trials.footer.${trialId}`)" class="footer__copy">
+			<div
+				v-if="$te(`trials.footer.${trialId}`) && route.name === 'trials'"
+				class="footer__copy"
+			>
 				<p v-html="$t(`trials.footer.${trialId}`)" />
 			</div>
 
