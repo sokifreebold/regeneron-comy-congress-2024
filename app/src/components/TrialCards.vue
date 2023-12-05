@@ -50,6 +50,7 @@
 						<div v-if="item.type" class="trial-cards__trial-control">
 							<button
 								v-if="item.type === 'card'"
+								:id="item.nct || item.id"
 								class="btn simple-white mobile-only"
 								@click="navigateToTrialCard(item)"
 							>
@@ -57,6 +58,7 @@
 							</button>
 							<button
 								v-if="item.type === 'external'"
+								:id="item.nct || item.id"
 								:class="['simple-white', item.type]"
 								@click="navigateToExternalLink(item)"
 							>
@@ -77,6 +79,7 @@
 						>
 							<button
 								v-if="item.type === 'card'"
+								:id="item.nct || item.id"
 								class="btn simple-white mobile-only"
 								@click="navigateToTrialCard(item)"
 							>
@@ -84,6 +87,7 @@
 							</button>
 							<button
 								v-if="item.type === 'external'"
+								:id="item.nct || item.id"
 								:class="['simple-white', item.type]"
 								@click="navigateToExternalLink(item)"
 							>
@@ -126,12 +130,6 @@ function navigateToTrialCard(item: ITrials) {
 
 function navigateToExternalLink(item: ITrials) {
 	if (item.externalLink) {
-		event('trial_card_visited', {
-			event_category: 'clinicaltrials.gov',
-			event_label: item.categoryId,
-			value: item.externalLink,
-		});
-
 		event('link', {
 			event_category: 'clinicaltrials.gov',
 			event_label: item.categoryId,
@@ -139,6 +137,7 @@ function navigateToExternalLink(item: ITrials) {
 		});
 
 		store.axn_updateExternalLink(item.externalLink);
+		store.axn_updateExternalLinkId(item.nct || item.id);
 	}
 }
 </script>

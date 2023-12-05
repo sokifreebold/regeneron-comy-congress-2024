@@ -18,7 +18,9 @@
 			</div>
 
 			<div class="overlay__controls">
-				<button class="primary" @click="submitRequest">Continue</button>
+				<a :id="externalLinkId" :href="externalLink" target="_blank" class="btn primary"
+					>Continue</a
+				>
 				<button class="secondary" @click="closeOverlay">Cancel</button>
 			</div>
 		</div>
@@ -32,14 +34,11 @@ const store = useAppStore();
 
 const host = shallowRef<string>(location.host);
 const externalLink = computed(() => store.get_externalLink);
+const externalLinkId = computed(() => store.get_externalLinkId);
 
 function closeOverlay() {
 	store.axn_updateExternalLink('');
-}
-
-function submitRequest() {
-	window.open(externalLink.value, '_blank');
-	closeOverlay();
+	store.axn_updateExternalLinkId('');
 }
 </script>
 
@@ -58,7 +57,7 @@ function submitRequest() {
 	&__content {
 		position: relative;
 		background: $white;
-		padding: $unit * 6;
+		padding: $unit * 6 $unit * 3;
 		border-radius: 0px $radius;
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		max-width: 500px;
@@ -73,6 +72,10 @@ function submitRequest() {
 		);
 
 		box-shadow: 0px 55px 116px 0px #0c2561;
+
+		@include tablet {
+			padding: $unit * 6;
+		}
 	}
 
 	&__copy {
@@ -88,7 +91,7 @@ function submitRequest() {
 	&__controls {
 		margin-top: $unit * 5;
 
-		button {
+		a {
 			margin-bottom: $unit;
 		}
 	}

@@ -14,12 +14,12 @@ app.use(createPinia());
 app.use(router);
 app.use(i18n);
 
-// app.use(
-// 	VueGtag,
-// 	{
-// 		config: { id: 'G-DB0JMEGR0Q' },
-// 	},
-// 	router,
-// );
+app.use(
+	VueGtag,
+	{
+		config: { id: 'G-DB0JMEGR0Q' },
+	},
+	router,
+);
 
 app.mount('#app');
