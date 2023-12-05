@@ -101,45 +101,59 @@
 	</div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
+import { computed, defineComponent } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { computed } from 'vue';
 import { trialsData } from '@/content/data';
-import { event } from 'vue-gtag';
+import { event, pageview } from 'vue-gtag';
 import { useAppStore } from '@/stores/app';
 
 import type { ITrialsRecords, ITrials } from '@/@types/data';
 
-const route = useRoute();
-const router = useRouter();
-const store = useAppStore();
+import { changeToSentenceCase } from '@/utils';
 
-const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
+export default defineComponent({
+	setup() {
+		const route = useRoute();
+		const router = useRouter();
+		const store = useAppStore();
 
-function navigateToTrialCard(item: ITrials) {
-	if (item.trialCardPdf) {
-		event('link', {
-			event_category: 'trial-pdf',
-			event_label: item.categoryId,
-			value: item.trialCardPdf,
-		});
+		const datum = computed<ITrialsRecords[]>(
+			() => (trialsData as any)[route.params.trialId as string],
+		);
 
-		router.push(`/trials/${item.categoryId}/${item.id}`);
-	}
-}
+		function navigateToTrialCard(item: ITrials) {
+			if (item.trialCardPdf) {
+				event('link', {
+					event_category: 'trial-pdf',
+					event_label: item.categoryId,
+					value: item.trialCardPdf,
+				});
 
-function navigateToExternalLink(item: ITrials) {
-	if (item.externalLink) {
-		event('link', {
-			event_category: 'clinicaltrials.gov',
-			event_label: item.categoryId,
-			value: item.externalLink,
-		});
+				router.push(`/trials/${item.categoryId}/${item.nct}`);
+			}
+		}
 
-		store.axn_updateExternalLink(item.externalLink);
-		store.axn_updateExternalLinkId(item.nct || item.id);
-	}
-}
+		function navigateToExternalLink(item: ITrials) {
+			if (item.externalLink) {
+				event('link', {
+					event_category: 'clinicaltrials.gov',
+					event_label: item.categoryId,
+					value: item.externalLink,
+				});
+
+				pageview({
+					page_path: `/trials/${item.categoryId}/${item.nct}/external`,
+					page_title: 'trial-card-external',
+				});
+				store.axn_updateExternalLink(item.externalLink);
+				store.axn_updateExternalLinkId(item.nct || item.id);
+			}
+		}
+
+		return { datum, navigateToTrialCard, navigateToExternalLink };
+	},
+});
 </script>
 
 <style lang="scss" scoped>

@@ -17,9 +17,13 @@ import GlobalOverlay from './components/GlobalOverlay.vue';
 
 const route = useRoute();
 
-watch(route, () => {
-	window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+watch(
+	route,
+	() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	},
+	{ deep: true },
+);
 </script>
 
 <style lang="scss" scoped>

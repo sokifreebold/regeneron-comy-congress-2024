@@ -57,7 +57,7 @@ export default defineComponent({
 		const router = useRouter();
 		const store = useAppStore();
 
-		const trialId = computed(() => route.params.trialId as string);
+		const trialId = computed<string>(() => route.params.trialId as string);
 
 		function navigateHome() {
 			router.push('/');
@@ -70,7 +70,10 @@ export default defineComponent({
 				value: trialId.value,
 			});
 
-			pageview({ page_path: `/trials/${trialId.value}/overlay` });
+			pageview({
+				page_path: `/trials/${trialId.value}/overlay`,
+				page_title: `trial-overlay-${trialId.value}`,
+			});
 			store.axn_updatePopup(trialId.value as string);
 		}
 

@@ -50,7 +50,7 @@ const pdfData = computed<ITrials>(() => {
 	let obj: any = {};
 
 	datum.value.forEach((record: ITrialsRecords) => {
-		const existingRecord = record.trials.find((_: ITrials) => _.id === id.value);
+		const existingRecord = record.trials.find((_: ITrials) => _.nct === id.value);
 		if (existingRecord) {
 			obj = existingRecord;
 		}

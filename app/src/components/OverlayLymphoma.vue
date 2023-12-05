@@ -128,7 +128,7 @@ function closeOverlay() {
 		margin-top: $unit * 10;
 
 		@include desktop {
-			margin-top: $unit * 15;
+			margin-top: $unit * 5;
 		}
 	}
 
