@@ -224,6 +224,11 @@ export default {
 				copy: 'The uses of all agents described herein are investigational and have not been evaluated by any regulatory authority. This information is intended for investigators interested in active clinical trials.',
 				'classical-hematology':
 					'<sup>†</sup> In collaboration with Alnylam Pharmaceuticals.<br><sup>††</sup> In collaboration with Intellia.',
+				copy2: 'This information is intended for investigators interested in active clinical trials.',
+				lymphoma:
+					'Odronextamab is an investigational agent and has not been fully evaluated by any regulatory authority.',
+				myeloma:
+					'Linvoseltamab is an investigational agent and has not been fully evaluated by any regulatory authority.',
 			},
 		},
 	},

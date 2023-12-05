@@ -24,7 +24,14 @@
 			</div>
 
 			<div class="footer__copy">
-				<p v-html="$t('trials.footer.copy')" />
+				<p
+					v-if="['lymphoma', 'myeloma'].includes(trialId)"
+					v-html="$t('trials.footer.copy2')"
+				/>
+				<p
+					v-if="['classical-hematology', 'solid-tumor'].includes(trialId)"
+					v-html="$t('trials.footer.copy')"
+				/>
 				<p v-html="$t('trials.footer.jobCode')" />
 			</div>
 
