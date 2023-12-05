@@ -2,17 +2,19 @@
 	<div class="trial-cards">
 		<!-- base -->
 		<div class="trial-cards__base trial-cards__base--header trial-cols">
-			<div class="trial-cards__base-col-1 trial-col trial-col--base"></div>
-			<div class="trial-cards__base-col-2 trial-col trial-col--mute">
+			<div class="trial-cards__base-col-1 trial-col trial-col--header trial-col--base"></div>
+			<div class="trial-cards__base-col-2 trial-col trial-col--header trial-col--mute">
 				<label>Phase</label><strong>1</strong>
 			</div>
-			<div class="trial-cards__base-col-3 trial-col trial-col--mute">
+			<div class="trial-cards__base-col-3 trial-col trial-col--header trial-col--mute">
 				<label>Phase</label><strong>2</strong>
 			</div>
-			<div class="trial-cards__base-col-4 trial-col trial-col--mute">
+			<div class="trial-cards__base-col-4 trial-col trial-col--header trial-col--mute">
 				<label>Phase</label><strong>3</strong>
 			</div>
-			<div class="trial-cards__base-col-5 trial-col trial-col--mute">NON-INTERVENTIONAL</div>
+			<div class="trial-cards__base-col-5 trial-col trial-col--header trial-col--mute">
+				NON-INTERVENTIONAL
+			</div>
 		</div>
 
 		<div
@@ -194,6 +196,11 @@ export default defineComponent({
 
 			@include large-desktop {
 				display: flex;
+				align-items: flex-end;
+			}
+
+			& > div {
+				margin: 0 $unit 0 0;
 			}
 		}
 
@@ -206,6 +213,10 @@ export default defineComponent({
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+
+			&.trial-cards__base-col-5 {
+				line-height: 40px;
+			}
 		}
 
 		label {
@@ -223,6 +234,11 @@ export default defineComponent({
 		margin: 0 $unit $unit 0;
 		border-radius: $radius * 0.5;
 		min-height: 220px;
+
+		&--header {
+			margin-bottom: 0;
+			padding-bottom: $unit * 2.5;
+		}
 
 		&--base {
 			width: 200px;
@@ -247,6 +263,7 @@ export default defineComponent({
 			justify-content: space-between;
 
 			&-icon {
+				flex: 1;
 				width: 70%;
 				aspect-ratio: 1;
 				margin-bottom: $unit * 3;

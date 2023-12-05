@@ -170,7 +170,7 @@ export default defineComponent({
 	}
 
 	&__overlay {
-		margin-bottom: $unit * 5;
+		margin-bottom: $unit * 7;
 	}
 }
 </style>

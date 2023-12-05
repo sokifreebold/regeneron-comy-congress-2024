@@ -207,7 +207,7 @@ export default {
 			nonInterventional: 'Non-Interventional',
 			seeTrialInfo: 'See Trial Info',
 			seeClincialGov: 'Visit ClinicalTrials.gov',
-			noPdf: 'No Trial card PDF found. Please try again later.',
+			noPdf: 'No trial card PDF found. Please try again later.',
 			close: 'Close',
 		},
 		trials: {
