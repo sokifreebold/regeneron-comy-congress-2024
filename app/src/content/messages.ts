@@ -231,5 +231,10 @@ export default {
 					'Linvoseltamab is an investigational agent and has not been fully evaluated by any regulatory authority.',
 			},
 		},
+		notFound: {
+			title: '404',
+			copy: "The page you're looking for doesn't exist.",
+			home: 'Goto Home',
+		},
 	},
 };

@@ -45,7 +45,7 @@
 						:class="['trial-col trial-col--data', `phase-${item.phase}`]"
 					>
 						<div v-if="item.phase" class="trial-cards__trial-phase">
-							{{ $t('misc.phase') }} {{ item.phase }}
+							{{ $t('misc.phase') }} {{ item.phaseMobile || item.phase }}
 						</div>
 						<div v-else-if="item.nonInterventional" class="trial-cards__trial-phase">
 							{{ $t('misc.nonInterventional') }}
@@ -77,7 +77,7 @@
 					</div>
 					<div class="trial-col trial-col--blank">
 						<div v-if="item.phase" class="trial-cards__trial-phase">
-							{{ $t('misc.phase') }} {{ item.phase }}
+							{{ $t('misc.phase') }} {{ item.phaseMobile || item.phase }}
 						</div>
 						<div v-else-if="item.nonInterventional" class="trial-cards__trial-phase">
 							{{ $t('misc.nonInterventional') }}

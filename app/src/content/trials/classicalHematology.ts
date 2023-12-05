@@ -15,6 +15,7 @@ const datum: ITrialsRecords[] = [
 				categoryId: 'classical-hematology',
 				type: 'card',
 				phase: 2,
+				phaseMobile: '1/2',
 				nct: 'NCT04409080',
 				trialCardPdf: 'NCT04409080_R13_REGN7257-EM-0004_844REGN-MID',
 			},

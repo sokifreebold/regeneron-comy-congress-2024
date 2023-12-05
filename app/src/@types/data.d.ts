@@ -10,6 +10,7 @@ export interface ITrials {
 	categoryId: string;
 	type?: trialLink;
 	phase?: number;
+	phaseMobile?: string;
 	nonInterventional?: boolean;
 	externalLink?: string;
 	nct?: string;

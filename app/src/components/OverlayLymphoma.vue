@@ -14,7 +14,7 @@
 							evaluated by any regulatory authority.
 						</p>
 
-						<p class="overlay__meta-plus">Plus sign denotes activation.</p>
+						<p class="overlay__meta-plus">Denotes activation.</p>
 					</div>
 					<div class="overlay__meta-bottom">
 						<small>A CD20xCD3 BISPECIFIC ANTIBODY</small>
@@ -44,7 +44,7 @@
 							evaluated by any regulatory authority.
 						</p>
 
-						<p class="overlay__meta-plus">Plus sign denotes activation.</p>
+						<p class="overlay__meta-plus">Denotes activation.</p>
 					</div>
 					<div class="overlay__meta-bottom">
 						<small>A BCMAxCD3 BISPECIFIC ANTIBODY</small>

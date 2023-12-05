@@ -30,7 +30,8 @@ watch(
 .app {
 	&.trials,
 	&.pdf,
-	&.trial-card {
+	&.trial-card,
+	&.not-found {
 		color: $white;
 		background: url('@/assets/backgrounds/trials.png');
 		@include bg-cover();
