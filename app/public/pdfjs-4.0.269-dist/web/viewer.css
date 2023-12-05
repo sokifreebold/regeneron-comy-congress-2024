@@ -3940,3 +3940,6 @@ dialog :link {
 #secondaryToolbarToggle {
 	display: none;
 }
+a {
+	pointer-events: none;
+}
