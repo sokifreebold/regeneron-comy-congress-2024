@@ -111,17 +111,29 @@ function navigateBack() {
 		align-items: center;
 		margin-bottom: $unit * 6;
 		color: $white;
-		font-family: 'RobotoCondensed-Regular';
-		cursor: pointer;
+		font-family: 'RobotoCondensed-Bold';
+		font-size: 16px;
 
-		&:before {
-			content: '';
+		@include desktop {
+			margin-bottom: $unit * 4;
+		}
+
+		&-button {
+			cursor: pointer;
 			display: flex;
-			width: $unit * 2.5;
-			aspect-ratio: 1;
-			background: url('@/assets/icons/back-arrow.svg');
-			@include bg-contain();
-			margin-right: $unit * 1.5;
+			align-items: center;
+			padding: $unit $unit $unit 0;
+			background: transparent;
+
+			&:before {
+				content: '';
+				display: flex;
+				width: $unit * 3;
+				aspect-ratio: 1;
+				background: url('@/assets/icons/back-arrow.svg');
+				@include bg-contain();
+				margin-right: $unit * 1.5;
+			}
 		}
 	}
 

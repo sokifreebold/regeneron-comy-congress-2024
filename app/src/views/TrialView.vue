@@ -70,7 +70,7 @@ export default defineComponent({
 				value: trialId.value,
 			});
 
-			pageview({ page_path: `/trials/${trialId.value}/?overlay` });
+			pageview({ page_path: `/trials/${trialId.value}/overlay` });
 			store.axn_updatePopup(trialId.value as string);
 		}
 

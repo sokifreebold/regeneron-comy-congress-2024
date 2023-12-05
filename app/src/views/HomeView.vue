@@ -3,7 +3,7 @@
 	<!-- <utils-molecule class="home__molecule home__molecule--secondary" />
 	<utils-molecule class="home__molecule home__molecule--tertiary" /> -->
 	<main>
-		<div class="container">
+		<div class="container container--home">
 			<!-- Page Title -->
 			<h1 class="type-heading-h1 home__title" v-html="$t('home.title')" />
 
@@ -92,7 +92,7 @@ function navigateToTrial(trial: ICategories) {
 	&-links {
 		&__item {
 			display: flex;
-			padding: $unit * 3;
+			padding: $unit * 4 $unit * 3;
 			margin-bottom: $unit * 3;
 			background: rgba($white, 0.8);
 			border-radius: 0px $radius;
@@ -100,7 +100,8 @@ function navigateToTrial(trial: ICategories) {
 			box-shadow: $box-shadow-01;
 
 			&-title {
-				font-size: 1.25em;
+				@include px-to-em(24px);
+				line-height: 28px;
 				font-weight: 700;
 				color: $primary;
 				text-transform: uppercase;
@@ -137,6 +138,17 @@ function navigateToTrial(trial: ICategories) {
 				flex-basis: 48%;
 				margin-right: $unit * 3;
 			}
+		}
+	}
+}
+
+@include large-desktop {
+	.container--home {
+		margin-top: $unit * 5;
+		max-width: 1086px;
+
+		.home-links__item {
+			flex-basis: 47%;
 		}
 	}
 }

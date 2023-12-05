@@ -186,18 +186,19 @@ function navigateToExternalLink(item: ITrials) {
 
 		label {
 			font-size: 1em;
+			@include px-to-em(18px);
 			text-transform: uppercase;
 		}
 
 		strong {
-			font-size: 3em;
+			@include px-to-em(52px);
 		}
 	}
 
 	.trial-col {
 		margin: 0 $unit $unit 0;
 		border-radius: $radius * 0.5;
-		min-height: 200px;
+		min-height: 220px;
 
 		&--base {
 			width: 200px;

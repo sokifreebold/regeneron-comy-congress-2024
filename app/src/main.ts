@@ -22,17 +22,4 @@ app.use(i18n);
 // 	router,
 // );
 
-app.use(
-	VueGtag,
-	{
-		config: { id: 'G-DB0JMEGR0Q' },
-	},
-	router,
-);
-
-// Components G-EGZS0XZTS2
 app.mount('#app');
-// import components from './components';
-// components(app).then(() => {
-// 	app.mount('#app');
-// });

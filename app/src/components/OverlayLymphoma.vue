@@ -168,6 +168,10 @@ function closeOverlay() {
 			strong {
 				font-size: 1.75em;
 				text-transform: uppercase;
+
+				@include large-desktop {
+					@include px-to-em(60);
+				}
 			}
 		}
 
