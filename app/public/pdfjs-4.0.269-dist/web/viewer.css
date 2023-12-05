@@ -3907,7 +3907,7 @@ dialog :link {
 		--editor-toolbar-base-offset: 40px;
 	}
 	#outerContainer .hiddenMediumView {
-		display: none;
+		/* display: none; */
 	}
 	#outerContainer .visibleMediumView {
 		display: inherit;
