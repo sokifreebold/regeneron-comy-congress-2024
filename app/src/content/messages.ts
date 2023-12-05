@@ -234,7 +234,7 @@ export default {
 		notFound: {
 			title: '404',
 			copy: "The page you're looking for doesn't exist.",
-			home: 'Goto Home',
+			home: 'Go to Home',
 		},
 	},
 };
