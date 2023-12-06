@@ -221,10 +221,9 @@ export default {
 				enclosed:
 					'The enclosed materials are being provided in response to your unsolicited request and are for your information only. The product discussed herein is an investigational agent and has not been fully evaluated or approved by the US Food and Drug Administration or any other regulatory agency worldwide. Reactive Use Only.',
 				copyright: '&copy; 2023 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
-				copy: 'The uses of all agents described herein are investigational and have not been evaluated by any regulatory authority. This information is intended for investigators interested in active clinical trials.',
+				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein are investigational and have not been evaluated by any regulatory authority.',
 				'classical-hematology':
 					'<sup>†</sup> In collaboration with Alnylam Pharmaceuticals.<br><sup>††</sup> In collaboration with Intellia.',
-				copy2: 'This information is intended for investigators interested in active clinical trials.',
 				lymphoma:
 					'Odronextamab is an investigational agent and has not been fully evaluated by any regulatory authority.',
 				myeloma:

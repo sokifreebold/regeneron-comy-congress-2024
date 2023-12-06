@@ -30,7 +30,11 @@
 			<div
 				v-for="(item, index) in section.trials"
 				:key="index"
-				:class="['trial-cards__trial', { 'is-non-interventional': item.nonInterventional }]"
+				:class="[
+					'trial-cards__trial',
+					{ 'is-non-interventional': item.nonInterventional },
+					{ 'is-phase-0': item.phase === 0 },
+				]"
 			>
 				<div class="trial-cards__base trial-cols">
 					<div class="trial-col trial-col--category">

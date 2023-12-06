@@ -49,6 +49,7 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 0,
 				nct: 'NCT05568459',
+				nonInterventional: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT05568459',
 			},
 		],
