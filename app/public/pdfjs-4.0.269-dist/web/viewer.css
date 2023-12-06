@@ -3236,7 +3236,7 @@ body {
 	height: 16px;
 
 	content: '';
-	background-color: var(--toolbar-icon-bg-color);
+	background-color: rgb(255 255 255);
 	-webkit-mask-size: cover;
 	mask-size: cover;
 }
