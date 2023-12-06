@@ -94,6 +94,21 @@ function closeOverlay() {
 		a {
 			margin-bottom: $unit;
 		}
+
+		a,
+		button,
+		.btn {
+			&:before {
+				display: none;
+			}
+		}
+
+		.btn.primary {
+			&:hover {
+				background: $accent-1;
+				border: 2px solid $accent-1;
+			}
+		}
 	}
 
 	&__close {
