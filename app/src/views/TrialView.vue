@@ -1,7 +1,11 @@
 <template>
+	<!-- Floating Molecules -->
+	<!-- TODO: Create a common component -->
 	<utils-molecule class="trials__molecule" />
 	<utils-molecule class="trials__molecule trials__molecule--secondary" />
 	<utils-molecule class="trials__molecule trials__molecule--tertiary" />
+
+	<!-- Main Trial View -->
 	<main>
 		<div class="container">
 			<!-- Back Icon -->
@@ -26,12 +30,12 @@
 				</button>
 			</div>
 
-			<!-- Content -->
+			<!-- Main Trial Cards Content -->
 			<trial-cards />
 		</div>
 	</main>
 
-	<!-- Home Footer -->
+	<!-- Footer -->
 	<footer-home />
 </template>
 
@@ -57,12 +61,14 @@ export default defineComponent({
 		const router = useRouter();
 		const store = useAppStore();
 
+		// trial id from URL
 		const trialId = computed<string>(() => route.params.trialId as string);
 
 		function navigateHome() {
 			router.push('/');
 		}
 
+		// Function to open overlay for the trials page
 		function openTrialOverlay() {
 			event('trial_overlay', {
 				event_category: 'trial_overlay',

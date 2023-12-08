@@ -1,3 +1,4 @@
+// Main data file for trial cards
 import type { ICategories } from '@/@types/data';
 import lymphomaTrials from './trials/lymphoma';
 import myelomaTrials from './trials/myeloma';

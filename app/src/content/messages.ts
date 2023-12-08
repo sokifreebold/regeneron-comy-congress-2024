@@ -1,3 +1,4 @@
+// Website Copy
 export default {
 	en: {
 		app: {

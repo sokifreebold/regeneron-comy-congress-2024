@@ -1,7 +1,8 @@
 <template>
+	<!-- Floating Molecules -->
 	<utils-molecule class="home__molecule" />
-	<!-- <utils-molecule class="home__molecule home__molecule--secondary" />
-	<utils-molecule class="home__molecule home__molecule--tertiary" /> -->
+
+	<!-- Home View -->
 	<main>
 		<div class="container container--home">
 			<!-- Page Title -->
@@ -38,6 +39,8 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
+
+// Data to draw categories on home page
 import { categories } from '@/content/data';
 import type { ICategories } from '@/@types/data';
 
@@ -46,6 +49,7 @@ import FooterHome from '@/components/FooterHome.vue';
 
 const router = useRouter();
 
+// Function to navigate to the relevant section
 function navigateToTrial(trial: ICategories) {
 	router.push(`/trials/${trial.id}`);
 }
@@ -57,28 +61,8 @@ function navigateToTrial(trial: ICategories) {
 		right: -150px;
 		top: -5%;
 
-		&--secondary {
-			right: 0px;
-			top: auto;
-			bottom: 5%;
-			width: 600px;
-			display: none;
-		}
-
-		&--tertiary {
-			right: auto;
-			left: 10%;
-			top: 30%;
-			width: 250px;
-			filter: blur(3px);
-		}
-
 		@include desktop {
 			right: 0;
-
-			&--secondary {
-				display: flex;
-			}
 		}
 	}
 

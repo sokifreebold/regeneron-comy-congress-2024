@@ -33,6 +33,7 @@ const router = createRouter({
 	],
 });
 
+// Router guard to change the page tile dynamically
 router.beforeEach((to: any, from, next) => {
 	let title = to.meta.title || 'Regeneron ASH 2023';
 

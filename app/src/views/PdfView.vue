@@ -1,7 +1,11 @@
 <template>
+	<!-- Floating Molecules -->
+	<!-- TODO: Create a common component -->
 	<utils-molecule class="trials__molecule" />
 	<utils-molecule class="trials__molecule trials__molecule--secondary" />
 	<utils-molecule class="trials__molecule trials__molecule--tertiary" />
+
+	<!-- Main PDF View -->
 	<main>
 		<div class="container">
 			<!-- Back Icon -->
@@ -12,6 +16,7 @@
 			</div>
 
 			<div v-if="pdfData && pdfData.trialCardPdf" class="trials__pdf">
+				<!-- Loading PDF from pdf.js viewer -->
 				<iframe
 					title="PDF"
 					width="100%"
@@ -32,8 +37,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { trialsData } from '@/content/data';
 
+// Trial data to load PDF
+import { trialsData } from '@/content/data';
 import type { ITrialsRecords, ITrials } from '@/@types/data';
 
 import UtilsMolecule from '@/components/UtilsMolecule.vue';
@@ -42,9 +48,11 @@ import FooterHome from '@/components/FooterHome.vue';
 const route = useRoute();
 const router = useRouter();
 
+// Values from router
 const trialId = computed(() => route.params.trialId);
 const id = computed(() => route.params.id);
 
+// Finding the data to load pdf based on nct from URL
 const datum = computed<ITrialsRecords[]>(() => (trialsData as any)[route.params.trialId as string]);
 const pdfData = computed<ITrials>(() => {
 	let obj: any = {};
@@ -59,6 +67,7 @@ const pdfData = computed<ITrials>(() => {
 	return obj;
 });
 
+// Function to navigate back to trial
 function navigateBack() {
 	router.push(`/trials/${trialId.value}`);
 }

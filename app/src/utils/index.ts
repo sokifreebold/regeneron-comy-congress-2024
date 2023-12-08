@@ -1,3 +1,4 @@
+// Function to change string to Sentence Case for Analytics purpose
 export function changeToSentenceCase(value: string) {
 	if (!value) {
 		return '';
