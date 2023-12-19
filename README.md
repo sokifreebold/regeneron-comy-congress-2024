@@ -94,4 +94,4 @@ npm run lint
 
 For more info or code walkthrough please contact sahil.david@boldsci.com
 
-END OF DOCUMENT
+END OF DOCUMENT.
