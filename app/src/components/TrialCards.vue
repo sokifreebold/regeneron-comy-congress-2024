@@ -139,6 +139,7 @@ export default defineComponent({
 			() => (trialsData as any)[route.params.trialId as string],
 		);
 
+		// ids
 		const nctId = computed(() => route.params.nct);
 		const viewId = computed(() => route.params.viewId);
 
