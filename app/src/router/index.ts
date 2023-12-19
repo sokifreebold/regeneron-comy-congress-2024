@@ -16,7 +16,7 @@ const router = createRouter({
 			meta: { title: 'Regeneron ASH 2023 - Our Pipeline' },
 		},
 		{
-			path: '/trials/:trialId',
+			path: '/trials/:trialId/:nct?/:viewId?',
 			name: 'trials',
 			component: TrialView,
 		},

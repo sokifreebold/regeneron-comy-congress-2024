@@ -121,7 +121,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { trialsData } from '@/content/data';
 import { event, pageview } from 'vue-gtag';
@@ -138,6 +138,31 @@ export default defineComponent({
 		const datum = computed<ITrialsRecords[]>(
 			() => (trialsData as any)[route.params.trialId as string],
 		);
+
+		const nctId = computed(() => route.params.nct);
+		const viewId = computed(() => route.params.viewId);
+
+		onMounted(() => {
+			if (!(nctId.value && viewId.value)) {
+				return;
+			}
+			if (viewId.value !== 'external') {
+				return;
+			}
+
+			let record: any;
+			datum.value.forEach((_: ITrialsRecords) => {
+				if (record) {
+					return;
+				}
+				const trials = _.trials || [];
+				record = trials.find((_: ITrials) => _.nct === nctId.value);
+			});
+
+			if (record) {
+				navigateToExternalLink(record);
+			}
+		});
 
 		function navigateToTrialCard(item: ITrials) {
 			if (item.trialCardPdf) {
@@ -159,8 +184,11 @@ export default defineComponent({
 					value: item.externalLink,
 				});
 
+				const externalLink = `/trials/${item.categoryId}/${item.nct}/external`;
+				console.log('External Link tracking: ', externalLink);
+
 				pageview({
-					page_path: `/trials/${item.categoryId}/${item.nct}/external`,
+					page_path: externalLink,
 					page_title: 'trial-card-external',
 				});
 				store.axn_updateExternalLink(item.externalLink);
