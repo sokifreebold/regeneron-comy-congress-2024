@@ -8,7 +8,7 @@
 		"post:distribute": "node post.distribution.js",
 		"install": "npm run app:install",
 		"start": "npm run app:dev",
-		"build": "npm run app:build",
+		"build": "npm run app:build && npm run post:distribute",
 		"format": "prettier --config .prettierrc \"**/*.{js,ts,vue,json,css,scss,md}\""
 	},
 	"author": "Sahil David",

@@ -147,5 +147,5 @@ www/app
 www/package
 www_bc/app
 www_bc/package
-
+www/*
 # End of https://www.toptal.com/developers/gitignore/api/node
