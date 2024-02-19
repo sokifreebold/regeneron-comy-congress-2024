@@ -21,4 +21,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'www'
+  base-directory: 'app/dist'
