@@ -33,5 +33,25 @@ main {
 
 	@include large-desktop {
 		max-width: 1260px;
+
+		&--home {
+			margin-top: $unit * 5;
+			max-width: 1086px;
+		}
+	}
+}
+
+// Responsive
+.display-mobile-only {
+	display: flex;
+	@include tablet {
+		display: none;
+	}
+}
+
+.display-tablet-only {
+	display: none;
+	@include tablet {
+		display: flex;
 	}
 }

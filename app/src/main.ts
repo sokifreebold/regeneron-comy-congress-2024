@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
 // IMP: Please include the tag before deploying for production, important for analytics
-import VueGtag from 'vue-gtag';
+// import VueGtag from 'vue-gtag';
 
 import App from './App.vue';
 import router from './router';
@@ -26,4 +26,8 @@ app.use(i18n);
 // 	router,
 // );
 
-app.mount('#app');
+// Components
+import components from './components';
+components(app).then(() => {
+	app.mount('#app');
+});

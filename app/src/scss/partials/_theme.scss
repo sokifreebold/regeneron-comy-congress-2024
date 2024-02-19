@@ -1,49 +1,13 @@
 // Icons
 .ui-icon {
-	&-lymphoma {
-		background: url('@/assets/icons/lymphoma.svg');
-		@include bg-contain();
-		background-position: top;
-	}
-
-	&-myeloma {
-		background: url('@/assets/icons/myeloma.svg');
-		@include bg-contain();
-		background-position: top;
-	}
-
-	&-classical-hematology {
-		background: url('@/assets/icons/classical-hematology.svg');
-		@include bg-contain();
-		background-position: top;
-	}
-
 	&-solid-tumor {
 		background: url('@/assets/icons/solid-tumor.svg');
 		@include bg-contain();
 		background-position: top;
 	}
 
-	&-lymphoma-white {
-		background: url('@/assets/icons/lymphoma-white.svg');
-		@include bg-contain();
-		background-position: top;
-	}
-
-	&-myeloma-white {
-		background: url('@/assets/icons/myeloma-white.svg');
-		@include bg-contain();
-		background-position: top;
-	}
-
-	&-classical-hematology-white {
-		background: url('@/assets/icons/classical-hematology-white.svg');
-		@include bg-contain();
-		background-position: top;
-	}
-
-	&-solid-tumor-white {
-		background: url('@/assets/icons/solid-tumor-white.svg');
+	&-hematology-oncology {
+		background: url('@/assets/icons/hematology-oncology.svg');
 		@include bg-contain();
 		background-position: top;
 	}

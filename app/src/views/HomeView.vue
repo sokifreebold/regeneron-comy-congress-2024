@@ -1,16 +1,23 @@
 <template>
-	<!-- Floating Molecules -->
-	<utils-molecule class="home__molecule" />
+	<layout-home>
+		<div class="home">
+			<!-- Home Title -->
+			<h1
+				class="type-heading-h1 home__title display-mobile-only"
+				v-html="$t('home.titleMobile')"
+			/>
+			<h1
+				class="type-heading-h1 home__title display-tablet-only"
+				v-html="$t('home.titleDesktop')"
+			/>
 
-	<!-- Home View -->
-	<main>
-		<div class="container container--home">
-			<!-- Page Title -->
-			<h1 class="type-heading-h1 home__title" v-html="$t('home.title')" />
-
-			<!-- Links -->
+			<!-- Panel -->
 			<div class="home-links">
-				<div v-for="(item, index) in categories" :key="index" class="home-links__item">
+				<div
+					v-for="(item, index) in getHomeCategories()"
+					:key="index"
+					class="home-links__item"
+				>
 					<div :class="['home-links__item-icon', `ui-icon-${item.id}`]" />
 					<div class="home-links__item-copy">
 						<div class="home-links__item-title type-font-condensed">
@@ -22,58 +29,27 @@
 
 						<div class="home-links__item-navigate">
 							<div class="button-wrapper">
-								<button @click="navigateToTrial(item)">
+								<!-- <button @click="() => {}">
 									{{ $t('misc.explore') }}
-								</button>
+								</button> -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</main>
-
-	<!-- Home Footer -->
-	<footer-home />
+	</layout-home>
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
-
-// Data to draw categories on home page
-import { categories } from '@/content/data';
-import type { ICategories } from '@/@types/data';
-
-import UtilsMolecule from '@/components/UtilsMolecule.vue';
-import FooterHome from '@/components/FooterHome.vue';
-
-const router = useRouter();
-
-// Function to navigate to the relevant section
-function navigateToTrial(trial: ICategories) {
-	router.push(`/trials/${trial.id}`);
-}
+import { getHomeCategories } from '@/utils/data';
 </script>
 
 <style lang="scss" scoped>
 .home {
-	&__molecule {
-		right: -150px;
-		top: -5%;
-
-		@include desktop {
-			right: 0;
-		}
-	}
-
-	&__title {
-		margin-top: $unit * 3;
-		@include px-to-em(60px);
-		line-height: 64px;
-	}
-
 	// Links
 	&-links {
+		margin: $unit * 2 0;
 		&__item {
 			display: flex;
 			padding: $unit * 4 $unit * 3;
@@ -117,22 +93,12 @@ function navigateToTrial(trial: ICategories) {
 		@include large-desktop {
 			display: flex;
 			flex-wrap: wrap;
+			margin-top: $unit * 6;
 
 			.home-links__item {
-				flex-basis: 48%;
+				flex-basis: 47%;
 				margin-right: $unit * 3;
 			}
-		}
-	}
-}
-
-@include large-desktop {
-	.container--home {
-		margin-top: $unit * 5;
-		max-width: 1086px;
-
-		.home-links__item {
-			flex-basis: 47%;
 		}
 	}
 }

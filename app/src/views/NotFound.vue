@@ -1,10 +1,5 @@
 <template>
 	<div class="not-found">
-		<!-- Floating Molecules -->
-		<utils-molecule class="trials__molecule" />
-		<utils-molecule class="trials__molecule trials__molecule--secondary" />
-		<utils-molecule class="trials__molecule trials__molecule--tertiary" />
-
 		<!-- 404 View -->
 		<div class="not-found__content container">
 			<div class="not-found__title">
@@ -22,10 +17,6 @@
 		</div>
 	</div>
 </template>
-
-<script setup lang="ts">
-import UtilsMolecule from '@/components/UtilsMolecule.vue';
-</script>
 
 <style lang="scss" scoped>
 .not-found {

@@ -1,12 +1,17 @@
 .type-heading {
 	&-h1 {
 		margin: $unit * 3 0;
-		@include px-to-em(60px);
-		line-height: 64px;
+		@include px-to-em(38px);
+		line-height: 40px;
 		font-family: 'RobotoCondensed-Bold';
 		font-weight: 600;
 		text-transform: uppercase;
 		color: $primary;
+
+		@include tablet {
+			@include px-to-em(60px);
+			line-height: 64px;
+		}
 	}
 }
 

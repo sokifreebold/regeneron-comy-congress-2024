@@ -1,5 +1,3 @@
 <template>
-  <div>
-	Hello AAD Congress
-  </div>
+	<router-view />
 </template>
