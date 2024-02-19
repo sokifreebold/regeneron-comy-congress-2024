@@ -17,12 +17,13 @@ app.use(router);
 app.use(i18n);
 
 // IMP: Please include the tag before deploying for production, important for analytics
-app.use(
-	VueGtag,
-	{
-		config: { id: 'G-DB0JMEGR0Q' },
-	},
-	router,
-);
+// TODO: Change to Config
+// app.use(
+// 	VueGtag,
+// 	{
+// 		config: { id: 'G-DB0JMEGR0Q' },
+// 	},
+// 	router,
+// );
 
 app.mount('#app');
