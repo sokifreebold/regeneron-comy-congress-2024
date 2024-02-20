@@ -1,3 +1,3 @@
 <template>
-	<utils-molecule modifier="home" />
+	<utils-molecule modifier="topRight" />
 </template>

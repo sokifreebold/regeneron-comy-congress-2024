@@ -18,6 +18,13 @@
 			max-width: 100%;
 		}
 	}
+
+	&-h2 {
+		@include px-to-em(32px);
+		line-height: 40px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
 }
 
 .type-font {

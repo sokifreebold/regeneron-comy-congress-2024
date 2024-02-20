@@ -1,6 +1,7 @@
 <template>
 	<div class="layout-trials">
 		<the-header />
+		<molecules-trials />
 
 		<div class="container layout-trials__back">
 			<slot name="back" />

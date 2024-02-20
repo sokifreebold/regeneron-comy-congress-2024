@@ -36,6 +36,7 @@ export default {
 			seeTrialInfo: 'See Trial Info',
 			seeClincialGov: 'Visit ClinicalTrials.gov',
 			noPdf: 'No trial card PDF found. Please try again later.',
+			noData: 'No data found',
 			close: 'Close',
 		},
 	},

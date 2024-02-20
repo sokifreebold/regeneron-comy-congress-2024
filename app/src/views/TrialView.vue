@@ -17,6 +17,9 @@
 				<div :class="['trials__header-icon', `ui-icon-${trialId}-white`]" />
 				<h1 class="type-heading-h1 trials__title" v-html="$t(`titles.trials.${trialId}`)" />
 			</div>
+
+			<!-- Trial Cards -->
+			<trial-cards />
 		</div>
 	</layout-trials>
 </template>
@@ -37,11 +40,14 @@ function navigateHome() {
 
 <style lang="scss" scoped>
 .trials {
-	margin-bottom: $unit * 5;
+	position: relative;
+	z-index: 2;
 }
 .trials__header {
 	display: flex;
 	align-items: center;
+	margin-bottom: $unit * 4;
+
 	&-icon {
 		display: flex;
 		width: $unit * 6;
