@@ -1,4 +1,4 @@
-# ASH Microsite SPA
+# AAD Congress Microsite & Kiosk
 
 The microsite is a Single Page Application developed with Vue 3 (TypeScript) in Vite.
 

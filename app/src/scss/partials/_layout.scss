@@ -48,15 +48,29 @@ main {
 
 // Responsive
 .display-mobile-only {
-	display: flex;
+	display: flex !important;
 	@include tablet {
-		display: none;
+		display: none !important;
 	}
 }
 
 .display-tablet-only {
-	display: none;
+	display: none !important;
 	@include tablet {
-		display: flex;
+		display: flex !important;
+	}
+}
+
+.display-desktop-only {
+	display: none !important;
+	@include desktop {
+		display: flex !important;
+	}
+}
+
+.display-large-desktop-only {
+	display: none !important;
+	@include large-desktop {
+		display: flex !important;
 	}
 }

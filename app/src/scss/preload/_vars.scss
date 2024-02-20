@@ -11,18 +11,25 @@ $primary-2: #002273;
 
 $accent-1: #2069e7;
 $accent-2: #9f24e2;
+$accent-3: #cb0094;
 
 $accent: #ffc656;
 $dark-blue: #000245;
 
 $blue-shade-1: #073b6c;
+$dark-shade-2: #051264;
+$dark-shade-3: #051264;
 
 // Layout
 $unit: 8px;
 $radius: 24px;
 
 $box-shadow-01: 0px 64px 84px 0px rgba(201, 201, 201, 0.55);
+$box-shadow-02: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
 
 $linear-gradient-01: linear-gradient(to right, $accent-1, $accent-2);
 $linear-gradient-02: linear-gradient(to right, $accent-2 0%, $secondary 100%);
 $linear-gradient-03: linear-gradient(to left, $accent-2, $secondary);
+$linear-gradient-04: linear-gradient(to right, rgba($dark-shade-3, 1), rgba($dark-shade-2, 1));
+$linear-gradient-05: linear-gradient(to top, $secondary, $accent-2);
+$linear-gradient-06: linear-gradient(to right, $accent-2, $accent-3);

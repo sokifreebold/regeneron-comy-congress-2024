@@ -1,5 +1,5 @@
 import type { ITrialsRecords } from '@/@types/data';
-import { categories, trialsData } from '@/data/microsite/trials';
+import { categories, trialsData } from '@/data/microsite';
 
 export function getHomeCategories() {
 	return categories;

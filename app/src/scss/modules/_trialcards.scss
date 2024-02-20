@@ -1,0 +1,152 @@
+.trial-card {
+	display: flex;
+	width: 100%;
+	margin: {
+		top: $unit * 2;
+		bottom: $unit * 2;
+	}
+
+	&--phase {
+		margin-top: $unit * 5;
+		margin-bottom: $unit * 4;
+	}
+
+	&__aside {
+		flex-shrink: 0;
+		width: 160px;
+		min-width: 160px;
+		margin-right: $unit;
+
+		&-card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			min-height: 200px;
+			border-radius: 0 $radius * 0.5;
+			background: $white;
+			color: $black;
+
+			&-icon {
+				margin-top: $unit * 2;
+				margin-bottom: $unit * 2;
+				flex: 1;
+				width: 85px;
+				aspect-ratio: 1;
+			}
+
+			p {
+				text-transform: uppercase;
+				text-align: center;
+				padding: 0 $unit * 2;
+				font-size: 14px;
+				line-height: 16px;
+				font-family: 'RobotoCondensed-Bold';
+				margin-bottom: $unit * 2;
+			}
+		}
+	}
+
+	&__datum {
+		display: flex;
+		flex: 1;
+	}
+
+	&__phase {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		flex: 1;
+
+		label {
+			@include px-to-em(18px);
+			line-height: 30px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		strong {
+			@include px-to-em(52px);
+			line-height: 50px;
+		}
+	}
+
+	&__row {
+		border-radius: $radius * 0.5;
+		min-height: 200px;
+
+		&-record {
+			position: relative;
+			background: $linear-gradient-02;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: center;
+			padding: $unit * 2;
+			border-radius: $radius * 0.5;
+
+			flex-basis: 97%;
+			@include large-desktop {
+				flex-basis: 75%;
+				&.phase-2 {
+					flex-basis: 50%;
+				}
+				&.phase-1 {
+					flex-basis: 25%;
+				}
+			}
+
+			&--blank {
+				flex: 1;
+				margin-left: $unit;
+				border: 1px solid rgba($white, 0.1);
+				background: rgba($blue-shade-1, 0.4);
+				backdrop-filter: blur(5px);
+			}
+		}
+
+		&-title {
+			max-width: 250px;
+			font-size: 1.3em;
+			font-family: 'RobotoCondensed-Bold';
+			text-align: right;
+
+			strong {
+				color: $accent;
+			}
+
+			@include large-desktop {
+				max-width: 100%;
+			}
+		}
+
+		&-control {
+			margin-top: $unit;
+		}
+
+		&.is-non-interventional {
+			background: $linear-gradient-05;
+			padding: 2px;
+			.trial-card__row-record {
+				flex-basis: 100%;
+				background: $linear-gradient-04;
+			}
+		}
+	}
+
+	&__badge {
+		position: absolute;
+		top: -10px;
+		right: 0;
+		@include px-to-em(12px);
+		line-height: 14px;
+		font-family: 'RobotoCondensed-Bold';
+		color: $white;
+		padding: 6px 14px;
+		border-radius: 0 6px 0 0;
+		border: 1px solid rgba($white, 0.5);
+		box-shadow: $box-shadow-02;
+		background: $linear-gradient-06;
+	}
+}

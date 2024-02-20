@@ -1,5 +1,5 @@
 <template>
-	<button :class="['button', `button--${props.modifier}`]">
+	<button :class="['button', `button--${props.modifier}`, { 'is-disabled': props.disabled }]">
 		<div class="button__content">
 			<div v-if="hasLeft" class="button__icon button__icon--left">
 				<slot name="leftIcon" />
@@ -18,6 +18,7 @@
 const props = defineProps({
 	modifier: { type: String, default: 'default' },
 	hasLeft: { type: Boolean, default: false },
+	disabled: { type: Boolean, default: false },
 });
 </script>
 
@@ -46,6 +47,7 @@ const props = defineProps({
 		width: calc(100% - 4px);
 		height: calc(100% - 4px);
 		transition: all 0.25s linear;
+		white-space: nowrap;
 	}
 
 	&__icon {
@@ -70,6 +72,11 @@ const props = defineProps({
 		}
 	}
 
+	&.is-disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+
 	// Modifier
 	&--back {
 		background: none;
@@ -88,6 +95,38 @@ const props = defineProps({
 			.button__content {
 				width: calc(100% - 4px);
 				height: calc(100% - 4px);
+			}
+		}
+	}
+
+	&--simple-white {
+		position: relative;
+		background: none;
+		.button {
+			&__content {
+				background: none;
+				color: $white;
+			}
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			border: 2px solid $white;
+			width: 100%;
+			height: 100%;
+			border-radius: $radius * 2;
+			transition: all 0.25s linear;
+		}
+
+		&:hover {
+			.button__content {
+				width: calc(100% - 4px);
+				height: calc(100% - 4px);
+			}
+			&:before {
+				border: 3px solid $white;
+				transition: all 0.25s linear;
 			}
 		}
 	}

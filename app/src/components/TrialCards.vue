@@ -13,9 +13,14 @@
 			<utils-no-record v-if="!(section.trials && section.trials.length > 0)">
 				{{ $t('misc.noData') }}
 			</utils-no-record>
-			<utils-no-record v-else>
-				{{ $t('misc.noData') }}
-			</utils-no-record>
+			<div v-else>
+				<trial-cards-phases class="display-large-desktop-only" />
+				<trial-cards-datum
+					v-for="(datum, index) in section.trials"
+					:key="index"
+					:datum="datum"
+				/>
+			</div>
 		</div>
 	</div>
 </template>

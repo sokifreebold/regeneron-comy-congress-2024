@@ -1,0 +1,10 @@
+.trial-aside-icon {
+	&--solid-tumor-non-melanoma-1,
+	&--solid-tumor-non-melanoma-2,
+	&--solid-tumor-non-melanoma-3,
+	&--solid-tumor-non-melanoma-4 {
+		background: url('@/assets/icons/trials/trial-icon-solid-tumor.svg');
+		@include bg-contain();
+		background-position: center;
+	}
+}

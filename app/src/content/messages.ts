@@ -38,6 +38,7 @@ export default {
 			noPdf: 'No trial card PDF found. Please try again later.',
 			noData: 'No data found',
 			close: 'Close',
+			recruiting: 'RECRUITING',
 		},
 	},
 };

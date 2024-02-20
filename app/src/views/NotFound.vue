@@ -10,20 +10,31 @@
 			</div>
 
 			<div class="not-found__controls">
-				<router-link class="not-found__link btn simple-white" to="/">
-					{{ $t('notFound.home') }}
+				<router-link class="not-found__link" to="/">
+					<the-button modifier="simple-white">
+						{{ $t('notFound.home') }}
+
+						<template v-slot:rightIcon>
+							<img src="@/assets/icons/chevron-right-white.svg" />
+						</template>
+					</the-button>
 				</router-link>
 			</div>
 		</div>
 	</div>
+
+	<molecules-trials />
 </template>
 
 <style lang="scss" scoped>
 .not-found {
 	height: 100vh;
 	display: flex;
+	background: url('@/assets/backgrounds/trials.png');
+	@include bg-cover();
 	align-items: center;
 	padding-bottom: $unit * 10;
+	color: $white;
 
 	&__content {
 		width: 100%;
