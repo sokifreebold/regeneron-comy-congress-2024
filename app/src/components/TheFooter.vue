@@ -1,5 +1,5 @@
 <template>
-	<footer :class="['footer', { 'is-home': route.name === 'home' }]">
+	<footer :class="['footer', { 'is-home': route.name === 'home' }, `footer--${props.modifier}`]">
 		<div class="container">
 			<div class="footer__copy">
 				<p v-html="$t('footer.shared.copy')" />
@@ -8,8 +8,15 @@
 
 			<div class="footer__copy footer__copy--logo">
 				<img
+					v-if="route.name === 'home'"
 					class="ui-logo-regeneron"
 					src="../assets/images/regeneron-logo-dark.svg"
+					alt="Regeneron"
+				/>
+				<img
+					v-else
+					class="ui-logo-regeneron"
+					src="../assets/images/regeneron-logo-white.svg"
 					alt="Regeneron"
 				/>
 				<p v-html="$t('footer.shared.copyright')" />
@@ -20,12 +27,23 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
+
+const props = defineProps({
+	modifier: { type: String, default: 'default' },
+});
+
 const route = useRoute();
 </script>
 
 <style lang="scss" scoped>
 .footer {
 	color: $white;
+
+	&--trials {
+		.container {
+			max-width: 1086px;
+		}
+	}
 
 	&__copy {
 		margin-top: $unit * 4;

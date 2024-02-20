@@ -6,8 +6,20 @@
 		background-position: top;
 	}
 
+	&-solid-tumor-white {
+		background: url('@/assets/icons/solid-tumor-white.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+
 	&-hematology-oncology {
 		background: url('@/assets/icons/hematology-oncology.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+
+	&-hematology-oncology-white {
+		background: url('@/assets/icons/hematology-oncology-white.svg');
 		@include bg-contain();
 		background-position: top;
 	}

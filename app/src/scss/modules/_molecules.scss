@@ -1,0 +1,31 @@
+.util-molecule {
+	position: fixed;
+	width: 300px;
+	aspect-ratio: 1;
+	top: 0;
+	background: url('@/assets/images/image-mol.png');
+	@include bg-contain();
+	filter: blur(0.5px);
+	z-index: 0;
+	pointer-events: none;
+
+	// Modifiers
+	&--home {
+		top: -150px;
+		right: -130px;
+
+		@include tablet {
+			top: -100px;
+			right: -100px;
+		}
+
+		@include desktop {
+			top: -50px;
+			right: -10px;
+		}
+
+		@include large-desktop {
+			width: 400px;
+		}
+	}
+}

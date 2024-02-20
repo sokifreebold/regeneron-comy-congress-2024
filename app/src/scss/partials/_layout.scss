@@ -34,9 +34,14 @@ main {
 	@include large-desktop {
 		max-width: 1260px;
 
-		&--home {
+		&--home,
+		&--trials {
 			margin-top: $unit * 5;
 			max-width: 1086px;
+		}
+
+		&--trials {
+			margin-top: $unit * 2;
 		}
 	}
 }

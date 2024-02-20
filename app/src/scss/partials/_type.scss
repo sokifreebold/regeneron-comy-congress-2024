@@ -7,10 +7,15 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		color: $primary;
+		max-width: 768px;
 
 		@include tablet {
 			@include px-to-em(60px);
 			line-height: 64px;
+		}
+
+		@include large-desktop {
+			max-width: 100%;
 		}
 	}
 }

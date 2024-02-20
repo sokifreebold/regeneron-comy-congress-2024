@@ -1,5 +1,5 @@
 <template>
-	<header class="header">
+	<header :class="['header', { 'is-home': route.name === 'home' }]">
 		<div class="container">
 			<img
 				v-if="route.name === 'home'"
@@ -33,7 +33,11 @@ function navigateHome() {
 
 <style lang="scss" scoped>
 .header {
-	border-bottom: 1px solid $primary;
+	border-bottom: 1px solid $primary-2;
+
+	&.is-home {
+		border-bottom: 1px solid $primary;
+	}
 
 	&-developer-label {
 		font-size: 12px;

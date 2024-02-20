@@ -1,11 +1,15 @@
 <template>
-	<the-header />
+	<div class="layout-home">
+		<the-header />
 
-	<main>
-		<div class="container container--home">
-			<slot />
-		</div>
-	</main>
+		<main>
+			<div class="container container--home">
+				<slot />
+			</div>
+		</main>
 
-	<the-footer />
+		<the-footer />
+	</div>
+
+	<molecules-home />
 </template>

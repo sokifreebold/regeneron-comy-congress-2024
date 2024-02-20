@@ -29,9 +29,13 @@
 
 						<div class="home-links__item-navigate">
 							<div class="button-wrapper">
-								<!-- <button @click="() => {}">
+								<the-button @click="navigateToTrial(item)">
 									{{ $t('misc.explore') }}
-								</button> -->
+
+									<template v-slot:rightIcon>
+										<img src="@/assets/icons/chevron-right-gradient.svg" />
+									</template>
+								</the-button>
 							</div>
 						</div>
 					</div>
@@ -42,7 +46,16 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
 import { getHomeCategories } from '@/utils/data';
+import type { ICategories } from '@/@types/data';
+
+const router = useRouter();
+
+function navigateToTrial(item: ICategories) {
+	router.push(`/trials/${item.id}`);
+}
 </script>
 
 <style lang="scss" scoped>
