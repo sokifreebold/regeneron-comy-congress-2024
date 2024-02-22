@@ -9,7 +9,7 @@ const datum: ITrialsRecords[] = [
 				id: 'solid-tumor-non-melanoma-1',
 				type: 'pdfCard',
 				phase: 3,
-				nct: 'NCTXXX01',
+				nct: 'NCT03969004',
 				trialCardPdf: '',
 				recruiting: true,
 				labels: {
@@ -21,7 +21,7 @@ const datum: ITrialsRecords[] = [
 				id: 'solid-tumor-non-melanoma-2',
 				type: 'external',
 				phase: 2,
-				nct: 'NCTXXX02',
+				nct: 'NCT04154943',
 				externalLink: 'https://clinicaltrials.gov/study/NCT04154943',
 				labels: {
 					title: 'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
@@ -32,8 +32,8 @@ const datum: ITrialsRecords[] = [
 				id: 'solid-tumor-non-melanoma-3',
 				type: 'external',
 				phase: 1,
-				nct: 'NCTXXX03',
-				externalLink: 'https://clinicaltrials.gov/study/NCT04154943',
+				nct: 'NCT03889912',
+				externalLink: 'https://clinicaltrials.gov/study/NCT03889912',
 				recruiting: true,
 				labels: {
 					title: 'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
@@ -44,8 +44,8 @@ const datum: ITrialsRecords[] = [
 				id: 'solid-tumor-non-melanoma-4',
 				type: 'external',
 				nonInterventional: true,
-				nct: 'NCTXXX04',
-				externalLink: 'https://clinicaltrials.gov/study/NCT04154943',
+				nct: 'NCT03836105',
+				externalLink: 'https://clinicaltrials.gov/study/NCT03836105',
 				labels: {
 					title: '<strong>CASE</strong> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'locally advanced or metastatic cutaneous squamous or basal cell carcinomas',
