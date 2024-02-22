@@ -16,15 +16,9 @@ app.use(createPinia());
 app.use(router);
 app.use(i18n);
 
-// IMP: Please include the tag before deploying for production, important for analytics
-// TODO: Change to Config
-// app.use(
-// 	VueGtag,
-// 	{
-// 		config: { id: 'G-DB0JMEGR0Q' },
-// 	},
-// 	router,
-// );
+// Analytics
+import { initialiseGoogleAnalytics } from './utils/bootstrap';
+initialiseGoogleAnalytics(app, router);
 
 // Components
 import components from './components';
