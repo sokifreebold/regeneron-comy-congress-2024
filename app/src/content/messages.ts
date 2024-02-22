@@ -24,6 +24,10 @@ export default {
 			trials: {
 				'solid-tumor': 'Solid Tumor',
 				'hematology-oncology': 'Hematology Oncology',
+				'basal-cell-merkel-cell-carcinoma': 'Basal Cell Carcinoma (BCC)',
+				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell Carcinoma (CSCC)',
+				'melanoma': 'Melanoma',
+				'multipleTumors': 'Multiple Tumors'
 			},
 		},
 		misc: {
