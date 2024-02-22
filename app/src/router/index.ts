@@ -19,7 +19,7 @@ const router = createRouter({
 			component: TrialView,
 		},
 		{
-			path: '/trials/:trialId/:id',
+			path: '/trials/:trialId/:nct',
 			name: 'trial-card',
 			component: PdfView,
 		},

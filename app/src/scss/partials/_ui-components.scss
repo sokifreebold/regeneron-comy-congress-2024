@@ -7,3 +7,9 @@
 .ui-one-word {
 	white-space: nowrap;
 }
+
+.ui-domain {
+	white-space: nowrap;
+	color: $primary;
+	border-bottom: 1px dotted $primary;
+}

@@ -21,9 +21,8 @@
 				<h3 class="trial-card__row-title" v-html="props.datum.labels?.title" />
 				<the-button
 					class="trial-card__row-control"
-					@click="() => {}"
+					@click="navigateTrialCardsWrapper(props.datum)"
 					modifier="simple-white"
-					:disabled="true"
 				>
 					{{ $t('misc.seeTrialInfo') }}
 
@@ -45,10 +44,19 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue';
+import { type PropType } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import type { ITrials } from '@/@types/data';
+import { navigateTrialCards } from '@/utils/navigate';
 
 const props = defineProps({
 	datum: { type: Object as PropType<ITrials>, required: true },
 });
+
+const route = useRoute();
+const router = useRouter();
+
+function navigateTrialCardsWrapper(trial: ITrials) {
+	navigateTrialCards(trial, router, route);
+}
 </script>

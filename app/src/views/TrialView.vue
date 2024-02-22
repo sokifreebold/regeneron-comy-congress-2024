@@ -25,16 +25,38 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted, watch } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
+import { getTrialDatum } from '@/utils/data';
+import { useAppStore } from '@/stores/app';
 
 const router = useRouter();
 const route = useRoute();
+const store = useAppStore();
 
 const trialId = computed<string>(() => route.params.trialId as string);
+const nctId = computed<string>(() => route.params.nct as string);
+const viewId = computed(() => route.params.viewId);
+
+watch(route, checkIfExternalOverlay);
+onMounted(checkIfExternalOverlay);
 
 function navigateHome() {
 	router.push('/');
+}
+
+function checkIfExternalOverlay() {
+	if (!(nctId.value && viewId.value)) {
+		return;
+	}
+	if (viewId.value !== 'external') {
+		return;
+	}
+	const datum = getTrialDatum(trialId.value, nctId.value);
+	if (datum && datum.externalLink) {
+		store.axn_updateExternalLink(datum.externalLink!);
+		store.axn_updateExternalLinkId(datum.nct || datum.id);
+	}
 }
 </script>
 

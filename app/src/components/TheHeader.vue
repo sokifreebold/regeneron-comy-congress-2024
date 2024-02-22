@@ -14,8 +14,6 @@
 				alt="Regeneron"
 				@click="navigateHome"
 			/>
-
-			<div class="header-developer-label">Development in progress</div>
 		</div>
 	</header>
 </template>

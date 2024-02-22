@@ -1,4 +1,4 @@
-import type { ITrialsRecords } from '@/@types/data';
+import type { ITrials, ITrialsRecords } from '@/@types/data';
 import { categories, trialsData } from '@/data/microsite';
 
 export function getHomeCategories() {
@@ -11,4 +11,18 @@ export function getTrialData(trial: string): ITrialsRecords[] {
 	}
 
 	return trialsData[trial];
+}
+
+export function getTrialDatum(trial: string, nct: string): ITrials | null {
+	if (!trialsData[trial]) {
+		return null;
+	}
+
+	try {
+		const data = trialsData[trial].map((_: ITrialsRecords) => _.trials).flat();
+		return data.find((_: ITrials) => _.nct === nct);
+	} catch (err) {
+		console.error(err);
+		return null;
+	}
 }
