@@ -10,7 +10,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT05730036',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT05730036 (LINKER-MM3)_R20_LNVO-EM-0005_844REGN-MID',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM3</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
@@ -22,7 +22,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT05828511',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT058285111 (LINKER-MM4)_R21_Linvoseltamab-EM-0011_844REGN-MID',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM4</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
@@ -34,7 +34,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT03761108',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT03761108 (LINKER-MM1)_R17_LNVO-EM-0001_844REGN-MID',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM4</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
@@ -46,7 +46,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT05955508',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT05955508_Smoldering_MM_R18_844REGN-MID',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-SMM1</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
@@ -58,7 +58,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 1,
 				nct: 'NCT05137054',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT05137054_LINKER-MM2_R23_LNVO-EM-0002_844REGN-MID',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM2</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span> + Other Cancer Treatments',
@@ -89,7 +89,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT06091254',
-				trialCardPdf: '',
+				trialCardPdf: 'OLYMPIA-1-R16_ODRO-EM-0002_844REGN-MID_Bleed',
 				recruiting: true,
 				labels: {
 					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span>',
@@ -101,7 +101,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT06097364',
-				trialCardPdf: '',
+				trialCardPdf: 'OLYMPIA-2-R12_ODRO-EM-0004_844REGN-MID_Bleed',
 				recruiting: true,
 				labels: {
 					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span> + Chemotherapy',
@@ -113,7 +113,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT06091865',
-				trialCardPdf: '',
+				trialCardPdf: 'OLYMPIA-3-R15_ODRO-EM-0003_844REGN-MID_3mmBleed',
 				recruiting: true,
 				labels: {
 					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span> + Chemotherapy',
@@ -149,7 +149,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT03888105',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT03888105 (ELM 2)_R19_Odronextamab-EM-0009_844REGN-MID',
 				recruiting: true,
 				labels: {
 					title: '<strong>ELM-2</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
@@ -161,7 +161,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 1,
 				nct: 'NCT02290951',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT02290951 (ELM 1)_R16_Odronextamab-EM-0008_844REGN-MID',
 				recruiting: false,
 				labels: {
 					title: '<strong>ELM-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span>',
@@ -173,7 +173,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 1,
 				nct: 'NCT05685173',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT05685173 (ATHENA 1)_R13_Odronextamab-EM-0010_844REGN-MID',
 				recruiting: true,
 				labels: {
 					title: '<strong>ATHENA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span> + REGN5837 <span class="ui-one-word">(CD22xCD28 bispecific)</span>',
@@ -185,7 +185,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 1,
 				nct: 'NCT02651662',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT02651662 CLIO 1_R12_Odronextamab-EM-0011_844REGN-MID',
 				recruiting: false,
 				labels: {
 					title: '<strong>CLIO-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
@@ -203,10 +203,10 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT05133531',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT05133531 (ACCESS 1)_R15_POZ-CEM-EM-0010_844REGN-MID',
 				recruiting: true,
 				labels: {
-					title: '<strong>ACCESS-1</strong> Pozelimab <span class="ui-one-word">(C5 monoclonal antibody)</span> + Cemidiran <span class="ui-one-word">(C5 RNAi)</span>',
+					title: '<strong>ACCESS-1</strong> Pozelimab <span class="ui-one-word">(C5 monoclonal antibody)</span> + Cemidiran <span class="ui-one-word">(C5 RNAi)†</span>',
 					aside: 'Paroxysmal nocturnal hemoglobinuria',
 				},
 			},
@@ -215,7 +215,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT04409080',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT04409080_R13_REGN7257-EM-0004_844REGN-MID_3mmBleed',
 				recruiting: true,
 				labels: {
 					title: 'IL2RG blocking antibody <span class="ui-one-word">(REGN7257)</span>',
@@ -224,10 +224,10 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'hematology-oncology-classical-hematology-3',
-				type: 'pdfCard',
+				type: 'external',
 				phase: 2,
 				nct: 'NCT05618808',
-				trialCardPdf: '',
+				externalLink: 'https://clinicaltrials.gov/study/NCT05618808',
 				recruiting: true,
 				labels: {
 					title: 'Factor XI antibody <span class="ui-one-word">(REGN9933)</span>',
@@ -236,13 +236,13 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'hematology-oncology-classical-hematology-4',
-				type: 'pdfCard',
+				type: 'external',
 				phase: 1,
 				nct: 'NCT04601051',
-				trialCardPdf: '',
+				externalLink: 'https://clinicaltrials.gov/study/NCT04601051',
 				recruiting: false,
 				labels: {
-					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)</span>',
+					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)††</span>',
 					aside: 'Transthyretin amyloidosis',
 				},
 			},

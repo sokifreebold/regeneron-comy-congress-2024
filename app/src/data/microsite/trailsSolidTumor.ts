@@ -10,7 +10,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT03969004',
-				trialCardPdf: '',
+				trialCardPdf: 'NCT03969004 (C-POST)_R15_CEM-EM-0030_844REGN-MID',
 				recruiting: true,
 				labels: {
 					title: 'Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
@@ -42,10 +42,10 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'solid-tumor-non-melanoma-4',
-				type: 'external',
+				type: 'pdfCard',
 				nonInterventional: true,
 				nct: 'NCT03836105',
-				externalLink: 'https://clinicaltrials.gov/study/NCT03836105',
+				trialCardPdf: 'NCT03836105 (CASE)',
 				labels: {
 					title: '<strong>CASE</strong> Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'locally advanced or metastatic cutaneous squamous or basal cell carcinomas',
@@ -59,11 +59,11 @@ const datum: ITrialsRecords[] = [
 		trials: [
 			{
 				id: 'solid-tumor-melanoma-1',
-				type: 'external',
+				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT05352672',
 				recruiting: true,
-				externalLink: 'https://clinicaltrials.gov/study/NCT05352672',
+				trialCardPdf: 'NCT05352672_R16_FIA-EM-0003_844REGN-MID',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Previously Untreated Unresectable Locally Advanced or Metastatic Melanoma',
@@ -71,11 +71,11 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'solid-tumor-melanoma-2',
-				type: 'external',
+				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT05608291',
 				recruiting: true,
-				externalLink: 'https://clinicaltrials.gov/study/NCT05608291',
+				trialCardPdf: 'NCT05608291_R16_FIA-EM-0009_844REGN-MID',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Adjuvant use in completely resected high-risk melanoma',
@@ -101,11 +101,11 @@ const datum: ITrialsRecords[] = [
 		trials: [
 			{
 				id: 'solid-tumor-lung-cancer-1',
-				type: 'external',
+				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT05785767',
 				recruiting: true,
-				externalLink: 'https://clinicaltrials.gov/study/NCT05785767',
+				trialCardPdf: 'NCT05785767_R22_FIA-EM-0010_844REGN-MID',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Advanced non-small cell lung cancer with PD-L1 expression > 50%',
@@ -113,11 +113,11 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'solid-tumor-lung-cancer-2',
-				type: 'external',
+				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT05800015',
 				recruiting: true,
-				externalLink: 'https://clinicaltrials.gov/study/NCT05800015',
+				trialCardPdf: 'NCT05800015_R20_FIA-EM-0011_844REGN-MID',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span> + Chemotherapy',
 					aside: 'Advanced non-small cell lung cancer',
@@ -149,11 +149,11 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'solid-tumor-lung-cancer-5',
-				type: 'external',
+				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT04982224',
 				recruiting: true,
-				externalLink: 'https://clinicaltrials.gov/study/NCT04982224 ',
+				trialCardPdf: 'NCT04982224_R18_ESMO_REGN5093-M114-EM-0003_844REGN-MID',
 				labels: {
 					title: 'REGN5093-M114 <span class="ui-one-word">(METxMET antibody-drug conjugate)</span>',
 					aside: 'MET-overexpressing non-small cell lung cancer',
@@ -197,11 +197,11 @@ const datum: ITrialsRecords[] = [
 		trials: [
 			{
 				id: 'solid-tumor-ovarian-cancer-1',
-				type: 'external',
+				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT03564340',
 				recruiting: true,
-				externalLink: 'https://clinicaltrials.gov/study/NCT03564340',
+				trialCardPdf: 'NCT03564340_R13_REGN4018-EM-0002_844REGN-MID',
 				labels: {
 					title: 'Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',	
 					aside: 'Platinum-resistant ovarian cancer',
@@ -209,11 +209,11 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'solid-tumor-ovarian-cancer-2',
-				type: 'external',
+				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT04590326',
 				recruiting: true,
-				externalLink: 'https://clinicaltrials.gov/study/NCT04590326',
+				trialCardPdf: 'NCT04590326_R18_REGN4018-EM-0003_844REGN-MID',
 				labels: {
 					title: 'REGN5668 <span class="ui-one-word">(MUC16xCD3 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span> or REGN5668 <span class="ui-one-word">(MUC16xCD3 bispecific)</span> + Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',	
 					aside: 'Recurrent ovarian cancer',
@@ -239,11 +239,11 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'solid-tumor-multiple-2',
-				type: 'external',
+				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT04916002',
 				recruiting: true,
-				externalLink: 'https://clinicaltrials.gov/study/NCT04916002',
+				trialCardPdf: 'NCT04916002_R20_VIDU-EM-0001_844REGN-MID',
 				labels: {
 					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Advanced/metastatic tumors',
