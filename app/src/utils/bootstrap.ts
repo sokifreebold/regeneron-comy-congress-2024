@@ -11,7 +11,7 @@ export function initialiseGoogleAnalytics(app: App<Element>, router: Router) {
 	app.use(
 		VueGtag,
 		{
-			config: { id: 'G-DB0JMEGR0Q' },
+			config: { id: appConfig.googleAnalyticsTag },
 		},
 		router,
 	);
