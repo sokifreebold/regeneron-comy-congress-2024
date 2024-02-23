@@ -143,6 +143,7 @@ dist
 .svelte-kit
 
 # Custom
+app/src/version.config.ts
 www/app
 www/package
 www_bc/app
