@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import TrialView from '../views/TrialView.vue';
 import PdfView from '../views/PdfView.vue';
+import ImagesView from '../views/ImagesView.vue';
 import NotFound from '../views/NotFound.vue';
 
 const router = createRouter({
@@ -22,6 +23,11 @@ const router = createRouter({
 			path: '/trials/:trialId/:nct',
 			name: 'trial-card',
 			component: PdfView,
+		},
+		{
+			path: '/trials/:trialId/:nct/images',
+			name: 'trial-card-images',
+			component: ImagesView,
 		},
 		{
 			path: '/:pathMatch(.*)*',

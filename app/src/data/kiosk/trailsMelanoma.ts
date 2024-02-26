@@ -7,11 +7,12 @@ const datum: ITrialsRecords[] = [
 		trials: [
 			{
 				id: 'melanoma-1',
-				type: 'pdfCard',
+				type: 'images',
 				phase: 3,
 				nct: 'NCT05352672',
 				recruiting: true,
-				trialCardPdf: 'NCT05352672_R16_FIA-EM-0003_844REGN-MID',
+				images: ['lymphoma-overlay', 'image-mol'],
+				// trialCardPdf: 'NCT05352672_R16_FIA-EM-0003_844REGN-MID',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Previously Untreated Unresectable Locally Advanced or Metastatic Melanoma',

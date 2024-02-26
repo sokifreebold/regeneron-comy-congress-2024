@@ -19,6 +19,7 @@ export interface ITrials {
 	externalLink?: string;
 	nct?: string;
 	trialCardPdf?: string;
+	images?: string[];
 	recruiting?: boolean;
 	labels?: ITrialsLabels;
 }
