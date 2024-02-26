@@ -1,4 +1,4 @@
-# ASH Microsite - Static Website Hosting - Deployment Package
+# AAD Microsite - Static Website Hosting - Deployment Package
 
 ## Overview
 This package contains all the necessary files for hosting your static website. It includes HTML, CSS, JavaScript files, and any additional assets required for the website to function correctly.
@@ -9,6 +9,14 @@ This package contains all the necessary files for hosting your static website. I
 - `/pdfs` - Directory containing trial card PDFs.
 - `/favicon.jpeg` - Favicon for the website.
 - `/index.html` - Main HTML entry point.
+
+## Build Instructions
+Microsite 
+`npm start`
+
+Kiosk 
+`cd app`
+`npm run dev:kiosk`
 
 ## Deployment Instructions
 2. **File Upload**: Upload all files from this package to the web server's root directory, maintaining the directory structure as provided.

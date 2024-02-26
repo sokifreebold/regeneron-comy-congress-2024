@@ -41,7 +41,7 @@ const externalLink = computed(() => store.get_externalLink);
 const externalLinkId = computed(() => store.get_externalLinkId);
 
 function closeOverlay() {
-	store.axn_updateExternalLink('');
+	store.axn_updateExternalLink('', undefined);
 	store.axn_updateExternalLinkId('');
 	router.push(`/trials/${trialId.value}`);
 }
