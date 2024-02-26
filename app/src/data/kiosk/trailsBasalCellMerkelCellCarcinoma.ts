@@ -31,10 +31,10 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'basal-cell-carcinoma-3',
-				type: 'pdfCard',
+				type: 'external',
 				nonInterventional: true,
 				nct: 'NCT03836105',
-				trialCardPdf: 'https://clinicaltrials.gov/study/NCT03836105',
+				externalLink: 'https://clinicaltrials.gov/study/NCT03836105',
 				labels: {
 					title: '<strong>CASE</strong> Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Locally advanced or metastatic cutaneous squamous or basal cell carcinomas',
