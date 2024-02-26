@@ -1,5 +1,12 @@
 <template>
-	<footer :class="['footer', { 'is-home': route.name === 'home' }, `footer--${props.modifier}`]">
+	<footer
+		:class="[
+			'footer is-animating',
+			{ 'is-home': route.name === 'home' },
+			`footer--${props.modifier}`,
+		]"
+		ref="footer"
+	>
 		<div class="container">
 			<div class="footer__copy">
 				<p v-html="$t('footer.shared.copy')" />

@@ -1,5 +1,5 @@
 <template>
-	<header :class="['header', { 'is-home': route.name === 'home' }]">
+	<header :class="['header is-animating', { 'is-home': route.name === 'home' }]" ref="header">
 		<div class="container">
 			<img
 				v-if="route.name === 'home'"

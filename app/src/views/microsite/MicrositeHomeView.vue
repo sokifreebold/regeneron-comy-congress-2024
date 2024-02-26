@@ -7,7 +7,7 @@
 				v-html="$t('home.titleMobile')"
 			/>
 			<h1
-				class="type-heading-h1 home__title display-tablet-only"
+				class="type-heading-h1 home__title display-tablet-only js-home-title"
 				v-html="$t('home.titleDesktop')"
 			/>
 
@@ -17,6 +17,7 @@
 					v-for="(item, index) in getHomeCategories()"
 					:key="index"
 					class="home-links__item"
+					:ref="setRef"
 				>
 					<div :class="['home-links__item-icon', `ui-icon-${item.id}`]" />
 					<div class="home-links__item-copy">
@@ -46,12 +47,52 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 import { getHomeCategories } from '@/utils/data';
 import type { ICategories } from '@/@types/data';
 
+import { gsap } from 'gsap';
+
 const router = useRouter();
+const itemRefs = ref<HTMLElement[]>([]);
+
+const setRef = (el: any) => {
+	if (el) {
+		itemRefs.value.push(el);
+	}
+};
+
+onMounted(() => {
+	animateHeader();
+	animateList();
+});
+
+function animateHeader() {
+	const homeTitle = document.querySelector('.js-home-title');
+	if (!homeTitle) {
+		return;
+	}
+
+	gsap.fromTo(
+		homeTitle,
+		{ opacity: 0, x: -40 },
+		{ opacity: 1, x: 0, duration: 0.5, ease: 'power1.out' },
+	);
+}
+
+function animateList() {
+	const tl = gsap.timeline();
+	itemRefs.value.forEach((item, index) => {
+		tl.fromTo(
+			item,
+			{ opacity: 0, y: -20, x: -10 },
+			{ opacity: 1, y: 0, x: 0, duration: 0.5, ease: 'power1.out' },
+			index * 0.2,
+		);
+	});
+}
 
 function navigateToTrial(item: ICategories) {
 	router.push(`/trials/${item.id}`);
