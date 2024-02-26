@@ -31,7 +31,7 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'melanoma-3',
-				type: 'external',
+				type: 'qrCode',
 				phase: 2,
 				nct: 'NCT06190951',
 				recruiting: true,
