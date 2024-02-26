@@ -7,7 +7,7 @@ const datum: ITrialsRecords[] = [
 		trials: [
 			{
 				id: 'multiple-tumors-1',
-				type: 'external',
+				type: 'qrCode',
 				phase: 1,
 				nct: 'NCT03005782',
 				recruiting: false,
