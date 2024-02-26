@@ -3,7 +3,7 @@ import type { ITrialsRecords } from '@/@types/data';
 const datum: ITrialsRecords[] = [
 	{
 		id: 'melanoma',
-		title: 'Melanoma',
+		title: 'Melanoma and Other Plasma Cell Dyscrasias',
 		trials: [
 			{
 				id: 'hematology-oncology-myeloma-1',
@@ -26,7 +26,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM4</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
-					aside: 'newly diagnosed multiple myeloma',
+					aside: 'Newly diagnosed multiple myeloma',
 				},
 			},
 			{
@@ -92,7 +92,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'OLYMPIA-1-R16_ODRO-EM-0002_844REGN-MID_Bleed',
 				recruiting: true,
 				labels: {
-					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span>',
+					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
 					aside: 'Previously untreated follicular lymphoma',
 				},
 			},
@@ -104,7 +104,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'OLYMPIA-2-R12_ODRO-EM-0004_844REGN-MID_Bleed',
 				recruiting: true,
 				labels: {
-					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span> + Chemotherapy',
+					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
 					aside: 'Untreated or relapsed/refractory follicular lymphoma',
 				},
 			},
@@ -116,7 +116,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'OLYMPIA-3-R15_ODRO-EM-0003_844REGN-MID_3mmBleed',
 				recruiting: true,
 				labels: {
-					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span> + Chemotherapy',
+					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
 					aside: 'Untreated diffuse large B-cell lymphoma',
 				},
 			},
@@ -140,7 +140,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT06230224',
 				recruiting: true,
 				labels: {
-					title: '<strong>OLYMPIA-5</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span> + Chemotherapy',
+					title: '<strong>OLYMPIA-5</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
 					aside: 'Relapsed/refractory follicular lymphoma and marginal zone lymphoma',
 				},
 			},
@@ -164,7 +164,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'NCT02290951 (ELM 1)_R16_Odronextamab-EM-0008_844REGN-MID',
 				recruiting: false,
 				labels: {
-					title: '<strong>ELM-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span>',
+					title: '<strong>ELM-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
 					aside: 'B-cell malignancies',
 				},
 			},
@@ -176,8 +176,8 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'NCT05685173 (ATHENA 1)_R13_Odronextamab-EM-0010_844REGN-MID',
 				recruiting: true,
 				labels: {
-					title: '<strong>ATHENA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 Bispecific)</span> + REGN5837 <span class="ui-one-word">(CD22xCD28 bispecific)</span>',
-					aside: 'Relapsed/Refractory aggressive B-Cell Non-Hodgkin Lymphoma',
+					title: '<strong>ATHENA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + CD22xCD28 bispecific <span class="ui-one-word">(REGN5837)</span>',
+					aside: 'Relapsed/refractory aggressive B-Cell Non-Hodgkin Lymphoma',
 				},
 			},
 			{
@@ -188,7 +188,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'NCT02651662 CLIO 1_R12_Odronextamab-EM-0011_844REGN-MID',
 				recruiting: false,
 				labels: {
-					title: '<strong>CLIO-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+					title: '<strong>CLIO-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Relapsed/refractory aggressive B-cell non-Hodgkin lymphoma',
 				},
 			},

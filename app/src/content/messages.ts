@@ -27,7 +27,7 @@ export default {
 				'basal-cell-merkel-cell-carcinoma': 'Basal Cell Carcinoma (BCC)',
 				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell Carcinoma (CSCC)',
 				'melanoma': 'Melanoma',
-				'multipleTumors': 'Multiple Tumors'
+				'multiple-tumors': 'Multiple Tumors'
 			},
 		},
 		misc: {

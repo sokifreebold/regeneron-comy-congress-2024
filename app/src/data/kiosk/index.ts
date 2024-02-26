@@ -9,12 +9,12 @@ export const categoriesKiosk: ICategories[] = [
 	{ id: 'basal-cell-merkel-cell-carcinoma', trials: 4 },
 	{ id: 'cutaneous-squamous-cell-carcinoma', trials: 6 },
 	{ id: 'melanoma', trials: 3 },
-	{ id: 'multipleTumors', trials: 3 },
+	{ id: 'multiple-tumors', trials: 3 },
 ];
 
 export const trialsDataKiosk: any = {
 	'basal-cell-merkel-cell-carcinoma': trailsBasalCellMerkelCellCarcinoma,
 	'cutaneous-squamous-cell-carcinoma': trailsCutaneousSquamousCellCarcinoma,
-	melanoma: trailsMelanoma,
+    'melanoma': trailsMelanoma,
 	'multiple-tumors': trailsMultipleTumors,
 };

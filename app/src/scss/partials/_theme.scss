@@ -1,6 +1,7 @@
 // Icons
 .ui-icon {
-	&-solid-tumor {
+	&-solid-tumor,
+	&-multiple-tumors {
 		background: url('@/assets/icons/solid-tumor.svg');
 		@include bg-contain();
 		background-position: top;
@@ -20,6 +21,14 @@
 
 	&-hematology-oncology-white {
 		background: url('@/assets/icons/hematology-oncology-white.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+
+	&-basal-cell-merkel-cell-carcinoma,
+	&-cutaneous-squamous-cell-carcinoma,
+	&-melanoma{
+		background: url('@/assets/icons/hand-magnifying-glass.svg');
 		@include bg-contain();
 		background-position: top;
 	}
