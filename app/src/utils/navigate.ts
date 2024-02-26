@@ -25,4 +25,15 @@ export function navigateTrialCards(
 		const pdfRoutePath = `/trials/${trialId}/${nct}`;
 		router.push(pdfRoutePath);
 	}
+
+	if (type === 'qrCode') {
+		const externalPath = `/trials/${trialId}/${nct}/qr`;
+
+		pageview({
+			page_path: externalPath,
+			page_title: 'trial-card-external',
+		});
+		router.push(externalPath);
+		return;
+	}
 }
