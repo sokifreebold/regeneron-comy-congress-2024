@@ -31,10 +31,10 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'hematology-oncology-myeloma-3',
-				type: 'pdfCard',
+				type: 'external',
 				phase: 2,
 				nct: 'NCT03761108',
-				trialCardPdf: 'NCT03761108 (LINKER-MM1)_R17_LNVO-EM-0001_844REGN-MID',
+				externalLink: 'https://clinicaltrials.gov/study/NCT03761108?term=NCT03761108&rank=1',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM4</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
@@ -55,10 +55,10 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'hematology-oncology-myeloma-5',
-				type: 'pdfCard',
+				type: 'external',
 				phase: 1,
 				nct: 'NCT05137054',
-				trialCardPdf: 'NCT05137054_LINKER-MM2_R23_LNVO-EM-0002_844REGN-MID',
+				externalLink: 'https://clinicaltrials.gov/study/NCT05137054?term=NCT05137054&rank=1',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM2</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span> + Other Cancer Treatments',
