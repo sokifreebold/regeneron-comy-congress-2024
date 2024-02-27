@@ -45,4 +45,46 @@
 			left: -10px;
 		}
 	}
+
+	&--kioskTopLeft {
+		width: 20%;
+		aspect-ratio: 1;
+		top: -20%;
+		left: -10%;
+		opacity: 0.53;
+	}
+
+	&--kioskTopRight {
+		width: 40%;
+		aspect-ratio: 1;
+		top: 15%;
+		right: -20%;
+		opacity: 0.5;
+	}
+
+	&--kioskCenterLeftBlur {
+		width: 20%;
+		left: -3%;
+		top: auto;
+		bottom: 10%;
+		filter: blur(2px);
+		opacity: 0.3;
+	}
+
+	&--kioskBlurTop {
+		width: 5%;
+		left: 50%;
+		top: 2%;
+		filter: blur(8px);
+		opacity: 0.2;
+	}
+
+	&--kioskBlurBottom {
+		width: 10%;
+		left: 30%;
+		top: auto;
+		bottom: 10%;
+		filter: blur(7px);
+		opacity: 0.1;
+	}
 }

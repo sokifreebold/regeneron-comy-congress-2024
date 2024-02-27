@@ -99,7 +99,8 @@ const props = defineProps({
 		}
 	}
 
-	&--simple-white {
+	&--simple-white,
+	&--simple-white-gradient-bg {
 		position: relative;
 		background: none;
 		.button {
@@ -129,6 +130,10 @@ const props = defineProps({
 				transition: all 0.25s linear;
 			}
 		}
+	}
+
+	&--simple-white-gradient-bg {
+		background: $linear-gradient-02;
 	}
 }
 </style>

@@ -15,6 +15,9 @@ export default {
 				jobCode: 'UNB-EM-0239. March 2024',
 				copyright: '&copy; 2024 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
 			},
+			kiosk: {
+				jobCode: 'US-UNB-EM-24-01-0003. February 2024',
+			},
 		},
 		home: {
 			titleMobile: 'Our oncology and hematology-oncology pipeline',
@@ -26,8 +29,8 @@ export default {
 				'hematology-oncology': 'Hematology Oncology',
 				'basal-cell-merkel-cell-carcinoma': 'Basal Cell Carcinoma (BCC)',
 				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell Carcinoma (CSCC)',
-				'melanoma': 'Melanoma',
-				'multiple-tumors': 'Multiple Tumors'
+				melanoma: 'Melanoma',
+				'multiple-tumors': 'Multiple Tumors',
 			},
 		},
 		misc: {
@@ -43,6 +46,7 @@ export default {
 			noData: 'No data found',
 			close: 'Close',
 			recruiting: 'RECRUITING',
+			seePipelineDetails: 'SEE PIPELINE DETAILS',
 		},
 	},
 };
