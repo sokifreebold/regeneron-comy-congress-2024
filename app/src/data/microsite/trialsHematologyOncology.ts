@@ -34,10 +34,10 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 2,
 				nct: 'NCT03761108',
-				externalLink: 'https://clinicaltrials.gov/study/NCT03761108?term=NCT03761108&rank=1',
+				externalLink: 'https://clinicaltrials.gov/study/NCT03761108',
 				recruiting: true,
 				labels: {
-					title: '<strong>LINKER-MM4</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
+					title: '<strong>LINKER-MM1</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
 					aside: 'Relapsed/refractory multiple myeloma',
 				},
 			},
@@ -62,6 +62,18 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM2</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span> + Other Cancer Treatments',
+					aside: 'Relapsed/refractory multiple myeloma',
+				},
+			},
+			{
+				id: 'hematology-oncology-myeloma-7',
+				type: 'external',
+				phase: 1,
+				nct: 'NCT06140524',
+				externalLink: 'https://classic.clinicaltrials.gov/ct2/show/NCT06140524',
+				recruiting: false,
+				labels: {
+					title: '<strong>LINKER-MGUS1</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
 					aside: 'Relapsed/refractory multiple myeloma',
 				},
 			},
