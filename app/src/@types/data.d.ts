@@ -3,7 +3,7 @@ export interface ICategories {
 	trials?: number;
 }
 
-type trialLink = 'pdfCard' | 'external' | 'qrCode';
+type trialLink = 'pdfCard' | 'external' | 'qrCode' | 'images';
 
 export interface ITrialsLabels {
 	title?: string;
@@ -19,6 +19,7 @@ export interface ITrials {
 	externalLink?: string;
 	nct?: string;
 	trialCardPdf?: string;
+	images?: string[];
 	recruiting?: boolean;
 	labels?: ITrialsLabels;
 }

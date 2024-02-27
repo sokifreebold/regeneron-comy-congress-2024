@@ -2,6 +2,7 @@
 	<Teleport to="body">
 		<overlay-external-link v-if="type === 'external'" />
 		<overlay-external-link-qr-code v-if="type === 'qrCode'" />
+		<overlay-images-carousel v-if="type === 'images'" />
 	</Teleport>
 </template>
 
