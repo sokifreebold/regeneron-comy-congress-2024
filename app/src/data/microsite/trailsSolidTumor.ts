@@ -45,7 +45,7 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				nonInterventional: true,
 				nct: 'NCT03836105',
-				externalLink: 'https://clinicaltrials.gov/study/NCT03836105?term=NCT03836105&rank=1',
+				externalLink: 'https://clinicaltrials.gov/study/NCT03836105   ',
 				labels: {
 					title: '<strong>CASE</strong> Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'locally advanced or metastatic cutaneous squamous or basal cell carcinoma',
