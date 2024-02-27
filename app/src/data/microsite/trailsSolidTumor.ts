@@ -63,7 +63,7 @@ const datum: ITrialsRecords[] = [
 				phase: 3,
 				nct: 'NCT05352672',
 				recruiting: true,
-				trialCardPdf: 'NCT05352672_R16_FIA-EM-0003_844REGN-MID',
+				trialCardPdf: 'NCT05352672_FIA-EM-0003',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Previously Untreated Unresectable Locally Advanced or Metastatic Melanoma',
@@ -75,7 +75,7 @@ const datum: ITrialsRecords[] = [
 				phase: 3,
 				nct: 'NCT05608291',
 				recruiting: true,
-				trialCardPdf: 'NCT05608291_R16_FIA-EM-0009_844REGN-MID',
+				trialCardPdf: 'NCT05608291_FIA-EM-0009',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Adjuvant use in completely resected high-risk melanoma',
@@ -243,7 +243,7 @@ const datum: ITrialsRecords[] = [
 				phase: 2,
 				nct: 'NCT04916002',
 				recruiting: true,
-				trialCardPdf: 'NCT04916002_R20_VIDU-EM-0001_844REGN-MID',
+				trialCardPdf: 'NCT04916002_VIDU-EM-0001',
 				labels: {
 					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced/metastatic tumors',
