@@ -25,6 +25,11 @@ export function navigateTrialCards(
 		const pdfRoutePath = `/trials/${trialId}/${nct}`;
 		router.push(pdfRoutePath);
 	}
+	
+	if (type === 'images') {
+		const imagesRoutePath = `/trials/${trialId}/${nct}/images`;
+		router.push(imagesRoutePath);
+	}
 
 	if (type === 'qrCode') {
 		const externalPath = `/trials/${trialId}/${nct}/qr`;
