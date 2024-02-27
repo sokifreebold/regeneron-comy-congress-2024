@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import type { ITrials } from '@/@types/data';
 import { getTrialDatum } from '@/utils/data';
@@ -40,6 +40,10 @@ const route = useRoute();
 const trialId = computed<string>(() => route.params.trialId as string);
 const nctId = computed<string>(() => route.params.nct as string);
 const datum = computed<ITrials | null>(() => getTrialDatum(trialId.value, nctId.value));
+
+onMounted(() => {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 function navigateBackToTrials() {
 	router.push(`/trials/${trialId.value}`);

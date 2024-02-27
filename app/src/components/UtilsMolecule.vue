@@ -4,18 +4,19 @@
 			'util-molecule',
 			`util-molecule--${props.modifier}`,
 			`util-molecule--${props.view}`,
-			'js-molecule',
+			{ 'js-molecule-fade': props.fadeIn },
 		]"
 	/>
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { gsap } from 'gsap';
+import { simpleFade } from '@/utils/animations';
 
 const props = defineProps({
 	modifier: { type: String, default: 'default' },
 	view: { type: String, default: 'default' },
+	fadeIn: { type: Boolean, default: false },
 });
 
 onMounted(() => {
@@ -23,15 +24,6 @@ onMounted(() => {
 });
 
 function animateMolecule() {
-	const element = document.querySelector('.js-molecule');
-	if (!element) {
-		return;
-	}
-
-	gsap.fromTo(
-		element,
-		{ opacity: 0, scale: 0.8 },
-		{ opacity: 1, scale: 1, duration: 1, ease: 'power1.out' },
-	);
+	simpleFade('.js-molecule-fade');
 }
 </script>

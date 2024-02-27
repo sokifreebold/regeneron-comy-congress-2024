@@ -121,11 +121,11 @@ const props = defineProps({
 
 		&:hover {
 			.button__content {
-				width: calc(100% - 4px);
-				height: calc(100% - 4px);
+				width: calc(100% - 6px);
+				height: calc(100% - 6px);
 			}
 			&:before {
-				border: 3px solid $white;
+				border: 4px solid $white;
 				transition: all 0.25s linear;
 			}
 		}

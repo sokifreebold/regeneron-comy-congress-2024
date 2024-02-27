@@ -3,7 +3,7 @@
 		<div class="home">
 			<!-- Home Title -->
 			<h1
-				class="type-heading-h1 home__title display-mobile-only"
+				class="type-heading-h1 home__title display-mobile-only js-home-title"
 				v-html="$t('home.titleMobile')"
 			/>
 			<h1
@@ -53,6 +53,7 @@ import { useRouter } from 'vue-router';
 import { getHomeCategories } from '@/utils/data';
 import type { ICategories } from '@/@types/data';
 
+import { fadeIn, fadeInRipple } from '@/utils/animations';
 import { gsap } from 'gsap';
 
 const router = useRouter();
@@ -70,27 +71,13 @@ onMounted(() => {
 });
 
 function animateHeader() {
-	const homeTitle = document.querySelector('.js-home-title');
-	if (!homeTitle) {
-		return;
-	}
-
-	gsap.fromTo(
-		homeTitle,
-		{ opacity: 0, x: -40 },
-		{ opacity: 1, x: 0, duration: 0.5, ease: 'power1.out' },
-	);
+	fadeIn('.js-home-title');
 }
 
 function animateList() {
 	const tl = gsap.timeline();
 	itemRefs.value.forEach((item, index) => {
-		tl.fromTo(
-			item,
-			{ opacity: 0, y: -20, x: -10 },
-			{ opacity: 1, y: 0, x: 0, duration: 0.5, ease: 'power1.out' },
-			index * 0.2,
-		);
+		fadeInRipple(item, tl, index * 0.25);
 	});
 }
 
