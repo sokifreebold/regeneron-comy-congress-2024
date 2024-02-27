@@ -1,3 +1,3 @@
 <template>
-	<utils-molecule modifier="topRight" fadeIn="true" />
+	<utils-molecule modifier="topRight" :fadeIn="true" />
 </template>

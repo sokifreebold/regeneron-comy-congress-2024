@@ -40,7 +40,6 @@ const route = useRoute();
 const itemRefs = ref<HTMLElement[]>([]);
 const setRef = (el: any) => {
 	if (el) {
-		console.log(el);
 		itemRefs.value.push(el);
 	}
 };

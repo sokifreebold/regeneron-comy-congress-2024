@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { version } from '@/version.config';
 
-type linkType = Omit<trialLink, 'pdfCard'>;
+// type linkType = Omit<trialLink, 'pdfCard'>;
 
 export const useAppStore = defineStore('appStore', {
 	state: () => ({
@@ -22,9 +22,8 @@ export const useAppStore = defineStore('appStore', {
 		axn_updateVersion(value: string) {
 			this.version = value;
 		},
-		axn_updateExternalLink(value: string, type: linkType) {
+		axn_updateExternalLink(value: string) {
 			this.externalLink = value;
-			this.linkType = type;
 		},
 		axn_updateExternalLinkId(value: string) {
 			this.externalLinkId = value;

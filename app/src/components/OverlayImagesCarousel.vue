@@ -2,31 +2,41 @@
 	<div class="overlay">
 		<div class="overlay__content">
 			<div class="overlay__close" @click="closeOverlay" />
-		
-			
+
 			<Carousel id="gallery" v-model="currentSlide">
 				<Slide v-for="image in images" :key="image">
 					<img class="carousel__item" v-bind:src="`../src/assets/images/${image}.png`" />
 				</Slide>
 			</Carousel>
 
-
-			<Carousel class="thumbnail-carousel" id="thumbnails" :items-to-show="2" ref="carousel" v-model="currentSlide">
+			<Carousel
+				class="thumbnail-carousel"
+				id="thumbnails"
+				:items-to-show="2"
+				ref="carousel"
+				v-model="currentSlide"
+			>
 				<Slide v-for="(image, index) in images" :key="image">
-					<div :class="{'carousel__wrapper': true, 'current__carousel__wrapper': currentSlide === index }">
-						<img class="carousel__item carousel__item__thumbnail" v-bind:src="`../src/assets/images/${image}.png`" @click="slideClicked(index)" />
+					<div
+						:class="{
+							carousel__wrapper: true,
+							current__carousel__wrapper: currentSlide === index,
+						}"
+					>
+						<img
+							class="carousel__item carousel__item__thumbnail"
+							v-bind:src="`../src/assets/images/${image}.png`"
+							@click="slideClicked(index)"
+						/>
 					</div>
-					
-					<span>Page {{ index+1 }}</span>
+
+					<span>Page {{ index + 1 }}</span>
 				</Slide>
 
 				<template #addons>
-				<Navigation />
-				
+					<Navigation />
 				</template>
 			</Carousel>
-
-		
 
 			<div class="overlay__controls">
 				<button @click="closeOverlay">Close</button>
@@ -39,9 +49,9 @@
 import { computed, ref } from 'vue';
 import { useAppStore } from '@/stores/app';
 import { useRoute, useRouter } from 'vue-router';
-import { ITrials } from '@/@types/data';
+// import type { ITrials } from '@/@types/data';
 import { getTrialDatum } from '@/utils/data';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+import { Carousel, Slide, Navigation } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 
 const store = useAppStore();
@@ -51,7 +61,7 @@ const router = useRouter();
 
 const trialId = computed<string>(() => route.params.trialId as string);
 const nctId = computed<string>(() => route.params.nct as string);
-const datum = computed<ITrials | null>(() => getTrialDatum(trialId.value, nctId.value));
+const datum = computed<any>(() => getTrialDatum(trialId.value, nctId.value));
 const images = datum.value.images;
 
 const currentSlide = ref(0);
@@ -61,7 +71,7 @@ function slideClicked(index: number) {
 }
 
 function closeOverlay() {
-	store.axn_updateExternalLink('', undefined);
+	store.axn_updateExternalLink('');
 	store.axn_updateExternalLinkId('');
 	router.push(`/trials/${trialId.value}`);
 }
@@ -155,7 +165,6 @@ function closeOverlay() {
 			background: black;
 			color: white;
 		}
-	
 	}
 
 	&__close {
@@ -171,18 +180,18 @@ function closeOverlay() {
 }
 
 .carousel__item {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.88);
-  color: var(--vc-clr-white);
-  font-size: 20px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.88);
+	color: var(--vc-clr-white);
+	font-size: 20px;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.carousel__item__thumbnail{
-	border: 2px solid #FFFFFF;
+.carousel__item__thumbnail {
+	border: 2px solid #ffffff;
 }
 
 .carousel__wrapper {
@@ -194,15 +203,13 @@ function closeOverlay() {
 }
 
 .carousel__slide {
-  padding: 10px;
-  flex-direction: column;
+	padding: 10px;
+	flex-direction: column;
 }
 
 .carousel__prev,
 .carousel__next {
-  box-sizing: content-box;
-  border: 5px solid white;
-
+	box-sizing: content-box;
+	border: 5px solid white;
 }
-
 </style>

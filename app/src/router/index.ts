@@ -1,3 +1,4 @@
+import { useAppStore } from '@/stores/app';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 import HomeView from '../views/HomeView.vue';
@@ -31,5 +32,27 @@ const router = createRouter({
 	],
 });
 
-// trackRouter(router); - imp
+// Route guard
+router.beforeEach((to: any, from, next) => {
+	const obj = {
+		pageId: to.name,
+		pagePath: to.fullPath,
+	};
+
+	const { query } = to;
+	if (query && query.mode === 'kiosk') {
+		const store = useAppStore();
+		store.axn_updateVersion('kiosk');
+	}
+
+	// Offline tracking
+	if (
+		(window as any).electronAPI &&
+		typeof (window as any).electronAPI.appendToCSV === 'function'
+	) {
+		(window as any).electronAPI.appendToCSV(obj);
+	}
+	next();
+});
+
 export default router;

@@ -1,8 +1,10 @@
 interface IAppConfig {
-	googleAnalyticsTag?: string;
+	googleAnalyticsTagMicrosite?: string;
+	googleAnalyticsTagKiosk?: string;
 }
 
 const appConfig: IAppConfig = {
-	googleAnalyticsTag: 'G-DG2Z2KMFVM',
+	googleAnalyticsTagMicrosite: 'G-DG2Z2KMFVM',
+	googleAnalyticsTagKiosk: 'G-MJHE1CTCXL',
 };
 export default appConfig;

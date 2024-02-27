@@ -9,13 +9,10 @@
 				alt="Regeneron"
 			/>
 
-			
 			<div class="overlay__qr-code"><qrcode-vue :value="externalLink"></qrcode-vue></div>
-			
+
 			<div class="overlay__copy">
-				<h3>
-					Scan QR code above to access trial information
-				</h3>
+				<h3>Scan QR code above to access trial information</h3>
 				<p>We encourage you to read the privacy policy of every website you visit.</p>
 			</div>
 
@@ -42,7 +39,7 @@ const externalLink = computed(() => store.get_externalLink);
 const externalLinkId = computed(() => store.get_externalLinkId);
 
 function closeOverlay() {
-	store.axn_updateExternalLink('', undefined);
+	store.axn_updateExternalLink('');
 	store.axn_updateExternalLinkId('');
 	router.push(`/trials/${trialId.value}`);
 }
@@ -139,10 +136,9 @@ function closeOverlay() {
 			text-align: center;
 			cursor: pointer;
 			transition: all 0.5s ease;
-			background: linear-gradient(90deg, #9F24E2 0%, #3F00C5 100%);
+			background: linear-gradient(90deg, #9f24e2 0%, #3f00c5 100%);
 			color: white;
 		}
-	
 	}
 
 	&__qr-code {

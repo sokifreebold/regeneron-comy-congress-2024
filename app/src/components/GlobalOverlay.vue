@@ -1,8 +1,6 @@
 <template>
 	<Teleport to="body">
-		<overlay-external-link v-if="type === 'external'" />
-		<overlay-external-link-qr-code v-if="type === 'qrCode'" />
-		<overlay-images-carousel v-if="type === 'images'" />
+		<overlay-external-link v-if="externalLink" />
 	</Teleport>
 </template>
 
@@ -11,5 +9,5 @@ import { computed } from 'vue';
 import { useAppStore } from '@/stores/app';
 
 const store = useAppStore();
-const type = computed(() => store.get_externalLinkType);
+const externalLink = computed(() => store.get_externalLink);
 </script>

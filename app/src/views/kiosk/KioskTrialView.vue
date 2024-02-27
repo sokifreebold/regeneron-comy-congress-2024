@@ -49,12 +49,12 @@ function checkIfExternalOverlay() {
 	if (!(nctId.value && viewId.value)) {
 		return;
 	}
-	if (viewId.value !== 'external' && viewId.value !== 'qr' && viewId.value !== 'images') {
+	if (viewId.value !== 'external') {
 		return;
 	}
 	const datum = getTrialDatum(trialId.value, nctId.value);
-	if (datum && (datum.externalLink || datum.images) && datum.type !== 'pdfCard') {
-		store.axn_updateExternalLink(datum.externalLink!, datum.type);
+	if (datum && datum.externalLink && datum.type !== 'pdfCard') {
+		store.axn_updateExternalLink(datum.externalLink!);
 		store.axn_updateExternalLinkId(datum.nct || datum.id);
 	}
 }
