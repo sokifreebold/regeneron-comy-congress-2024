@@ -9,29 +9,30 @@
 				alt="Regeneron"
 			/>
 
+			
+			<div class="overlay__qr-code"><qrcode-vue :value="externalLink"></qrcode-vue></div>
+			
 			<div class="overlay__copy">
 				<h3>
-					You are now leaving the site
-					<span class="ui-domain">{{ host }}</span>
+					Scan QR code above to access trial information
 				</h3>
 				<p>We encourage you to read the privacy policy of every website you visit.</p>
 			</div>
 
 			<div class="overlay__controls">
-				<a :id="externalLinkId" :href="externalLink" target="_blank">Continue</a>
-				<button @click="closeOverlay">Cancel</button>
+				<button @click="closeOverlay">Done</button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { computed, shallowRef } from 'vue';
+import { computed } from 'vue';
 import { useAppStore } from '@/stores/app';
 import { useRoute, useRouter } from 'vue-router';
-const store = useAppStore();
+import QrcodeVue from 'qrcode.vue';
 
-const host = shallowRef<string>(location.host);
+const store = useAppStore();
 
 const route = useRoute();
 const router = useRouter();
@@ -69,6 +70,8 @@ function closeOverlay() {
 		max-height: 90vh;
 		overflow: auto;
 		margin: $unit * 2;
+		display: flex;
+		flex-direction: column;
 
 		background: linear-gradient(
 			166deg,
@@ -95,6 +98,8 @@ function closeOverlay() {
 
 	&__controls {
 		margin-top: $unit * 5;
+		display: flex;
+		justify-content: center;
 
 		a {
 			position: relative;
@@ -126,15 +131,23 @@ function closeOverlay() {
 		a,
 		button {
 			padding: $unit * 1.5 $unit * 3;
-			width: 100%;
+			width: auto;
 			border-radius: $radius * 2;
-			border: 2px solid $primary-2;
+			border: 2px solid transparent;
 			font-family: 'RobotoCondensed-Bold';
 			font-size: 1em;
 			text-align: center;
 			cursor: pointer;
 			transition: all 0.5s ease;
+			background: linear-gradient(90deg, #9F24E2 0%, #3F00C5 100%);
+			color: white;
 		}
+	
+	}
+
+	&__qr-code {
+		align-self: center;
+		padding-top: 2rem;
 	}
 
 	&__close {

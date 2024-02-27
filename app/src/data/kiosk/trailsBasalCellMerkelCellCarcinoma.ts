@@ -19,7 +19,7 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'basal-cell-carcinoma-2',
-				type: 'external',
+				type: 'qrCode',
 				phase: 1,
 				nct: 'NCT03889912',
 				recruiting: true,

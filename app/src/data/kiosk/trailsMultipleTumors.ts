@@ -7,7 +7,7 @@ const datum: ITrialsRecords[] = [
 		trials: [
 			{
 				id: 'multiple-tumors-1',
-				type: 'external',
+				type: 'qrCode',
 				phase: 1,
 				nct: 'NCT03005782',
 				recruiting: false,
@@ -19,7 +19,7 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'multiple-tumors-2',
-				type: 'external',
+				type: 'qrCode',
 				phase: 1,
 				nct: 'NCT03233139',
 				recruiting: true,
@@ -31,7 +31,7 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'multiple-tumors-3',
-				type: 'external',
+				type: 'qrCode',
 				phase: 1,
 				nct: 'NCT05259709',
 				recruiting: true,

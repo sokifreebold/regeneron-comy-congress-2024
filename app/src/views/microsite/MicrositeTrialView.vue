@@ -57,12 +57,12 @@ function checkIfExternalOverlay() {
 	if (!(nctId.value && viewId.value)) {
 		return;
 	}
-	if (viewId.value !== 'external') {
+	if (viewId.value !== 'external' && viewId.value !== 'qr') {
 		return;
 	}
 	const datum = getTrialDatum(trialId.value, nctId.value);
-	if (datum && datum.externalLink) {
-		store.axn_updateExternalLink(datum.externalLink!);
+	if (datum && datum.externalLink && datum.type !== 'pdfCard') {
+		store.axn_updateExternalLink(datum.externalLink!, datum.type);
 		store.axn_updateExternalLinkId(datum.nct || datum.id);
 	}
 }
