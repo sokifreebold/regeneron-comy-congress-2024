@@ -1,62 +1,60 @@
 <template>
-	<layout-trials>
-		<!-- Back Button -->
-		<template v-slot:back>
-			<the-button @click="navigateHome" :hasLeft="true" modifier="back">
-				{{ $t('misc.back') }}
-
-				<template v-slot:leftIcon>
-					<img src="@/assets/icons/back-arrow.svg" />
-				</template>
-			</the-button>
-		</template>
-
+	<layout-kiosk>
 		<div class="trials">
 			<!-- Title -->
-			<div class="trials__header">
-				<div :class="['trials__header-icon', `ui-icon-${trialId}-white`]" />
-				<h1 class="type-heading-h1 trials__title" v-html="$t(`titles.trials.${trialId}`)" />
+			<div class="trials__header js-trial-title">
+				<div :class="['trials__header-icon', `ui-icon-${trialId}`]" />
+				<h1
+					class="type-heading-h1 type-color-white trials__title"
+					v-html="$t(`titles.trials.${trialId}`)"
+				/>
+			</div>
+
+			<!-- Breadcrumb -->
+			<div class="trials__breadcrumb">
+				<div class="trials__breadcrumb-item trials__breadcrumb-item--link">
+					<router-link to="/">{{ $t('misc.mainMenu') }}</router-link>
+				</div>
+
+				<div class="trials__breadcrumb-item" v-html="$t(`titles.breadcrumb.${trialId}`)" />
 			</div>
 
 			<!-- Trial Cards -->
 			<trial-cards />
+
+			<div class="trials__controls">
+				<the-button @click="navigateHome()" modifier="simple-white">
+					{{ $t('misc.mainMenu') }}
+
+					<template v-slot:rightIcon>
+						<img src="@/assets/icons/home-icon.svg" />
+					</template>
+				</the-button>
+			</div>
 		</div>
-	</layout-trials>
+	</layout-kiosk>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, watch } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-import { getTrialDatum } from '@/utils/data';
-import { useAppStore } from '@/stores/app';
+import { computed, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { fadeIn } from '@/utils/animations';
 
-const router = useRouter();
 const route = useRoute();
-const store = useAppStore();
+const router = useRouter();
 
 const trialId = computed<string>(() => route.params.trialId as string);
-const nctId = computed<string>(() => route.params.nct as string);
-const viewId = computed(() => route.params.viewId);
 
-watch(route, checkIfExternalOverlay);
-onMounted(checkIfExternalOverlay);
+onMounted(() => {
+	animateHeader();
+});
+
+function animateHeader() {
+	fadeIn('.js-trial-header');
+}
 
 function navigateHome() {
 	router.push('/');
-}
-
-function checkIfExternalOverlay() {
-	if (!(nctId.value && viewId.value)) {
-		return;
-	}
-	if (viewId.value !== 'external') {
-		return;
-	}
-	const datum = getTrialDatum(trialId.value, nctId.value);
-	if (datum && datum.externalLink && datum.type !== 'pdfCard') {
-		store.axn_updateExternalLink(datum.externalLink!);
-		store.axn_updateExternalLinkId(datum.nct || datum.id);
-	}
 }
 </script>
 
@@ -68,23 +66,43 @@ function checkIfExternalOverlay() {
 .trials__header {
 	display: flex;
 	align-items: center;
-	margin-bottom: $unit * 4;
 
 	&-icon {
 		display: flex;
-		width: $unit * 6;
-		min-width: $unit * 6;
+		width: $unit * 10;
+		min-width: $unit * 10;
 		aspect-ratio: 1;
-		margin-right: $unit * 2;
+		margin-right: $unit * 4;
+	}
+}
 
-		@include tablet {
-			width: $unit * 8;
-			min-width: $unit * 8;
-			margin-right: $unit * 6;
+.trials__breadcrumb {
+	display: flex;
+	align-items: center;
+	margin-bottom: $unit * 7;
+
+	&-item {
+		&:after {
+			content: '>';
+			margin: 0 $unit * 1;
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+
+		&--link {
+			a {
+				border-bottom: 1px solid $white;
+			}
 		}
 	}
 }
-.trials__title {
-	color: $white;
+
+.trials__controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 </style>

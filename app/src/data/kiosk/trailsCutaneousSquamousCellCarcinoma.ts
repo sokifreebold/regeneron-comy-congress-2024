@@ -19,7 +19,7 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'cutaneous-squamous-cell-carcinoma-2',
-				type: 'qrCode',
+				type: 'external',
 				phase: 1,
 				nct: 'NCT04154943',
 				recruiting: false,
@@ -31,7 +31,7 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'cutaneous-squamous-cell-carcinoma-3',
-				type: 'qrCode',
+				type: 'external',
 				phase: 1,
 				nct: 'NCT04626635',
 				recruiting: true,
@@ -55,7 +55,7 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'cutaneous-squamous-cell-carcinoma-5',
-				type: 'qrCode',
+				type: 'external',
 				phase: 1,
 				nct: 'NCT03889912',
 				recruiting: true,
@@ -76,7 +76,7 @@ const datum: ITrialsRecords[] = [
 					aside: 'Locally advanced or metastatic cutaneous squamous or basal cell carcinomas',
 				},
 			},
-		]
+		],
 	},
 ];
 export default datum;

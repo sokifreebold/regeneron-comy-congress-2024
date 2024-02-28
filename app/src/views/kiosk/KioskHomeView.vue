@@ -15,9 +15,10 @@
 			>
 				<div :class="['kiosk-home-links__item-icon', `ui-icon-${item.id}`]" />
 				<div class="kiosk-home-links__item-copy">
-					<div class="kiosk-home-links__item-title type-font-condensed">
-						{{ $t(`titles.trials.${item.id}`) }}
-					</div>
+					<div
+						class="kiosk-home-links__item-title type-font-condensed"
+						v-html="$t(`titles.trials.${item.id}`)"
+					/>
 
 					<div class="kiosk-home-links__item-navigate">
 						<div class="button-wrapper">
@@ -75,7 +76,7 @@ function animateList() {
 }
 
 function navigateToTrial(item: ICategories) {
-	// router.push(`/trials/${item.id}`);
+	router.push(`/panels/trials/${item.id}`);
 }
 </script>
 

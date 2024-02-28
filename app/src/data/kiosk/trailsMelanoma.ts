@@ -31,17 +31,18 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'melanoma-3',
-				type: 'qrCode',
+				type: 'external',
 				phase: 2,
 				nct: 'NCT06190951',
 				recruiting: true,
-				externalLink: 'https://clinicaltrials.gov/study/NCT06190951?term=NCT06190951&rank=1',
+				externalLink:
+					'https://clinicaltrials.gov/study/NCT06190951?term=NCT06190951&rank=1',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Resectable stage III and IV melanoma',
 				},
 			},
-		]
-	}
+		],
+	},
 ];
 export default datum;

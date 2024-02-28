@@ -1,6 +1,8 @@
 import type { ITrials } from '@/@types/data';
 import { type RouteLocationNormalizedLoaded, type Router } from 'vue-router';
 import { pageview } from 'vue-gtag';
+import { useAppStore } from '@/stores/app';
+import { computed } from 'vue';
 
 export function navigateTrialCards(
 	trial: ITrials,
@@ -10,13 +12,24 @@ export function navigateTrialCards(
 	const { type, nct } = trial;
 	const { trialId } = route.params;
 
-	if (type === 'external') {
-		const externalPath = `/trials/${trialId}/${nct}/external`;
+	const store = useAppStore();
+	const version = computed(() => store.get_version);
 
-		pageview({
-			page_path: externalPath,
-			page_title: 'trial-card-external',
-		});
+	if (type === 'external') {
+		let pageTitle = 'trial-card-external';
+		let externalPath = `/trials/${trialId}/${nct}/external`;
+
+		if (version.value === 'kiosk') {
+			externalPath = `/panels${externalPath}`;
+			pageTitle = 'panels-trial-card-external';
+		}
+
+		if (version.value !== 'kiosk') {
+			pageview({
+				page_path: externalPath,
+				page_title: pageTitle,
+			});
+		}
 		router.push(externalPath);
 		return;
 	}
@@ -24,21 +37,5 @@ export function navigateTrialCards(
 	if (type === 'pdfCard') {
 		const pdfRoutePath = `/trials/${trialId}/${nct}`;
 		router.push(pdfRoutePath);
-	}
-	
-	if (type === 'images') {
-		const imagesRoutePath = `/trials/${trialId}/${nct}/images`;
-		router.push(imagesRoutePath);
-	}
-
-	if (type === 'qrCode') {
-		const externalPath = `/trials/${trialId}/${nct}/qr`;
-
-		pageview({
-			page_path: externalPath,
-			page_title: 'trial-card-external',
-		});
-		router.push(externalPath);
-		return;
 	}
 }

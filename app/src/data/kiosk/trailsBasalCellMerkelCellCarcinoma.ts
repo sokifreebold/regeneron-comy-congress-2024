@@ -19,7 +19,7 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'basal-cell-carcinoma-2',
-				type: 'qrCode',
+				type: 'external',
 				phase: 1,
 				nct: 'NCT03889912',
 				recruiting: true,
@@ -40,7 +40,7 @@ const datum: ITrialsRecords[] = [
 					aside: 'Locally advanced or metastatic cutaneous squamous or basal cell carcinomas',
 				},
 			},
-		]
+		],
 	},
 	{
 		id: 'merkel-cell-carcinoma',

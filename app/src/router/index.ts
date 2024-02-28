@@ -2,7 +2,12 @@ import { useAppStore } from '@/stores/app';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 import HomeView from '../views/HomeView.vue';
-import TrialView from '../views/TrialView.vue';
+
+import MicrositeTrialView from '../views/microsite/MicrositeTrialView.vue';
+import KioskTrialView from '@/views/kiosk/KioskTrialView.vue';
+
+import KioskQRCode from '@/views/kiosk/KioskQRCode.vue';
+
 import PdfView from '../views/PdfView.vue';
 import NotFound from '../views/NotFound.vue';
 
@@ -17,12 +22,22 @@ const router = createRouter({
 		{
 			path: '/trials/:trialId/:nct?/:viewId?',
 			name: 'trials',
-			component: TrialView,
+			component: MicrositeTrialView,
 		},
 		{
 			path: '/trials/:trialId/:nct',
 			name: 'trial-card',
 			component: PdfView,
+		},
+		{
+			path: '/panels/trials/:trialId/:nct?',
+			name: 'panels-trials',
+			component: KioskTrialView,
+		},
+		{
+			path: '/panels/trials/:trialId/:nct?/external',
+			name: 'panels-trial-card-external',
+			component: KioskQRCode,
 		},
 		{
 			path: '/:pathMatch(.*)*',
@@ -35,6 +50,7 @@ const router = createRouter({
 // Route guard
 router.beforeEach((to: any, from, next) => {
 	const obj = {
+		event: 'pageview',
 		pageId: to.name,
 		pagePath: to.fullPath,
 	};
