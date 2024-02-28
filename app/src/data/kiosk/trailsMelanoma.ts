@@ -44,6 +44,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				externalLink:
 					'https://clinicaltrials.gov/study/NCT06190951?term=NCT06190951&rank=1',
+				qrCode: 'QR_NCT06190951',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Resectable stage III and IV melanoma',

@@ -256,7 +256,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT04601051',
 				recruiting: false,
 				labels: {
-					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)<sup>††</sup></span>',
+					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)</span>',
 					aside: 'Transthyretin amyloidosis',
 				},
 			},

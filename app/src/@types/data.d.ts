@@ -22,6 +22,7 @@ export interface ITrials {
 	trialCardImages?: string[];
 	recruiting?: boolean;
 	labels?: ITrialsLabels;
+	qrCode?: string;
 }
 
 export interface ITrialsRecords {

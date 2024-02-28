@@ -9,7 +9,12 @@
 
 			<div class="kiosk-overlay__content">
 				<div class="kiosk-overlay__qr">
-					<qrcode-vue :value="trialData.externalLink" :size="200" />
+					<img
+						v-if="trialData.qrCode"
+						:src="`/qrcodes/${trialData.qrCode}.png`"
+						:alt="trialData.nct"
+					/>
+					<!-- <qrcode-vue v-else :value="trialData.externalLink" :size="200" /> -->
 				</div>
 			</div>
 
@@ -82,9 +87,11 @@ function closeOverlay() {
 
 	&__qr {
 		background: $white;
-		padding: $unit * 2;
 
 		@media screen and (max-width: 1600px) {
+			img {
+				width: 150px !important;
+			}
 			canvas {
 				width: 100px !important;
 				height: 100px !important;
@@ -118,7 +125,7 @@ function closeOverlay() {
 		max-width: 1200px;
 		padding: $unit * 10;
 
-		img {
+		.ui-logo-regeneron {
 			max-width: 500px;
 		}
 

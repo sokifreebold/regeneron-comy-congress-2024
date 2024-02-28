@@ -28,6 +28,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT04154943',
 				recruiting: false,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04154943',
+				qrCode: 'QR_NCT04154943',
 				labels: {
 					title: 'Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Stage II to IV cutaneous squamous cell carcinoma',
@@ -40,6 +41,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT04626635',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04626635',
+				qrCode: 'QR_NCT04626635',
 				labels: {
 					title: 'REGN7075 <span class="ui-one-word">(EGFRxCD28 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Advanced solid tumors',
@@ -68,6 +70,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT03889912',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03889912',
+				qrCode: 'QR_NCT03889912 1',
 				labels: {
 					title: 'Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Cutaneous squamous or basal cell carcinomas',
@@ -83,6 +86,7 @@ const datum: ITrialsRecords[] = [
 					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
 					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
 				],
+				qrCode: 'QR_NCT03836105 1',
 				labels: {
 					title: '<strong>CASE</strong> Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Locally advanced or metastatic cutaneous squamous or basal cell carcinomas',

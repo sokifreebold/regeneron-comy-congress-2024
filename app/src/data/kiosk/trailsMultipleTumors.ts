@@ -12,6 +12,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT03005782',
 				recruiting: false,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03005782',
+				qrCode: 'QR_NCT03005782',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> +/- Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Advanced malignances',
@@ -24,6 +25,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT03233139',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03233139',
+				qrCode: 'QR_NCT03233139',
 				labels: {
 					title: 'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Advanced malignancies (Japanese patients)',
@@ -36,6 +38,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT05259709',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT05259709',
+				qrCode: 'QR_NCT05259709',
 				labels: {
 					title: '89Zr-DFOREGN5054 <span class="ui-one-word">(CD8 monoclonal)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Advanced and metastatic solid tumors',
