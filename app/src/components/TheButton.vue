@@ -1,5 +1,7 @@
 <template>
-	<button :class="['button', `button--${props.modifier}`, { 'is-disabled': props.disabled }]">
+	<button
+		:class="['button', `button--${props.modifier}`, { 'is-disabled': props.disabled }, version]"
+	>
 		<div class="button__content">
 			<div v-if="hasLeft" class="button__icon button__icon--left">
 				<slot name="leftIcon" />
@@ -15,11 +17,18 @@
 </template>
 
 <script setup lang="ts">
+import { useAppStore } from '@/stores/app';
+import { computed } from 'vue';
+
 const props = defineProps({
 	modifier: { type: String, default: 'default' },
 	hasLeft: { type: Boolean, default: false },
 	disabled: { type: Boolean, default: false },
 });
+
+const store = useAppStore();
+
+const version = computed(() => store.get_version);
 </script>
 
 <style lang="scss" scoped>
@@ -134,6 +143,25 @@ const props = defineProps({
 
 	&--simple-white-gradient-bg {
 		background: $linear-gradient-02;
+	}
+
+	@include k-desktop {
+		&.kiosk {
+			height: 100px;
+
+			.button {
+				&__content {
+					font-size: 40px;
+					padding: $unit * 10 $unit * 10;
+					border-radius: $radius * 5;
+				}
+
+				&__icon {
+					min-width: $unit * 3;
+					margin-left: $unit * 3;
+				}
+			}
+		}
 	}
 }
 </style>

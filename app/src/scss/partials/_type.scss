@@ -17,6 +17,10 @@
 		@include large-desktop {
 			max-width: 100%;
 		}
+
+		@include k-desktop {
+			line-height: 1.2;
+		}
 	}
 
 	&-h2 {

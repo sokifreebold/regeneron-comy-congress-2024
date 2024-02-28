@@ -9,7 +9,7 @@
 
 			<div class="kiosk-overlay__content">
 				<div class="kiosk-overlay__qr">
-					<qrcode-vue :value="trialData.externalLink" :size="150" />
+					<qrcode-vue :value="trialData.externalLink" :size="200" />
 				</div>
 			</div>
 
@@ -33,14 +33,19 @@ import { useRoute, useRouter } from 'vue-router';
 import { getTrialDatum } from '@/utils/data';
 
 import QrcodeVue from 'qrcode.vue';
+// import { useAppStore } from '@/stores/app';
 
 const route = useRoute();
 const router = useRouter();
+
+// const store = useAppStore();
 
 const trialId = computed<string>(() => route.params.trialId as string);
 const nctId = computed<string>(() => route.params.nct as string);
 
 const trialData = computed<any>(() => trialDataFunction());
+// const version = computed(() => store.get_version);
+// const size = computed(() => (version.value === 'kiosk' & (window as any).innerWidth ? 400 : 300));
 
 function trialDataFunction() {
 	if (!nctId.value) {
@@ -73,6 +78,13 @@ function closeOverlay() {
 	&__qr {
 		background: $white;
 		padding: $unit * 2;
+
+		@media screen and (max-width: 1600px) {
+			canvas {
+				width: 100px !important;
+				height: 100px !important;
+			}
+		}
 	}
 
 	&__copy {
@@ -94,6 +106,32 @@ function closeOverlay() {
 
 		:deep() .button__icon {
 			display: none;
+		}
+	}
+
+	@include k-desktop {
+		max-width: 1200px;
+		padding: $unit * 10;
+
+		img {
+			max-width: 500px;
+		}
+
+		&__qr {
+			margin: $unit * 5;
+		}
+
+		&__copy {
+			margin: $unit * 10 0;
+			strong {
+				line-height: 1.3;
+				@include px-to-em(18px);
+				margin-bottom: $unit * 4;
+			}
+			p {
+				@include px-to-em(16px);
+				line-height: 1.1;
+			}
 		}
 	}
 }

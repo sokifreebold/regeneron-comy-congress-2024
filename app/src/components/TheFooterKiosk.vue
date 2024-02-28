@@ -25,6 +25,15 @@ const props = defineProps({
 			@include px-to-em(12px);
 			@include px-to-em(18px, line-height);
 			margin: $unit 0;
+			line-height: 1.4;
+		}
+	}
+
+	@include k-desktop {
+		&__copy {
+			p {
+				margin-bottom: $unit * 4;
+			}
 		}
 	}
 }

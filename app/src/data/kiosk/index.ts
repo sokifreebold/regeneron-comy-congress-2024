@@ -1,7 +1,7 @@
 import type { ICategories } from '@/@types/data';
 
 import trailsBasalCellMerkelCellCarcinoma from './trailsBasalCellMerkelCellCarcinoma';
-import trailsCutaneousSquamousCellCarcinoma from './trailsBasalCellMerkelCellCarcinoma';
+import trailsCutaneousSquamousCellCarcinoma from './trailsCutaneousSquamousCellCarcinoma';
 import trailsMelanoma from './trailsMelanoma';
 import trailsMultipleTumors from './trailsMultipleTumors';
 
@@ -15,6 +15,6 @@ export const categoriesKiosk: ICategories[] = [
 export const trialsDataKiosk: any = {
 	'basal-cell-merkel-cell-carcinoma': trailsBasalCellMerkelCellCarcinoma,
 	'cutaneous-squamous-cell-carcinoma': trailsCutaneousSquamousCellCarcinoma,
-    'melanoma': trailsMelanoma,
+	melanoma: trailsMelanoma,
 	'multiple-tumors': trailsMultipleTumors,
 };

@@ -1,5 +1,5 @@
 <template>
-	<div class="layout-kiosk-overlay">
+	<div class="layout-kiosk-overlay kiosk-app">
 		<div class="layout-kiosk-overlay__content">
 			<slot />
 		</div>

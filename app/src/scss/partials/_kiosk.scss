@@ -3,4 +3,10 @@
 		margin: $unit * 3;
 		padding: $unit * 5 $unit * 10;
 	}
+
+	@include k-desktop {
+		&-container {
+			padding: $unit * 8 $unit * 15;
+		}
+	}
 }

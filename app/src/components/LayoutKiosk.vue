@@ -1,5 +1,5 @@
 <template>
-	<div class="layout-kiosk">
+	<div class="layout-kiosk kiosk-app">
 		<div class="kiosk-container layout-kiosk__main">
 			<slot />
 		</div>
@@ -25,7 +25,6 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		// justify-content: center;
 		z-index: 1;
 	}
 
@@ -33,6 +32,12 @@
 		flex: 1;
 		overflow-y: auto;
 		@include scrollbar-light();
+	}
+
+	@include k-desktop {
+		&__main {
+			justify-content: center;
+		}
 	}
 }
 </style>

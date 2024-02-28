@@ -113,5 +113,24 @@ function navigateToTrial(item: ICategories) {
 			}
 		}
 	}
+
+	@include k-desktop {
+		&-links {
+			margin-top: $unit * 10;
+
+			&__item {
+				&-title {
+					line-height: 1.2;
+				}
+
+				&-icon {
+					width: $unit * 20;
+					min-width: $unit * 20;
+					margin-right: $unit * 15;
+					aspect-ratio: 1;
+				}
+			}
+		}
+	}
 }
 </style>
