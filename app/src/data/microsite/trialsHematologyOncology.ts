@@ -3,7 +3,7 @@ import type { ITrialsRecords } from '@/@types/data';
 const datum: ITrialsRecords[] = [
 	{
 		id: 'melanoma',
-		title: 'Melanoma and Other Plasma Cell Dyscrasias',
+		title: 'Myeloma and Other Plasma Cell Dyscrasias',
 		trials: [
 			{
 				id: 'hematology-oncology-myeloma-1',
@@ -54,26 +54,28 @@ const datum: ITrialsRecords[] = [
 				},
 			},
 			{
-				id: 'hematology-oncology-myeloma-5',
-				type: 'external',
-				phase: 1,
-				nct: 'NCT05137054',
-				externalLink: 'https://clinicaltrials.gov/study/NCT05137054?term=NCT05137054&rank=1',
-				recruiting: true,
-				labels: {
-					title: '<strong>LINKER-MM2</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span> + Other Cancer Treatments',
-					aside: 'Relapsed/refractory multiple myeloma',
-				},
-			},
-			{
 				id: 'hematology-oncology-myeloma-7',
 				type: 'external',
-				phase: 1,
+				phase: 2,
 				nct: 'NCT06140524',
-				externalLink: 'https://classic.clinicaltrials.gov/ct2/show/NCT06140524',
+				externalLink: 'https://clinicaltrials.gov/study/NCT06140524',
 				recruiting: false,
 				labels: {
 					title: '<strong>LINKER-MGUS1</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
+					aside: 'high-risk monoclonal gammopathy or non-high-risk smoldering multiple myeloma',
+				},
+			},
+			{
+				id: 'hematology-oncology-myeloma-5',
+				type: 'pdfCard',
+				phase: 1,
+				nct: 'NCT05137054',
+				trialCardPdf: 'NCT05137054 (LINKER-MM2)_LNVO-EM-0002',
+				externalLink:
+					'https://clinicaltrials.gov/study/NCT05137054?term=NCT05137054&rank=1',
+				recruiting: true,
+				labels: {
+					title: '<strong>LINKER-MM2</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span> + Other Cancer Treatments',
 					aside: 'Relapsed/refractory multiple myeloma',
 				},
 			},
@@ -116,7 +118,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'OLYMPIA-2-R12_ODRO-EM-0004_844REGN-MID_Bleed',
 				recruiting: true,
 				labels: {
-					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
+					title: '<strong>OLYMPIA-2</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
 					aside: 'Untreated or relapsed/refractory follicular lymphoma',
 				},
 			},
@@ -128,7 +130,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'OLYMPIA-3-R15_ODRO-EM-0003_844REGN-MID_3mmBleed',
 				recruiting: true,
 				labels: {
-					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
+					title: '<strong>OLYMPIA-3</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
 					aside: 'Untreated diffuse large B-cell lymphoma',
 				},
 			},
@@ -140,7 +142,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT06230224',
 				recruiting: true,
 				labels: {
-					title: '<strong>OLYMPIA-4</strong> Odronextamab  <span class="ui-one-word">(OLYMPIA-4 Odronextamab)</span>',
+					title: '<strong>OLYMPIA-4</strong> Odronextamab  <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
 					aside: 'Relapsed/refractory diffuse large B-cell non-Hodgkin Lymphoma',
 				},
 			},
@@ -148,8 +150,8 @@ const datum: ITrialsRecords[] = [
 				id: 'hematology-oncology-lymphoma-5',
 				type: 'external',
 				phase: 3,
-				nct: 'NCT06230224',
-				externalLink: 'https://clinicaltrials.gov/study/NCT06230224',
+				nct: 'NCT06149286',
+				externalLink: 'https://clinicaltrials.gov/study/NCT06149286',
 				recruiting: true,
 				labels: {
 					title: '<strong>OLYMPIA-5</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
@@ -218,7 +220,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'NCT05133531 (ACCESS 1)_R15_POZ-CEM-EM-0010_844REGN-MID',
 				recruiting: true,
 				labels: {
-					title: '<strong>ACCESS-1</strong> Pozelimab <span class="ui-one-word">(C5 monoclonal antibody)</span> + Cemidiran <span class="ui-one-word">(C5 RNAi)†</span>',
+					title: '<strong>ACCESS-1</strong> Pozelimab <span class="ui-one-word">(C5 monoclonal antibody)</span> + Cemidiran <span class="ui-one-word">(C5 RNAi)<sup>†</sup></span>',
 					aside: 'Paroxysmal nocturnal hemoglobinuria',
 				},
 			},
@@ -254,7 +256,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT04601051',
 				recruiting: false,
 				labels: {
-					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)††</span>',
+					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)<sup>††</sup></span>',
 					aside: 'Transthyretin amyloidosis',
 				},
 			},
@@ -265,7 +267,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT05568459',
 				externalLink: 'https://clinicaltrials.gov/study/NCT05568459',
 				nonInterventional: true,
-				recruiting: false,
+				recruiting: true,
 				labels: {
 					title: '<strong>HONEY-B</strong> Lead-in, non-interventional real-world study',
 					aside: 'Hemophilia B',

@@ -18,15 +18,19 @@ export default {
 			kiosk: {
 				jobCode: 'US-UNB-EM-24-01-0003. February 2024',
 			},
+			'hematology-oncology': {
+				copy: 'This information is intended for investigators interested in active clinical trials.<br>The uses of all agents described herein for phase 1–3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country. † In collaboration with Alnylam Pharmaceuticals. †† In collaboration with Intellia Therapeutics.',
+			},
 		},
 		home: {
 			titleMobile: 'Our oncology and hematology-oncology pipeline',
 			titleDesktop: 'Our oncology and<br>hematology-oncology pipeline',
+			kioskTitle: 'Our Dermato-Oncology Pipeline',
 		},
 		titles: {
 			trials: {
 				'solid-tumor': 'Solid Tumor',
-				'hematology-oncology': 'Hematology Oncology',
+				'hematology-oncology': 'Hematology-Oncology',
 				'basal-cell-merkel-cell-carcinoma':
 					'Basal Cell Carcinoma (BCC) + Merkel Cell Carcinoma (MCC)',
 				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell Carcinoma (CSCC)',
@@ -48,7 +52,7 @@ export default {
 			backToTrials: 'Back To Trials',
 			phase: 'Phase',
 			nonInterventional: 'Non-Interventional',
-			seeTrialInfo: 'See Trial Info',
+			seeTrialInfo: 'SEE TRIAL INFO',
 			seeClincialGov: 'Visit ClinicalTrials.gov',
 			noPdf: 'No trial card found. Please try again later.',
 			noData: 'No data found',

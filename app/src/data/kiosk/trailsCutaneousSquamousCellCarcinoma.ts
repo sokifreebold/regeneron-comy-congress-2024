@@ -75,10 +75,10 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'cutaneous-squamous-cell-carcinoma-6',
-				type: 'pdfCard',
+				type: 'external',
 				nonInterventional: true,
 				nct: 'NCT03836105',
-				trialCardPdf: 'https://clinicaltrials.gov/study/NCT03836105',
+				externalLink: 'https://clinicaltrials.gov/study/NCT03836105',
 				trialCardImages: [
 					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
 					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',

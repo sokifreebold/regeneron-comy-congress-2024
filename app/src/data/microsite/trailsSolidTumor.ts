@@ -86,8 +86,9 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 2,
 				nct: 'NCT06190951',
-				recruiting: false,
-				externalLink: 'https://clinicaltrials.gov/study/NCT06190951?term=NCT06190951&rank=1',
+				recruiting: true,
+				externalLink:
+					'https://clinicaltrials.gov/study/NCT06190951?term=NCT06190951&rank=1',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Resectable stage III and IV melanoma',
@@ -185,7 +186,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03972657',
 				labels: {
-					title: 'PSMAxCD28 bispecific <span class="ui-one-word">(REGN4336)</span> ± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'PSMAxCD28 bispecific <span class="ui-one-word">(REGN5678)</span> ± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Metastatic castration-resistant prostate cancer or clear cell renal cell carcinoma',
 				},
 			},
@@ -203,7 +204,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT03564340_R13_REGN4018-EM-0002_844REGN-MID',
 				labels: {
-					title: 'Ubamatamab <span class="ui-one-word">(MUC16xCD3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',	
+					title: 'Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Platinum-resistant ovarian cancer',
 				},
 			},
@@ -215,7 +216,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT04590326_R18_REGN4018-EM-0003_844REGN-MID',
 				labels: {
-					title: 'MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span> + Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',	
+					title: 'MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span> + Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',
 					aside: 'Recurrent ovarian cancer',
 				},
 			},
@@ -281,7 +282,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04465487',
 				labels: {
-					title: 'REGN6569 <span class="ui-one-word">(GITR antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'GITR antibody <span class="ui-one-word">(REGN6569)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced solid tumors',
 				},
 			},

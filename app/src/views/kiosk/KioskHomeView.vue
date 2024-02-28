@@ -2,7 +2,7 @@
 	<layout-kiosk>
 		<h1
 			class="type-heading-h1 type-color-white home__title js-home-title"
-			v-html="$t('home.titleDesktop')"
+			v-html="$t('home.kioskTitle')"
 		/>
 
 		<!-- Panel -->

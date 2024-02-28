@@ -151,4 +151,5 @@ www_bc/package
 www/*
 
 electron/distribution
+electron-dse/distribution
 # End of https://www.toptal.com/developers/gitignore/api/node

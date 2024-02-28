@@ -87,8 +87,7 @@
 		@include largeIcon();
 	}
 	&--solid-tumor-multiple-4,
-	&--multiple-tumors-2
-	 {
+	&--multiple-tumors-2 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-13.svg');
 		@include bg-contain();
 		background-position: center;
@@ -109,8 +108,8 @@
 	&--hematology-oncology-myeloma-1,
 	&--hematology-oncology-myeloma-2,
 	&--hematology-oncology-myeloma-3,
-	&--hematology-oncology-myeloma-4
-	{
+	&--hematology-oncology-myeloma-4,
+	&--hematology-oncology-myeloma-7 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-oncology-1.svg');
 		@include bg-contain();
 		background-position: center;
@@ -118,71 +117,61 @@
 	&--hematology-oncology-lymphoma-1,
 	&--hematology-oncology-lymphoma-4,
 	&--hematology-oncology-lymphoma-6,
-	&--hematology-oncology-lymphoma-7
-	{
+	&--hematology-oncology-lymphoma-7 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-oncology-4.svg');
 		@include bg-contain();
 		background-position: center;
 	}
-	&--hematology-oncology-myeloma-5
-	{
+	&--hematology-oncology-myeloma-5 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-oncology-2.svg');
 		@include bg-contain();
 		background-position: center;
 		@include largeIcon();
 	}
 	&--hematology-oncology-myeloma-6,
-	&--hematology-oncology-classical-hematology-5
-	{
+	&--hematology-oncology-classical-hematology-5 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-oncology-3.svg');
 		@include bg-contain();
 		background-position: center;
 	}
 	&--hematology-oncology-lymphoma-2,
 	&--hematology-oncology-lymphoma-3,
-	&--hematology-oncology-lymphoma-5
-	{
+	&--hematology-oncology-lymphoma-5 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-lymphoma-1.svg');
 		@include bg-contain();
 		background-position: center;
 		@include largeIcon();
 	}
 	&--hematology-oncology-lymphoma-8,
-	&--hematology-oncology-lymphoma-9
-	{
+	&--hematology-oncology-lymphoma-9 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-lymphoma-2.svg');
 		@include bg-contain();
 		background-position: center;
 		@include largeIcon();
 	}
-	&--hematology-oncology-classical-hematology-1
-	{
+	&--hematology-oncology-classical-hematology-1 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-classical-hematology-1.svg');
 		@include bg-contain();
 		background-position: center;
 		@include largeIcon();
 	}
-	&--hematology-oncology-classical-hematology-2
-	{
+	&--hematology-oncology-classical-hematology-2 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-classical-hematology-2.svg');
 		@include bg-contain();
 		background-position: center;
 	}
-	&--hematology-oncology-classical-hematology-3
-	{
+	&--hematology-oncology-classical-hematology-3 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-classical-hematology-3.svg');
 		@include bg-contain();
 		background-position: center;
 	}
-	&--hematology-oncology-classical-hematology-4
-	{
+	&--hematology-oncology-classical-hematology-4 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-classical-hematology-4.svg');
 		@include bg-contain();
 		background-position: center;
 	}
 	&--basal-cell-carcinoma-1,
-	&--cutaneous-squamous-cell-carcinoma-4
-	{
+	&--cutaneous-squamous-cell-carcinoma-4 {
 		background: url('@/assets/icons/trials/basal-cell-merkel-cell-carcinoma-1.svg');
 		@include bg-contain();
 		background-position: center;
@@ -195,20 +184,17 @@
 	&--cutaneous-squamous-cell-carcinoma-6,
 	&--melanoma-1,
 	&--melanoma-2,
-	&--melanoma-3
-	{
+	&--melanoma-3 {
 		background: url('@/assets/icons/trials/basal-cell-merkel-cell-carcinoma-2.svg');
 		@include bg-contain();
 		background-position: center;
 	}
-	&--basal-cell-carcinoma-4
-	{
+	&--basal-cell-carcinoma-4 {
 		background: url('@/assets/icons/trials/basal-cell-merkel-cell-carcinoma-3.svg');
 		@include bg-contain();
 		background-position: center;
 	}
-	&--cutaneous-squamous-cell-carcinoma-3
-	{
+	&--cutaneous-squamous-cell-carcinoma-3 {
 		background: url('@/assets/icons/trials/cutaneous-squamous-cell-carcinoma-1.svg');
 		@include bg-contain();
 		background-position: center;

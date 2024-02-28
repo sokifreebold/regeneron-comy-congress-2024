@@ -9,7 +9,11 @@
 	>
 		<div class="container">
 			<div class="footer__copy">
-				<p v-html="$t('footer.shared.copy')" />
+				<p
+					v-if="$te(`footer.${trialId}.copy`) && route.name === 'trials'"
+					v-html="$t(`footer.${trialId}.copy`)"
+				/>
+				<p v-else v-html="$t('footer.shared.copy')" />
 				<p v-html="$t('footer.shared.jobCode')" />
 			</div>
 
@@ -33,6 +37,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 const props = defineProps({
@@ -40,6 +45,8 @@ const props = defineProps({
 });
 
 const route = useRoute();
+
+const trialId = computed<string>(() => route.params.trialId as string);
 </script>
 
 <style lang="scss" scoped>
