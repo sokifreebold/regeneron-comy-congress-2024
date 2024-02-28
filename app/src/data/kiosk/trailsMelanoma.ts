@@ -12,8 +12,8 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT05352672',
 				recruiting: true,
 				trialCardImages: [
-					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
-					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+					'NCT05352672_FIA-EM-0003_353061533400_844REGN-MID_L1d_front',
+					'NCT05352672_FIA-EM-0003_353061533400_844REGN-MID_L1d_back',
 				],
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
@@ -28,8 +28,8 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT05608291_R16_FIA-EM-0009_844REGN-MID',
 				trialCardImages: [
-					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
-					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+					'NCT05608291_FIA-EM-0009_353061533400_844REGN-MID_L1b_front',
+					'NCT05608291_FIA-EM-0009_353061533400_844REGN-MID_L1b_back',
 				],
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',

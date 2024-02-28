@@ -13,8 +13,8 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'NCT03969004 (C-POST)_R15_CEM-EM-0030_844REGN-MID',
 				recruiting: true,
 				trialCardImages: [
-					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
-					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+					'NCT03969004-(C-POST)_R15_CEM-EM-0030_844REGN-MID-1',
+					'NCT03969004-(C-POST)_R15_CEM-EM-0030_844REGN-MID-2',
 				],
 				labels: {
 					title: 'Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 antibody))</span>',
@@ -55,8 +55,8 @@ const datum: ITrialsRecords[] = [
 				recruiting: false,
 				externalLink: 'NCT04916002_R20_VIDU-EM-0001_844REGN-MID',
 				trialCardImages: [
-					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
-					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+					'NCT04916002_VIDU-EM-0001_353061533400_844REGN-MID_L1g_front',
+					'NCT04916002_VIDU-EM-0001_353061533400_844REGN-MID_L1g_back',
 				],
 				labels: {
 					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
