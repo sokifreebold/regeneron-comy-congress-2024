@@ -5,7 +5,7 @@
 
 			<Carousel id="gallery" v-model="currentSlide">
 				<Slide v-for="image in images" :key="image">
-					<img class="carousel__item" v-bind:src="`../src/assets/images/${image}.png`" />
+					<img class="carousel__item" v-bind:src="`/trialCardImages/${image}.png`" />
 				</Slide>
 			</Carousel>
 
@@ -25,7 +25,7 @@
 					>
 						<img
 							class="carousel__item carousel__item__thumbnail"
-							v-bind:src="`../src/assets/images/${image}.png`"
+							v-bind:src="`/trialCardImages/${image}.png`"
 							@click="slideClicked(index)"
 						/>
 					</div>
@@ -62,7 +62,7 @@ const router = useRouter();
 const trialId = computed<string>(() => route.params.trialId as string);
 const nctId = computed<string>(() => route.params.nct as string);
 const datum = computed<any>(() => getTrialDatum(trialId.value, nctId.value));
-const images = datum.value.images;
+const images = datum.value.trialCardImages;
 
 const currentSlide = ref(0);
 

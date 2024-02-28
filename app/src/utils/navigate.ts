@@ -35,7 +35,10 @@ export function navigateTrialCards(
 	}
 
 	if (type === 'pdfCard') {
-		const pdfRoutePath = `/trials/${trialId}/${nct}`;
+		let pdfRoutePath = `/trials/${trialId}/${nct}`;
+		if (version.value === 'kiosk') {
+			pdfRoutePath = `/panels${pdfRoutePath}`;
+		}
 		router.push(pdfRoutePath);
 	}
 }

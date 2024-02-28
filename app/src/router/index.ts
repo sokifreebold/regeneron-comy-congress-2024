@@ -7,6 +7,7 @@ import MicrositeTrialView from '../views/microsite/MicrositeTrialView.vue';
 import KioskTrialView from '@/views/kiosk/KioskTrialView.vue';
 
 import KioskQRCode from '@/views/kiosk/KioskQRCode.vue';
+import KioskPdfImages from '@/views/kiosk/KioskPdfImages.vue';
 
 import PdfView from '../views/PdfView.vue';
 import NotFound from '../views/NotFound.vue';
@@ -30,9 +31,14 @@ const router = createRouter({
 			component: PdfView,
 		},
 		{
-			path: '/panels/trials/:trialId/:nct?',
+			path: '/panels/trials/:trialId',
 			name: 'panels-trials',
 			component: KioskTrialView,
+		},
+		{
+			path: '/panels/trials/:trialId/:nct',
+			name: 'panels-trial-card',
+			component: KioskPdfImages,
 		},
 		{
 			path: '/panels/trials/:trialId/:nct?/external',
