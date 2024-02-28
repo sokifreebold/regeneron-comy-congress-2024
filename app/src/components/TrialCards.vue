@@ -3,7 +3,11 @@
 		{{ $t('misc.noData') }}
 	</utils-no-record>
 	<div v-else>
-		<div v-for="(section, index) in trialData" :key="index" class="trial-cards">
+		<div
+			v-for="(section, index) in trialData"
+			:key="index"
+			:class="['trial-cards', { kiosk: version === 'kiosk' }]"
+		>
 			<h2
 				v-if="section.title"
 				class="type-heading-h2 type-font-condensed trial-cards__title js-trial-section-title"
@@ -35,9 +39,14 @@ import { gsap } from 'gsap';
 import { getTrialData } from '@/utils/data';
 import type { ITrialsRecords } from '@/@types/data';
 import { fadeIn, fadeInRipple } from '@/utils/animations';
+import { useAppStore } from '@/stores/app';
 
 const route = useRoute();
 const itemRefs = ref<HTMLElement[]>([]);
+
+const store = useAppStore();
+const version = computed(() => store.get_version);
+
 const setRef = (el: any) => {
 	if (el) {
 		itemRefs.value.push(el);

@@ -151,3 +151,70 @@
 		background: $linear-gradient-06;
 	}
 }
+
+.trial-cards {
+	&.kiosk {
+		@include k-desktop {
+			margin-bottom: $unit * 15;
+
+			.trial-cards__title {
+				line-height: 1.1;
+			}
+			.trial-card {
+				margin: $unit * 5 0;
+				&__phase {
+					margin-top: $unit * 10;
+
+					strong,
+					label {
+						line-height: 1.2;
+					}
+				}
+				&__aside {
+					width: 400px;
+
+					margin-right: $unit * 3;
+
+					&-card {
+						min-height: 400px;
+						height: 100%;
+						border-radius: 0 $radius;
+						p {
+							@include px-to-em(12px);
+							line-height: 1.2;
+							padding: 0 $unit * 5;
+						}
+
+						&-icon {
+							width: 150px;
+						}
+					}
+				}
+
+				&__row {
+					&-title {
+						line-height: 1.2;
+						margin: $unit * 4 0;
+					}
+
+					&-record {
+						border-radius: $radius;
+						padding: $unit * 5;
+
+						&--blank {
+							margin-left: $unit * 3;
+						}
+
+						:deep() .button__content {
+							padding: $unit * 5 $unit * 2;
+						}
+					}
+				}
+
+				&__badge {
+					line-height: 1.1;
+				}
+			}
+		}
+	}
+}

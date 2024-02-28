@@ -12,6 +12,10 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT03969004',
 				trialCardPdf: 'NCT03969004 (C-POST)_R15_CEM-EM-0030_844REGN-MID',
 				recruiting: true,
+				trialCardImages: [
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+				],
 				labels: {
 					title: 'Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 antibody))</span>',
 					aside: 'High-risk cutaneous squamous cell carcinoma',
@@ -48,6 +52,10 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT04916002',
 				recruiting: false,
 				externalLink: 'NCT04916002_R20_VIDU-EM-0001_844REGN-MID',
+				trialCardImages: [
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+				],
 				labels: {
 					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Advanced/metastatic tumors',
@@ -71,6 +79,10 @@ const datum: ITrialsRecords[] = [
 				nonInterventional: true,
 				nct: 'NCT03836105',
 				trialCardPdf: 'https://clinicaltrials.gov/study/NCT03836105',
+				trialCardImages: [
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+				],
 				labels: {
 					title: '<strong>CASE</strong> Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Locally advanced or metastatic cutaneous squamous or basal cell carcinomas',

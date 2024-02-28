@@ -15,6 +15,8 @@ const datum: ITrialsRecords[] = [
 				trialCardImages: [
 					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
 					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+					'NCT02651662_CLIO-1-1',
+					'NCT02651662_CLIO-1-2',
 				],
 				labels: {
 					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
@@ -57,6 +59,10 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT04916002',
 				recruiting: true,
 				trialCardPdf: 'NCT04916002_R20_VIDU-EM-0001_844REGN-MID',
+				trialCardImages: [
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+				],
 				labels: {
 					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced/metastatic tumors',

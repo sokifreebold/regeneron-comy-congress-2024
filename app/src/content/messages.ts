@@ -28,7 +28,7 @@ export default {
 				'solid-tumor': 'Solid Tumor',
 				'hematology-oncology': 'Hematology Oncology',
 				'basal-cell-merkel-cell-carcinoma':
-					'Basal Cell Carcinoma (BCC) +<br>Merkel Cell Carcinoma (MCC)',
+					'Basal Cell Carcinoma (BCC) + Merkel Cell Carcinoma (MCC)',
 				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell Carcinoma (CSCC)',
 				melanoma: 'Melanoma',
 				'multiple-tumors': 'Multiple Tumors',

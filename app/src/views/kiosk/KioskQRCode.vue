@@ -1,6 +1,6 @@
 <template>
 	<layout-kiosk-overlay>
-		<div class="kiosk-overlay">
+		<div class="kiosk-overlay js-animate-overlay">
 			<img
 				class="ui-logo-regeneron"
 				src="../../assets/images/regeneron-logo-dark.svg"
@@ -28,11 +28,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { getTrialDatum } from '@/utils/data';
 
 import QrcodeVue from 'qrcode.vue';
+import { fadeIn } from '@/utils/animations';
 // import { useAppStore } from '@/stores/app';
 
 const route = useRoute();
@@ -46,6 +47,10 @@ const nctId = computed<string>(() => route.params.nct as string);
 const trialData = computed<any>(() => trialDataFunction());
 // const version = computed(() => store.get_version);
 // const size = computed(() => (version.value === 'kiosk' & (window as any).innerWidth ? 400 : 300));
+
+onMounted(() => {
+	fadeIn('.js-animate-overlay');
+});
 
 function trialDataFunction() {
 	if (!nctId.value) {

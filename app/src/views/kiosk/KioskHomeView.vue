@@ -119,6 +119,8 @@ function navigateToTrial(item: ICategories) {
 			margin-top: $unit * 10;
 
 			&__item {
+				margin-bottom: 40px;
+
 				&-title {
 					line-height: 1.2;
 				}

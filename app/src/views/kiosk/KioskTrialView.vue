@@ -1,5 +1,5 @@
 <template>
-	<layout-kiosk>
+	<layout-kiosk class="layout-trial-kiosk">
 		<div class="trials">
 			<!-- Title -->
 			<div class="trials__header js-trial-title">
@@ -104,5 +104,35 @@ function navigateHome() {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.trials {
+	@include k-desktop {
+		&__title {
+			@include px-to-em(50px);
+		}
+
+		&__header {
+			margin-bottom: $unit * 5;
+			&-icon {
+				display: flex;
+				width: $unit * 30;
+				min-width: $unit * 30;
+				margin-right: $unit * 8;
+			}
+		}
+
+		&__breadcrumb {
+			margin-bottom: $unit * 15;
+		}
+	}
+}
+</style>
+
+<style lang="scss">
+.layout-trial-kiosk {
+	.layout-kiosk__main {
+		justify-content: flex-start !important;
+	}
 }
 </style>

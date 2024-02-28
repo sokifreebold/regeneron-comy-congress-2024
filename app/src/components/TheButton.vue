@@ -152,7 +152,8 @@ const version = computed(() => store.get_version);
 			.button {
 				&__content {
 					font-size: 40px;
-					padding: $unit * 10 $unit * 10;
+					line-height: 1.1;
+					padding: $unit * 10 $unit * 5;
 					border-radius: $radius * 5;
 				}
 

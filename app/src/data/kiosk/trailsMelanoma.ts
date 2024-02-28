@@ -27,6 +27,10 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT05608291',
 				recruiting: true,
 				trialCardPdf: 'NCT05608291_R16_FIA-EM-0009_844REGN-MID',
+				trialCardImages: [
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-1',
+					'NCT02290951 (ELM 1)_Odronextamab-EM-0008-2',
+				],
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Adjuvant use in completely resected high-risk melanoma',
