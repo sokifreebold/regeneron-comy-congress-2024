@@ -90,7 +90,7 @@ const datum: ITrialsRecords[] = [
 				nonInterventional: true,
 				recruiting: false,
 				labels: {
-					title: '<strong>NCT05673967</strong> Non-interventional real-world experience <span class="ui-one-word">(Non-interventional)</span>',
+					title: '<strong>NCT05673967</strong> Non-interventional real-world experience',
 					aside: 'Relapsed/refractory multiple myeloma',
 				},
 			},
@@ -259,7 +259,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT04601051',
 				recruiting: false,
 				labels: {
-					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)</span>',
+					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)</span>††',
 					aside: 'Transthyretin amyloidosis',
 				},
 			},
