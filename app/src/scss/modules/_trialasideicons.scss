@@ -16,7 +16,6 @@
 		@include bg-contain();
 		background-position: center;
 	}
-	&--solid-tumor-melanoma-1,
 	&--solid-tumor-melanoma-2,
 	&--solid-tumor-melanoma-3,
 	&--solid-tumor-melanoma-4,
@@ -171,21 +170,27 @@
 		background-position: center;
 	}
 	&--basal-cell-carcinoma-1,
-	&--cutaneous-squamous-cell-carcinoma-4 {
+	&--cutaneous-squamous-cell-carcinoma-4,
+	&--solid-tumor-melanoma-1 {
 		background: url('@/assets/icons/trials/basal-cell-merkel-cell-carcinoma-1.svg');
 		@include bg-contain();
 		background-position: center;
+		@include largeIcon();
 	}
 	&--basal-cell-carcinoma-2,
 	&--basal-cell-carcinoma-3,
 	&--cutaneous-squamous-cell-carcinoma-1,
 	&--cutaneous-squamous-cell-carcinoma-2,
 	&--cutaneous-squamous-cell-carcinoma-5,
-	&--cutaneous-squamous-cell-carcinoma-6,
+	&--cutaneous-squamous-cell-carcinoma-6 {
+		background: url('@/assets/icons/trials/basal-cell-merkel-cell-carcinoma-2.svg');
+		@include bg-contain();
+		background-position: center;
+	}
 	&--melanoma-1,
 	&--melanoma-2,
 	&--melanoma-3 {
-		background: url('@/assets/icons/trials/basal-cell-merkel-cell-carcinoma-2.svg');
+		background: url('@/assets/icons/trials/melanoma-1.svg');
 		@include bg-contain();
 		background-position: center;
 	}

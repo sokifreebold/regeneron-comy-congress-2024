@@ -24,7 +24,7 @@ const datum: ITrialsRecords[] = [
 			{
 				id: 'cutaneous-squamous-cell-carcinoma-2',
 				type: 'external',
-				phase: 1,
+				phase: 2,
 				nct: 'NCT04154943',
 				recruiting: false,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04154943',
@@ -37,7 +37,7 @@ const datum: ITrialsRecords[] = [
 			{
 				id: 'cutaneous-squamous-cell-carcinoma-3',
 				type: 'external',
-				phase: 1,
+				phase: 2,
 				nct: 'NCT04626635',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04626635',
@@ -52,7 +52,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT04916002',
-				recruiting: false,
+				recruiting: true,
 				externalLink: 'NCT04916002_R20_VIDU-EM-0001_844REGN-MID',
 				trialCardImages: [
 					'NCT04916002_VIDU-EM-0001_353061533400_844REGN-MID_L1g_front',
@@ -68,7 +68,7 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 1,
 				nct: 'NCT03889912',
-				recruiting: true,
+				recruiting: false,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03889912',
 				qrCode: 'QR_NCT03889912 1',
 				labels: {
