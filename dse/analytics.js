@@ -27,6 +27,9 @@ function addClickListener(e) {
 		pagePath,
 		value,
 	};
+
+	// TODO: Add Analytics sent to Google Analytics
+
 	console.log(`[TRACKING]: ${JSON.stringify(obj)}`);
 
 	// Offline tracking
