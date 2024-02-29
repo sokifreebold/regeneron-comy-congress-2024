@@ -17,7 +17,7 @@ const datum: ITrialsRecords[] = [
 					'NCT03969004-(C-POST)_R15_CEM-EM-0030_844REGN-MID-2',
 				],
 				labels: {
-					title: 'Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 antibody))</span>',
+					title: 'Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'High-risk cutaneous squamous cell carcinoma',
 				},
 			},
@@ -43,7 +43,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT04626635',
 				qrCode: 'QR_NCT04626635',
 				labels: {
-					title: 'REGN7075 <span class="ui-one-word">(EGFRxCD28 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+					title: 'REGN7075 <span class="ui-one-word">(EGFRxCD28 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced solid tumors',
 				},
 			},
@@ -59,7 +59,7 @@ const datum: ITrialsRecords[] = [
 					'NCT04916002_VIDU-EM-0001_353061533400_844REGN-MID_L1g_back',
 				],
 				labels: {
-					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced/metastatic tumors',
 				},
 			},
@@ -68,12 +68,12 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 1,
 				nct: 'NCT03889912',
-				recruiting: false,
+				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03889912',
 				qrCode: 'QR_NCT03889912 1',
 				labels: {
 					title: 'Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
-					aside: 'Cutaneous squamous or basal cell carcinomas',
+					aside: 'Cutaneous squamous or basal cell carcinoma',
 				},
 			},
 			{
@@ -89,7 +89,7 @@ const datum: ITrialsRecords[] = [
 				qrCode: 'QR_NCT03836105 1',
 				labels: {
 					title: '<strong>CASE</strong> Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
-					aside: 'Locally advanced or metastatic cutaneous squamous or basal cell carcinomas',
+					aside: 'Locally advanced or metastatic cutaneous squamous or basal cell carcinoma',
 				},
 			},
 		],

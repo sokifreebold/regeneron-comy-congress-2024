@@ -19,11 +19,11 @@
 					{{ $t('misc.recruiting') }}
 				</div>
 
-				<div v-if="props.datum.phase" class="trial-card__mobile-phase">
-					{{ $t('misc.phase') }} {{ props.datum.phaseMobile || props.datum.phase }}
-				</div>
-				<div v-else-if="props.datum.nonInterventional" class="trial-card__mobile-phase">
+				<div v-if="props.datum.nonInterventional" class="trial-card__mobile-phase">
 					{{ $t('misc.nonInterventional') }}
+				</div>
+				<div v-else-if="props.datum.phase" class="trial-card__mobile-phase">
+					{{ $t('misc.phase') }} {{ props.datum.phaseMobile || props.datum.phase }}
 				</div>
 
 				<h3 class="trial-card__row-title" v-html="props.datum.labels?.title" />

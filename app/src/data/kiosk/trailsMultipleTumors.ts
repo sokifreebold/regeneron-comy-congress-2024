@@ -14,7 +14,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT03005782',
 				qrCode: 'QR_NCT03005782',
 				labels: {
-					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> ± Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> ± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced malignances',
 				},
 			},

@@ -84,7 +84,6 @@ const datum: ITrialsRecords[] = [
 			{
 				id: 'hematology-oncology-myeloma-6',
 				type: 'external',
-				phase: 1,
 				nct: 'NCT05673967',
 				externalLink: 'https://clinicaltrials.gov/study/NCT05673967',
 				nonInterventional: true,
@@ -266,7 +265,6 @@ const datum: ITrialsRecords[] = [
 			{
 				id: 'hematology-oncology-classical-hematology-5',
 				type: 'external',
-				phase: 1,
 				nct: 'NCT05568459',
 				externalLink: 'https://clinicaltrials.gov/study/NCT05568459',
 				nonInterventional: true,
