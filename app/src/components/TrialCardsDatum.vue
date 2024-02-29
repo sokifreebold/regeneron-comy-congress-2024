@@ -18,6 +18,14 @@
 				<div v-if="props.datum.recruiting" class="trial-card__badge">
 					{{ $t('misc.recruiting') }}
 				</div>
+
+				<div v-if="props.datum.phase" class="trial-card__mobile-phase">
+					{{ $t('misc.phase') }} {{ props.datum.phaseMobile || props.datum.phase }}
+				</div>
+				<div v-else-if="props.datum.nonInterventional" class="trial-card__mobile-phase">
+					{{ $t('misc.nonInterventional') }}
+				</div>
+
 				<h3 class="trial-card__row-title" v-html="props.datum.labels?.title" />
 				<the-button
 					class="trial-card__row-control"

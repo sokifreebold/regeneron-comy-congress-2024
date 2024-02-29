@@ -150,6 +150,18 @@
 		box-shadow: $box-shadow-02;
 		background: $linear-gradient-06;
 	}
+
+	&__mobile-phase {
+		opacity: 0.6;
+		@include px-to-em(20px);
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: $unit;
+
+		@include large-desktop {
+			display: none;
+		}
+	}
 }
 
 .trial-cards {
