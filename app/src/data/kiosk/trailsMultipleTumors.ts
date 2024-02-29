@@ -14,7 +14,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT03005782',
 				qrCode: 'QR_NCT03005782',
 				labels: {
-					title: 'Fianlimab <span class="ui-one-word">(LAG-3 monoclonal)</span> +/- Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> ± Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
 					aside: 'Advanced malignances',
 				},
 			},
@@ -27,7 +27,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT03233139',
 				qrCode: 'QR_NCT03233139',
 				labels: {
-					title: 'Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+					title: 'Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced malignancies (Japanese patients)',
 				},
 			},
@@ -40,7 +40,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT05259709',
 				qrCode: 'QR_NCT05259709',
 				labels: {
-					title: '89Zr-DFOREGN5054 <span class="ui-one-word">(CD8 monoclonal)</span> + Cemiplimab <span class="ui-one-word">(PD-1 monoclonal)</span>',
+					title: 'CD8 antibody <span class="ui-one-word">(89Zr-DFOREGN5054)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced and metastatic solid tumors',
 				},
 			},
