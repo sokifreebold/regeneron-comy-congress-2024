@@ -3,11 +3,11 @@
 		<div class="home">
 			<!-- Home Title -->
 			<h1
-				class="type-heading-h1 home__title display-mobile-only js-home-title"
+				class="type-heading-h1 home__title display-mobile-only js-animation-slideIn"
 				v-html="$t('home.titleMobile')"
 			/>
 			<h1
-				class="type-heading-h1 home__title display-tablet-only js-home-title"
+				class="type-heading-h1 home__title display-tablet-only js-animation-slideIn"
 				v-html="$t('home.titleDesktop')"
 			/>
 
@@ -16,7 +16,7 @@
 				<div
 					v-for="(item, index) in getHomeCategories()"
 					:key="index"
-					class="home-links__item"
+					class="home-links__item js-animation-slideIn"
 					:ref="setRef"
 				>
 					<div :class="['home-links__item-icon', `ui-icon-${item.id}`]" />
@@ -47,14 +47,11 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 import { getHomeCategories } from '@/utils/data';
 import type { ICategories } from '@/@types/data';
-
-import { fadeIn, fadeInRipple } from '@/utils/animations';
-import { gsap } from 'gsap';
 
 const router = useRouter();
 const itemRefs = ref<HTMLElement[]>([]);
@@ -64,22 +61,6 @@ const setRef = (el: any) => {
 		itemRefs.value.push(el);
 	}
 };
-
-onMounted(() => {
-	animateHeader();
-	animateList();
-});
-
-function animateHeader() {
-	fadeIn('.js-home-title');
-}
-
-function animateList() {
-	const tl = gsap.timeline();
-	itemRefs.value.forEach((item, index) => {
-		fadeInRipple(item, tl, index * 0.25);
-	});
-}
 
 function navigateToTrial(item: ICategories) {
 	router.push(`/trials/${item.id}`);

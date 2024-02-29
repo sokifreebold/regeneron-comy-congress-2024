@@ -1,7 +1,7 @@
 <template>
 	<layout-kiosk>
 		<h1
-			class="type-heading-h1 type-color-white home__title js-home-title"
+			class="type-heading-h1 type-color-white home__title js-animation-slideIn"
 			v-html="$t('home.kioskTitle')"
 		/>
 
@@ -10,8 +10,7 @@
 			<div
 				v-for="(item, index) in getKioskHomeCategories()"
 				:key="index"
-				class="kiosk-home-links__item"
-				:ref="setRef"
+				class="kiosk-home-links__item js-animation-slideIn"
 			>
 				<div :class="['kiosk-home-links__item-icon', `ui-icon-${item.id}`]" />
 				<div class="kiosk-home-links__item-copy">
@@ -41,39 +40,12 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 import { getKioskHomeCategories } from '@/utils/data';
 import type { ICategories } from '@/@types/data';
-import { fadeIn, fadeInRipple } from '@/utils/animations';
-import { gsap } from 'gsap';
 
 const router = useRouter();
-
-const itemRefs = ref<HTMLElement[]>([]);
-
-const setRef = (el: any) => {
-	if (el) {
-		itemRefs.value.push(el);
-	}
-};
-
-onMounted(() => {
-	animateHeader();
-	animateList();
-});
-
-function animateHeader() {
-	fadeIn('.js-home-title');
-}
-
-function animateList() {
-	const tl = gsap.timeline();
-	itemRefs.value.forEach((item, index) => {
-		fadeInRipple(item, tl, index * 0.25);
-	});
-}
 
 function navigateToTrial(item: ICategories) {
 	router.push(`/panels/trials/${item.id}`);

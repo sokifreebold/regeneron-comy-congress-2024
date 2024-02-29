@@ -1,3 +1,8 @@
 .is-animating {
 	transition: all 0.25s ease;
 }
+
+.js-animation-slideIn,
+.js-animation-popup-slideIn {
+	opacity: 0;
+}

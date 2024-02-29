@@ -2,7 +2,7 @@
 	<layout-kiosk class="layout-trial-kiosk">
 		<div class="trials">
 			<!-- Title -->
-			<div class="trials__header js-trial-title">
+			<div class="trials__header js-animation-slideIn">
 				<div :class="['trials__header-icon', `ui-icon-${trialId}`]" />
 				<h1
 					class="type-heading-h1 type-color-white trials__title"
@@ -11,7 +11,7 @@
 			</div>
 
 			<!-- Breadcrumb -->
-			<div class="trials__breadcrumb">
+			<div class="trials__breadcrumb js-animation-slideIn">
 				<div class="trials__breadcrumb-item trials__breadcrumb-item--link">
 					<router-link to="/">{{ $t('misc.mainMenu') }}</router-link>
 				</div>
@@ -22,7 +22,7 @@
 			<!-- Trial Cards -->
 			<trial-cards />
 
-			<div class="trials__controls">
+			<div class="trials__controls js-animation-slideIn">
 				<the-button @click="navigateHome()" modifier="simple-white">
 					{{ $t('misc.mainMenu') }}
 

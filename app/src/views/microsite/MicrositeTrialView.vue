@@ -13,7 +13,7 @@
 
 		<div class="trials">
 			<!-- Title -->
-			<div class="trials__header js-trial-title">
+			<div class="trials__header js-trial-title js-animation-slideIn">
 				<div :class="['trials__header-icon', `ui-icon-${trialId}-white`]" />
 				<h1 class="type-heading-h1 trials__title" v-html="$t(`titles.trials.${trialId}`)" />
 			</div>
@@ -29,7 +29,6 @@ import { computed, onMounted, watch } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { getTrialDatum } from '@/utils/data';
 import { useAppStore } from '@/stores/app';
-import { fadeIn } from '@/utils/animations';
 
 const router = useRouter();
 const route = useRoute();
@@ -42,12 +41,7 @@ const viewId = computed(() => route.params.viewId);
 watch(route, checkIfExternalOverlay);
 onMounted(() => {
 	checkIfExternalOverlay();
-	animateHeader();
 });
-
-function animateHeader() {
-	fadeIn('.js-trial-title');
-}
 
 function navigateHome() {
 	router.push('/');

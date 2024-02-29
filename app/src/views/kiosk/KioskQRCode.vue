@@ -1,6 +1,6 @@
 <template>
 	<layout-kiosk-overlay>
-		<div class="kiosk-overlay js-animate-overlay">
+		<div class="kiosk-overlay js-animation-slideIn">
 			<img
 				class="ui-logo-regeneron"
 				src="../../assets/images/regeneron-logo-dark.svg"
@@ -13,8 +13,8 @@
 						v-if="trialData.qrCode"
 						:src="`/qrcodes/${trialData.qrCode}.png`"
 						:alt="trialData.nct"
+						loading="lazy"
 					/>
-					<!-- <qrcode-vue v-else :value="trialData.externalLink" :size="200" /> -->
 				</div>
 			</div>
 
@@ -37,25 +37,15 @@ import { computed, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { getTrialDatum } from '@/utils/data';
 
-import QrcodeVue from 'qrcode.vue';
 import { fadeIn } from '@/utils/animations';
-// import { useAppStore } from '@/stores/app';
 
 const route = useRoute();
 const router = useRouter();
-
-// const store = useAppStore();
 
 const trialId = computed<string>(() => route.params.trialId as string);
 const nctId = computed<string>(() => route.params.nct as string);
 
 const trialData = computed<any>(() => trialDataFunction());
-// const version = computed(() => store.get_version);
-// const size = computed(() => (version.value === 'kiosk' & (window as any).innerWidth ? 400 : 300));
-
-onMounted(() => {
-	fadeIn('.js-animate-overlay');
-});
 
 function trialDataFunction() {
 	if (!nctId.value) {

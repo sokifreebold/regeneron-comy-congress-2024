@@ -18,14 +18,15 @@
 		</div>
 
 		<div v-else class="kiosk-images">
-			<div class="kiosk-images__image js-animate-image">
+			<div class="kiosk-images__image">
 				<img
 					class="carousel__item"
 					v-bind:src="`/trialCardImages/${trialData.trialCardImages[currentSlide]}.png`"
+					loading="lazy"
 				/>
 			</div>
 
-			<div class="kiosk-images__thumbnails js-animate-thumbnails">
+			<div class="kiosk-images__thumbnails">
 				<div
 					v-for="(image, index) in trialData.trialCardImages"
 					:key="image"
@@ -42,7 +43,7 @@
 				</div>
 			</div>
 
-			<div class="kiosk-images__controls js-animate-close">
+			<div class="kiosk-images__controls">
 				<the-button @click="closeOverlay" modifier="simple-white">
 					{{ $t('misc.close') }}
 
@@ -56,11 +57,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 import { getTrialDatum } from '@/utils/data';
-import { fadeIn } from '@/utils/animations';
 
 const route = useRoute();
 const router = useRouter();
@@ -71,12 +71,6 @@ const trialId = computed<string>(() => route.params.trialId as string);
 const nctId = computed<string>(() => route.params.nct as string);
 
 const trialData = computed<any>(() => trialDataFunction());
-
-onMounted(() => {
-	fadeIn('.js-animate-image');
-	fadeIn('.js-animate-thumbnails');
-	fadeIn('.js-animate-close');
-});
 
 function trialDataFunction() {
 	if (!nctId.value) {

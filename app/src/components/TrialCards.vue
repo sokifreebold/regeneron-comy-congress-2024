@@ -10,7 +10,7 @@
 		>
 			<h2
 				v-if="section.title"
-				class="type-heading-h2 type-font-condensed trial-cards__title js-trial-section-title"
+				class="type-heading-h2 type-font-condensed trial-cards__title js-trial-section-title js-animation-slideIn"
 				v-html="section.title"
 			/>
 
@@ -18,7 +18,9 @@
 				{{ $t('misc.noData') }}
 			</utils-no-record>
 			<div v-else>
-				<trial-cards-phases class="display-large-desktop-only js-phases" />
+				<trial-cards-phases
+					class="display-large-desktop-only js-phases js-animation-slideIn"
+				/>
 				<div :ref="setRef">
 					<trial-cards-datum
 						v-for="(datum, index) in section.trials"
@@ -32,13 +34,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
-import { gsap } from 'gsap';
 
 import { getTrialData } from '@/utils/data';
 import type { ITrialsRecords } from '@/@types/data';
-import { fadeIn, fadeInRipple } from '@/utils/animations';
 import { useAppStore } from '@/stores/app';
 
 const route = useRoute();
@@ -53,21 +53,8 @@ const setRef = (el: any) => {
 	}
 };
 
-onMounted(() => {
-	fadeIn('.js-trial-section-title');
-	fadeIn('.js-phases');
-	animateList();
-});
-
 const trialId = computed<string>(() => route.params.trialId as string);
 const trialData = computed<ITrialsRecords[]>(() => getTrialData(trialId.value));
-
-function animateList() {
-	const tl = gsap.timeline();
-	itemRefs.value.forEach((item, index) => {
-		fadeInRipple(item, tl, index * 0.5);
-	});
-}
 </script>
 
 <style lang="scss" scoped>

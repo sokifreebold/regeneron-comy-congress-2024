@@ -1,5 +1,5 @@
 <template>
-	<div class="trial-card">
+	<div class="trial-card js-animation-slideIn">
 		<div class="trial-card__aside display-large-desktop-only">
 			<div class="trial-card__aside-card">
 				<div

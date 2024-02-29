@@ -1,5 +1,5 @@
 <template>
-	<div class="overlay">
+	<div class="overlay js-animation-popup-slideIn">
 		<div class="overlay__content">
 			<div class="overlay__close" @click="closeOverlay" />
 
@@ -26,9 +26,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed, shallowRef } from 'vue';
+import { computed, onMounted, shallowRef } from 'vue';
 import { useAppStore } from '@/stores/app';
 import { useRoute, useRouter } from 'vue-router';
+import { applyElementsRippleFade } from '@/utils/animations';
+
 const store = useAppStore();
 
 const host = shallowRef<string>(location.host);
@@ -39,6 +41,11 @@ const router = useRouter();
 const trialId = computed<string>(() => route.params.trialId as string);
 const externalLink = computed(() => store.get_externalLink);
 const externalLinkId = computed(() => store.get_externalLinkId);
+
+onMounted(applyAnimations);
+function applyAnimations() {
+	applyElementsRippleFade('.js-animation-popup-slideIn');
+}
 
 function closeOverlay() {
 	store.axn_updateExternalLink('');
