@@ -221,7 +221,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'NCT05133531 (ACCESS 1)_R15_POZ-CEM-EM-0010_844REGN-MID',
 				recruiting: true,
 				labels: {
-					title: '<strong>ACCESS-1</strong> Pozelimab <span class="ui-one-word">(C5 monoclonal antibody)</span> + Cemidiran <span class="ui-one-word">(C5 RNAi)<sup>†</sup></span>',
+					title: '<strong>ACCESS-1</strong> Pozelimab <span class="ui-one-word">(C5 monoclonal antibody)</span> <br>+ Cemidiran <span class="ui-one-word">(C5 RNAi)<sup>†</sup></span>',
 					aside: 'Paroxysmal nocturnal hemoglobinuria',
 				},
 			},
@@ -258,7 +258,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT04601051',
 				recruiting: false,
 				labels: {
-					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)</span>††',
+					title: 'NTLA-2001 <span class="ui-one-word">(TTR gene editing)</span>',
 					aside: 'Transthyretin amyloidosis',
 				},
 			},

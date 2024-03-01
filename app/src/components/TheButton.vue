@@ -77,7 +77,7 @@ const version = computed(() => store.get_version);
 		.button__content {
 			width: calc(100% - 6px);
 			height: calc(100% - 6px);
-			transition: all 0.25s linear;
+			transition: all 0.15s linear;
 		}
 	}
 
@@ -126,7 +126,7 @@ const version = computed(() => store.get_version);
 			width: 100%;
 			height: 100%;
 			border-radius: $radius * 2;
-			transition: all 0.25s linear;
+			transition: all 0.15s linear;
 		}
 
 		&:hover {
@@ -136,7 +136,7 @@ const version = computed(() => store.get_version);
 			}
 			&:before {
 				border: 4px solid $white;
-				transition: all 0.25s linear;
+				transition: all 0.15s linear;
 			}
 		}
 	}

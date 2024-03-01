@@ -65,7 +65,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT05352672_FIA-EM-0003',
 				labels: {
-					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Previously Untreated Unresectable Locally Advanced or Metastatic Melanoma',
 				},
 			},
@@ -77,7 +77,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT05608291_FIA-EM-0009',
 				labels: {
-					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Adjuvant use in completely resected high-risk melanoma',
 				},
 			},
@@ -90,7 +90,7 @@ const datum: ITrialsRecords[] = [
 				externalLink:
 					'https://clinicaltrials.gov/study/NCT06190951?term=NCT06190951&rank=1',
 				labels: {
-					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Resectable stage III and IV melanoma',
 				},
 			},
@@ -109,7 +109,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT05785767_R22_FIA-EM-0010_844REGN-MID',
 				labels: {
-					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced non-small cell lung cancer with PD-L1 expression > 50%',
 				},
 			},
@@ -122,7 +122,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT05800015_R20_FIA-EM-0011_844REGN-MID',
 				labels: {
-					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> + Chemotherapy',
+					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span><br>+ Chemotherapy',
 					aside: 'Advanced non-small cell lung cancer',
 				},
 			},
@@ -134,7 +134,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: false,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03409614',
 				labels: {
-					title: 'Ipilimumab <span class="ui-one-word">(CTLA-4 antibody)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> + Chemotherapy',
+					title: 'Ipilimumab <span class="ui-one-word">(CTLA-4 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span><br>+ Chemotherapy',
 					aside: 'Advanced or metastatic non-small cell lung cancer',
 				},
 			},
@@ -177,7 +177,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT05125016',
 				labels: {
-					title: 'PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span> ± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span> + PSMAxCD28 bispecific <span class="ui-one-word">(REGN5678)</span>',
+					title: 'PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span><br>± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span><br>+ PSMAxCD28 bispecific <span class="ui-one-word">(REGN5678)</span>',
 					aside: 'Metastatic castration-resistant prostate cancer',
 				},
 			},
@@ -190,7 +190,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03972657',
 				labels: {
-					title: 'PSMAxCD28 bispecific <span class="ui-one-word">(REGN5678)</span> ± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'PSMAxCD28 bispecific <span class="ui-one-word">(REGN5678)</span><br>± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Metastatic castration-resistant prostate cancer or clear cell renal cell carcinoma',
 				},
 			},
@@ -209,7 +209,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT03564340_R13_REGN4018-EM-0002_844REGN-MID',
 				labels: {
-					title: 'Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Platinum-resistant ovarian cancer',
 				},
 			},
@@ -222,7 +222,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT04590326_R18_REGN4018-EM-0003_844REGN-MID',
 				labels: {
-					title: 'MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span> + Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',
+					title: 'MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span><br>+ Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',
 					aside: 'Recurrent ovarian cancer',
 				},
 			},
@@ -241,7 +241,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04626635',
 				labels: {
-					title: '<strong>COMBINE-EGFR-1</strong> EGFRxCD28 bispecific <span class="ui-one-word">(REGN7075)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: '<strong>COMBINE-EGFR-1</strong><br>EGFRxCD28 bispecific <span class="ui-one-word">(REGN7075)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced solid tumors',
 				},
 			},
@@ -253,7 +253,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT04916002_VIDU-EM-0001',
 				labels: {
-					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced/metastatic tumors',
 				},
 			},
@@ -265,7 +265,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: false,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03005782',
 				labels: {
-					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span> ± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced malignances',
 				},
 			},
@@ -289,7 +289,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04465487',
 				labels: {
-					title: 'GITR antibody <span class="ui-one-word">(REGN6569)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'GITR antibody <span class="ui-one-word">(REGN6569)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced solid tumors',
 				},
 			},
@@ -301,7 +301,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT05259709',
 				labels: {
-					title: 'CD8 antibody <span class="ui-one-word">(89Zr-DFOREGN5054)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'CD8 antibody <span class="ui-one-word">(89Zr-DFOREGN5054)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced and metastatic solid tumors',
 				},
 			},

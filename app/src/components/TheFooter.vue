@@ -61,7 +61,7 @@ const trialId = computed<string>(() => route.params.trialId as string);
 
 	&__copy {
 		margin-top: $unit * 4;
-		max-width: 768px;
+		max-width: 1024px;
 
 		p {
 			@include px-to-em(12px);
