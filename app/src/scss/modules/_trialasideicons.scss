@@ -213,5 +213,6 @@
 		background: url('@/assets/icons/trials/cutaneous-squamous-cell-carcinoma-1.svg');
 		@include bg-contain();
 		background-position: center;
+		@include largeIcon();
 	}
 }
