@@ -10,7 +10,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT05730036',
-				trialCardPdf: 'NCT05730036 (LINKER-MM3)_R20_LNVO-EM-0005_844REGN-MID',
+				trialCardPdf: 'NCT05730036 (LINKER-MM3)_LNVO-EM-0005',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM3</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
@@ -23,7 +23,7 @@ const datum: ITrialsRecords[] = [
 				phase: 2,
 				phaseMobile: '1/2',
 				nct: 'NCT05828511',
-				trialCardPdf: 'NCT058285111 (LINKER-MM4)_R21_Linvoseltamab-EM-0011_844REGN-MID',
+				trialCardPdf: 'NCT058285111_Linvoseltamab-EM-0011',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM4</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
@@ -48,7 +48,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT05955508',
-				trialCardPdf: 'NCT05955508_Smoldering_MM_R18_844REGN-MID',
+				trialCardPdf: 'NCT05955508 Linvoseltamab-EM-0016',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-SMM1</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
@@ -104,7 +104,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT06091254',
-				trialCardPdf: 'OLYMPIA-1-R16_ODRO-EM-0002_844REGN-MID_Bleed',
+				trialCardPdf: 'NCT06091254_OLYMPIA-1_ODRO-EM-0002',
 				recruiting: true,
 				labels: {
 					title: '<strong>OLYMPIA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
@@ -116,7 +116,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT06097364',
-				trialCardPdf: 'OLYMPIA-2-R12_ODRO-EM-0004_844REGN-MID_Bleed',
+				trialCardPdf: 'NCT06097364_OLYMPIA-2_ODRO-EM-0004',
 				recruiting: true,
 				labels: {
 					title: '<strong>OLYMPIA-2</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
@@ -128,7 +128,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT06091865',
-				trialCardPdf: 'OLYMPIA-3-R15_ODRO-EM-0003_844REGN-MID_3mmBleed',
+				trialCardPdf: 'NCT06091865_OLYMPIA-3_ODRO-EM-0003',
 				recruiting: true,
 				labels: {
 					title: '<strong>OLYMPIA-3</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
@@ -164,7 +164,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT03888105',
-				trialCardPdf: 'NCT03888105 (ELM 2)_R19_Odronextamab-EM-0009_844REGN-MID',
+				trialCardPdf: 'NCT03888105 (ELM 2)_Odronextamab-EM-0009',
 				recruiting: true,
 				labels: {
 					title: '<strong>ELM-2</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
@@ -176,7 +176,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 1,
 				nct: 'NCT02290951',
-				trialCardPdf: 'NCT02290951 (ELM 1)_R16_Odronextamab-EM-0008_844REGN-MID',
+				trialCardPdf: 'NCT02290951 (ELM 1)_Odronextamab-EM-0008',
 				recruiting: false,
 				labels: {
 					title: '<strong>ELM-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
@@ -188,7 +188,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 1,
 				nct: 'NCT05685173',
-				trialCardPdf: 'NCT05685173 (ATHENA 1)_R13_Odronextamab-EM-0010_844REGN-MID',
+				trialCardPdf: 'NCT05685173 (ATHENA 1)_Odronextamab-EM-0010',
 				recruiting: true,
 				labels: {
 					title: '<strong>ATHENA-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + CD22xCD28 bispecific <span class="ui-one-word">(REGN5837)</span>',
@@ -200,7 +200,7 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 1,
 				nct: 'NCT02651662',
-				trialCardPdf: 'NCT02651662 CLIO 1_R12_Odronextamab-EM-0011_844REGN-MID',
+				trialCardPdf: 'NCT02651662_CLIO-1',
 				recruiting: false,
 				labels: {
 					title: '<strong>CLIO-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',

@@ -107,7 +107,7 @@ const datum: ITrialsRecords[] = [
 				phaseMobile: '2/3',
 				nct: 'NCT05785767',
 				recruiting: true,
-				trialCardPdf: 'NCT05785767_R22_FIA-EM-0010_844REGN-MID',
+				trialCardPdf: 'NCT05785767_FIA-EM-0010',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced non-small cell lung cancer with PD-L1 expression > 50%',
@@ -120,7 +120,7 @@ const datum: ITrialsRecords[] = [
 				phaseMobile: '2/3',
 				nct: 'NCT05800015',
 				recruiting: true,
-				trialCardPdf: 'NCT05800015_R20_FIA-EM-0011_844REGN-MID',
+				trialCardPdf: 'NCT05800015_FIA-EM-0011',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span><br>+ Chemotherapy',
 					aside: 'Advanced non-small cell lung cancer',
@@ -156,7 +156,7 @@ const datum: ITrialsRecords[] = [
 				phase: 2,
 				nct: 'NCT04982224',
 				recruiting: true,
-				trialCardPdf: 'NCT04982224_R18_ESMO_REGN5093-M114-EM-0003_844REGN-MID',
+				trialCardPdf: 'NCT04982224_REGN5093-M114-EM-0003',
 				labels: {
 					title: 'METxMET antibody-drug conjugate <span class="ui-one-word">(REGN5093-M114)</span>',
 					aside: 'MET-overexpressing non-small cell lung cancer',
@@ -207,7 +207,7 @@ const datum: ITrialsRecords[] = [
 				phaseMobile: '1/2',
 				nct: 'NCT03564340',
 				recruiting: true,
-				trialCardPdf: 'NCT03564340_R13_REGN4018-EM-0002_844REGN-MID',
+				trialCardPdf: 'NCT03564340_REGN4018-EM-0002',
 				labels: {
 					title: 'Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Platinum-resistant ovarian cancer',
@@ -220,7 +220,7 @@ const datum: ITrialsRecords[] = [
 				phaseMobile: '1/2',
 				nct: 'NCT04590326',
 				recruiting: true,
-				trialCardPdf: 'NCT04590326_R18_REGN4018-EM-0003_844REGN-MID',
+				trialCardPdf: 'NCT04590326_REGN4018-EM-0003',
 				labels: {
 					title: 'MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span><br>+ Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',
 					aside: 'Recurrent ovarian cancer',

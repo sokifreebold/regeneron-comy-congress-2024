@@ -1,6 +1,6 @@
 import type { ICategories } from '@/@types/data';
 
-import trialsSolidTumor from './trailsSolidTumor';
+import trialsSolidTumor from './trialsSolidTumor';
 import trialsHematologyOncology from './trialsHematologyOncology';
 
 export const categories: ICategories[] = [
