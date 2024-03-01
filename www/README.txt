@@ -10,14 +10,6 @@ This package contains all the necessary files for hosting your static website. I
 - `/favicon.jpeg` - Favicon for the website.
 - `/index.html` - Main HTML entry point.
 
-## Build Instructions
-Microsite 
-`npm start`
-
-Kiosk 
-`cd app`
-`npm run dev:kiosk`
-
 ## Deployment Instructions
 2. **File Upload**: Upload all files from this package to the web server's root directory, maintaining the directory structure as provided.
 4. **Website Testing**: After uploading, visit your website's URL to confirm that everything is functioning as expected.
