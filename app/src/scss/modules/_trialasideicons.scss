@@ -147,9 +147,14 @@
 		background-position: center;
 		@include largeIcon();
 	}
-	&--hematology-oncology-lymphoma-8,
 	&--hematology-oncology-lymphoma-9 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-lymphoma-2.svg');
+		@include bg-contain();
+		background-position: center;
+		@include largeIcon();
+	}
+	&--hematology-oncology-lymphoma-8 {
+		background: url('@/assets/icons/trials/trial-icon-hematology-lymphoma-3.svg');
 		@include bg-contain();
 		background-position: center;
 		@include largeIcon();
