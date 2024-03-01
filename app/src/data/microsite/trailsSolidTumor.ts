@@ -13,7 +13,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'NCT03969004 (C-POST)_R15_CEM-EM-0030_844REGN-MID',
 				recruiting: true,
 				labels: {
-					title: '<strong>C-POST</strong> Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'High-risk cutaneous squamous cell carcinoma',
 				},
 			},
