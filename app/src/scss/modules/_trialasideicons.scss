@@ -203,6 +203,7 @@
 		background: url('@/assets/icons/trials/melanoma-1.svg');
 		@include bg-contain();
 		background-position: center;
+		@include largeIcon();
 	}
 	&--basal-cell-carcinoma-4 {
 		background: url('@/assets/icons/trials/basal-cell-merkel-cell-carcinoma-3.svg');
