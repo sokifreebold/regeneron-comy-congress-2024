@@ -43,7 +43,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT04626635',
 				qrCode: 'QR_NCT04626635',
 				labels: {
-					title: 'EGFRxCD28 bispecific <span class="ui-one-word">(REGN7075)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: '<strong>Combine-EGFR</strong> EGFRxCD28 bispecific <span class="ui-one-word">(REGN7075)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced solid tumors',
 				},
 			},

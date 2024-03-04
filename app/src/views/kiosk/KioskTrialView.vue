@@ -106,6 +106,10 @@ function navigateHome() {
 	justify-content: center;
 }
 
+.trials__title{
+	font-size: 3em;
+}
+
 .trials {
 	@include k-desktop {
 		&__title {

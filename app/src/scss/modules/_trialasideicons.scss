@@ -7,6 +7,10 @@
 	width: 120px;
 	aspect-ratio: auto;
 }
+@mixin extraLargeIcon {
+	width: 140px;
+	aspect-ratio: auto;
+}
 .trial-aside-icon {
 	&--solid-tumor-non-melanoma-1,
 	&--solid-tumor-non-melanoma-2,
@@ -95,7 +99,7 @@
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-12.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--solid-tumor-multiple-4,
 	&--multiple-tumors-2 {
@@ -114,7 +118,7 @@
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-15.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--hematology-oncology-myeloma-1,
 	&--hematology-oncology-myeloma-2,
@@ -191,7 +195,7 @@
 		background: url('@/assets/icons/trials/basal-cell-merkel-cell-carcinoma-1.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--basal-cell-carcinoma-2,
 	&--basal-cell-carcinoma-3,
@@ -209,7 +213,7 @@
 		background: url('@/assets/icons/trials/melanoma-1.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--basal-cell-carcinoma-4 {
 		background: url('@/assets/icons/trials/basal-cell-merkel-cell-carcinoma-3.svg');
@@ -220,6 +224,6 @@
 		background: url('@/assets/icons/trials/cutaneous-squamous-cell-carcinoma-1.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 }

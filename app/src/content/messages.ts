@@ -32,14 +32,14 @@ export default {
 				'solid-tumor': 'Solid Tumor',
 				'hematology-oncology': 'Hematology-Oncology',
 				'basal-cell-merkel-cell-carcinoma':
-					'Basal Cell Carcinoma (BCC) + Merkel Cell Carcinoma (MCC)',
-				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell Carcinoma (CSCC)',
+					'Basal Cell Carcinoma (BCC) + <br>Merkel Cell Carcinoma (MCC)',
+				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell <br>Carcinoma (CSCC)',
 				melanoma: 'Melanoma',
 				'multiple-tumors': 'Multiple Tumors',
 			},
 			breadcrumb: {
 				'basal-cell-merkel-cell-carcinoma':
-					'Basal Cell Carcinoma (BCC) + Merkel Cell Carcinoma (MCC)',
+					'<strong>Basal Cell Carcinoma (BCC) + Merkel Cell Carcinoma (MCC)</strong>',
 				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell Carcinoma (CSCC)',
 				melanoma: 'Melanoma',
 				'multiple-tumors': 'Multiple Tumors',

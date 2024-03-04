@@ -53,6 +53,11 @@ function navigateToTrial(item: ICategories) {
 </script>
 
 <style lang="scss" scoped>
+
+.type-heading-h1{
+	font-size: 6.5em;
+	line-height: 1em;
+}
 .kiosk-home {
 	&-links {
 		margin-top: $unit * 5;
