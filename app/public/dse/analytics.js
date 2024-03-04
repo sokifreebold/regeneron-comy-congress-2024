@@ -1,3 +1,5 @@
+const coreId = 'coreSpr_3952301';
+
 function addClickListener(e) {
 	let value = '';
 	let pageId = '';
@@ -12,7 +14,7 @@ function addClickListener(e) {
 	}
 
 	try {
-		const slideIndex = document.getElementById('coreSpr_3952301').getCore().B.qa();
+		const slideIndex = document.getElementById(coreId).getCore().B.qa();
 		if (!isNaN(slideIndex)) {
 			pageId = slideIndex + 1;
 			pagePath = `slide${pageId}`;
@@ -28,24 +30,59 @@ function addClickListener(e) {
 		value,
 	};
 
-	// TODO: Add Analytics sent to Google Analytics
-	window.dataLayer.push({
-		event: 'page_view',
-		page_title: pagePath,
+	gtag('event', 'click', {
+		page_title: pageId,
 		page_location: location.href,
+		page_path: pagePath,
+		value,
 	});
-
 	console.log(`[TRACKING]: ${JSON.stringify(obj)}`);
 
 	// Offline tracking
 	if (window.electronAPI && typeof window.electronAPI.appendToCSV === 'function') {
 		window.electronAPI.appendToCSV(obj);
 	}
+
+	pageView();
+}
+
+function pageView() {
+	try {
+		setTimeout(() => {
+			const slideIndex = document.getElementById(coreId).getCore().B.qa();
+			if (isNaN(slideIndex)) {
+				return;
+			}
+
+			const pageTitle = slideIndex + 1;
+			const pagePath = `slide${pageTitle}`;
+
+			gtag('event', 'page_view', {
+				page_title: pageTitle,
+				page_location: location.href,
+				page_path: pagePath,
+			});
+
+			const obj = {
+				event: 'page_view',
+				pageId: pageTitle,
+				pagePath,
+			};
+			console.log(`[TRACKING]: ${JSON.stringify(obj)}`);
+			// Offline tracking
+			if (window.electronAPI && typeof window.electronAPI.appendToCSV === 'function') {
+				window.electronAPI.appendToCSV(obj);
+			}
+		}, 300);
+	} catch (err) {
+		console.warn(err);
+	}
 }
 
 (function () {
 	document.addEventListener('DOMContentLoaded', (event) => {
 		console.log('DOM fully loaded and parsed');
+		pageView();
 		document.addEventListener('mousedown', addClickListener);
 	});
 })();
