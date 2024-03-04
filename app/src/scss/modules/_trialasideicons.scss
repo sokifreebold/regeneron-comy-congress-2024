@@ -26,6 +26,12 @@
 		background-position: center;
 		@include largeIcon();
 	}
+	&--solid-tumor-mcc-1 {
+		background: url('@/assets/icons/trials/mcc-1.svg');
+		@include bg-contain();
+		background-position: center;
+		@include largeIcon();
+	}
 	&--solid-tumor-lung-cancer-2 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-3.svg');
 		@include bg-contain();

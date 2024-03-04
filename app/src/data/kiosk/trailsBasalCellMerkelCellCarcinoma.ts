@@ -53,7 +53,7 @@ const datum: ITrialsRecords[] = [
 		title: 'Merkel Cell Carcinoma (MCC)',
 		trials: [
 			{
-				id: 'solid-tumor-melanoma-1',
+				id: 'solid-tumor-mcc-1',
 				type: 'pdfCard',
 				phase: 2,
 				nct: 'NCT04916002',
