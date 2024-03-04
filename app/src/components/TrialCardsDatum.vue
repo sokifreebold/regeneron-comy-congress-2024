@@ -36,6 +36,7 @@
 
 					<template v-slot:rightIcon>
 						<img
+							class="external-icon"
 							v-if="props.datum.type === 'external'"
 							src="@/assets/icons/external-link.svg"
 						/>
@@ -68,3 +69,10 @@ function navigateTrialCardsWrapper(trial: ITrials) {
 	navigateTrialCards(trial, router, route);
 }
 </script>
+
+
+<style lang="scss" scoped>
+.external-icon {
+	height: 1.5em;
+}
+</style>
