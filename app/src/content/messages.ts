@@ -62,6 +62,7 @@ export default {
 			seePipelineDetails: 'SEE PIPELINE DETAILS',
 			mainMenu: 'Main Menu',
 			done: 'Done',
+			loading: 'Loading, please wait...',
 		},
 		kiosk: {
 			qr: {

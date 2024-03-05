@@ -1,4 +1,5 @@
 .trial-card {
+	position: relative;
 	display: flex;
 	width: 100%;
 	margin: {
@@ -162,6 +163,14 @@
 		@include large-desktop {
 			display: none;
 		}
+	}
+
+	// Loader Image
+	&__loader {
+		position: absolute;
+		z-index: -99;
+		opacity: 0;
+		display: none !important;
 	}
 }
 

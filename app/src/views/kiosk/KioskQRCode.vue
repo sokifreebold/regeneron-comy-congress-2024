@@ -33,11 +33,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { getTrialDatum } from '@/utils/data';
-
-import { fadeIn } from '@/utils/animations';
 
 const route = useRoute();
 const router = useRouter();
@@ -76,9 +74,14 @@ function closeOverlay() {
 	}
 
 	&__qr {
+		display: flex;
 		background: $white;
+		min-width: 330px;
+		aspect-ratio: 1;
 
 		@media screen and (max-width: 1600px) {
+			min-width: 150px;
+
 			img {
 				width: 150px !important;
 			}

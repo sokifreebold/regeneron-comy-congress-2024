@@ -30,6 +30,7 @@ $box-shadow-03: 0px 55px 116px 0px rgba(#0c2561, 1);
 
 $linear-gradient-01: linear-gradient(to right, $accent-1, $accent-2);
 $linear-gradient-02: linear-gradient(to right, $accent-2 0%, $secondary 100%);
+$linear-gradient-02-alt: linear-gradient(to left, $accent-2 0%, $secondary 100%);
 $linear-gradient-03: linear-gradient(to left, $accent-2, $secondary);
 $linear-gradient-04: linear-gradient(to right, rgba($dark-shade-3, 1), rgba($dark-shade-2, 1));
 $linear-gradient-05: linear-gradient(to top, $secondary, $accent-2);

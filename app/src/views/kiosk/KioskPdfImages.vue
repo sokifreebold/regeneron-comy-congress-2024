@@ -1,5 +1,11 @@
 <template>
-	<layout-kiosk-overlay class="layout-kiosk-overlay">
+	<layout-kiosk-overlay
+		v-if="!loaded"
+		class="layout-kiosk-images-overlay layout-kiosk-images-overlay__loader"
+	>
+		{{ $t('misc.loading') }}
+	</layout-kiosk-overlay>
+	<layout-kiosk-overlay class="layout-kiosk-images-overlay">
 		<div
 			v-if="!(trialData.trialCardImages && trialData.trialCardImages.length > 0)"
 			class="kiosk-images-no-data"
@@ -27,6 +33,15 @@
 			</div>
 
 			<div class="kiosk-images__thumbnails">
+				<button
+					:class="[
+						'kiosk-images__thumbnails-controls kiosk-images__thumbnails-controls--prev',
+						{ 'is-disabled': currentSlide === 0 },
+					]"
+					@click="navigateSlides(-1)"
+				>
+					<img src="@/assets/icons/chevron-left-white.svg" />
+				</button>
 				<div
 					v-for="(image, index) in trialData.trialCardImages"
 					:key="image"
@@ -41,6 +56,15 @@
 						@click="slideClicked(index)"
 					/>
 				</div>
+				<button
+					:class="[
+						'kiosk-images__thumbnails-controls kiosk-images__thumbnails-controls--next',
+						{ 'is-disabled': currentSlide === trialData.trialCardImages.length - 1 },
+					]"
+					@click="navigateSlides(1)"
+				>
+					<img src="@/assets/icons/chevron-right-white.svg" />
+				</button>
 			</div>
 
 			<div class="kiosk-images__controls">
@@ -57,7 +81,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 import { getTrialDatum } from '@/utils/data';
@@ -66,11 +90,36 @@ const route = useRoute();
 const router = useRouter();
 
 const currentSlide = ref(0);
+const loaded = ref(false);
 
 const trialId = computed<string>(() => route.params.trialId as string);
 const nctId = computed<string>(() => route.params.nct as string);
 
 const trialData = computed<any>(() => trialDataFunction());
+
+onMounted(() => {
+	const images = document.querySelectorAll('img');
+	const imageLoadPromises = Array.from(images).map(
+		(img) =>
+			new Promise((resolve, reject) => {
+				img.onload = resolve;
+				img.onerror = reject;
+			}),
+	);
+
+	Promise.all(imageLoadPromises)
+		.then(() => {
+			loaded.value = true;
+		})
+		.catch((error) => {
+			console.error('At least one image failed to load', error);
+		});
+
+	// Fallback to load images
+	setTimeout(() => {
+		loaded.value = true;
+	}, 3000);
+});
 
 function trialDataFunction() {
 	if (!nctId.value) {
@@ -87,9 +136,13 @@ function slideClicked(index: number) {
 function closeOverlay() {
 	router.push(`/panels/trials/${trialId.value}`);
 }
+
+function navigateSlides(dir: number) {
+	currentSlide.value = currentSlide.value + dir;
+}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .kiosk-images-no-data {
 	display: flex;
 	flex-direction: column;
@@ -100,12 +153,31 @@ function closeOverlay() {
 	}
 }
 
-.layout-kiosk-overlay {
+.layout-kiosk-images-overlay {
 	width: 100%;
-	:deep() .layout-kiosk-overlay__content {
+	.layout-kiosk-overlay__content {
 		width: 100%;
 		height: 100%;
 		padding: $unit * 5 $unit * 10;
+	}
+
+	&__loader {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		position: fixed;
+		inset: 0;
+		z-index: 9;
+
+		.layout-kiosk-overlay__content {
+			width: 100%;
+			height: 100%;
+			padding: $unit * 5 $unit * 10;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 }
 .kiosk-images {
@@ -121,10 +193,6 @@ function closeOverlay() {
 		@include scrollbar-light();
 		max-width: 900px;
 		margin: 0 auto;
-
-		img {
-			// max-height: 100%;
-		}
 	}
 
 	&__thumbnails {
@@ -146,6 +214,32 @@ function closeOverlay() {
 				max-width: 70px;
 			}
 		}
+
+		&-controls {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 2px solid $white;
+			height: 60px;
+			background: $linear-gradient-02;
+			border-radius: 50px;
+			margin: $unit * 2 $unit * 3;
+			cursor: pointer;
+
+			img {
+				max-width: 20px;
+				aspect-ratio: 1;
+			}
+
+			&--prev {
+				background: $linear-gradient-02-alt;
+			}
+
+			&.is-disabled {
+				pointer-events: none;
+				opacity: 0;
+			}
+		}
 	}
 
 	&__controls {
@@ -165,6 +259,15 @@ function closeOverlay() {
 			margin: $unit * 10 auto;
 			img {
 				max-width: 200px;
+			}
+
+			&-controls {
+				height: 130px;
+				padding: 0 20px;
+				img {
+					height: 40px;
+					aspect-ratio: 1;
+				}
 			}
 		}
 	}

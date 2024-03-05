@@ -49,6 +49,11 @@
 				class="trial-card__row-record trial-card__row-record--blank display-large-desktop-only"
 			/>
 		</div>
+
+		<!-- Loader images -->
+		<div class="trial-card__loader" v-if="props.datum.qrCode">
+			<img :src="`/qrcodes/${props.datum.qrCode}.png`" />
+		</div>
 	</div>
 </template>
 
