@@ -117,7 +117,7 @@ function navigateHome() {
 		}
 
 		&__header {
-			margin-bottom: $unit * 5;
+			margin-bottom: $unit * 4;
 			&-icon {
 				display: flex;
 				width: $unit * 25;
@@ -127,7 +127,7 @@ function navigateHome() {
 		}
 
 		&__breadcrumb {
-			margin-bottom: $unit * 15;
+			margin-bottom: $unit * 5;
 		}
 	}
 }
