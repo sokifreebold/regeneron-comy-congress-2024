@@ -3,7 +3,6 @@ import type { ITrialsRecords } from '@/@types/data';
 const datum: ITrialsRecords[] = [
 	{
 		id: 'cutaneous-squamous-cell-carcinoma',
-		title: 'Cutaneous Squamous Cell Carcinoma (CSCC)',
 		trials: [
 			{
 				id: 'cutaneous-squamous-cell-carcinoma-1',

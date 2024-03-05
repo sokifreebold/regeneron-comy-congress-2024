@@ -104,7 +104,9 @@ function navigateToTrial(item: ICategories) {
 				&-icon {
 					width: $unit * 20;
 					min-width: $unit * 20;
-					margin-right: $unit * 15;
+					margin-left: $unit * 5;
+					margin-right: $unit * 10;
+					margin-top: $unit * 5;
 					aspect-ratio: 1;
 				}
 			}

@@ -3,7 +3,6 @@ import type { ITrialsRecords } from '@/@types/data';
 const datum: ITrialsRecords[] = [
 	{
 		id: 'multiple-tumors',
-		title: 'Multiple Tumors',
 		trials: [
 			{
 				id: 'multiple-tumors-1',
