@@ -1,4 +1,5 @@
 const coreId = 'coreSpr_3952301';
+let currentPage = '';
 
 function addClickListener(e) {
 	let value = '';
@@ -54,15 +55,23 @@ function pageView() {
 				return;
 			}
 
+			if (slideIndex < 0) {
+				return;
+			}
+
 			const pageTitle = slideIndex + 1;
 			const pagePath = `slide${pageTitle}`;
+
+			if (currentPage === pagePath) {
+				return;
+			}
 
 			gtag('event', 'page_view', {
 				page_title: pageTitle,
 				page_location: location.href,
 				page_path: pagePath,
 			});
-
+			currentPage = pagePath;
 			const obj = {
 				event: 'page_view',
 				pageId: pageTitle,
