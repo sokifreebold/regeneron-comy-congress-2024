@@ -34,6 +34,18 @@ try {
 	console.log(error);
 }
 
+// Copy DSE
+const dseInputPath = path.join(__dirname, 'dse');
+const dseOutputPath = path.join(__dirname, 'www/dse');
+if (fs.existsSync(dseInputPath)) {
+	if (!fs.existsSync(dseOutputPath)) {
+		console.log('[Distribution]: DSE Output directory not found. Creating...');
+		fs.mkdirSync(dseOutputPath);
+	}
+	fs.copySync(dseInputPath, dseOutputPath);
+	console.log('[Distribution]: DSE files copied.');
+}
+
 console.log('[Distribution]: Process completed.');
 
 // Zip
