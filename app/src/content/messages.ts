@@ -40,9 +40,10 @@ export default {
 			breadcrumb: {
 				'basal-cell-merkel-cell-carcinoma':
 					'<strong>Basal Cell Carcinoma (BCC) + Merkel Cell Carcinoma (MCC)</strong>',
-				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell Carcinoma (CSCC)',
-				melanoma: 'Melanoma',
-				'multiple-tumors': 'Multiple Tumors',
+				'cutaneous-squamous-cell-carcinoma':
+					'<strong>Cutaneous Squamous Cell Carcinoma (CSCC)</strong>',
+				melanoma: '<strong>Melanoma</strong>',
+				'multiple-tumors': '<strong>Multiple Tumors</strong>',
 			},
 		},
 		misc: {

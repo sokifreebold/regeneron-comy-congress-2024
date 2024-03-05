@@ -166,3 +166,13 @@ const version = computed(() => store.get_version);
 	}
 }
 </style>
+
+<style lang="scss">
+.button {
+	@include k-desktop {
+		.kiosk-icon--lg {
+			min-width: $unit * 5;
+		}
+	}
+}
+</style>

@@ -9,6 +9,9 @@
 }
 @mixin extraLargeIcon {
 	width: 140px;
+	@include k-desktop {
+		width: 300px !important;
+	}
 	aspect-ratio: auto;
 }
 .trial-aside-icon {
@@ -34,7 +37,7 @@
 		background: url('@/assets/icons/trials/mcc-1.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--solid-tumor-lung-cancer-2 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-3.svg');
@@ -94,7 +97,12 @@
 		background-position: center;
 		@include largeIcon();
 	}
-	&--solid-tumor-multiple-3,
+	&--solid-tumor-multiple-3 {
+		background: url('@/assets/icons/trials/trial-icon-solid-tumor-12.svg');
+		@include bg-contain();
+		background-position: center;
+		@include largeIcon();
+	}
 	&--multiple-tumors-1 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-12.svg');
 		@include bg-contain();
@@ -113,7 +121,12 @@
 		background-position: center;
 		@include largeIcon();
 	}
-	&--solid-tumor-multiple-6,
+	&--solid-tumor-multiple-6 {
+		background: url('@/assets/icons/trials/trial-icon-solid-tumor-15.svg');
+		@include bg-contain();
+		background-position: center;
+		@include largeIcon();
+	}
 	&--multiple-tumors-3 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-15.svg');
 		@include bg-contain();

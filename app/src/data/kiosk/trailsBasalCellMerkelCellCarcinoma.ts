@@ -17,7 +17,7 @@ const datum: ITrialsRecords[] = [
 					'NCT04916002_VIDU-EM-0001_353061533400_844REGN-MID_L1g_back',
 				],
 				labels: {
-					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced/metastatic tumors',
 				},
 			},
@@ -64,7 +64,7 @@ const datum: ITrialsRecords[] = [
 					'NCT04916002_VIDU-EM-0001_353061533400_844REGN-MID_L1g_back',
 				],
 				labels: {
-					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span> + Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced/metastatic tumors',
 				},
 			},

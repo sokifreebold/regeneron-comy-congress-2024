@@ -27,7 +27,7 @@
 					{{ $t('misc.mainMenu') }}
 
 					<template v-slot:rightIcon>
-						<img src="@/assets/icons/home-icon.svg" />
+						<img src="@/assets/icons/home-icon.svg" class="kiosk-icon--lg" />
 					</template>
 				</the-button>
 			</div>
@@ -106,22 +106,22 @@ function navigateHome() {
 	justify-content: center;
 }
 
-.trials__title{
+.trials__title {
 	font-size: 3em;
 }
 
 .trials {
 	@include k-desktop {
 		&__title {
-			@include px-to-em(50px);
+			@include px-to-em(44px);
 		}
 
 		&__header {
 			margin-bottom: $unit * 5;
 			&-icon {
 				display: flex;
-				width: $unit * 30;
-				min-width: $unit * 30;
+				width: $unit * 25;
+				min-width: $unit * 25;
 				margin-right: $unit * 8;
 			}
 		}

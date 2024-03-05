@@ -1,7 +1,7 @@
 <template>
 	<layout-kiosk>
 		<h1
-			class="type-heading-h1 type-color-white home__title js-animation-slideIn"
+			class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
 			v-html="$t('home.kioskTitle')"
 		/>
 
@@ -53,12 +53,11 @@ function navigateToTrial(item: ICategories) {
 </script>
 
 <style lang="scss" scoped>
-
-.type-heading-h1{
-	font-size: 6.5em;
-	line-height: 1em;
-}
 .kiosk-home {
+	&__title {
+		font-size: 5.8em;
+		line-height: 1;
+	}
 	&-links {
 		margin-top: $unit * 5;
 
