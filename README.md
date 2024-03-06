@@ -4,7 +4,7 @@ The microsite is a Single Page Application developed with Vue 3 (TypeScript) in 
 
 ## Environments
 
--   [Internal Staging Site](https://ash-microsite.dev.tech.colabglo.com/#/)
+-   [Internal Staging Site](https://aad-congress.dev.tech.colabglo.com/#/)
 -   [Production Live Site](https://regeneronmacontentcongress.com/s/)
 
 ## Recommended IDE Setup
@@ -24,36 +24,10 @@ The project follows the standard Vue 3 project style guide. Following are the li
 **Useful Info**
 
 -   `app/public/pdfs` - contains all the PDFs for trials cards match with data
--   `app/public/pdfjs-4.0.269-dist` - contains the PDF viewer to load pdfs
--   `app/src/content/data.ts` - data for all the trial cards
+-   `app/public/pdfjs-4.0.269-dist-custom` - contains the PDF viewer to load pdfs
+-   `app/src/data/data/*` - data for all the trial cards (kiosk & microsite)
 -   `app/src/@types` - contains all the types for the data
 -   `app/src/components/TrialCards.vue` - Main Component to handle all the trial cards
-
-## Production Build Files
-
-Please run the following command for the production files.
-
-```sh
-cd app
-npm install
-npm run build
-```
-
-After the command runs successfully, the files will be available in `app/dist` folder which can be zipped and sent to RafterOne for deployment.
-
-**IMPORTANT**
-
-Before running the production `npm run build` command please make sure that the Analytics code is added in `src/main.ts`
-
-```ts
-app.use(
-	VueGtag,
-	{
-		config: { id: 'G-DB0JMEGR0Q' },
-	},
-	router,
-);
-```
 
 ## Project Setup
 
@@ -66,29 +40,81 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
+// Microsite
 npm run dev
+
+// Kiosk - Interactive Panel
+npm run dev:kiosk
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Production Build Files
 
 ```sh
-npm run test:unit
+// Microsite
+npm run build
+
+// Kiosk - Interactive Panel
+npm run build:kiosk
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+After the command runs successfully, the files will be available in `app/dist` folder which can be zipped and sent to RafterOne for deployment.
 
-```sh
-npm run lint
-```
+## Google Analytics
+
+-   [Microsite Google Analytics Account](https://analytics.google.com/analytics/web/?authuser=4#/p428656037/reports/intelligenthome)
+-   [Kiosk Interactive Panels Analytics Account](https://analytics.google.com/analytics/web/?authuser=4#/p429504844/reports/intelligenthome)
+-   [DSE Deck Analytics Account](https://analytics.google.com/analytics/web/?authuser=4#/p429748703/reports/intelligenthome)
+
+The analytics code for microsite & kiosk panels are available in `app/src/app.config.ts`
 
 ## Useful Link
 
--   [GitHub Repo](https://github.com/BOLDSCIENCE/regeneron-ash-microsite-2023)
--   [Figma Designs](https://www.figma.com/file/SyopCp9r0RUzVFtn7LH31L/MA-Portal-Final-Designs-1.0?type=design&node-id=3011-239437&mode=design&t=qdDmMYT6pkol7yQY-0)
--   [CI/CD DevOps Pipeline](https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/ash-microsite-boldscience-dev/view?region=us-east-1)
--   [S3 Bucket hosting internal Site](https://s3.console.aws.amazon.com/s3/buckets/ash-microsite-boldscience-dev-app?region=us-east-1&tab=objects)
--   [CloudFront](https://us-east-1.console.aws.amazon.com/cloudfront/v4/home?region=us-east-1#/distributions/E1WM2MBMN4KMUD)
--   [Google Analytics: Account - Regeneron - ASH Microsite 2023](https://analytics.google.com/analytics/web/?authuser=4#/p417068151/reports/intelligenthome?params=_u..nav%3Dmaui%26_u.date00%3D20231207%26_u.date01%3D20231208&collectionId=business-objectives)
+-   [GitHub Repo](https://github.com/BOLDSCIENCE/regeneron-aad-congress-2024)
+-   [Figma Designs](https://www.figma.com/file/z3Vg4AoxryR6uLp2XB2k3h/REGN-AAD-2024?type=design&mode=design&t=6lOFo1tM5WttqDEC-0)
+-   [CI/CD DevOps Pipeline](https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/aad-congress-boldscience-dev/view?region=us-east-1)
+-   [S3 Bucket hosting internal Site](https://s3.console.aws.amazon.com/s3/buckets/aad-congress-boldscience-dev-app?region=us-east-1&bucketType=general&tab=objects)
+
+---
+
+## Packaging Microsite
+
+Build the microsite by running following commands
+
+```sh
+cd app
+npm run build
+```
+
+The final files will be available in `app/dist`. Please package them up and supply the files to the vendor.
+
+## Packaging Interactive Panels - Kiosk
+
+Build the kiosk version by running following commands
+
+```sh
+cd app
+npm run build:kiosk
+```
+
+Copy the produced files from `/app/dist` to `/electron/dist`. Then please run the following command to generate .exe file for panels kiosk
+
+```sh
+cd electron
+npm run distribute-windows
+```
+
+The .exe file will be generated in `/electron/distribution`
+
+## Packaging DSE
+
+Copy the files from `/dse` to `/electron-dse/dist`. Then please run the following command to generate .exe file for panels kiosk
+
+```sh
+cd electron-dse
+npm run distribute-windows
+```
+
+The .exe file will be generated in `/electron-dse/distribution`
 
 ---
 
