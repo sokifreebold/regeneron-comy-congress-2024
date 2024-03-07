@@ -1,4 +1,4 @@
-# AAD Microsite - Static Website Hosting - Deployment Package
+# AACR Microsite - Static Website Hosting - Deployment Package
 
 ## Overview
 This package contains all the necessary files for hosting your static website. It includes HTML, CSS, JavaScript files, and any additional assets required for the website to function correctly.

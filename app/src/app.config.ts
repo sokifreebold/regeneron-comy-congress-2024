@@ -4,7 +4,7 @@ interface IAppConfig {
 }
 
 const appConfig: IAppConfig = {
-	googleAnalyticsTagMicrosite: 'G-DG2Z2KMFVM',
-	googleAnalyticsTagKiosk: 'G-5VX2XG7YKQ',
+	googleAnalyticsTagMicrosite: '',
+	googleAnalyticsTagKiosk: '',
 };
 export default appConfig;
