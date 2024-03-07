@@ -15,7 +15,7 @@ let csvFilePath;
 
 function createNewCSVFile() {
 	const documentsPath = app.getPath('documents');
-	const adcTrackingPath = path.join(documentsPath, 'AAD-Interactive-Panel');
+	const adcTrackingPath = path.join(documentsPath, 'AACR-Interactive-Panel');
 
 	const now = new Date();
 	const dateTimeString = now.toISOString().replace(/:/g, '-').replace(/\..+/, '');
@@ -24,7 +24,7 @@ function createNewCSVFile() {
 		fs.mkdirSync(adcTrackingPath, { recursive: true });
 	}
 
-	csvFilePath = path.join(adcTrackingPath, `AAD-Interactive-Panel-backup_${dateTimeString}.csv`);
+	csvFilePath = path.join(adcTrackingPath, `AACR-Interactive-Panel-backup_${dateTimeString}.csv`);
 
 	// Create the file with the headers if required
 	const headers = 'event,page_id,page_path,timestamp\n';

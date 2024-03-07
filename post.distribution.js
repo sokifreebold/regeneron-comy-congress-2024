@@ -50,7 +50,7 @@ console.log('[Distribution]: Process completed.');
 
 // Zip
 const outputPackage = path.join(__dirname, 'www/package');
-const outputZip = path.join(outputPackage, 'aad-congress-microsite-package.zip');
+const outputZip = path.join(outputPackage, 'aacr-congress-microsite-package.zip');
 
 // Ensure output directory exists
 if (!fs.existsSync(outputPackage)) {

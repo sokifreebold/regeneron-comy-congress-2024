@@ -2,7 +2,7 @@
 export default {
 	en: {
 		app: {
-			name: 'AAD Congress 2024',
+			name: 'AACR Congress 2024',
 		},
 		notFound: {
 			title: '404',

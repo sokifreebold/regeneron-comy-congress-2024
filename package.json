@@ -1,5 +1,5 @@
 {
-	"name": "regeneron-aad-congress-2024",
+	"name": "regeneron-aacr-congress-2024",
 	"version": "1.0.0",
 	"scripts": {
 		"app:install": "cd app && npm install",

@@ -1,5 +1,5 @@
 {
-	"name": "aad-congress",
+	"name": "aacr-congress",
 	"version": "1.0.0",
 	"description": "",
 	"main": "main.js",
@@ -11,8 +11,8 @@
 		"distribute-mac": "npm-run-all -s pack-electron-mac"
 	},
 	"build": {
-		"appId": "com.boldsci.aadcongress",
-		"artifactName": "AAD-Congress-${version}.${ext}",
+		"appId": "com.boldsci.aacrcongress",
+		"artifactName": "AACR-Congress-${version}.${ext}",
 		"directories": {
 			"output": "./distribution/"
 		},

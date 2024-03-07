@@ -1,10 +1,10 @@
-# AAD Congress Microsite & Kiosk
+# AACR Congress Microsite & Kiosk
 
 The microsite is a Single Page Application developed with Vue 3 (TypeScript) in Vite.
 
 ## Environments
 
--   [Internal Staging Site](https://aad-congress.dev.tech.colabglo.com/#/)
+-   [Internal Staging Site](https://aacr-congress.dev.tech.colabglo.com/#/)
 -   [Production Live Site](https://regeneronmacontentcongress.com/s/)
 
 ## Recommended IDE Setup
@@ -69,10 +69,10 @@ The analytics code for microsite & kiosk panels are available in `app/src/app.co
 
 ## Useful Link
 
--   [GitHub Repo](https://github.com/BOLDSCIENCE/regeneron-aad-congress-2024)
--   [Figma Designs](https://www.figma.com/file/z3Vg4AoxryR6uLp2XB2k3h/REGN-AAD-2024?type=design&mode=design&t=6lOFo1tM5WttqDEC-0)
--   [CI/CD DevOps Pipeline](https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/aad-congress-boldscience-dev/view?region=us-east-1)
--   [S3 Bucket hosting internal Site](https://s3.console.aws.amazon.com/s3/buckets/aad-congress-boldscience-dev-app?region=us-east-1&bucketType=general&tab=objects)
+-   [GitHub Repo](https://github.com/BOLDSCIENCE/regeneron-aacr-congress-2024)
+-   [Figma Designs](https://www.figma.com/file/8urDuT4PAc1mmDF7ZlNm0Y/REGN-AACR-Microsite-2024?type=design&node-id=2862-29504&mode=design&t=hVF5cS9CL3D6asNq-0)
+-   [CI/CD DevOps Pipeline](https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/aacr-congress-boldscience-dev/view?region=us-east-1)
+-   [S3 Bucket hosting internal Site](https://s3.console.aws.amazon.com/s3/buckets/aacr-congress-boldscience-dev-app?region=us-east-1&bucketType=general&tab=objects)
 
 ---
 
