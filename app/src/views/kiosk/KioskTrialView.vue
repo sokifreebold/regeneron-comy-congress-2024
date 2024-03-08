@@ -1,5 +1,7 @@
 <template>
 	<layout-kiosk class="layout-trial-kiosk">
+		<img src="@/assets/icons/main-menu-button.svg" class="menu-button" @click="navigateHome()"/>
+	
 		<div class="trials">
 			<!-- Title -->
 			<div class="trials__header js-animation-slideIn">
@@ -129,5 +131,10 @@ function navigateHome() {
 	.layout-kiosk__main {
 		justify-content: flex-start !important;
 	}
+}
+
+.menu-button{
+	width: 12em;
+	margin-left: -5em;
 }
 </style>
