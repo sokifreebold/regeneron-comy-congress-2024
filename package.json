@@ -11,7 +11,7 @@
 		"post:distribute": "node post.distribution.js",
 		"install": "npm run app:install && npm run electron:install",
 		"start": "npm run app:dev",
-		"build": "npm run app:build && npm run post:distribute && npm run package",
+		"build": "npm run app:build && npm run post:distribute",
 		"format": "prettier --config .prettierrc \"**/*.{js,ts,vue,json,css,scss,md}\"",
 		"package:kiosk": "node package.electron.js",
 		"package:kiosk:post": "node post.electron.js",
