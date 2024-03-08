@@ -10,15 +10,6 @@
 				/>
 			</div>
 
-			<!-- Breadcrumb -->
-			<div class="trials__breadcrumb js-animation-slideIn">
-				<div class="trials__breadcrumb-item trials__breadcrumb-item--link">
-					<router-link to="/">{{ $t('misc.mainMenu') }}</router-link>
-				</div>
-
-				<div class="trials__breadcrumb-item" v-html="$t(`titles.breadcrumb.${trialId}`)" />
-			</div>
-
 			<!-- Trial Cards -->
 			<trial-cards />
 

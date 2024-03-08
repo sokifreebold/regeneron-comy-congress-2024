@@ -116,6 +116,15 @@ npm run distribute-windows
 
 The .exe file will be generated in `/electron-dse/distribution`
 
+## Adding analytics
+1. Go to analytics.google.com and log in using beboldscidev@gmail.com
+2. Click create -> account
+3. Click web platform
+4. Pass in the application URL
+5. Click create stream to get details including measurment id and stream id
+6. Use the measurement id for googleAnalyticsTagMicrosite in app.config
+7. You can use the chrome extension GADebug to debug google analytics
+
 ---
 
 For more info or code walkthrough please contact sahil.david@boldsci.com
