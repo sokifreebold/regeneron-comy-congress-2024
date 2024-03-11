@@ -166,7 +166,7 @@ const datum: ITrialsRecords[] = [
 	},
 	{
 		id: 'prostate-cancer',
-		title: 'Genitourinary',
+		title: 'Genitourinary Cancer',
 		trials: [
 			{
 				id: 'solid-tumor-prostate-cancer-1',
