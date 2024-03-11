@@ -23,4 +23,11 @@
 		@include bg-contain();
 		background-position: top;
 	}
+
+	&-nsclc-clinical-trial-information,
+	&-melanoma-clinical-trial-information {
+		background: url('@/assets/icons/hand-glass.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 }
