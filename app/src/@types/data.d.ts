@@ -1,6 +1,7 @@
 export interface ICategories {
 	id: string;
 	trials?: number;
+	learnMore: boolean
 }
 
 export interface ICategoriesRecords{

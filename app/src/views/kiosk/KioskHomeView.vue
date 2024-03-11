@@ -32,8 +32,9 @@
 								@click="navigateToTrial(item)"
 								modifier="simple-white-gradient-bg"
 							>
-								{{ $t('misc.seePipelineDetails') }}
-
+								{{item.learnMore ?
+									 $t('misc.seePipelineDetails') :
+									 $t('misc.learnMore') }}
 								<template v-slot:rightIcon>
 									<img src="@/assets/icons/chevron-right-white.svg" />
 								</template>

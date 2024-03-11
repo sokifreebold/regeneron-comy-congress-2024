@@ -65,6 +65,7 @@ export default {
 			close: 'Close',
 			recruiting: 'RECRUITING',
 			seePipelineDetails: 'SEE PIPELINE DETAILS',
+			learnMore: 'LEARN MORE',
 			mainMenu: 'Main Menu',
 			done: 'Done',
 			loading: 'Loading, please wait...',
