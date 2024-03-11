@@ -8,7 +8,7 @@
 				<div :class="['trials__header-icon', `ui-icon-${trialId}`]" />
 				<h1
 					class="type-heading-h1 type-color-white trials__title"
-					v-html="$t(`titles.trials.${trialId}`)"
+					v-html="$t(`titles.categories.${trialId}.trial-title`)"
 				/>
 			</div>
 
@@ -32,11 +32,14 @@
 import { computed, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { fadeIn } from '@/utils/animations';
+import { getTrialData } from '@/utils/data';
+import type { ICategoriesRecords } from '@/@types/data';
 
 const route = useRoute();
 const router = useRouter();
 
 const trialId = computed<string>(() => route.params.trialId as string);
+// const categoryData = computed<ICategoriesRecords>(() => getTrialData(trialId.value));
 
 onMounted(() => {
 	animateHeader();

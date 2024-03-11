@@ -6,7 +6,7 @@ import { categoriesKiosk, trialsDataKiosk } from '@/data/kiosk';
 
 export function getHomeCategories() {
 	return categories;
-}
+} 
 
 export function getTrialData(trial: string): ITrialsRecords[] {
 	const store = useAppStore();

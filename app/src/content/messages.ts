@@ -25,17 +25,30 @@ export default {
 		titles: {
 			trials: {
 				'solid-tumor': 'Solid Tumor',
-				'hematology-oncology': 'Hematology-Oncology',
-				'nsclc-clinical-trial-information': 'Clinical Trial Information',
-				'nsclc-disease-state-education': 'Disease State Eduction',
-				'melanoma-clinical-trial-information': 'Clinical Trial Information',
-				'melanoma-disease-state-education': 'Disease State Eduction',
+				'hematology-oncology': 'Hematology-Oncology'
 			},
 			categories: {
 				'nsclc': 'Non-Small cell lung cancer (NSCLC)',
 				'melanoma': 'Melanoma',
 				'our-oncology-mobile': 'Our oncology and hematology-oncology pipeline',
 				'our-oncology-desktop': 'Our oncology and<br>hematology-oncology pipeline',
+
+				'nsclc-clinical-trial-information': {
+					'home-title': 'Clinical Trial Information',
+					'trial-title': 'Non-Small cell lung cancer (NSCLC)'
+				},
+				'nsclc-disease-state-education': {
+					'home-title': 'Disease State Eduction',
+					'trial-title': 'Disease State Eduction'
+				},
+				'melanoma-clinical-trial-information': {
+					'home-title': 'Clinical Trial Information',
+					'trial-title': 'Melanoma'
+				},
+				'melanoma-disease-state-education': {
+					'home-title': 'Disease State Eduction',
+					'trial-title': 'Disease State Eduction'
+				}
 			},
 		},
 		misc: {

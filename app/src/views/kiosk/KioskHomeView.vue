@@ -23,7 +23,7 @@
 				<div class="kiosk-home-links__item-copy">
 					<div
 						class="kiosk-home-links__item-title type-font-condensed"
-						v-html="$t(`titles.trials.${item.id}`)"
+						v-html="$t(`titles.categories.${item.id}.home-title`)"
 					/>
 
 					<div class="kiosk-home-links__item-navigate">
