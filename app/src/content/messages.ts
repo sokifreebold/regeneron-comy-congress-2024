@@ -22,11 +22,6 @@ export default {
 				copy: 'This information is intended for investigators interested in active clinical trials.<br>The uses of all agents described herein for phase 1–3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country. Please see odronextamab prescribing information in your country. ',
 			},
 		},
-		home: {
-			titleMobile: 'Our oncology and hematology-oncology pipeline',
-			titleDesktop: 'Our oncology and<br>hematology-oncology pipeline',
-			kioskTitle: 'Our Dermato-Oncology Pipeline',
-		},
 		titles: {
 			trials: {
 				'solid-tumor': 'Solid Tumor',
@@ -36,6 +31,12 @@ export default {
 				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell <br>Carcinoma (CSCC)',
 				melanoma: 'Melanoma',
 				'multiple-tumors': 'Multiple Tumors',
+			},
+			categories: {
+				'nsclc': 'Non-Small cell lung cancer (NSCLC)',
+				'melanoma': 'Melanoma',
+				'our-oncology-mobile': 'Our oncology and hematology-oncology pipeline',
+				'our-oncology-desktop': 'Our oncology and<br>hematology-oncology pipeline',
 			},
 			breadcrumb: {
 				'basal-cell-merkel-cell-carcinoma':

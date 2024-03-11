@@ -3,6 +3,13 @@ export interface ICategories {
 	trials?: number;
 }
 
+export interface ICategoriesRecords{
+	id: string;
+	mobileTitleKey: string;
+	desktopTitleKey: string;
+	categories: ICategories[];
+}
+
 type trialLink = 'pdfCard' | 'external' | 'qrCode' | 'images';
 
 export interface ITrialsLabels {

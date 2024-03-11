@@ -1,14 +1,17 @@
 <template>
 	<layout-kiosk>
-		<h1
-			class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
-			v-html="$t('home.kioskTitle')"
-		/>
+		<div
+			v-for="(grouping, index) in getKioskHomeCategories()"
+			:key="index">
+			<h1
+				class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
+				v-html="$t(grouping.mobileTitleKey)"
+			/>
 
-		<!-- Panel -->
+			<!-- Panel -->
 		<div class="kiosk-home-links">
 			<div
-				v-for="(item, index) in getKioskHomeCategories()"
+				v-for="(item, index) in grouping.categories"
 				:key="index"
 				class="kiosk-home-links__item js-animation-slideIn"
 			>
@@ -35,6 +38,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</layout-kiosk>
 </template>
