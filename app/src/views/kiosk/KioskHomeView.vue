@@ -125,5 +125,6 @@ function navigateToTrial(item: ICategories) {
 .category-icon{
 	width: 5em;
 	margin-left: -5em;
+	margin-right: 1em;
 }
 </style>

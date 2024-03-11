@@ -1,9 +1,7 @@
 import type { ICategoriesRecords } from '@/@types/data';
 
-import trailsBasalCellMerkelCellCarcinoma from './trailsBasalCellMerkelCellCarcinoma';
-import trailsCutaneousSquamousCellCarcinoma from './trailsCutaneousSquamousCellCarcinoma';
+import trailsNoneSmallCellLungCancer from './nonSmallCellLungCancer';
 import trailsMelanoma from './trailsMelanoma';
-import trailsMultipleTumors from './trailsMultipleTumors';
 
 export const categoriesKiosk: ICategoriesRecords[] = [
 	{ id: 'nsclc', mobileTitleKey: 'titles.categories.nsclc', desktopTitleKey: 'titles.categories.nsclc', categories: [ 
@@ -19,8 +17,6 @@ export const categoriesKiosk: ICategoriesRecords[] = [
 ];
 
 export const trialsDataKiosk: any = {
-	'nsclc-clinical-trial-information': trailsBasalCellMerkelCellCarcinoma,
-	'nsclc-disease-state-education': trailsCutaneousSquamousCellCarcinoma,
+	'nsclc-clinical-trial-information': trailsNoneSmallCellLungCancer,
 	'melanoma-clinical-trial-information': trailsMelanoma,
-	'melanoma-disease-state-education': trailsMultipleTumors,
 };
