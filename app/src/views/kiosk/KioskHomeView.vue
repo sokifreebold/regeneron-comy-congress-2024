@@ -3,10 +3,14 @@
 		<div
 			v-for="(grouping, index) in getKioskHomeCategories()"
 			:key="index">
-			<h1
-				class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
-				v-html="$t(grouping.mobileTitleKey)"
-			/>
+			
+			<div>
+				<img :src="`src/assets/icons/${grouping.icon}.svg`" class="category-icon"/>
+				<h1
+					class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
+					v-html="$t(grouping.mobileTitleKey)"
+				/>
+			</div>
 
 			<!-- Panel -->
 		<div class="kiosk-home-links">
@@ -61,6 +65,7 @@ function navigateToTrial(item: ICategories) {
 	&__title {
 		font-size: 5.8em;
 		line-height: 1;
+		display: inline;
 	}
 	&-links {
 		margin-top: $unit * 5;
@@ -116,5 +121,9 @@ function navigateToTrial(item: ICategories) {
 			}
 		}
 	}
+}
+.category-icon{
+	width: 5em;
+	margin-left: -5em;
 }
 </style>

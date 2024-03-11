@@ -8,6 +8,7 @@ export interface ICategoriesRecords{
 	mobileTitleKey: string;
 	desktopTitleKey: string;
 	categories: ICategories[];
+	icon: string;
 }
 
 type trialLink = 'pdfCard' | 'external' | 'qrCode' | 'images';

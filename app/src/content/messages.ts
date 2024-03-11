@@ -26,25 +26,16 @@ export default {
 			trials: {
 				'solid-tumor': 'Solid Tumor',
 				'hematology-oncology': 'Hematology-Oncology',
-				'basal-cell-merkel-cell-carcinoma':
-					'Basal Cell Carcinoma (BCC) + <br>Merkel Cell Carcinoma (MCC)',
-				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell <br>Carcinoma (CSCC)',
-				melanoma: 'Melanoma',
-				'multiple-tumors': 'Multiple Tumors',
+				'nsclc-clinical-trial-information': 'Clinical Trial Information',
+				'nsclc-disease-state-education': 'Disease State Eduction',
+				'melanoma-clinical-trial-information': 'Clinical Trial Information',
+				'melanoma-disease-state-education': 'Disease State Eduction',
 			},
 			categories: {
 				'nsclc': 'Non-Small cell lung cancer (NSCLC)',
 				'melanoma': 'Melanoma',
 				'our-oncology-mobile': 'Our oncology and hematology-oncology pipeline',
 				'our-oncology-desktop': 'Our oncology and<br>hematology-oncology pipeline',
-			},
-			breadcrumb: {
-				'basal-cell-merkel-cell-carcinoma':
-					'<strong>Basal Cell Carcinoma (BCC) + Merkel Cell Carcinoma (MCC)</strong>',
-				'cutaneous-squamous-cell-carcinoma':
-					'<strong>Cutaneous Squamous Cell Carcinoma (CSCC)</strong>',
-				melanoma: '<strong>Melanoma</strong>',
-				'multiple-tumors': '<strong>Multiple Tumors</strong>',
 			},
 		},
 		misc: {
