@@ -19,7 +19,6 @@
 				:key="index"
 				class="kiosk-home-links__item js-animation-slideIn"
 			>
-				<div :class="['kiosk-home-links__item-icon', `ui-icon-${item.id}`]" />
 				<div class="kiosk-home-links__item-copy">
 					<div
 						class="kiosk-home-links__item-title type-font-condensed"
