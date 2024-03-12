@@ -21,7 +21,7 @@
 			>
 				<div class="kiosk-home-links__item-copy">
 					<div
-						class="kiosk-home-links__item-title type-font-condensed"
+						class="kiosk-home-links__item-title type-heading-h2 type-font-condensed"
 						v-html="$t(`titles.categories.${item.id}.home-title`)"
 					/>
 
