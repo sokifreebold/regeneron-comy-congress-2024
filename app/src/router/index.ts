@@ -4,10 +4,10 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 
 import MicrositeTrialView from '../views/microsite/MicrositeTrialView.vue';
-import KioskTrialView from '@/views/kiosk/KioskTrialView.vue';
+import KioskTrialView from '@/views/kiosk1/KioskTrialView.vue';
 
-import KioskQRCode from '@/views/kiosk/KioskQRCode.vue';
-import KioskPdfImages from '@/views/kiosk/KioskPdfImages.vue';
+import KioskQRCode from '@/views/kiosk1/KioskQRCode.vue';
+import KioskPdfImages from '@/views/kiosk1/KioskPdfImages.vue';
 
 import PdfView from '../views/PdfView.vue';
 import NotFound from '../views/NotFound.vue';
