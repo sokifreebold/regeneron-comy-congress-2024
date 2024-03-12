@@ -23,6 +23,16 @@
 		@include bg-contain();
 		background-position: top;
 	}
+	&-lung-icon {
+		background: url('@/assets/icons/lung-icon.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-hand-glass{
+		background: url('@/assets/icons/hand-glass.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 
 	&-nsclc-clinical-trial-information,
 	&-melanoma-clinical-trial-information {

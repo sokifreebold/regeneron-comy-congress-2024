@@ -5,7 +5,7 @@
 			:key="index">
 			
 		<div class="category-header">
-			<img :src="`src/assets/icons/${grouping.icon}.svg`" class="category-icon"/>
+			<div :class="['kiosk-home-links__item-icon category-icon', `ui-icon-${grouping.icon}`]" />
 			<h1
 				class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
 				v-html="$t(grouping.mobileTitleKey)"
@@ -124,16 +124,17 @@ function navigateToTrial(item: ICategories) {
 }
 
 .category-container{
-	margin-top: 4em;
+	margin-top: 3em;
 }
 .category-icon{
 	width: 5em;
 	margin-left: -2em;
 	margin-right: 1em;
-	flex-shrink: 0;
+	flex-shrink: 0;	
 }
 
 .category-header{
 	display: flex;
+	align-items: center;
 }
 </style>
