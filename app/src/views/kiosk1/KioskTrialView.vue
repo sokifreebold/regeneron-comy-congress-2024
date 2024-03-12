@@ -48,6 +48,7 @@ function navigateHome() {
 .trials {
 	position: relative;
 	z-index: 2;
+	margin-top: 6em;
 }
 .trials__header {
 	display: flex;
@@ -128,6 +129,7 @@ function navigateHome() {
 
 .menu-button{
 	width: 12em;
-	margin-left: -5em;
+	position: fixed;
+	left: 0;
 }
 </style>
