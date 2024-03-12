@@ -1,7 +1,6 @@
 <template>
 	<layout-home>
-		<div v-for="(grouping, index) in getHomeCategories()"
-		:key="index">
+		<div v-for="(grouping, index) in getHomeCategories()" :key="index">
 			<div class="home">
 				<!-- Home Title -->
 				<h1
@@ -45,7 +44,7 @@
 					</div>
 				</div>
 			</div>
-	</div>
+		</div>
 	</layout-home>
 </template>
 
