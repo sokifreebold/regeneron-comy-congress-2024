@@ -22,28 +22,33 @@ export default {
 				copy: 'This information is intended for investigators interested in active clinical trials.<br>The uses of all agents described herein for phase 1–3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country. Please see odronextamab prescribing information in your country. ',
 			},
 		},
-		home: {
-			titleMobile: 'Our oncology and hematology-oncology pipeline',
-			titleDesktop: 'Our oncology and<br>hematology-oncology pipeline',
-			kioskTitle: 'Our Dermato-Oncology Pipeline',
-		},
 		titles: {
 			trials: {
 				'solid-tumor': 'Solid Tumor',
-				'hematology-oncology': 'Hematology-Oncology',
-				'basal-cell-merkel-cell-carcinoma':
-					'Basal Cell Carcinoma (BCC) + <br>Merkel Cell Carcinoma (MCC)',
-				'cutaneous-squamous-cell-carcinoma': 'Cutaneous Squamous Cell <br>Carcinoma (CSCC)',
-				melanoma: 'Melanoma',
-				'multiple-tumors': 'Multiple Tumors',
+				'hematology-oncology': 'Hematology-Oncology'
 			},
-			breadcrumb: {
-				'basal-cell-merkel-cell-carcinoma':
-					'<strong>Basal Cell Carcinoma (BCC) + Merkel Cell Carcinoma (MCC)</strong>',
-				'cutaneous-squamous-cell-carcinoma':
-					'<strong>Cutaneous Squamous Cell Carcinoma (CSCC)</strong>',
-				melanoma: '<strong>Melanoma</strong>',
-				'multiple-tumors': '<strong>Multiple Tumors</strong>',
+			categories: {
+				'nsclc': 'Non-Small cell lung cancer (NSCLC)',
+				'melanoma': 'Melanoma',
+				'our-oncology-mobile': 'Our oncology and hematology-oncology pipeline',
+				'our-oncology-desktop': 'Our oncology and<br>hematology-oncology pipeline',
+
+				'nsclc-clinical-trial-information': {
+					'home-title': 'Clinical Trial Information',
+					'trial-title': 'Non-Small cell lung cancer (NSCLC)'
+				},
+				'nsclc-disease-state-education': {
+					'home-title': 'Disease State Eduction',
+					'trial-title': 'Disease State Eduction'
+				},
+				'melanoma-clinical-trial-information': {
+					'home-title': 'Clinical Trial Information',
+					'trial-title': 'Melanoma'
+				},
+				'melanoma-disease-state-education': {
+					'home-title': 'Disease State Eduction',
+					'trial-title': 'Disease State Eduction'
+				}
 			},
 		},
 		misc: {
@@ -60,6 +65,7 @@ export default {
 			close: 'Close',
 			recruiting: 'RECRUITING',
 			seePipelineDetails: 'SEE PIPELINE DETAILS',
+			learnMore: 'LEARN MORE',
 			mainMenu: 'Main Menu',
 			done: 'Done',
 			loading: 'Loading, please wait...',

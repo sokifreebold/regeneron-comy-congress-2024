@@ -1,6 +1,15 @@
 export interface ICategories {
 	id: string;
 	trials?: number;
+	learnMore: boolean
+}
+
+export interface ICategoriesRecords{
+	id: string;
+	mobileTitleKey: string;
+	desktopTitleKey: string;
+	categories: ICategories[];
+	icon?: string;
 }
 
 type trialLink = 'pdfCard' | 'external' | 'qrCode' | 'images';

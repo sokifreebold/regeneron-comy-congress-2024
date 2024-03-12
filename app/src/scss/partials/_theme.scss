@@ -24,16 +24,9 @@
 		background-position: top;
 	}
 
-	&-basal-cell-merkel-cell-carcinoma,
-	&-cutaneous-squamous-cell-carcinoma,
-	&-melanoma {
+	&-nsclc-clinical-trial-information,
+	&-melanoma-clinical-trial-information {
 		background: url('@/assets/icons/hand-glass.svg');
-		@include bg-contain();
-		background-position: top;
-	}
-
-	&-multiple-tumors {
-		background: url('@/assets/icons/solid-tumor-white.svg');
 		@include bg-contain();
 		background-position: top;
 	}

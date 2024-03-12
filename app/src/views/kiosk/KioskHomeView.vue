@@ -1,22 +1,28 @@
 <template>
 	<layout-kiosk>
-		<h1
-			class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
-			v-html="$t('home.kioskTitle')"
-		/>
+		<div
+			v-for="(grouping, index) in getKioskHomeCategories()"
+			:key="index">
+			
+			<div>
+				<img :src="`src/assets/icons/${grouping.icon}.svg`" class="category-icon"/>
+				<h1
+					class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
+					v-html="$t(grouping.mobileTitleKey)"
+				/>
+			</div>
 
-		<!-- Panel -->
+			<!-- Panel -->
 		<div class="kiosk-home-links">
 			<div
-				v-for="(item, index) in getKioskHomeCategories()"
+				v-for="(item, index) in grouping.categories"
 				:key="index"
 				class="kiosk-home-links__item js-animation-slideIn"
 			>
-				<div :class="['kiosk-home-links__item-icon', `ui-icon-${item.id}`]" />
 				<div class="kiosk-home-links__item-copy">
 					<div
-						class="kiosk-home-links__item-title type-font-condensed"
-						v-html="$t(`titles.trials.${item.id}`)"
+						class="kiosk-home-links__item-title type-heading-h2 type-font-condensed"
+						v-html="$t(`titles.categories.${item.id}.home-title`)"
 					/>
 
 					<div class="kiosk-home-links__item-navigate">
@@ -25,8 +31,9 @@
 								@click="navigateToTrial(item)"
 								modifier="simple-white-gradient-bg"
 							>
-								{{ $t('misc.seePipelineDetails') }}
-
+								{{item.learnMore ?
+									 $t('misc.seePipelineDetails') :
+									 $t('misc.learnMore') }}
 								<template v-slot:rightIcon>
 									<img src="@/assets/icons/chevron-right-white.svg" />
 								</template>
@@ -35,6 +42,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</layout-kiosk>
 </template>
@@ -57,6 +65,7 @@ function navigateToTrial(item: ICategories) {
 	&__title {
 		font-size: 5.8em;
 		line-height: 1;
+		display: inline;
 	}
 	&-links {
 		margin-top: $unit * 5;
@@ -112,5 +121,10 @@ function navigateToTrial(item: ICategories) {
 			}
 		}
 	}
+}
+.category-icon{
+	width: 5em;
+	margin-left: -2em;
+	margin-right: 1em;
 }
 </style>

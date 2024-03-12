@@ -1,20 +1,22 @@
-import type { ICategories } from '@/@types/data';
+import type { ICategoriesRecords } from '@/@types/data';
 
-import trailsBasalCellMerkelCellCarcinoma from './trailsBasalCellMerkelCellCarcinoma';
-import trailsCutaneousSquamousCellCarcinoma from './trailsCutaneousSquamousCellCarcinoma';
+import trailsNoneSmallCellLungCancer from './nonSmallCellLungCancer';
 import trailsMelanoma from './trailsMelanoma';
-import trailsMultipleTumors from './trailsMultipleTumors';
 
-export const categoriesKiosk: ICategories[] = [
-	{ id: 'basal-cell-merkel-cell-carcinoma', trials: 4 },
-	{ id: 'cutaneous-squamous-cell-carcinoma', trials: 6 },
-	{ id: 'melanoma', trials: 3 },
-	{ id: 'multiple-tumors', trials: 3 },
+export const categoriesKiosk: ICategoriesRecords[] = [
+	{ id: 'nsclc', mobileTitleKey: 'titles.categories.nsclc', desktopTitleKey: 'titles.categories.nsclc', categories: [ 
+		{ id: 'nsclc-clinical-trial-information', trials: 4, learnMore: true },
+		{ id: 'nsclc-disease-state-education', trials: 6 },
+	],
+	icon: 'lung-icon'},
+	{ id: 'melanoma', mobileTitleKey: 'titles.categories.melanoma', desktopTitleKey: 'titles.categories.melanoma', categories: [
+		{ id: 'melanoma-clinical-trial-information', trials: 3, learnMore: true },
+		{ id: 'melanoma-disease-state-education', trials: 3},
+	],
+	icon: 'hand-glass'}
 ];
 
 export const trialsDataKiosk: any = {
-	'basal-cell-merkel-cell-carcinoma': trailsBasalCellMerkelCellCarcinoma,
-	'cutaneous-squamous-cell-carcinoma': trailsCutaneousSquamousCellCarcinoma,
-	melanoma: trailsMelanoma,
-	'multiple-tumors': trailsMultipleTumors,
+	'nsclc-clinical-trial-information': trailsNoneSmallCellLungCancer,
+	'melanoma-clinical-trial-information': trailsMelanoma,
 };

@@ -1,48 +1,51 @@
 <template>
 	<layout-home>
-		<div class="home">
-			<!-- Home Title -->
-			<h1
-				class="type-heading-h1 home__title display-mobile-only js-animation-slideIn"
-				v-html="$t('home.titleMobile')"
-			/>
-			<h1
-				class="type-heading-h1 home__title display-tablet-only js-animation-slideIn"
-				v-html="$t('home.titleDesktop')"
-			/>
+		<div v-for="(grouping, index) in getHomeCategories()"
+		:key="index">
+			<div class="home">
+				<!-- Home Title -->
+				<h1
+					class="type-heading-h1 home__title display-mobile-only js-animation-slideIn"
+					v-html="$t(grouping.mobileTitleKey)"
+				/>
+				<h1
+					class="type-heading-h1 home__title display-tablet-only js-animation-slideIn"
+					v-html="$t(grouping.desktopTitleKey)"
+				/>
 
-			<!-- Panel -->
-			<div class="home-links">
-				<div
-					v-for="(item, index) in getHomeCategories()"
-					:key="index"
-					class="home-links__item js-animation-slideIn"
-					:ref="setRef"
-				>
-					<div :class="['home-links__item-icon', `ui-icon-${item.id}`]" />
-					<div class="home-links__item-copy">
-						<div class="home-links__item-title type-font-condensed">
-							{{ $t(`titles.trials.${item.id}`) }}
-						</div>
-						<div class="home-links__item-sub-title">
-							{{ item.trials }} {{ $t('misc.clinicalTrials') }}
-						</div>
+				<!-- Panel -->
+				<div class="home-links">
+					<div
+						v-for="(item, index) in grouping.categories"
+						:key="index"
+						class="home-links__item js-animation-slideIn"
+						:ref="setRef"
+					>
+						<div :class="['home-links__item-icon', `ui-icon-${item.id}`]" />
+						<div class="home-links__item-copy">
+							<div class="home-links__item-title type-font-condensed">
+								{{ $t(`titles.trials.${item.id}`) }}
+							</div>
+							<div class="home-links__item-sub-title">
+								{{ item.trials }} {{ $t('misc.clinicalTrials') }}
+							</div>
 
-						<div class="home-links__item-navigate">
-							<div class="button-wrapper">
-								<the-button @click="navigateToTrial(item)">
-									{{ $t('misc.explore') }}
+							<div class="home-links__item-navigate">
+								<div class="button-wrapper">
+									<the-button @click="navigateToTrial(item)">
+										{{ $t('misc.explore') }}
 
-									<template v-slot:rightIcon>
-										<img src="@/assets/icons/chevron-right-gradient.svg" />
-									</template>
-								</the-button>
+										<template v-slot:rightIcon>
+											<img src="@/assets/icons/chevron-right-gradient.svg" />
+										</template>
+									</the-button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+	</div>
 	</layout-home>
 </template>
 
