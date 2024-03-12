@@ -1,16 +1,16 @@
 <template>
 	<layout-kiosk>
-		<div
+		<div class="category-container"
 			v-for="(grouping, index) in getKioskHomeCategories()"
 			:key="index">
 			
-			<div>
-				<img :src="`src/assets/icons/${grouping.icon}.svg`" class="category-icon"/>
-				<h1
-					class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
-					v-html="$t(grouping.mobileTitleKey)"
-				/>
-			</div>
+		<div class="category-header">
+			<img :src="`src/assets/icons/${grouping.icon}.svg`" class="category-icon"/>
+			<h1
+				class="type-heading-h1 type-color-white kiosk-home__title js-animation-slideIn"
+				v-html="$t(grouping.mobileTitleKey)"
+			/>
+		</div>
 
 			<!-- Panel -->
 		<div class="kiosk-home-links">
@@ -63,7 +63,7 @@ function navigateToTrial(item: ICategories) {
 <style lang="scss" scoped>
 .kiosk-home {
 	&__title {
-		font-size: 5.8em;
+		font-size: 5.0em;
 		line-height: 1;
 		display: inline;
 	}
@@ -122,9 +122,18 @@ function navigateToTrial(item: ICategories) {
 		}
 	}
 }
+
+.category-container{
+	margin-top: 4em;
+}
 .category-icon{
 	width: 5em;
 	margin-left: -2em;
 	margin-right: 1em;
+	flex-shrink: 0;
+}
+
+.category-header{
+	display: flex;
 }
 </style>
