@@ -14,16 +14,6 @@
 
 			<!-- Trial Cards -->
 			<trial-cards />
-
-			<div class="trials__controls js-animation-slideIn">
-				<the-button @click="navigateHome()" modifier="simple-white">
-					{{ $t('misc.mainMenu') }}
-
-					<template v-slot:rightIcon>
-						<img src="@/assets/icons/home-icon.svg" class="kiosk-icon--lg" />
-					</template>
-				</the-button>
-			</div>
 		</div>
 	</layout-kiosk>
 </template>
