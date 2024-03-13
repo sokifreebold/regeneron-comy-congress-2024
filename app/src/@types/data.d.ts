@@ -12,6 +12,13 @@ export interface ICategoriesRecords{
 	icon?: string;
 }
 
+export interface ILandingPageCategoryGroup{
+	id: string;
+	title: string;
+	icon: string;
+	trials: ICategoryRecords[];
+}
+
 type trialLink = 'pdfCard' | 'external' | 'qrCode' | 'images';
 
 export interface ITrialsLabels {

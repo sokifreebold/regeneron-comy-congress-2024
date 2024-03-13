@@ -1,5 +1,16 @@
 <template>
 	<layout-kiosk>
+
+		<!-- TODO ONLY HERE WHILE DEVELOPING
+			TODO remove from here and move to kiosk 3 once available -->
+		<div class="category-container"
+			v-for="(grouping, index) in getLandingPageCategoryGroups()"
+			:key="index">
+			<landing-page-category-group
+				:categoryGroup="grouping"
+			></landing-page-category-group>
+		</div>
+
 		<div class="category-container"
 			v-for="(grouping, index) in getKioskHomeCategories()"
 			:key="index">
@@ -14,6 +25,7 @@
 
 			<!-- Panel -->
 		<div class="kiosk-home-links">
+			
 			<div
 				v-for="(item, index) in grouping.categories"
 				:key="index"
@@ -51,6 +63,7 @@
 import { useRouter } from 'vue-router';
 
 import { getKioskHomeCategories } from '@/utils/data';
+import { getLandingPageCategoryGroups } from '@/utils/data';
 import type { ICategories } from '@/@types/data';
 
 const router = useRouter();

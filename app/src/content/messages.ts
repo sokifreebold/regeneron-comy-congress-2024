@@ -28,9 +28,10 @@ export default {
 				'hematology-oncology': 'Hematology',
 			},
 			categories: {
-				nsclc: 'Non-Small cell lung cancer (NSCLC)',
-				melanoma: 'Melanoma',
-				'our-oncology-mobile': 'Our oncology<br>pipeline',
+				'nsclc': 'Non-Small cell lung cancer (NSCLC)',
+				'melanoma': 'Melanoma',
+				'solid-tumors': 'Solid Tumors',
+				'our-oncology-mobile': 'Our oncology pipeline',
 				'our-oncology-desktop': 'Our oncology pipeline',
 
 				'nsclc-clinical-trial-information': {

@@ -2,7 +2,7 @@ import { computed } from 'vue';
 import { useAppStore } from '@/stores/app';
 import type { ITrials, ITrialsRecords } from '@/@types/data';
 import { categories, trialsData } from '@/data/microsite';
-import { categoriesKiosk, trialsDataKiosk } from '@/data/kiosk';
+import { categoriesKiosk, trialsDataKiosk, landingPageCategoryGroups } from '@/data/kiosk';
 
 export function getHomeCategories() {
 	return categories;
@@ -41,4 +41,9 @@ export function getTrialDatum(trial: string, nct: string): ITrials | null {
 // Kiosk Data
 export function getKioskHomeCategories() {
 	return categoriesKiosk;
+}
+
+// Kiosk Data
+export function getLandingPageCategoryGroups() {
+	return landingPageCategoryGroups;
 }
