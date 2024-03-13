@@ -25,7 +25,7 @@ export default {
 		titles: {
 			trials: {
 				'solid-tumor': 'Solid Tumor',
-				'hematology-oncology': 'Hematology-Oncology',
+				'hematology-oncology': 'Hematology',
 			},
 			categories: {
 				nsclc: 'Non-Small cell lung cancer (NSCLC)',
