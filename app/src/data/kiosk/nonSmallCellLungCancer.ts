@@ -12,19 +12,27 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT05785767',
 				recruiting: true,
 				trialCardPdf: 'NCT05785767_FIA-EM-0010',
+				trialCardImages: [
+					'NCT05785767_FIA-EM-0010-1',
+					'NCT05785767_FIA-EM-0010-2',
+				],
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced non-small cell lung cancer with PD-L1 expression > 50%',
 				},
 			},
 			{
-				id: 'solid-tumor-lung-cancer-2',
+					id: 'solid-tumor-lung-cancer-2',
 				type: 'pdfCard',
 				phase: 3,
 				phaseMobile: '2/3',
 				nct: 'NCT05800015',
 				recruiting: true,
 				trialCardPdf: 'NCT05800015_FIA-EM-0011',
+				trialCardImages: [
+					'NCT05800015_FIA-EM-0011-1',
+					'NCT05800015_FIA-EM-0011-2',
+				],
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span><br>+ Chemotherapy',
 					aside: 'Advanced non-small cell lung cancer',
@@ -61,6 +69,10 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT04982224',
 				recruiting: true,
 				trialCardPdf: 'NCT04982224_REGN5093-M114-EM-0003',
+				trialCardImages: [
+					'NCT04982224_REGN5093-M114-EM-0003-1',
+					'NCT04982224_REGN5093-M114-EM-0003-2',
+				],
 				labels: {
 					title: 'METxMET antibody-drug conjugate <span class="ui-one-word">(REGN5093-M114)</span>',
 					aside: 'MET-overexpressing non-small cell lung cancer',
