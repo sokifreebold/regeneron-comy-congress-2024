@@ -28,12 +28,31 @@
 		@include bg-contain();
 		background-position: top;
 	}
+	&-lung-icon-dark {
+		background: url('@/assets/icons/lung-icon-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 	&-hand-glass{
 		background: url('@/assets/icons/hand-glass.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-
+	&-hand-glass-dark{
+		background: url('@/assets/icons/hand-glass-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-bubble-cloud{
+		background: url('@/assets/icons/bubble-cloud.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-expand-more{
+		background: url('@/assets/icons/expand-more.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 	&-nsclc-clinical-trial-information,
 	&-melanoma-clinical-trial-information {
 		background: url('@/assets/icons/hand-glass.svg');

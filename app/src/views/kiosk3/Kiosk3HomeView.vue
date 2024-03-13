@@ -1,13 +1,17 @@
 <template>
 	<layout-kiosk>
-		This is data dump for kiosk 3<br />
-		<pre>{{ kiosk3Categories }}</pre>
-		<hr />
+		<p>Please select a treatment area</p>
 
-		Data Render
-		<div v-for="(item, index) in kiosk3Categories" :key="index" @click="navigateLanding(item)">
-			{{ item }}
+		<!-- TODO ONLY HERE WHILE DEVELOPING
+			TODO remove from here and move to kiosk 3 once available -->
+			<div class="category-container"
+			v-for="(grouping, index) in kiosk3Categories"
+			:key="index">
+			<landing-page-category-group
+				:categoryGroup="grouping"
+			></landing-page-category-group>
 		</div>
+
 	</layout-kiosk>
 </template>
 

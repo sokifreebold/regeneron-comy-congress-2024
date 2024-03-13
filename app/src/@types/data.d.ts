@@ -19,6 +19,9 @@ export interface ICategoriesKiosk {
 
 export interface ICategoriesKiosk3 {
 	id: string;
+	title: string;
+	icon: string;
+	trials: ICategoryRecords[];
 }
 
 type trialLink = 'pdfCard' | 'external' | 'qrCode' | 'images';
