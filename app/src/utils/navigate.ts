@@ -10,7 +10,7 @@ export function navigateTrialCards(
 	route: RouteLocationNormalizedLoaded,
 ) {
 	const { type, nct } = trial;
-	const { trialId } = route.params;
+	const { trialId, parentId } = route.params;
 
 	const store = useAppStore();
 	const version = computed(() => store.get_version);
@@ -19,8 +19,8 @@ export function navigateTrialCards(
 		let pageTitle = 'trial-card-external';
 		let externalPath = `/trials/${trialId}/${nct}/external`;
 
-		if (version.value === 'kiosk') {
-			externalPath = `/panels${externalPath}`;
+		if (version.value.includes('kiosk')) {
+			externalPath = `/panels/${parentId}${externalPath}`;
 			pageTitle = 'panels-trial-card-external';
 		}
 
@@ -36,8 +36,8 @@ export function navigateTrialCards(
 
 	if (type === 'pdfCard') {
 		let pdfRoutePath = `/trials/${trialId}/${nct}`;
-		if (version.value === 'kiosk') {
-			pdfRoutePath = `/panels${pdfRoutePath}`;
+		if (version.value.includes('kiosk')) {
+			pdfRoutePath = `/panels/${parentId}${pdfRoutePath}`;
 		}
 		router.push(pdfRoutePath);
 	}

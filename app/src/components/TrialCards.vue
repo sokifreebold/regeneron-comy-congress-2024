@@ -6,7 +6,7 @@
 		<div
 			v-for="(section, index) in trialData"
 			:key="index"
-			:class="['trial-cards', { kiosk: version === 'kiosk' }]"
+			:class="['trial-cards', { kiosk: version.includes('kiosk') }]"
 		>
 			<h2
 				v-if="section.title"
@@ -53,8 +53,9 @@ const setRef = (el: any) => {
 	}
 };
 
+const parentId = computed<string>(() => route.params.parentId as string);
 const trialId = computed<string>(() => route.params.trialId as string);
-const trialData = computed<ITrialsRecords[]>(() => getTrialData(trialId.value));
+const trialData = computed<ITrialsRecords[]>(() => getTrialData(trialId.value, parentId.value));
 </script>
 
 <style lang="scss" scoped>

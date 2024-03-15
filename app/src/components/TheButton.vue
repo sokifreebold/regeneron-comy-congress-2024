@@ -1,6 +1,13 @@
 <template>
+	<!-- TODO: Change kiosk version class to multiple kiosk -->
 	<button
-		:class="['button', `button--${props.modifier}`, { 'is-disabled': props.disabled }, version]"
+		:class="[
+			'button',
+			`button--${props.modifier}`,
+			{ 'is-disabled': props.disabled },
+			{ kiosk: version.includes('kiosk') },
+			version,
+		]"
 	>
 		<div class="button__content">
 			<div v-if="hasLeft" class="button__icon button__icon--left">

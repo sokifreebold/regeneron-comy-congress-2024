@@ -92,6 +92,7 @@ const router = useRouter();
 const currentSlide = ref(0);
 const loaded = ref(false);
 
+const parentId = computed<string>(() => route.params.parentId as string);
 const trialId = computed<string>(() => route.params.trialId as string);
 const nctId = computed<string>(() => route.params.nct as string);
 
@@ -125,7 +126,7 @@ function trialDataFunction() {
 	if (!nctId.value) {
 		return;
 	}
-	const datum = getTrialDatum(trialId.value, nctId.value);
+	const datum = getTrialDatum(trialId.value, nctId.value, parentId.value);
 	return datum;
 }
 
@@ -134,7 +135,7 @@ function slideClicked(index: number) {
 }
 
 function closeOverlay() {
-	router.push(`/panels/trials/${trialId.value}`);
+	router.push(`/panels/trials/${parentId.value}/${trialId.value}`);
 }
 
 function navigateSlides(dir: number) {

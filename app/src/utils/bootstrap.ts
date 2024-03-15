@@ -10,21 +10,26 @@ export function initialiseGoogleAnalytics(app: App<Element>, router: Router) {
 	// if (isLocalEnvironment()) {
 	// 	return;
 	// }
+	const { googleAnalytics } = appConfig;
+	if (!googleAnalytics) {
+		return;
+	}
 
-	let tag = appConfig.googleAnalyticsTagMicrosite;
+	let tag;
 	try {
-		if ((version as any) === 'kiosk') {
-			tag = appConfig.googleAnalyticsTagKiosk;
+		if (googleAnalytics[version]) {
+			tag = googleAnalytics[version];
 		}
 	} catch (err) {
 		console.warn(err);
 	}
 
 	if (!tag) {
+		console.log(`[LOG]: No GA Tag found for version ${version}`);
 		return;
 	}
 
-	console.log(`[LOG]: Using GA Tag ${tag}`);
+	console.log(`[LOG]: Using GA Tag ${tag} for version ${version}`);
 	app.use(
 		VueGtag,
 		{

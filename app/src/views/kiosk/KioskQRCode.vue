@@ -40,6 +40,7 @@ import { getTrialDatum } from '@/utils/data';
 const route = useRoute();
 const router = useRouter();
 
+const parentId = computed<string>(() => route.params.parentId as string);
 const trialId = computed<string>(() => route.params.trialId as string);
 const nctId = computed<string>(() => route.params.nct as string);
 
@@ -49,12 +50,12 @@ function trialDataFunction() {
 	if (!nctId.value) {
 		return;
 	}
-	const datum = getTrialDatum(trialId.value, nctId.value);
+	const datum = getTrialDatum(trialId.value, nctId.value, parentId.value);
 	return datum;
 }
 
 function closeOverlay() {
-	router.push(`/panels/trials/${trialId.value}`);
+	router.push(`/panels/trials/${parentId.value}/${trialId.value}`);
 }
 </script>
 

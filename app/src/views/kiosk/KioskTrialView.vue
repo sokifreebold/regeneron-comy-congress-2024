@@ -1,7 +1,11 @@
 <template>
 	<layout-kiosk class="layout-trial-kiosk">
-		<img src="@/assets/icons/main-menu-button.svg" class="menu-button" @click="navigateHome()"/>
-	
+		<img
+			src="@/assets/icons/main-menu-button.svg"
+			class="menu-button"
+			@click="navigateHome()"
+		/>
+
 		<div class="trials">
 			<!-- Title -->
 			<div class="trials__header js-animation-slideIn">
@@ -22,14 +26,11 @@
 import { computed, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { fadeIn } from '@/utils/animations';
-import { getTrialData } from '@/utils/data';
-import type { ICategoriesRecords } from '@/@types/data';
 
 const route = useRoute();
 const router = useRouter();
 
 const trialId = computed<string>(() => route.params.trialId as string);
-// const categoryData = computed<ICategoriesRecords>(() => getTrialData(trialId.value));
 
 onMounted(() => {
 	animateHeader();
@@ -127,7 +128,7 @@ function navigateHome() {
 	}
 }
 
-.menu-button{
+.menu-button {
 	width: 12em;
 	position: fixed;
 	left: 0;

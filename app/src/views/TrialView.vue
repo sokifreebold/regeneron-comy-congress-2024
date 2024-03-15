@@ -7,7 +7,7 @@ import { computed } from 'vue';
 import { useAppStore } from '@/stores/app';
 
 import MicrositeTrialView from './microsite/MicrositeTrialView.vue';
-import KioskTrialView from './kiosk1/KioskTrialView.vue';
+import KioskTrialView from './kiosk/KioskTrialView.vue';
 
 const store = useAppStore();
 const version = computed(() => store.get_version);
