@@ -1,9 +1,6 @@
 <template>
 	<layout-kiosk>
 		<p>Please select a treatment area</p>
-
-		<!-- TODO ONLY HERE WHILE DEVELOPING
-			TODO remove from here and move to kiosk 3 once available -->
 			<div class="category-container"
 			v-for="(grouping, index) in kiosk3Categories"
 			:key="index">

@@ -13,7 +13,8 @@
                         v-html="$t(`titles.categories.${categoryGroup.id}`)"
                     />
                 </div>
-                <img src="@/assets/icons/expand-more.svg" class="expand" @click="toggleExpand()"/>
+                <img  v-if="!showing" src="@/assets/icons/expand-more.svg" class="expand" @click="toggleExpand()"/>
+                <img  v-if="showing" src="@/assets/icons/expand-less.svg" class="expand" @click="toggleExpand()"/>
             </div>
             <div class="category-contents"  v-if="showing">
                 <div v-for="(trial, index) in categoryGroup.trials" :key="index" class="category-content">
@@ -146,6 +147,7 @@ function navigateToTrial(item: ICategories) {
     padding: $unit * 6 $unit * 3;
     border-radius: 0px $radius;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 15em;
     max-height: 90vh;
     overflow: auto;
     margin: $unit * 2;
@@ -167,6 +169,7 @@ function navigateToTrial(item: ICategories) {
 .trial-title{
     color: #065BAA;
     font-size: 1.5em;
+    text-align: center;
 }
 
 
