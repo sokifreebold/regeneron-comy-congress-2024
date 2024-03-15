@@ -30,7 +30,14 @@ export default {
 			categories: {
 				'nsclc': 'Non-Small cell lung cancer (NSCLC)',
 				'melanoma': 'Melanoma',
+				'non-melanoma': 'Non Melanoma Skin Cancer (NMSC)',
 				'solid-tumors': 'Solid Tumors',
+				'genitourinary': 'Genitourinary Cancer',
+				'ovarian': 'Ovarian Cancer',
+				'multiple-tumors': 'Multiple Tumors',
+				'hematology': 'Hematology',
+				'myeloma': 'Myeloma and Other Plasma Cell Dyscrasias',
+				'lymphoma': 'Lymphoma',
 				'our-oncology-mobile': 'Our oncology pipeline',
 				'our-oncology-desktop': 'Our oncology pipeline',
 

@@ -48,6 +48,31 @@
 		@include bg-contain();
 		background-position: top;
 	}
+	&-prostate-dark{
+		background: url('@/assets/icons/prostate-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-gynecologic-dark{
+		background: url('@/assets/icons/gynecologic-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-multiple-tumors-dark{
+		background: url('@/assets/icons/multiple-tumors-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-myeloma-dark{
+		background: url('@/assets/icons/myeloma-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-lymphoma-dark{
+		background: url('@/assets/icons/lymphoma-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 	&-expand-more{
 		background: url('@/assets/icons/expand-more.svg');
 		@include bg-contain();

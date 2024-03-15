@@ -135,7 +135,7 @@ function navigateToTrial(item: ICategories) {
 
 .category-contents{
     display: flex;
-       
+    flex-wrap: wrap;
 }
 
 .category-content{
