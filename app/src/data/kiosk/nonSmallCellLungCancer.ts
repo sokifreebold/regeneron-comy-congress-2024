@@ -45,6 +45,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT03409614',
 				recruiting: false,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03409614',
+				qrCode: 'QR_NCT03409614',
 				labels: {
 					title: 'Ipilimumab <span class="ui-one-word">(CTLA-4 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span><br>+ Chemotherapy',
 					aside: 'Advanced or metastatic non-small cell lung cancer',
@@ -57,6 +58,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT04077099',
 				recruiting: false,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04077099',
+				qrCode: 'QR_NCT04077099',
 				labels: {
 					title: 'METxMET biparatopic <span class="ui-one-word">(REGN5093)</span>',
 					aside: 'MET-altered advanced non-small cell lung cancer',
