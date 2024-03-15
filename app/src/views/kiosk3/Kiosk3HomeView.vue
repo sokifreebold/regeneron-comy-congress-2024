@@ -1,6 +1,6 @@
 <template>
 	<layout-kiosk>
-		<p>Please select a treatment area</p>
+		<p class="text">Please select a treatment area.</p>
 			<div class="category-container"
 			v-for="(grouping, index) in kiosk3Categories"
 			:key="index">
@@ -23,3 +23,16 @@ function navigateLanding(item: ICategoriesKiosk3) {
 	router.push(`/panels/landing/${item.id}`);
 }
 </script>
+
+
+<style lang="scss" scoped>
+.text{
+	font-family: 'RobotoCondensed-Bold';
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 48px;
+	letter-spacing: 0em;
+	text-align: left;
+	width: 600px
+}
+</style>

@@ -90,7 +90,7 @@ export const kiosk3Categories: ICategoriesKiosk3[] = [
 	{id: 'solid-tumors', title: 'Solid Tumors', icon: 'bubble-cloud', trials: [
 		nonMelanoma, melanoma, nsclc, genitourinaryCancer, ovarian, multipleTumors
 	]},
-	{id: 'hematology', title: 'Hematology', icon: 'bubble-cloud', trials: [
+	{id: 'hematology', title: 'Hematology', icon: 'hematology', trials: [
 		myeloma, lymphoma
 	]}
 ];

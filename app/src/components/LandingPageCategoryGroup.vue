@@ -25,20 +25,21 @@
                         </p>
                     </div>
                   
-                    <the-button @click="navigateToTrial(item)" class="button-wrapper" modifier="simple-white-gradient-bg">
-                        {{$t('misc.seePipelineDetails')}}
-                        <template v-slot:rightIcon>
-                            <img src="@/assets/icons/chevron-right-white.svg" />
-                        </template>
-                    </the-button>
-                    
-                    <the-button @click="navigateToTrial(item)" class="button-wrapper" modifier="simple-white-gradient-bg">
-                        {{$t('misc.learnMore')}}
-                        <template v-slot:rightIcon>
-                            <img src="@/assets/icons/chevron-right-white.svg" />
-                        </template>
-                    </the-button>
-                    
+                    <div class="the-buttons">
+                        <the-button @click="navigateToTrial(item)" class="button-wrapper" modifier="simple-white-gradient-bg">
+                            {{$t('misc.seePipelineDetails')}}
+                            <template v-slot:rightIcon>
+                                <img src="@/assets/icons/chevron-right-white.svg" />
+                            </template>
+                        </the-button>
+                        
+                        <the-button @click="navigateToTrial(item)" class="button-wrapper" modifier="simple-white-gradient-bg">
+                            {{$t('misc.learnMore')}}
+                            <template v-slot:rightIcon>
+                                <img src="@/assets/icons/chevron-right-white.svg" />
+                            </template>
+                        </the-button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,6 +100,7 @@ function navigateToTrial(item: ICategories) {
 				min-width: $unit * 4;
 				aspect-ratio: 1;
 				margin-right: $unit * 2;
+                
 
 				@include tablet {
 					width: $unit * 10;
@@ -164,6 +166,14 @@ function navigateToTrial(item: ICategories) {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+}
+
+.trial-icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 3em;
 }
 
 .trial-title{
@@ -172,6 +182,15 @@ function navigateToTrial(item: ICategories) {
     text-align: center;
 }
 
+.button-wrapper{
+    display: flex;
+}
+
+.the-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
 
 
 </style> 

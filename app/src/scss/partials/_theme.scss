@@ -48,6 +48,11 @@
 		@include bg-contain();
 		background-position: top;
 	}
+	&-hematology{
+		background: url('@/assets/icons/hematology.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 	&-prostate-dark{
 		background: url('@/assets/icons/prostate-dark.svg');
 		@include bg-contain();
