@@ -33,52 +33,52 @@
 		@include bg-contain();
 		background-position: top;
 	}
-	&-hand-glass{
+	&-hand-glass {
 		background: url('@/assets/icons/hand-glass.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-hand-glass-dark{
+	&-hand-glass-dark {
 		background: url('@/assets/icons/hand-glass-dark.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-bubble-cloud{
+	&-bubble-cloud {
 		background: url('@/assets/icons/bubble-cloud.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-hematology{
+	&-hematology {
 		background: url('@/assets/icons/hematology.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-prostate-dark{
+	&-prostate-dark {
 		background: url('@/assets/icons/prostate-dark.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-gynecologic-dark{
+	&-gynecologic-dark {
 		background: url('@/assets/icons/gynecologic-dark.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-multiple-tumors-dark{
+	&-multiple-tumors-dark {
 		background: url('@/assets/icons/multiple-tumors-dark.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-myeloma-dark{
+	&-myeloma-dark {
 		background: url('@/assets/icons/myeloma-dark.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-lymphoma-dark{
+	&-lymphoma-dark {
 		background: url('@/assets/icons/lymphoma-dark.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-expand-more{
+	&-expand-more {
 		background: url('@/assets/icons/expand-more.svg');
 		@include bg-contain();
 		background-position: top;
@@ -104,32 +104,27 @@
 		@include bg-contain();
 		background-position: top;
 	}
-	&-genitourinary
-	{
+	&-genitourinary {
 		background: url('@/assets/icons/genitourinary.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-ovarian
-	{
+	&-ovarian {
 		background: url('@/assets/icons/ovarian.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-multiple-tumors
-	{
+	&-multiple-tumors {
 		background: url('@/assets/icons/multiple-tumors.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-myeloma
-	{
+	&-myeloma {
 		background: url('@/assets/icons/myeloma-whi.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-	&-lymphoma
-	{
+	&-lymphoma {
 		background: url('@/assets/icons/lymphoma-whi.svg');
 		@include bg-contain();
 		background-position: top;

@@ -28,11 +28,11 @@ export default {
 				'hematology-oncology': 'Hematology',
 			},
 			categories: {
-				'nsclc': {
+				nsclc: {
 					'home-title': 'Non-Small cell lung cancer (NSCLC)',
 					'trial-title': 'Non-Small cell lung cancer (NSCLC)',
 				},
-				'melanoma': {
+				melanoma: {
 					'home-title': 'Melanoma',
 					'trial-title': 'Melanoma',
 				},
@@ -41,11 +41,11 @@ export default {
 					'trial-title': 'Non Melanoma Skin Cancer (NMSC)',
 				},
 				'solid-tumors': 'Solid Tumors',
-				'genitourinary': {
+				genitourinary: {
 					'home-title': 'Genitourinary Cancer',
 					'trial-title': 'Genitourinary Cancer',
 				},
-				'ovarian': {
+				ovarian: {
 					'home-title': 'Ovarian Cancer',
 					'trial-title': 'Ovarian Cancer',
 				},
@@ -53,12 +53,12 @@ export default {
 					'home-title': 'Multiple Tumors',
 					'trial-title': 'Multiple Tumors',
 				},
-				'hematology': 'Hematology',
-				'myeloma': {
+				hematology: 'Hematology',
+				myeloma: {
 					'home-title': 'Myeloma and Other Plasma Cell Dyscrasias',
 					'trial-title': 'Myeloma and Other Plasma Cell Dyscrasias',
 				},
-				'lymphoma': {
+				lymphoma: {
 					'home-title': 'Lymphoma',
 					'trial-title': 'Lymphoma',
 				},
