@@ -17,13 +17,6 @@ export interface ICategoriesKiosk {
 	categories: ICategoriesRecords[];
 }
 
-export interface ICategoriesKiosk3 {
-	id: string;
-	title: string;
-	icon: string;
-	trials: ICategoryRecords[];
-}
-
 type trialLink = 'pdfCard' | 'external' | 'qrCode' | 'images';
 
 export interface ITrialsLabels {

@@ -26,6 +26,7 @@ export default {
 			trials: {
 				'solid-tumor': 'Solid Tumor',
 				'hematology-oncology': 'Hematology',
+				intro: 'Please select a treatment area.',
 			},
 			categories: {
 				nsclc: {

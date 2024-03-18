@@ -1,19 +1,18 @@
 <template>
-	<layout-kiosk>
-		<p class="text">Please select a treatment area.</p>
-			<div class="category-container"
-			v-for="(grouping, index) in kioskCategoriesData"
-			:key="index">
-			<landing-page-category-group
-				:categoryGroup="grouping"
-			></landing-page-category-group>
-		</div>
+	<layout-kiosk class="kiosk">
+		<p class="intro-text">{{ $t('titles.trials.intro') }}</p>
 
+		<div
+			class="category-container"
+			v-for="(grouping, index) in kioskCategoriesData"
+			:key="index"
+		>
+			<landing-page-category-group :categoryGroup="grouping"></landing-page-category-group>
+		</div>
 	</layout-kiosk>
 </template>
 
 <script setup lang="ts">
-
 import { computed } from 'vue';
 import type { ICategoriesKiosk3 } from '@/@types/data';
 import { useRouter } from 'vue-router';
@@ -29,18 +28,21 @@ function navigateLanding(item: ICategoriesKiosk3) {
 	router.push(`/panels/landing/${item.id}`);
 }
 
-const kioskCategoriesData = computed<ICategoriesKiosk3[]>(() => getKioskHomeCategories()!.categories);
+const kioskCategoriesData = computed<ICategoriesKiosk3[]>(
+	() => getKioskHomeCategories()!.categories,
+);
 </script>
 
-
 <style lang="scss" scoped>
-.text{
-	font-family: 'RobotoCondensed-Bold';
-	font-size: 24px;
-	font-weight: 700;
-	line-height: 48px;
-	letter-spacing: 0em;
-	text-align: left;
-	width: 600px
+.kiosk {
+	.intro-text {
+		font-family: 'RobotoCondensed-Bold';
+		font-size: 2em;
+		font-weight: 700;
+		line-height: 48px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-bottom: 0.5em;
+	}
 }
 </style>
