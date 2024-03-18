@@ -89,4 +89,49 @@
 		@include bg-contain();
 		background-position: top;
 	}
+	&-non-melanoma {
+		background: url('@/assets/icons/non-melanoma.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-melanoma {
+		background: url('@/assets/icons/melanoma.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-nsclc {
+		background: url('@/assets/icons/nsclc.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-genitourinary
+	{
+		background: url('@/assets/icons/genitourinary.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-ovarian
+	{
+		background: url('@/assets/icons/ovarian.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-multiple-tumors
+	{
+		background: url('@/assets/icons/multiple-tumors.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-myeloma
+	{
+		background: url('@/assets/icons/myeloma-whi.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-lymphoma
+	{
+		background: url('@/assets/icons/lymphoma-whi.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 }

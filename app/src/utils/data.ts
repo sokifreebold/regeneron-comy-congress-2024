@@ -19,18 +19,15 @@ export function getTrialData(trial: string, parentId?: string): ITrialsRecords[]
 	if (version.value.includes('kiosk')) {
 		let datum: ITrialsRecords[] = [];
 		const kioskCategories = getKioskHomeCategories();
-		console.log(JSON.stringify(kioskCategories))
 		if (kioskCategories) {
 			const parentCategory = kioskCategories.categories.find(
 				(_: ICategories) => _.id === parentId,
 			);
-			console.log(JSON.stringify(parentCategory))
 
 			if (parentCategory) {
 				const childCategory = parentCategory.categories.find(
 					(_: ICategories) => _.id === trial,
 				);
-				console.log(JSON.stringify(childCategory));
 				if (childCategory && childCategory.data) {
 					datum = childCategory.data;
 				}
