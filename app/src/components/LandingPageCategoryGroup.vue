@@ -17,28 +17,30 @@
                 <img  v-if="showing" src="@/assets/icons/expand-less.svg" class="expand" @click="toggleExpand()"/>
             </div>
             <div class="category-contents"  v-if="showing">
-                <div v-for="(trial, index) in categoryGroup.trials" :key="index" class="category-content">
-                    <div class="trial-icon-and-title">
-                        <div :class="['kiosk-home-links__item-icon trial-icon', `ui-icon-${trial.icon}`]" />
-                        <p class="trial-title type-font-condensed">
-                            {{ $t(trial.mobileTitleKey) }}
-                        </p>
-                    </div>
-                  
-                    <div class="the-buttons">
-                        <the-button @click="navigateToTrial(item)" class="button-wrapper" modifier="simple-white-gradient-bg">
-                            {{$t('misc.seePipelineDetails')}}
-                            <template v-slot:rightIcon>
-                                <img src="@/assets/icons/chevron-right-white.svg" />
-                            </template>
-                        </the-button>
-                        
-                        <the-button @click="navigateToTrial(item)" class="button-wrapper" modifier="simple-white-gradient-bg">
-                            {{$t('misc.learnMore')}}
-                            <template v-slot:rightIcon>
-                                <img src="@/assets/icons/chevron-right-white.svg" />
-                            </template>
-                        </the-button>
+                <div v-for="(trial, index) in categoryGroup.categories" :key="index" class="category-content">
+                    <div class="category-content-container">
+                        <div class="trial-icon-and-title">
+                            <div :class="['kiosk-home-links__item-icon trial-icon', `ui-icon-${trial.icon}`]" />
+                            <p class="trial-title type-font-condensed">
+                                {{ $t(`${trial.title}.trial-title`) }}
+                            </p>
+                        </div>
+                    
+                        <div class="the-buttons">
+                            <the-button @click="navigateToTrial(categoryGroup.id, trial.categories[0])" class="button-wrapper" modifier="simple-white-gradient-bg">
+                                {{$t('misc.seePipelineDetails')}}
+                                <template v-slot:rightIcon>
+                                    <img src="@/assets/icons/chevron-right-white.svg" />
+                                </template>
+                            </the-button>
+                            
+                            <the-button @click="navigateToTrial(categoryGroup.id, trial.categories[0])" class="button-wrapper" modifier="simple-white-gradient-bg">
+                                {{$t('misc.learnMore')}}
+                                <template v-slot:rightIcon>
+                                    <img src="@/assets/icons/chevron-right-white.svg" />
+                                </template>
+                            </the-button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,9 +65,10 @@ function toggleExpand(){
     showing.value = !showing.value;
 }
 
-function navigateToTrial(item: ICategories) {
-	router.push(`/panels/trials/${item.id}`);
+function navigateToTrial(parentCategoryId: string, item: ICategories) {
+	router.push(`/panels/trials/${parentCategoryId}/${item.id}`);
 }
+
 
 </script>
 
@@ -160,6 +163,11 @@ function navigateToTrial(item: ICategories) {
         rgba(255, 255, 255, 0) 260.85%
     );
     box-shadow: 0px 55px 116px 0px #0c2561;
+}
+
+.category-content-container{
+    // padding: 1em 1em;
+    // margin: 1em;
 }
 
 .trial-icon-and-title{

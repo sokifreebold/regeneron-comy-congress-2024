@@ -2,6 +2,38 @@ import type { ICategoriesKiosk, ICategoriesKiosk3 } from '@/@types/data';
 
 import trailsNoneSmallCellLungCancer from './nonSmallCellLungCancer';
 import trailsMelanoma from './trailsMelanoma';
+import trailsNonMelanoma from './nonMelanoma';
+import trailsMelanoma3 from './melanoma';
+import trailsNsclc from './nsclc';
+import trialsGenitourinaryCancer from './genitourinaryCancer';
+import trialsOvarianCancer from './ovarianCancer';
+import trialsMultipleTumors from './multipleTumors';
+import trialsMyeloma from './myeloma';
+import trialsLymphoma from './lymphoma';
+
+const nsclc = { id: 'nsclc', title: 'titles.categories.nsclc', categories: [ {id: 'nsclc', trials: 0 }],
+icon: 'lung-icon-dark', data: trailsNsclc };
+
+const nonMelanoma = { id: 'non-melanoma', title: 'titles.categories.non-melanoma', categories: [{ id: 'non-melanoma', trials: 0 },],
+icon: 'hand-glass-dark', data: trailsNonMelanoma};
+
+const melanoma = { id: 'melanoma', title: 'titles.categories.melanoma', categories: [{ id: 'melanoma', trials: 0}],
+icon: 'hand-glass-dark', data: trailsMelanoma3};
+
+const genitourinaryCancer = { id: 'genitourinary', title: 'titles.categories.genitourinary', categories: [ { id: 'genitourinary', trials: 0}],
+icon: 'prostate-dark', data: trialsGenitourinaryCancer};
+
+const ovarian = { id: 'ovarian', title: 'titles.categories.ovarian', categories: [ {id: 'ovarian', trials: 0 }],
+icon: 'gynecologic-dark', data: trialsOvarianCancer};
+
+const multipleTumors = { id: 'multiple-tumors', title: 'titles.categories.multiple-tumors', categories: [{id: 'multiple-tumors', trials: 0}],
+icon: 'multiple-tumors-dark', data: trialsMultipleTumors};
+
+const myeloma = { id: 'myeloma', title: 'titles.categories.myeloma', categories: [ {id: 'myeloma', trials: 0}],
+icon: 'myeloma-dark', data: trialsMyeloma};
+
+const lymphoma = { id: 'lymphoma', title: 'titles.categories.lymphoma', categories: [ {id: 'lymphoma', trials: 0}],
+icon: 'lymphoma-dark', data: trialsLymphoma};
 
 export const categoriesKiosk: ICategoriesKiosk[] = [
 	{
@@ -60,37 +92,16 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 			},
 		],
 	},
-];
+	{
+		kiosk: 'kiosk3',
+		categories: [
+			{id: 'solid-tumors', title: 'Solid Tumors', icon: 'bubble-cloud', categories: [
+				nonMelanoma, melanoma, nsclc, genitourinaryCancer, ovarian, multipleTumors
+			]},
+			{id: 'hematology', title: 'Hematology', icon: 'hematology', categories: [
+				myeloma, lymphoma
+			]}
+		]
+	}
 
-const nsclc = { id: 'nsclc', mobileTitleKey: 'titles.categories.nsclc', desktopTitleKey: 'titles.categories.nsclc', categories: [],
-icon: 'lung-icon-dark'};
-
-const nonMelanoma = { id: 'non-melanoma', mobileTitleKey: 'titles.categories.non-melanoma', desktopTitleKey: 'titles.categories.non-melanoma', categories: [],
-icon: 'hand-glass-dark'};
-
-const melanoma = { id: 'melanoma', mobileTitleKey: 'titles.categories.melanoma', desktopTitleKey: 'titles.categories.melanoma', categories: [],
-icon: 'hand-glass-dark'};
-
-const genitourinaryCancer = { id: 'genitourinary', mobileTitleKey: 'titles.categories.genitourinary', desktopTitleKey: 'titles.categories.genitourinary', categories: [],
-icon: 'prostate-dark'};
-
-const ovarian = { id: 'ovarian', mobileTitleKey: 'titles.categories.ovarian', desktopTitleKey: 'titles.categories.ovarian', categories: [],
-icon: 'gynecologic-dark'};
-
-const multipleTumors = { id: 'multiple-tumors', mobileTitleKey: 'titles.categories.multiple-tumors', desktopTitleKey: 'titles.categories.multiple-tumors', categories: [],
-icon: 'multiple-tumors-dark'};
-
-const myeloma = { id: 'myeloma', mobileTitleKey: 'titles.categories.myeloma', desktopTitleKey: 'titles.categories.myeloma', categories: [],
-icon: 'myeloma-dark'};
-
-const lymphoma = { id: 'lymphoma', mobileTitleKey: 'titles.categories.lymphoma', desktopTitleKey: 'titles.categories.lymphoma', categories: [],
-icon: 'lymphoma-dark'};
-
-export const kiosk3Categories: ICategoriesKiosk3[] = [
-	{id: 'solid-tumors', title: 'Solid Tumors', icon: 'bubble-cloud', trials: [
-		nonMelanoma, melanoma, nsclc, genitourinaryCancer, ovarian, multipleTumors
-	]},
-	{id: 'hematology', title: 'Hematology', icon: 'hematology', trials: [
-		myeloma, lymphoma
-	]}
 ];

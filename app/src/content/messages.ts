@@ -28,16 +28,40 @@ export default {
 				'hematology-oncology': 'Hematology',
 			},
 			categories: {
-				'nsclc': 'Non-Small cell lung cancer (NSCLC)',
-				'melanoma': 'Melanoma',
-				'non-melanoma': 'Non Melanoma Skin Cancer (NMSC)',
+				'nsclc': {
+					'home-title': 'Non-Small cell lung cancer (NSCLC)',
+					'trial-title': 'Non-Small cell lung cancer (NSCLC)',
+				},
+				'melanoma': {
+					'home-title': 'Melanoma',
+					'trial-title': 'Melanoma',
+				},
+				'non-melanoma': {
+					'home-title': 'Non Melanoma Skin Cancer (NMSC)',
+					'trial-title': 'Non Melanoma Skin Cancer (NMSC)',
+				},
 				'solid-tumors': 'Solid Tumors',
-				'genitourinary': 'Genitourinary Cancer',
-				'ovarian': 'Ovarian Cancer',
-				'multiple-tumors': 'Multiple Tumors',
+				'genitourinary': {
+					'home-title': 'Genitourinary Cancer',
+					'trial-title': 'Genitourinary Cancer',
+				},
+				'ovarian': {
+					'home-title': 'Ovarian Cancer',
+					'trial-title': 'Ovarian Cancer',
+				},
+				'multiple-tumors': {
+					'home-title': 'Multiple Tumors',
+					'trial-title': 'Multiple Tumors',
+				},
 				'hematology': 'Hematology',
-				'myeloma': 'Myeloma and Other Plasma Cell Dyscrasias',
-				'lymphoma': 'Lymphoma',
+				'myeloma': {
+					'home-title': 'Myeloma and Other Plasma Cell Dyscrasias',
+					'trial-title': 'Myeloma and Other Plasma Cell Dyscrasias',
+				},
+				'lymphoma': {
+					'home-title': 'Lymphoma',
+					'trial-title': 'Lymphoma',
+				},
 				'our-oncology-mobile': 'Our oncology pipeline',
 				'our-oncology-desktop': 'Our oncology pipeline',
 
