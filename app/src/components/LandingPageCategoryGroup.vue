@@ -128,6 +128,12 @@ function navigateToTrial(parentCategoryId: string, item: ICategories) {
 			backdrop-filter: blur(3px);
 			margin-bottom: 20px;
 
+			&-copy {
+				margin-bottom: 0.5em;
+				margin-top: 1.5em;
+				border-radius: 20px 20px 20px 0px;
+				backdrop-filter: blur(20px);
+			}
 			&-title {
 				// @include px-to-em(40px);
 				font-size: 3em;
