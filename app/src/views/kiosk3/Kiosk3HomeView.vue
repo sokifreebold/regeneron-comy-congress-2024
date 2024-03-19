@@ -63,6 +63,7 @@ watch(route, checkIfOverlay);
 		line-height: 48px;
 		letter-spacing: 0em;
 		text-align: left;
+		margin-top: 1em;
 		margin-bottom: 0.5em;
 	}
 }

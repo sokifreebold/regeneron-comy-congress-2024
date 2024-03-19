@@ -32,9 +32,9 @@
 					<div
 						v-for="(trial, index) in categoryGroup.categories"
 						:key="index"
-						class="category-content"
+						class="category-content-wrapper"
 					>
-						<div>
+						<div class="category-content">
 							<div class="category-content__trial-icon-and-title">
 								<div
 									:class="[
@@ -43,7 +43,7 @@
 									]"
 								/>
 								<p
-									class="category-content__trial-icon-and-title__trial-title type-font-condensed"
+									class="category-content__trial-icon-and-title__trial-title type-font-condensed type-heading-h1"
 								>
 									{{ $t(`${trial.title}.trial-title`) }}
 								</p>
@@ -182,22 +182,30 @@ function navigateToTrial(item: ICategories) {
 
 .category-contents {
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
+	align-items: stretch;
+	gap: $unit * 5;
+}
+
+.category-content-wrapper {
+	flex: 1 1 0px;
+	margin: 0.5em;
 }
 
 .category-content {
+	height: 100%;
+	padding: 1em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	background: $white;
-	padding: $unit * 6 $unit * 3;
 	border-radius: 0px $radius;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	min-width: 15em;
 	max-height: 90vh;
 	overflow: auto;
-	margin: $unit * 5;
-	flex: 1 1 0px;
 	background: linear-gradient(
 		166deg,
 		rgba(255, 255, 255, 0.96) 57.85%,
@@ -225,7 +233,7 @@ function navigateToTrial(item: ICategories) {
 
 		&__trial-title {
 			color: #065baa;
-			font-size: 1.5em;
+			font-size: 1.2em;
 			text-align: center;
 		}
 	}
