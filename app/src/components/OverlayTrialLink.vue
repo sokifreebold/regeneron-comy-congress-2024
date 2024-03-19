@@ -62,7 +62,7 @@ function navigateToCondition(conditionId: string) {
 	router.push(`/conditions/${conditionId}`);
 }
 
-const categoryGroup = computed<ICategoriesKiosk3>(() =>
+const categoryGroup = computed<ICategoriesKiosk>(() =>
 	getKioskHomeCategories()!.categories.find((c) => c.id === categoryGroupId.value),
 );
 const category = computed(() =>

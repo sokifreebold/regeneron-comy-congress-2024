@@ -1,4 +1,4 @@
-import type { ICategoriesKiosk, ICategoriesKiosk3 } from '@/@types/data';
+import type { ICategoriesKiosk, ICategoriesKiosk } from '@/@types/data';
 
 import trailsNoneSmallCellLungCancer from './nonSmallCellLungCancer';
 import trailsMelanoma from './trailsMelanoma';
