@@ -10,6 +10,7 @@ export const useAppStore = defineStore('appStore', {
 		externalLinkId: '',
 		linkType: undefined,
 		popup: '',
+		trialIds: [],
 	}),
 	getters: {
 		get_version: (state) => state.version,
@@ -17,6 +18,7 @@ export const useAppStore = defineStore('appStore', {
 		get_externalLinkId: (state) => state.externalLinkId,
 		get_externalLinkType: (state) => state.linkType,
 		get_popup: (state) => state.popup,
+		get_trialIds: (state) => state.trialIds,
 	},
 	actions: {
 		axn_updateVersion(value: string) {
@@ -27,6 +29,9 @@ export const useAppStore = defineStore('appStore', {
 		},
 		axn_updateExternalLinkId(value: string) {
 			this.externalLinkId = value;
+		},
+		axn_updateTrialIds(value: string[]) {
+			this.trialIds = value;
 		},
 		axn_updatePopup(value: string) {
 			this.popup = value;

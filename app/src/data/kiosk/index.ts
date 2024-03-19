@@ -25,6 +25,7 @@ const nonMelanoma = {
 	categories: [{ id: 'non-melanoma', trials: 0 }],
 	icon: 'hand-glass-dark',
 	data: trailsNonMelanoma,
+	trialIds: ['bcc', 'cscc'],
 };
 
 const melanoma = {

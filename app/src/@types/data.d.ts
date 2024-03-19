@@ -10,6 +10,7 @@ export interface ICategoriesRecords {
 	title?: string;
 	categories: ICategories[];
 	icon?: string;
+	trialIds?: string[];
 }
 
 export interface ICategoriesKiosk {

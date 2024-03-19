@@ -23,6 +23,10 @@ export default {
 			},
 		},
 		titles: {
+			conditions: {
+				bcc: 'Basal Cell Carcinoma (BCC)',
+				cscc: 'Cutaneous Squamous Cell Carcinoma (CSCC)',
+			},
 			trials: {
 				'solid-tumor': 'Solid Tumor',
 				'hematology-oncology': 'Hematology',

@@ -51,7 +51,7 @@
 
 							<div class="category-content__navigation-buttons">
 								<the-button
-									@click="navigateToTrial(categoryGroup.id, trial.categories[0])"
+									@click="navigateToTrial(trial.categories[0])"
 									class="button-wrapper"
 									modifier="simple-white-gradient-bg"
 								>
@@ -62,7 +62,7 @@
 								</the-button>
 
 								<the-button
-									@click="navigateToTrial(categoryGroup.id, trial.categories[0])"
+									@click="learnMore(trial, trial.categories[0])"
 									class="button-wrapper"
 									modifier="simple-white-gradient-bg"
 								>
@@ -95,8 +95,17 @@ function toggleExpand() {
 	showing.value = !showing.value;
 }
 
-function navigateToTrial(parentCategoryId: string, item: ICategories) {
-	router.push(`/panels/trials/${parentCategoryId}/${item.id}`);
+function learnMore(category: ICategoriesRecords, item: ICategories) {
+	if (category.trialIds && category.trialIds.length > 0) {
+		router.push(`/overlay/${categoryGroup.id}/${category.id}`);
+	} else {
+		// TODO change to link the dse pages
+		navigateToTrial(item);
+	}
+}
+
+function navigateToTrial(item: ICategories) {
+	router.push(`/panels/trials/${categoryGroup.id}/${item.id}`);
 }
 </script>
 

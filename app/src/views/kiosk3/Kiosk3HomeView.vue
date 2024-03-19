@@ -13,9 +13,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted, watch } from 'vue';
 import type { ICategoriesKiosk3 } from '@/@types/data';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 import { useAppStore } from '@/stores/app';
 import { getKioskHomeCategories } from '@/utils/data';
 
@@ -23,6 +23,9 @@ const store = useAppStore();
 store.axn_updateVersion('kiosk3');
 
 const router = useRouter();
+const route = useRoute();
+const categoryGroupId = computed<string>(() => route.params.categoryGroupId as string);
+const categoryId = computed<string>(() => route.params.categoryId as string);
 
 function navigateLanding(item: ICategoriesKiosk3) {
 	router.push(`/panels/landing/${item.id}`);
@@ -31,6 +34,24 @@ function navigateLanding(item: ICategoriesKiosk3) {
 const kioskCategoriesData = computed<ICategoriesKiosk3[]>(
 	() => getKioskHomeCategories()!.categories,
 );
+
+function checkIfOverlay() {
+	if (!categoryGroupId.value) {
+		return;
+	}
+	const categoryGroup = kioskCategoriesData.value.find((cd) => cd.id === categoryGroupId.value);
+	if (categoryGroup) {
+		const category = categoryGroup.categories.find((c) => c.id === categoryId.value);
+		if (category && category.trialIds && category.trialIds.length > 0) {
+			store.axn_updateTrialIds(category.trialIds);
+		}
+	}
+}
+
+onMounted(() => {
+	checkIfOverlay();
+});
+watch(route, checkIfOverlay);
 </script>
 
 <style lang="scss" scoped>
