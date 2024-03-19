@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, watch } from 'vue';
-import type { ICategoriesKiosk3 } from '@/@types/data';
+import type { ICategoriesKiosk } from '@/@types/data';
 import { useRouter, useRoute } from 'vue-router';
 import { useAppStore } from '@/stores/app';
 import { getKioskHomeCategories } from '@/utils/data';
@@ -27,11 +27,11 @@ const route = useRoute();
 const categoryGroupId = computed<string>(() => route.params.categoryGroupId as string);
 const categoryId = computed<string>(() => route.params.categoryId as string);
 
-function navigateLanding(item: ICategoriesKiosk3) {
+function navigateLanding(item: ICategoriesKiosk) {
 	router.push(`/panels/landing/${item.id}`);
 }
 
-const kioskCategoriesData = computed<ICategoriesKiosk3[]>(
+const kioskCategoriesData = computed<ICategoriesKiosk[]>(
 	() => getKioskHomeCategories()!.categories,
 );
 
