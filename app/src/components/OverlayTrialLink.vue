@@ -109,7 +109,7 @@ div .overlay__content__the-button .button__content {
 		box-shadow: 0px 55px 116px 0px #0c2561;
 
 		@include tablet {
-			padding: $unit * 6;
+			padding: $unit * 14;
 		}
 
 		&__title {
@@ -121,7 +121,7 @@ div .overlay__content__the-button .button__content {
 			font-weight: 700;
 			line-height: 40px; /* 125% */
 			text-transform: uppercase;
-			padding-bottom: 1em;
+			padding-bottom: 2em;
 		}
 
 		&__category-icon {
@@ -129,6 +129,8 @@ div .overlay__content__the-button .button__content {
 			width: 6em !important;
 			aspect-ratio: 1;
 			margin-right: $unit * 2;
+			margin-bottom: 2em;
+			margin-top: 2em;
 
 			@include tablet {
 				width: $unit * 10;
@@ -152,7 +154,9 @@ div .overlay__content__the-button .button__content {
 		position: absolute;
 		top: $unit * 2;
 		right: $unit * 2;
-		width: $unit * 2;
+		width: $unit * 5;
+		margin-right: 1em;
+		margin-top: 1em;
 		aspect-ratio: 1;
 		background: url('@/assets/icons/close-icon.svg');
 		@include bg-contain();

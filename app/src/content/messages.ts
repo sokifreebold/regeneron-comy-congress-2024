@@ -42,8 +42,8 @@ export default {
 					'trial-title': 'Melanoma',
 				},
 				'non-melanoma': {
-					'home-title': 'Non Melanoma Skin Cancer (NMSC)',
-					'trial-title': 'Non Melanoma Skin Cancer (NMSC)',
+					'home-title': 'Non-Melanoma Skin Cancer (NMSC)',
+					'trial-title': 'Non-Melanoma Skin Cancer (NMSC)',
 				},
 				'solid-tumors': 'Solid Tumors',
 				genitourinary: {
