@@ -65,43 +65,43 @@
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-6.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--solid-tumor-prostate-cancer-2 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-7.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--solid-tumor-ovarian-cancer-1 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-8.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--solid-tumor-ovarian-cancer-2 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-9.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--solid-tumor-multiple-1 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-10.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--solid-tumor-multiple-2 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-11.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--solid-tumor-multiple-3 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-12.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--multiple-tumors-1 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-12.svg');
@@ -119,13 +119,13 @@
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-14.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--solid-tumor-multiple-6 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-15.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--multiple-tumors-3 {
 		background: url('@/assets/icons/trials/trial-icon-solid-tumor-15.svg');
@@ -154,7 +154,7 @@
 		background: url('@/assets/icons/trials/trial-icon-hematology-oncology-2.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--hematology-oncology-myeloma-6,
 	&--hematology-oncology-classical-hematology-5 {
@@ -168,19 +168,19 @@
 		background: url('@/assets/icons/trials/trial-icon-hematology-lymphoma-1.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--hematology-oncology-lymphoma-9 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-lymphoma-2.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--hematology-oncology-lymphoma-8 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-lymphoma-3.svg');
 		@include bg-contain();
 		background-position: center;
-		@include largeIcon();
+		@include extraLargeIcon();
 	}
 	&--hematology-oncology-classical-hematology-1 {
 		background: url('@/assets/icons/trials/trial-icon-hematology-classical-hematology-1.svg');
