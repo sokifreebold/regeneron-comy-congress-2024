@@ -3,7 +3,6 @@ import type { ITrialsRecords } from '@/@types/data';
 const datum: ITrialsRecords[] = [
 	{
 		id: 'myeloma',
-		title: 'Myeloma and Other Plasma Cell Dyscrasias',
 		trials: [
 			{
 				id: 'hematology-oncology-myeloma-1',

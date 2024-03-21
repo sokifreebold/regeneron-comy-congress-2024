@@ -2,14 +2,14 @@ import type { ICategoriesKiosk } from '@/@types/data';
 
 import trailsNoneSmallCellLungCancer from './nonSmallCellLungCancer';
 import trailsMelanoma from './trailsMelanoma';
-import trailsNonMelanoma from './nonMelanoma';
-import trailsMelanoma3 from './melanoma';
-import trailsNsclc from './nsclc';
-import trialsGenitourinaryCancer from './genitourinaryCancer';
-import trialsOvarianCancer from './ovarianCancer';
-import trialsMultipleTumors from './multipleTumors';
-import trialsMyeloma from './myeloma';
-import trialsLymphoma from './lymphoma';
+import trailsNonMelanoma from './kiosk3/nonMelanoma';
+import trailsMelanoma3 from './kiosk3/melanoma';
+import trailsNsclc from './kiosk3/nsclc';
+import trialsGenitourinaryCancer from './kiosk3/genitourinaryCancer';
+import trialsOvarianCancer from './kiosk3/ovarianCancer';
+import trialsMultipleTumors from './kiosk3/multipleTumors';
+import trialsMyeloma from './kiosk3/myeloma';
+import trialsLymphoma from './kiosk3/lymphoma';
 import trialsMopcd from './kiosk2/mopcd';
 import trialsLymphoma2 from './kiosk2/lymphoma';
 
