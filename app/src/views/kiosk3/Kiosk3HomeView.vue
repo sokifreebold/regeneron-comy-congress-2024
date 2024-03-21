@@ -15,14 +15,13 @@
 <script setup lang="ts">
 import { computed, onMounted, watch } from 'vue';
 import type { ICategoriesKiosk } from '@/@types/data';
-import { useRouter, useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 import { useAppStore } from '@/stores/app';
 import { getKioskHomeCategories } from '@/utils/data';
 
 const store = useAppStore();
 store.axn_updateVersion('kiosk3');
 
-const router = useRouter();
 const route = useRoute();
 const categoryGroupId = computed<string>(() => route.params.categoryGroupId as string);
 const categoryId = computed<string>(() => route.params.categoryId as string);

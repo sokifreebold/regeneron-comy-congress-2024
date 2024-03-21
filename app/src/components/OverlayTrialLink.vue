@@ -112,7 +112,7 @@ div .overlay__content__the-button .button__content {
 		}
 
 		&__title {
-			color: var(--Draft-2023-Primary-Regeneron-Blue, #065baa);
+			color: #065baa;
 			text-align: center;
 			font-family: 'RobotoCondensed-Bold';
 			font-size: 3em;
