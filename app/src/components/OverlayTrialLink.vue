@@ -30,15 +30,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, shallowRef } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useAppStore } from '@/stores/app';
 import { useRoute, useRouter } from 'vue-router';
 import { applyElementsRippleFade } from '@/utils/animations';
 import { getKioskHomeCategories } from '@/utils/data';
+import type { ICategoriesRecords } from '@/@types/data';
 
 const store = useAppStore();
-
-const host = shallowRef<string>(location.host);
 
 const route = useRoute();
 const router = useRouter();
@@ -62,11 +61,11 @@ function navigateToCondition(conditionId: string) {
 	router.push(`/conditions/${conditionId}`);
 }
 
-const categoryGroup = computed<ICategoriesKiosk>(() =>
-	getKioskHomeCategories()!.categories.find((c) => c.id === categoryGroupId.value),
+const categoryGroup = computed<ICategoriesRecords>(
+	() => getKioskHomeCategories()!.categories.find((c) => c.id === categoryGroupId.value)!,
 );
-const category = computed(() =>
-	categoryGroup.value.categories.find((c) => c.id === categoryId.value),
+const category = computed(
+	() => categoryGroup.value.categories.find((c) => c.id === categoryId.value)!,
 );
 </script>
 

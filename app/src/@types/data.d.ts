@@ -3,6 +3,9 @@ export interface ICategories {
 	trials?: number;
 	learnMore?: boolean;
 	data?: ITrialsRecords[];
+	icon?: string;
+	title?: string;
+	trialIds?: string[];
 }
 
 export interface ICategoriesRecords {
@@ -10,7 +13,6 @@ export interface ICategoriesRecords {
 	title?: string;
 	categories: ICategories[];
 	icon?: string;
-	trialIds?: string[];
 }
 
 export interface ICategoriesKiosk {

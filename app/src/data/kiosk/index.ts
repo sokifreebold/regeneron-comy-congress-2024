@@ -1,4 +1,4 @@
-import type { ICategoriesKiosk, ICategoriesKiosk } from '@/@types/data';
+import type { ICategoriesKiosk } from '@/@types/data';
 
 import trailsNoneSmallCellLungCancer from './nonSmallCellLungCancer';
 import trailsMelanoma from './trailsMelanoma';
@@ -14,7 +14,6 @@ import trialsLymphoma from './lymphoma';
 const nsclc = {
 	id: 'nsclc',
 	title: 'titles.categories.nsclc',
-	categories: [{ id: 'nsclc', trials: 0 }],
 	icon: 'lung-icon-dark',
 	data: trailsNsclc,
 };
@@ -22,7 +21,6 @@ const nsclc = {
 const nonMelanoma = {
 	id: 'non-melanoma',
 	title: 'titles.categories.non-melanoma',
-	categories: [{ id: 'non-melanoma', trials: 0 }],
 	icon: 'hand-glass-dark',
 	data: trailsNonMelanoma,
 	trialIds: ['bcc', 'cscc'],
@@ -31,7 +29,6 @@ const nonMelanoma = {
 const melanoma = {
 	id: 'melanoma',
 	title: 'titles.categories.melanoma',
-	categories: [{ id: 'melanoma', trials: 0 }],
 	icon: 'hand-glass-dark',
 	data: trailsMelanoma3,
 };
@@ -39,7 +36,6 @@ const melanoma = {
 const genitourinaryCancer = {
 	id: 'genitourinary',
 	title: 'titles.categories.genitourinary',
-	categories: [{ id: 'genitourinary', trials: 0 }],
 	icon: 'prostate-dark',
 	data: trialsGenitourinaryCancer,
 };
@@ -47,7 +43,6 @@ const genitourinaryCancer = {
 const ovarian = {
 	id: 'ovarian',
 	title: 'titles.categories.ovarian',
-	categories: [{ id: 'ovarian', trials: 0 }],
 	icon: 'gynecologic-dark',
 	data: trialsOvarianCancer,
 };
@@ -55,7 +50,6 @@ const ovarian = {
 const multipleTumors = {
 	id: 'multiple-tumors',
 	title: 'titles.categories.multiple-tumors',
-	categories: [{ id: 'multiple-tumors', trials: 0 }],
 	icon: 'multiple-tumors-dark',
 	data: trialsMultipleTumors,
 };
@@ -63,7 +57,6 @@ const multipleTumors = {
 const myeloma = {
 	id: 'myeloma',
 	title: 'titles.categories.myeloma',
-	categories: [{ id: 'myeloma', trials: 0 }],
 	icon: 'myeloma-dark',
 	data: trialsMyeloma,
 };
@@ -71,7 +64,6 @@ const myeloma = {
 const lymphoma = {
 	id: 'lymphoma',
 	title: 'titles.categories.lymphoma',
-	categories: [{ id: 'lymphoma', trials: 0 }],
 	icon: 'lymphoma-dark',
 	data: trialsLymphoma,
 };

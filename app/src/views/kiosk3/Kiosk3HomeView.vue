@@ -4,7 +4,7 @@
 
 		<div
 			class="category-container"
-			v-for="(grouping, index) in kioskCategoriesData"
+			v-for="(grouping, index) in kioskCategoriesData.categories"
 			:key="index"
 		>
 			<landing-page-category-group :categoryGroup="grouping"></landing-page-category-group>
@@ -27,19 +27,15 @@ const route = useRoute();
 const categoryGroupId = computed<string>(() => route.params.categoryGroupId as string);
 const categoryId = computed<string>(() => route.params.categoryId as string);
 
-function navigateLanding(item: ICategoriesKiosk) {
-	router.push(`/panels/landing/${item.id}`);
-}
-
-const kioskCategoriesData = computed<ICategoriesKiosk[]>(
-	() => getKioskHomeCategories()!.categories,
-);
+const kioskCategoriesData = computed<ICategoriesKiosk>(() => getKioskHomeCategories()!);
 
 function checkIfOverlay() {
 	if (!categoryGroupId.value) {
 		return;
 	}
-	const categoryGroup = kioskCategoriesData.value.find((cd) => cd.id === categoryGroupId.value);
+	const categoryGroup = kioskCategoriesData.value.categories.find(
+		(cd) => cd.id === categoryGroupId.value,
+	);
 	if (categoryGroup) {
 		const category = categoryGroup.categories.find((c) => c.id === categoryId.value);
 		if (category && category.trialIds && category.trialIds.length > 0) {

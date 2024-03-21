@@ -30,7 +30,7 @@
 				</div>
 				<div class="category-contents" v-if="showing">
 					<div
-						v-for="(trial, index) in categoryGroup.categories"
+						v-for="(category, index) in categoryGroup.categories"
 						:key="index"
 						class="category-content-wrapper"
 					>
@@ -39,19 +39,19 @@
 								<div
 									:class="[
 										'kiosk-home-links__item-icon category-content__trial-icon-and-title__trial-icon',
-										`ui-icon-${trial.icon}`,
+										`ui-icon-${category.icon}`,
 									]"
 								/>
 								<p
 									class="category-content__trial-icon-and-title__trial-title type-font-condensed type-heading-h1"
 								>
-									{{ $t(`${trial.title}.trial-title`) }}
+									{{ $t(`${category.title}.trial-title`) }}
 								</p>
 							</div>
 
 							<div class="category-content__navigation-buttons">
 								<the-button
-									@click="navigateToTrial(trial.categories[0])"
+									@click="navigateToTrial(category)"
 									class="button-wrapper"
 									modifier="simple-white-gradient-bg"
 								>
@@ -62,7 +62,7 @@
 								</the-button>
 
 								<the-button
-									@click="learnMore(trial, trial.categories[0])"
+									@click="learnMore(category)"
 									class="button-wrapper"
 									modifier="simple-white-gradient-bg"
 								>
@@ -83,7 +83,8 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 import { ref } from 'vue';
-import { ICategoriesRecords } from '@/@types/data';
+import type { ICategories } from '@/@types/data';
+import type { ICategoriesRecords } from '@/@types/data';
 
 const { categoryGroup } = defineProps<{ categoryGroup: ICategoriesRecords }>();
 
@@ -95,9 +96,9 @@ function toggleExpand() {
 	showing.value = !showing.value;
 }
 
-function learnMore(category: ICategoriesRecords, item: ICategories) {
-	if (category.trialIds && category.trialIds.length > 0) {
-		router.push(`/overlay/${categoryGroup.id}/${category.id}`);
+function learnMore(item: ICategories) {
+	if (item.trialIds && item.trialIds.length > 0) {
+		router.push(`/overlay/${categoryGroup.id}/${item.id}`);
 	} else {
 		// TODO change to link the dse pages
 		navigateToTrial(item);
