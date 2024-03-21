@@ -119,7 +119,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					},
 					{ id: 'mopcd-disease-state-education', trials: 6 },
 				],
-				icon: 'lung-icon',
+				icon: 'myeloma-dark',
 			},
 			{
 				id: 'lymphoma',
@@ -133,7 +133,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					},
 					{ id: 'lymphoma-disease-state-education', trials: 3 },
 				],
-				icon: 'hand-glass',
+				icon: 'lymphoma-dark',
 			},
 		],
 	},
