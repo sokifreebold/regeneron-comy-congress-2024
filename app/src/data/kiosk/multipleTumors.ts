@@ -13,6 +13,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT04626635',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04626635',
+				qrCode: 'QR_NCT04626635',
 				labels: {
 					title: '<strong>COMBINE-EGFR-1</strong><br>EGFRxCD28 bispecific <span class="ui-one-word">(REGN7075)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced solid tumors',
@@ -37,6 +38,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT03005782',
 				recruiting: false,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03005782',
+				qrCode: 'QR_NCT03005782',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced malignances',
@@ -49,6 +51,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT03233139',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03233139',
+				qrCode: 'QR_NCT03233139',
 				labels: {
 					title: 'Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced malignancies (Japanese patients)',
@@ -61,6 +64,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT04465487',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT04465487',
+				qrCode: 'NCT04465487',
 				labels: {
 					title: 'GITR antibody <span class="ui-one-word">(REGN6569)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced solid tumors',
@@ -73,6 +77,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT05259709',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT05259709',
+				qrCode: 'QR_NCT05259709',
 				labels: {
 					title: 'CD8 antibody <span class="ui-one-word">(89Zr-DFOREGN5054)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced and metastatic solid tumors',
