@@ -11,6 +11,8 @@ export interface ICategories {
 export interface ICategoriesRecords {
 	id: string;
 	title?: string;
+	mobileTitleKey?: string;
+	desktopTitleKey?: string;
 	categories: ICategories[];
 	icon?: string;
 }

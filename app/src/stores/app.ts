@@ -10,7 +10,7 @@ export const useAppStore = defineStore('appStore', {
 		externalLinkId: '',
 		linkType: undefined,
 		popup: '',
-		trialIds: [],
+		trialIds: [] as string[],
 	}),
 	getters: {
 		get_version: (state) => state.version,
