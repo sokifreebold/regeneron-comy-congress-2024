@@ -48,6 +48,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT06230224',
 				externalLink: 'https://clinicaltrials.gov/study/NCT06230224',
 				recruiting: true,
+				qrCode: 'NCT06230224',
 				labels: {
 					title: '<strong>OLYMPIA-4</strong> Odronextamab  <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
 					aside: 'Relapsed/refractory diffuse large B-cell non-Hodgkin Lymphoma',
@@ -60,6 +61,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT06149286',
 				externalLink: 'https://clinicaltrials.gov/study/NCT06149286',
 				recruiting: true,
+				qrCode: 'NCT06149286',
 				labels: {
 					title: '<strong>OLYMPIA-5</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
 					aside: 'Relapsed/refractory follicular lymphoma and marginal zone lymphoma',

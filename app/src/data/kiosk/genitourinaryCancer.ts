@@ -13,6 +13,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT05125016',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT05125016',
+				qrCode: 'NCT05125016',
 				labels: {
 					title: 'PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span><br>± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or <br>PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span><br>+ PSMAxCD28 bispecific <span class="ui-one-word">(REGN5678)</span>',
 					aside: 'Metastatic castration-resistant prostate cancer',
@@ -26,6 +27,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT03972657',
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT03972657',
+				qrCode: 'NCT03972657',
 				labels: {
 					title: 'PSMAxCD28 bispecific <span class="ui-one-word">(REGN5678)</span><br>± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Metastatic castration-resistant prostate cancer or clear cell renal cell carcinoma',
