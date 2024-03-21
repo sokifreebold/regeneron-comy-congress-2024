@@ -114,6 +114,6 @@ const datum: ITrialsRecords[] = [
 				},
 			},
 		],
-	}
+	},
 ];
 export default datum;

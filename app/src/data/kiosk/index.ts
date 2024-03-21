@@ -10,6 +10,8 @@ import trialsOvarianCancer from './ovarianCancer';
 import trialsMultipleTumors from './multipleTumors';
 import trialsMyeloma from './myeloma';
 import trialsLymphoma from './lymphoma';
+import trialsMopcd from './kiosk2/mopcd';
+import trialsLymphoma2 from './kiosk2/lymphoma';
 
 const nsclc = {
 	id: 'nsclc',
@@ -109,7 +111,12 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 				id: 'mopcd',
 				title: 'Myeloma and other plasma cell dyscrasias',
 				categories: [
-					{ id: 'mopcd-clinical-trial-information', trials: 4, learnMore: true },
+					{
+						id: 'mopcd-clinical-trial-information',
+						trials: 4,
+						learnMore: true,
+						data: trialsMopcd,
+					},
 					{ id: 'mopcd-disease-state-education', trials: 6 },
 				],
 				icon: 'lung-icon',
@@ -118,7 +125,12 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 				id: 'lymphoma',
 				title: 'Lymphoma',
 				categories: [
-					{ id: 'lymphoma-clinical-trial-information', trials: 3, learnMore: true },
+					{
+						id: 'lymphoma-clinical-trial-information',
+						trials: 3,
+						learnMore: true,
+						data: trialsLymphoma2,
+					},
 					{ id: 'lymphoma-disease-state-education', trials: 3 },
 				],
 				icon: 'hand-glass',
