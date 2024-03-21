@@ -129,4 +129,14 @@
 		@include bg-contain();
 		background-position: top;
 	}
+	&-mopcd-clinical-trial-information {
+		background: url('@/assets/icons/myeloma-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-lymphoma-clinical-trial-information {
+		background: url('@/assets/icons/lymphoma-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 }
