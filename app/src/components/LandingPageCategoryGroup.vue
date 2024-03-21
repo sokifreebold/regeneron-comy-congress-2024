@@ -3,7 +3,10 @@
 		<div class="kiosk-home-links__item js-animation-slideIn">
 			<div class="kiosk-home-links__item-navigate">
 				<div class="kiosk-home-links__category-group-header">
-					<div class="kiosk-home-links__category-group-header__title-and-icon">
+					<div
+						@click="toggleExpand"
+						class="kiosk-home-links__category-group-header__title-and-icon"
+					>
 						<span
 							:class="[
 								'kiosk-home-links__item-icon category-icon',
