@@ -33,6 +33,21 @@ export default {
 				intro: 'Please select a treatment area.',
 			},
 			categories: {
+				mopcd: 'Myeloma and other plasma cell dyscrasias',
+				'mopcd-clinical-trial-information': {
+					'home-title': 'Clinical trial information',
+					'trial-title': 'Myeloma and other plasma cell dyscrasias',
+				},
+				'mopcd-disease-state-education': {
+					'home-title': 'Disease State Education',
+				},
+				'lymphoma-clinical-trial-information': {
+					'home-title': 'Clinical trial information',
+					'trial-title': 'Lymphoma',
+				},
+				'lymphoma-disease-state-education': {
+					'home-title': 'Disease State Education',
+				},
 				nsclc: {
 					'home-title': 'Non-Small cell lung cancer (NSCLC)',
 					'trial-title': 'Non-Small cell lung cancer (NSCLC)',

@@ -3,7 +3,6 @@ import type { ITrialsRecords } from '@/@types/data';
 const datum: ITrialsRecords[] = [
 	{
 		id: 'myeloma',
-		title: 'Myeloma and Other Plasma Cell Dyscrasias',
 		trials: [
 			{
 				id: 'hematology-oncology-myeloma-1',
@@ -62,6 +61,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT06140524',
 				externalLink: 'https://clinicaltrials.gov/study/NCT06140524',
 				recruiting: false,
+				qrCode: 'NCT06140524',
 				labels: {
 					title: '<strong>LINKER-MGUS1</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
 					aside: 'high-risk monoclonal gammopathy or non-high-risk smoldering multiple myeloma',
@@ -88,6 +88,7 @@ const datum: ITrialsRecords[] = [
 				externalLink: 'https://clinicaltrials.gov/study/NCT05673967',
 				nonInterventional: true,
 				recruiting: false,
+				qrCode: 'NCT05673967',
 				labels: {
 					title: '<strong>NCT05673967</strong> Non-interventional real-world experience',
 					aside: 'Relapsed/refractory multiple myeloma',

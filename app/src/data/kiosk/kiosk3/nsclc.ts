@@ -3,7 +3,6 @@ import type { ITrialsRecords } from '@/@types/data';
 const datum: ITrialsRecords[] = [
 	{
 		id: 'non-small-cell-lung-cancer',
-		title: 'Non-small cell lung cancer (NSCLC)',
 		trials: [
 			{
 				id: 'solid-tumor-lung-cancer-1',
