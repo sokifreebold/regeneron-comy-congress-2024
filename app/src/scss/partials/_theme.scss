@@ -28,15 +28,104 @@
 		@include bg-contain();
 		background-position: top;
 	}
-	&-hand-glass{
+	&-lung-icon-dark {
+		background: url('@/assets/icons/lung-icon-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-hand-glass {
 		background: url('@/assets/icons/hand-glass.svg');
 		@include bg-contain();
 		background-position: top;
 	}
-
+	&-hand-glass-dark {
+		background: url('@/assets/icons/hand-glass-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-bubble-cloud {
+		background: url('@/assets/icons/bubble-cloud.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-hematology {
+		background: url('@/assets/icons/hematology.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-prostate-dark {
+		background: url('@/assets/icons/prostate-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-gynecologic-dark {
+		background: url('@/assets/icons/gynecologic-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-multiple-tumors-dark {
+		background: url('@/assets/icons/multiple-tumors-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-myeloma-dark {
+		background: url('@/assets/icons/myeloma-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-lymphoma-dark {
+		background: url('@/assets/icons/lymphoma-dark.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-expand-more {
+		background: url('@/assets/icons/expand-more.svg');
+		@include bg-contain();
+		background-position: top;
+	}
 	&-nsclc-clinical-trial-information,
 	&-melanoma-clinical-trial-information {
 		background: url('@/assets/icons/hand-glass.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-non-melanoma {
+		background: url('@/assets/icons/non-melanoma.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-melanoma {
+		background: url('@/assets/icons/melanoma.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-nsclc {
+		background: url('@/assets/icons/nsclc.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-genitourinary {
+		background: url('@/assets/icons/genitourinary.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-ovarian {
+		background: url('@/assets/icons/ovarian.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-multiple-tumors {
+		background: url('@/assets/icons/multiple-tumors.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-myeloma {
+		background: url('@/assets/icons/myeloma-whi.svg');
+		@include bg-contain();
+		background-position: top;
+	}
+	&-lymphoma {
+		background: url('@/assets/icons/lymphoma-whi.svg');
 		@include bg-contain();
 		background-position: top;
 	}

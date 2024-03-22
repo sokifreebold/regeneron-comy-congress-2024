@@ -64,6 +64,7 @@ const version = computed(() => store.get_version);
 		height: calc(100% - 4px);
 		transition: all 0.25s linear;
 		white-space: nowrap;
+		justify-content: center;
 	}
 
 	&__icon {

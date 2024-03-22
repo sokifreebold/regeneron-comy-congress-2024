@@ -3,11 +3,16 @@ export interface ICategories {
 	trials?: number;
 	learnMore?: boolean;
 	data?: ITrialsRecords[];
+	icon?: string;
+	title?: string;
+	trialIds?: string[];
 }
 
 export interface ICategoriesRecords {
 	id: string;
 	title?: string;
+	mobileTitleKey?: string;
+	desktopTitleKey?: string;
 	categories: ICategories[];
 	icon?: string;
 }
@@ -15,10 +20,6 @@ export interface ICategoriesRecords {
 export interface ICategoriesKiosk {
 	kiosk: string;
 	categories: ICategoriesRecords[];
-}
-
-export interface ICategoriesKiosk3 {
-	id: string;
 }
 
 type trialLink = 'pdfCard' | 'external' | 'qrCode' | 'images';

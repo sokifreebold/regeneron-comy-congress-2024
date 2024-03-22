@@ -5,11 +5,11 @@
 				<!-- Home Title -->
 				<h1
 					class="type-heading-h1 home__title display-mobile-only js-animation-slideIn"
-					v-html="$t(grouping.mobileTitleKey)"
+					v-html="$t(`${grouping.mobileTitleKey}`)"
 				/>
 				<h1
 					class="type-heading-h1 home__title display-tablet-only js-animation-slideIn"
-					v-html="$t(grouping.desktopTitleKey)"
+					v-html="$t(`${grouping.desktopTitleKey}`)"
 				/>
 
 				<!-- Panel -->

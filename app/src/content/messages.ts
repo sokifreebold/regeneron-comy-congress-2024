@@ -23,14 +23,51 @@ export default {
 			},
 		},
 		titles: {
+			conditions: {
+				bcc: 'Basal Cell Carcinoma (BCC)',
+				cscc: 'Cutaneous Squamous Cell Carcinoma (CSCC)',
+			},
 			trials: {
 				'solid-tumor': 'Solid Tumor',
 				'hematology-oncology': 'Hematology',
+				intro: 'Please select a treatment area.',
 			},
 			categories: {
-				nsclc: 'Non-Small cell lung cancer (NSCLC)',
-				melanoma: 'Melanoma',
-				'our-oncology-mobile': 'Our oncology<br>pipeline',
+				nsclc: {
+					'home-title': 'Non-Small cell lung cancer (NSCLC)',
+					'trial-title': 'Non-Small cell lung cancer (NSCLC)',
+				},
+				melanoma: {
+					'home-title': 'Melanoma',
+					'trial-title': 'Melanoma',
+				},
+				'non-melanoma': {
+					'home-title': 'Non-Melanoma Skin Cancer (NMSC)',
+					'trial-title': 'Non-Melanoma Skin Cancer (NMSC)',
+				},
+				'solid-tumors': 'Solid Tumors',
+				genitourinary: {
+					'home-title': 'Genitourinary Cancer',
+					'trial-title': 'Genitourinary Cancer',
+				},
+				ovarian: {
+					'home-title': 'Ovarian Cancer',
+					'trial-title': 'Ovarian Cancer',
+				},
+				'multiple-tumors': {
+					'home-title': 'Multiple Tumors',
+					'trial-title': 'Multiple Tumors',
+				},
+				hematology: 'Hematology',
+				myeloma: {
+					'home-title': 'Myeloma and Other Plasma Cell Dyscrasias',
+					'trial-title': 'Myeloma and Other Plasma Cell Dyscrasias',
+				},
+				lymphoma: {
+					'home-title': 'Lymphoma',
+					'trial-title': 'Lymphoma',
+				},
+				'our-oncology-mobile': 'Our oncology pipeline',
 				'our-oncology-desktop': 'Our oncology pipeline',
 
 				'nsclc-clinical-trial-information': {

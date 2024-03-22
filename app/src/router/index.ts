@@ -10,6 +10,7 @@ import KioskQRCode from '@/views/kiosk/KioskQRCode.vue';
 import KioskPdfImages from '@/views/kiosk/KioskPdfImages.vue';
 
 import Kiosk3LandingView from '@/views/kiosk3/Kiosk3LandingView.vue';
+import Kiosk3HomeView from '@/views/kiosk3/Kiosk3HomeView.vue';
 
 import PdfView from '../views/PdfView.vue';
 import NotFound from '../views/NotFound.vue';
@@ -51,6 +52,11 @@ const router = createRouter({
 			path: '/panels/landing/:id',
 			name: 'panels-landing-page',
 			component: Kiosk3LandingView,
+		},
+		{
+			path: '/overlay/:categoryGroupId/:categoryId',
+			name: 'trial-links-overlay',
+			component: Kiosk3HomeView,
 		},
 		{
 			path: '/:pathMatch(.*)*',
