@@ -25,6 +25,7 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT04916002',
 				recruiting: true,
 				trialCardPdf: 'NCT04916002_VIDU-EM-0001',
+				trialCardImages: ['NCT04916002_VIDU-EM-0001-1', 'NCT04916002_VIDU-EM-0001-2'],
 				labels: {
 					title: 'Vidutolimod <span class="ui-one-word">(TLR9 agonist)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'Advanced/metastatic tumors',
