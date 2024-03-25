@@ -2,11 +2,8 @@
 	<div class="kiosk-home-links__item-copy">
 		<div class="kiosk-home-links__item js-animation-slideIn">
 			<div class="kiosk-home-links__item-navigate">
-				<div class="kiosk-home-links__category-group-header">
-					<div
-						@click="toggleExpand"
-						class="kiosk-home-links__category-group-header__title-and-icon"
-					>
+				<div class="kiosk-home-links__category-group-header" @click="toggleExpand">
+					<div class="kiosk-home-links__category-group-header__title-and-icon">
 						<span
 							:class="[
 								'kiosk-home-links__item-icon category-icon',
@@ -18,18 +15,7 @@
 							v-html="$t(`titles.categories.${categoryGroup.id}`)"
 						/>
 					</div>
-					<img
-						v-if="!showing"
-						src="@/assets/icons/expand-more.svg"
-						class="expand"
-						@click="toggleExpand()"
-					/>
-					<img
-						v-if="showing"
-						src="@/assets/icons/expand-less.svg"
-						class="expand"
-						@click="toggleExpand()"
-					/>
+					<div :class="['kiosk-home-links__item-expand', { 'is-active': showing }]" />
 				</div>
 				<div class="category-contents" v-if="showing">
 					<div
@@ -127,6 +113,7 @@ function navigateToTrial(item: ICategories) {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			cursor: pointer;
 
 			&__title-and-icon {
 				display: flex;
@@ -148,10 +135,8 @@ function navigateToTrial(item: ICategories) {
 				backdrop-filter: blur(20px);
 			}
 			&-title {
-				// @include px-to-em(40px);
 				font-size: 3em;
 				line-height: 35px;
-				margin-bottom: $unit * 4;
 			}
 
 			&-icon {
@@ -164,6 +149,25 @@ function navigateToTrial(item: ICategories) {
 				@include tablet {
 					width: $unit * 10;
 					margin-right: $unit * 6;
+				}
+			}
+
+			&-expand {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: $unit * 4;
+				aspect-ratio: 1;
+				background: url(@/assets/icons/expand-more.svg);
+				@include bg-contain();
+				transition: all 0.5s ease;
+
+				@include k-desktop {
+					width: $unit * 10;
+				}
+
+				&.is-active {
+					transform: rotate(-180deg);
 				}
 			}
 		}

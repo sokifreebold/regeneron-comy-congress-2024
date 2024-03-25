@@ -7,27 +7,27 @@
 			v-for="(grouping, index) in kioskCategoriesData.categories"
 			:key="index"
 		>
-			<landing-page-category-group :categoryGroup="grouping"></landing-page-category-group>
+			<landing-page-category-group :categoryGroup="grouping" />
 		</div>
 	</layout-kiosk>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted, watch } from 'vue';
-import type { ICategoriesKiosk } from '@/@types/data';
 import { useRoute } from 'vue-router';
-import { useAppStore } from '@/stores/app';
+
 import { getKioskHomeCategories } from '@/utils/data';
+import type { ICategoriesKiosk } from '@/@types/data';
+import { useAppStore } from '@/stores/app';
 
 const store = useAppStore();
-store.axn_updateVersion('kiosk3');
-
 const route = useRoute();
 const categoryGroupId = computed<string>(() => route.params.categoryGroupId as string);
 const categoryId = computed<string>(() => route.params.categoryId as string);
 
 const kioskCategoriesData = computed<ICategoriesKiosk>(() => getKioskHomeCategories()!);
 
+// TODO: Overlay update
 function checkIfOverlay() {
 	if (!categoryGroupId.value) {
 		return;
