@@ -1,11 +1,11 @@
 export interface ICategories {
 	id: string;
 	trials?: number;
-	learnMore?: boolean;
 	data?: ITrialsRecords[];
 	icon?: string;
 	title?: string;
 	trialIds?: string[];
+	dse?: string;
 }
 
 export interface ICategoriesRecords {

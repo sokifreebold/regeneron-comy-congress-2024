@@ -8,9 +8,7 @@ import KioskTrialView from '@/views/kiosk/KioskTrialView.vue';
 
 import KioskQRCode from '@/views/kiosk/KioskQRCode.vue';
 import KioskPdfImages from '@/views/kiosk/KioskPdfImages.vue';
-
-import Kiosk3LandingView from '@/views/kiosk3/Kiosk3LandingView.vue';
-import Kiosk3HomeView from '@/views/kiosk3/Kiosk3HomeView.vue';
+import KioskDseView from '@/views/kiosk/KioskDseView.vue';
 
 import PdfView from '../views/PdfView.vue';
 import NotFound from '../views/NotFound.vue';
@@ -19,7 +17,7 @@ const router = createRouter({
 	history: createWebHashHistory(),
 	routes: [
 		{
-			path: '/',
+			path: '/:overlayId?',
 			name: 'home',
 			component: HomeView,
 		},
@@ -49,14 +47,9 @@ const router = createRouter({
 			component: KioskQRCode,
 		},
 		{
-			path: '/panels/landing/:id',
-			name: 'panels-landing-page',
-			component: Kiosk3LandingView,
-		},
-		{
-			path: '/overlay/:categoryGroupId/:categoryId',
-			name: 'trial-links-overlay',
-			component: Kiosk3HomeView,
+			path: '/panels/dse/:parentId/:trialId/:dseId',
+			name: 'panels-dse',
+			component: KioskDseView,
 		},
 		{
 			path: '/:pathMatch(.*)*',
@@ -75,9 +68,9 @@ router.beforeEach((to: any, from, next) => {
 	};
 
 	const { query } = to;
-	if (query && query.mode === 'kiosk') {
+	if (query && ['kiosk1', 'kiosk2', 'kiosk3'].includes(query.mode)) {
 		const store = useAppStore();
-		store.axn_updateVersion('kiosk');
+		store.axn_updateVersion(query.mode);
 	}
 
 	// Offline tracking

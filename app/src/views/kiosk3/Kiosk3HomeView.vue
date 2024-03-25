@@ -1,65 +1,121 @@
 <template>
-	<layout-kiosk class="kiosk">
-		<p class="intro-text">{{ $t('titles.trials.intro') }}</p>
+	<layout-kiosk class="kiosk-grouped">
+		<p class="kiosk-grouped__intro">{{ $t('titles.trials.intro') }}</p>
 
 		<div
-			class="category-container"
-			v-for="(grouping, index) in kioskCategoriesData.categories"
+			class="kiosk-grouped__categories"
+			v-for="(category, index) in kioskCategoriesData.categories"
 			:key="index"
 		>
-			<landing-page-category-group :categoryGroup="grouping" />
+			<!-- Header -->
+			<div class="kiosk-grouped__header" @click="toggleActiveCategory(category.id)">
+				<div class="kiosk-grouped__header-copy">
+					<div :class="['kiosk-grouped__header-icon', `ui-icon-${category.icon}`]" />
+					<p
+						class="kiosk-grouped__header-title type-heading-h2 type-font-condensed"
+						v-html="$t(`titles.categories.${category.id}`)"
+					/>
+				</div>
+				<div
+					:class="[
+						'kiosk-grouped__header-expand',
+						{ 'is-active': category.id === activeCategory },
+					]"
+				/>
+			</div>
+
+			<!-- Categories -->
+			<div v-if="category.id === activeCategory" class="kiosk-grouped__content">
+				<landing-page-category-group
+					:categories="category.categories"
+					:parentId="activeCategory"
+				/>
+			</div>
 		</div>
 	</layout-kiosk>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, watch } from 'vue';
-import { useRoute } from 'vue-router';
+import { computed, ref } from 'vue';
 
 import { getKioskHomeCategories } from '@/utils/data';
 import type { ICategoriesKiosk } from '@/@types/data';
-import { useAppStore } from '@/stores/app';
 
-const store = useAppStore();
-const route = useRoute();
-const categoryGroupId = computed<string>(() => route.params.categoryGroupId as string);
-const categoryId = computed<string>(() => route.params.categoryId as string);
+const activeCategory = ref('');
 
 const kioskCategoriesData = computed<ICategoriesKiosk>(() => getKioskHomeCategories()!);
 
-// TODO: Overlay update
-function checkIfOverlay() {
-	if (!categoryGroupId.value) {
-		return;
-	}
-	const categoryGroup = kioskCategoriesData.value.categories.find(
-		(cd) => cd.id === categoryGroupId.value,
-	);
-	if (categoryGroup) {
-		const category = categoryGroup.categories.find((c) => c.id === categoryId.value);
-		if (category && category.trialIds && category.trialIds.length > 0) {
-			store.axn_updateTrialIds(category.trialIds);
-		}
-	}
+function toggleActiveCategory(categoryId: string) {
+	activeCategory.value = activeCategory.value !== categoryId ? categoryId : '';
 }
-
-onMounted(() => {
-	checkIfOverlay();
-});
-watch(route, checkIfOverlay);
 </script>
 
 <style lang="scss" scoped>
-.kiosk {
-	.intro-text {
+.kiosk-grouped {
+	&__intro {
+		margin-bottom: $unit * 5;
 		font-family: 'RobotoCondensed-Bold';
 		font-size: 2em;
-		font-weight: 700;
-		line-height: 48px;
-		letter-spacing: 0em;
-		text-align: left;
-		margin-top: 1em;
-		margin-bottom: 0.5em;
+	}
+
+	&__categories {
+		display: flex;
+		flex-direction: column;
+		padding: 3em 2em 3em 2em;
+		border-radius: 20px 20px 20px 0;
+		background: rgba($white, 0.1);
+		backdrop-filter: blur(3px);
+		margin-bottom: 20px;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1em;
+		width: 100%;
+		cursor: pointer;
+
+		&-expand {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: $unit * 4;
+			aspect-ratio: 1;
+			background: url(@/assets/icons/expand-more.svg);
+			@include bg-contain();
+			transition: all 0.5s ease;
+
+			&.is-active {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	&__content {
+		margin-top: $unit * 3;
+		padding: 1em;
+	}
+
+	@include k-desktop {
+		&__intro {
+			margin-bottom: $unit * 10;
+		}
+
+		&__categories {
+			border-radius: 40px 40px 40px 0;
+			margin: $unit * 5 0;
+		}
+
+		&__header {
+			&-expand {
+				width: $unit * 10;
+			}
+		}
+
+		&__content {
+			margin-top: $unit * 10;
+		}
 	}
 }
 </style>

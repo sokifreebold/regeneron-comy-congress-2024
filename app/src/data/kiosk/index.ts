@@ -1,7 +1,11 @@
 import type { ICategoriesKiosk } from '@/@types/data';
 
-import trailsNoneSmallCellLungCancer from './nonSmallCellLungCancer';
-import trailsMelanoma from './trailsMelanoma';
+import trailsNoneSmallCellLungCancer from './kiosk1/nonSmallCellLungCancer';
+import trailsMelanoma from './kiosk1/trailsMelanoma';
+
+import trialsMopcd from './kiosk2/mopcd';
+import trialsLymphoma2 from './kiosk2/lymphoma';
+
 import trailsNonMelanoma from './kiosk3/nonMelanoma';
 import trailsMelanoma3 from './kiosk3/melanoma';
 import trailsNsclc from './kiosk3/nsclc';
@@ -10,15 +14,6 @@ import trialsOvarianCancer from './kiosk3/ovarianCancer';
 import trialsMultipleTumors from './kiosk3/multipleTumors';
 import trialsMyeloma from './kiosk3/myeloma';
 import trialsLymphoma from './kiosk3/lymphoma';
-import trialsMopcd from './kiosk2/mopcd';
-import trialsLymphoma2 from './kiosk2/lymphoma';
-
-const nsclc = {
-	id: 'nsclc',
-	title: 'titles.categories.nsclc',
-	icon: 'lung-icon-dark',
-	data: trailsNsclc,
-};
 
 const nonMelanoma = {
 	id: 'non-melanoma',
@@ -35,11 +30,20 @@ const melanoma = {
 	data: trailsMelanoma3,
 };
 
+const nsclc = {
+	id: 'nsclc',
+	title: 'titles.categories.nsclc',
+	icon: 'lung-icon-dark',
+	data: trailsNsclc,
+	dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R7',
+};
+
 const genitourinaryCancer = {
 	id: 'genitourinary',
 	title: 'titles.categories.genitourinary',
 	icon: 'prostate-dark',
 	data: trialsGenitourinaryCancer,
+	dse: 'REG1123083_AACR_PROSTATE_Interactive_Kiosk_R7',
 };
 
 const ovarian = {
@@ -47,6 +51,7 @@ const ovarian = {
 	title: 'titles.categories.ovarian',
 	icon: 'gynecologic-dark',
 	data: trialsOvarianCancer,
+	dse: 'REG1123083_AACR_OVARIAN_Interactive_Kiosk_R6',
 };
 
 const multipleTumors = {
@@ -61,6 +66,7 @@ const myeloma = {
 	title: 'titles.categories.myeloma',
 	icon: 'myeloma-dark',
 	data: trialsMyeloma,
+	dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R10',
 };
 
 const lymphoma = {
@@ -68,6 +74,7 @@ const lymphoma = {
 	title: 'titles.categories.lymphoma',
 	icon: 'lymphoma-dark',
 	data: trialsLymphoma,
+	dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R10',
 };
 
 export const categoriesKiosk: ICategoriesKiosk[] = [
@@ -81,10 +88,13 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'nsclc-clinical-trial-information',
 						trials: 4,
-						learnMore: true,
 						data: trailsNoneSmallCellLungCancer,
 					},
-					{ id: 'nsclc-disease-state-education', trials: 6 },
+					{
+						id: 'nsclc-disease-state-education',
+						trials: 6,
+						dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R7',
+					},
 				],
 				icon: 'lung-icon',
 			},
@@ -95,10 +105,12 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'melanoma-clinical-trial-information',
 						trials: 3,
-						learnMore: true,
 						data: trailsMelanoma,
 					},
-					{ id: 'melanoma-disease-state-education', trials: 3 },
+					{
+						id: 'melanoma-disease-state-education',
+						trials: 3,
+					},
 				],
 				icon: 'hand-glass',
 			},
@@ -114,10 +126,13 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'mopcd-clinical-trial-information',
 						trials: 4,
-						learnMore: true,
 						data: trialsMopcd,
 					},
-					{ id: 'mopcd-disease-state-education', trials: 6 },
+					{
+						id: 'mopcd-disease-state-education',
+						trials: 6,
+						dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R10',
+					},
 				],
 				icon: 'myeloma-dark',
 			},
@@ -128,10 +143,13 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'lymphoma-clinical-trial-information',
 						trials: 3,
-						learnMore: true,
 						data: trialsLymphoma2,
 					},
-					{ id: 'lymphoma-disease-state-education', trials: 3 },
+					{
+						id: 'lymphoma-disease-state-education',
+						trials: 3,
+						dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R10',
+					},
 				],
 				icon: 'lymphoma-dark',
 			},

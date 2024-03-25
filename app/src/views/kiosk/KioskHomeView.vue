@@ -37,11 +37,9 @@
 									@click="navigateToTrial(grouping.id, item)"
 									modifier="simple-white-gradient-bg"
 								>
-									{{
-										item.learnMore
-											? $t('misc.seePipelineDetails')
-											: $t('misc.learnMore')
-									}}
+									<span v-if="item.dse" v-html="$t('misc.learnMore')" />
+									<span v-else v-html="$t('misc.seePipelineDetails')" />
+
 									<template v-slot:rightIcon>
 										<img src="@/assets/icons/chevron-right-white.svg" />
 									</template>
@@ -67,7 +65,11 @@ const router = useRouter();
 const kioskCategoriesData = computed<ICategoriesKiosk>(() => getKioskHomeCategories()!);
 
 function navigateToTrial(parentCategory: string, item: ICategories) {
-	router.push(`/panels/trials/${parentCategory}/${item.id}`);
+	if (item.dse) {
+		router.push(`/panels/dse/${parentCategory}/${item.id}/${item.dse}`);
+	} else {
+		router.push(`/panels/trials/${parentCategory}/${item.id}`);
+	}
 }
 </script>
 

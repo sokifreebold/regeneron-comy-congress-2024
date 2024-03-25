@@ -1,68 +1,48 @@
 <template>
-	<div class="kiosk-home-links__item-copy">
-		<div class="kiosk-home-links__item js-animation-slideIn">
-			<div class="kiosk-home-links__item-navigate">
-				<div class="kiosk-home-links__category-group-header" @click="toggleExpand">
-					<div class="kiosk-home-links__category-group-header__title-and-icon">
-						<span
-							:class="[
-								'kiosk-home-links__item-icon category-icon',
-								`ui-icon-${categoryGroup.icon}`,
-							]"
-						/>
-						<p
-							class="kiosk-home-links__item-title type-heading-h2 type-font-condensed"
-							v-html="$t(`titles.categories.${categoryGroup.id}`)"
-						/>
-					</div>
-					<div :class="['kiosk-home-links__item-expand', { 'is-active': showing }]" />
-				</div>
-				<div class="category-contents" v-if="showing">
+	<div class="kiosk-grouping-category">
+		<div
+			v-for="(category, index) in props.categories"
+			:key="index"
+			class="kiosk-grouping-category__wrapper"
+		>
+			<div class="kiosk-grouping-category__content">
+				<div class="kiosk-grouping-category__header">
 					<div
-						v-for="(category, index) in categoryGroup.categories"
-						:key="index"
-						class="category-content-wrapper"
+						:class="[
+							'kiosk-grouping-category__header-icon',
+							`ui-icon-${category.icon}`,
+						]"
+					/>
+					<p
+						class="kiosk-grouping-category__header-title type-font-condensed type-heading-h1"
 					>
-						<div class="category-content">
-							<div class="category-content__trial-icon-and-title">
-								<div
-									:class="[
-										'kiosk-home-links__item-icon category-content__trial-icon-and-title__trial-icon',
-										`ui-icon-${category.icon}`,
-									]"
-								/>
-								<p
-									class="category-content__trial-icon-and-title__trial-title type-font-condensed type-heading-h1"
-								>
-									{{ $t(`${category.title}.trial-title`) }}
-								</p>
-							</div>
+						{{ $t(`${category.title}.trial-title`) }}
+					</p>
+				</div>
 
-							<div class="category-content__navigation-buttons">
-								<the-button
-									@click="navigateToTrial(category)"
-									class="button-wrapper"
-									modifier="simple-white-gradient-bg"
-								>
-									{{ $t('misc.seePipelineDetails') }}
-									<template v-slot:rightIcon>
-										<img src="@/assets/icons/chevron-right-white.svg" />
-									</template>
-								</the-button>
+				<div class="kiosk-grouping-category__controls">
+					<the-button
+						@click="navigateToTrial(category)"
+						class="button-wrapper"
+						modifier="simple-white-gradient-bg"
+					>
+						{{ $t('misc.seePipelineDetails') }}
+						<template v-slot:rightIcon>
+							<img src="@/assets/icons/chevron-right-white.svg" />
+						</template>
+					</the-button>
 
-								<the-button
-									@click="learnMore(category)"
-									class="button-wrapper"
-									modifier="simple-white-gradient-bg"
-								>
-									{{ $t('misc.learnMore') }}
-									<template v-slot:rightIcon>
-										<img src="@/assets/icons/chevron-right-white.svg" />
-									</template>
-								</the-button>
-							</div>
-						</div>
-					</div>
+					<the-button
+						v-if="category.dse"
+						class="button-wrapper"
+						modifier="simple-white-gradient-bg"
+						@click="navigateToDse(category)"
+					>
+						{{ $t('misc.learnMore') }}
+						<template v-slot:rightIcon>
+							<img src="@/assets/icons/chevron-right-white.svg" />
+						</template>
+					</the-button>
 				</div>
 			</div>
 		</div>
@@ -71,184 +51,89 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { ref } from 'vue';
+import type { PropType } from 'vue';
 import type { ICategories } from '@/@types/data';
-import type { ICategoriesRecords } from '@/@types/data';
 
-const { categoryGroup } = defineProps<{ categoryGroup: ICategoriesRecords }>();
+const props = defineProps({
+	categories: { type: Object as PropType<any>, required: true },
+	parentId: { type: String, required: true },
+});
 
 const router = useRouter();
 
-const showing = ref(false);
-
-function toggleExpand() {
-	showing.value = !showing.value;
-}
-
-function learnMore(item: ICategories) {
-	if (item.trialIds && item.trialIds.length > 0) {
-		router.push(`/overlay/${categoryGroup.id}/${item.id}`);
-	} else {
-		// TODO change to link the dse pages
-		navigateToTrial(item);
-	}
+function navigateToDse(item: ICategories) {
+	router.push(`/panels/dse/${props.parentId}/${item.id}/${item.dse}`);
 }
 
 function navigateToTrial(item: ICategories) {
-	router.push(`/panels/trials/${categoryGroup.id}/${item.id}`);
+	router.push(`/panels/trials/${props.parentId}/${item.id}`);
 }
 </script>
 
 <style lang="scss" scoped>
-.kiosk-home {
-	&__title {
-		font-size: 5em;
-		line-height: 1;
-		display: inline;
-	}
-	&-links {
-		margin-top: $unit * 5;
-
-		&__category-group-header {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			cursor: pointer;
-
-			&__title-and-icon {
-				display: flex;
-				align-items: center;
-			}
-		}
-		&__item {
-			display: flex;
-			padding: 5em 3em 5em 3em;
-			border-radius: 20px 20px 20px 0;
-			background: rgba($white, 0.1);
-			backdrop-filter: blur(3px);
-			margin-bottom: 20px;
-
-			&-copy {
-				margin-bottom: 0.5em;
-				margin-top: 1.5em;
-				border-radius: 20px 20px 20px 0px;
-				backdrop-filter: blur(20px);
-			}
-			&-title {
-				font-size: 3em;
-				line-height: 35px;
-			}
-
-			&-icon {
-				display: flex;
-				width: $unit * 8;
-				min-width: $unit * 4;
-				aspect-ratio: 1;
-				margin-right: $unit * 2;
-
-				@include tablet {
-					width: $unit * 10;
-					margin-right: $unit * 6;
-				}
-			}
-
-			&-expand {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: $unit * 4;
-				aspect-ratio: 1;
-				background: url(@/assets/icons/expand-more.svg);
-				@include bg-contain();
-				transition: all 0.5s ease;
-
-				@include k-desktop {
-					width: $unit * 10;
-				}
-
-				&.is-active {
-					transform: rotate(-180deg);
-				}
-			}
-		}
-
-		&__item-navigate {
-			width: 100%;
-		}
-	}
-}
-
-.category-icon {
-	width: 3em;
-	margin-right: 1em;
-	margin-bottom: 1em;
-}
-
-.expand {
-	width: 1.5em;
-}
-
-.category-contents {
+.kiosk-grouping-category {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: stretch;
 	gap: $unit * 5;
-}
 
-.category-content-wrapper {
-	flex: 1 1 0px;
-	margin: 0.5em;
-}
-
-.category-content {
-	height: 100%;
-	padding: 1em;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	background: $white;
-	border-radius: 0px $radius;
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	min-width: 15em;
-	max-height: 90vh;
-	overflow: auto;
-	background: linear-gradient(
-		166deg,
-		rgba(255, 255, 255, 0.96) 57.85%,
-		rgba(255, 255, 255, 0) 260.85%
-	);
-	box-shadow: 0px 55px 116px 0px #0c2561;
-
-	&__navigation-buttons {
-		display: flex;
-		flex-direction: column;
-		margin-top: 1em;
+	&__wrapper {
+		width: 47%;
 	}
 
-	&__trial-icon-and-title {
+	&__content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		padding: 1.5em;
+		border-radius: 0px 20px 0 20px;
+		background: rgba($white, 0.9);
+		margin-bottom: $unit * 4;
+		backdrop-filter: blur(5px);
+	}
 
-		&__trial-icon {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			width: 3em;
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		width: 100%;
+
+		&-icon {
+			display: flex;
+			width: $unit * 8;
+			min-width: $unit * 4;
+			aspect-ratio: 1;
+			margin-right: $unit * 2;
 		}
-
-		&__trial-title {
-			color: #065baa;
-			font-size: 1.2em;
-			text-align: center;
+		&-title {
+			font-size: 1.25em;
+			line-height: 1.2em;
+			margin: $unit * 2 0;
 		}
 	}
-}
 
-.button-wrapper {
-	display: flex;
-	justify-content: center !important;
+	&__controls {
+		width: 100%;
+
+		.button-wrapper {
+			width: 100%;
+			margin: $unit * 2 0;
+		}
+	}
+
+	@include k-desktop {
+		&__header {
+			&-icon {
+				width: $unit * 15;
+			}
+		}
+		&__content {
+			border-radius: 0px 40px 0 40px;
+		}
+	}
 }
 </style>
