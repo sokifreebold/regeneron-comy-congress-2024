@@ -117,7 +117,8 @@ const version = computed(() => store.get_version);
 	}
 
 	&--simple-white,
-	&--simple-white-gradient-bg {
+	&--simple-white-gradient-bg,
+	&--simple-white-gradient-bg-01 {
 		position: relative;
 		background: none;
 		.button {
@@ -149,6 +150,9 @@ const version = computed(() => store.get_version);
 		}
 	}
 
+	&--simple-white-gradient-bg-01 {
+		background: $linear-gradient-01;
+	}
 	&--simple-white-gradient-bg {
 		background: $linear-gradient-02;
 	}

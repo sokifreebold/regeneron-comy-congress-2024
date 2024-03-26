@@ -43,6 +43,18 @@
 							<img src="@/assets/icons/chevron-right-white.svg" />
 						</template>
 					</the-button>
+
+					<the-button
+						v-if="category.multipleDse && category.multipleDse.length > 0"
+						class="button-wrapper"
+						modifier="simple-white-gradient-bg"
+						@click="navigateToMultipleDse(category)"
+					>
+						{{ $t('misc.learnMore') }}
+						<template v-slot:rightIcon>
+							<img src="@/assets/icons/chevron-right-white.svg" />
+						</template>
+					</the-button>
 				</div>
 			</div>
 		</div>
@@ -53,12 +65,14 @@
 import { useRouter } from 'vue-router';
 import type { PropType } from 'vue';
 import type { ICategories } from '@/@types/data';
+import { useAppStore } from '@/stores/app';
 
 const props = defineProps({
 	categories: { type: Object as PropType<any>, required: true },
 	parentId: { type: String, required: true },
 });
 
+const store = useAppStore();
 const router = useRouter();
 
 function navigateToDse(item: ICategories) {
@@ -67,6 +81,10 @@ function navigateToDse(item: ICategories) {
 
 function navigateToTrial(item: ICategories) {
 	router.push(`/panels/trials/${props.parentId}/${item.id}`);
+}
+
+function navigateToMultipleDse(item: any) {
+	store.axn_updateOverlayTrial(item);
 }
 </script>
 

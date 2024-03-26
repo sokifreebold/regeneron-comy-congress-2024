@@ -20,7 +20,16 @@ const nonMelanoma = {
 	title: 'titles.categories.non-melanoma',
 	icon: 'hand-glass-dark',
 	data: trailsNonMelanoma,
-	trialIds: ['bcc', 'cscc'],
+	multipleDse: [
+		{
+			id: 'bcc',
+			dse: 'REG1123083_AACR_BCC_Interactive_Kiosk_R8',
+		},
+		{
+			id: 'cscc',
+			dse: 'REG1123083_AACR_CSCC_Interactive_Kiosk_R8',
+		},
+	],
 };
 
 const melanoma = {
@@ -28,6 +37,7 @@ const melanoma = {
 	title: 'titles.categories.melanoma',
 	icon: 'hand-glass-dark',
 	data: trailsMelanoma3,
+	dse: 'REG1123079_Melanoma_AACR_Kiosk_R9',
 };
 
 const nsclc = {
@@ -110,6 +120,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'melanoma-disease-state-education',
 						trials: 3,
+						dse: 'REG1123079_Melanoma_AACR_Kiosk_R9',
 					},
 				],
 				icon: 'hand-glass',

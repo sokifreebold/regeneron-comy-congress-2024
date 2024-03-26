@@ -3,48 +3,44 @@
 		<div class="overlay__content">
 			<div class="overlay__close" @click="closeOverlay" />
 
-			<div :class="['overlay__content__category-icon', `ui-icon-${category.icon}`]" />
+			<div :class="['overlay__category-icon', `ui-icon-${overlayTrial.icon}`]" />
 
-			<div class="overlay__content__title">
-				{{ $t(`titles.categories.${categoryId}.home-title`) }}
+			<h3 class="overlay__title">
+				{{ $t(`titles.categories.${overlayTrial.id}.home-title`) }}
+			</h3>
+
+			<div class="overlay__controls-wrapper">
+				<the-button
+					class="overlay__controls"
+					v-for="(trial, index) in overlayTrial.multipleDse"
+					:key="index"
+					@click="navigateDse(trial)"
+					modifier="simple-white-gradient-bg-01"
+				>
+					<span>{{ $t(`titles.conditions.${trial.id}`) }}</span>
+
+					<template v-slot:rightIcon>
+						<img
+							class="overlay__content__the-button__arrow-icon"
+							src="@/assets/icons/arrow.svg"
+						/>
+					</template>
+				</the-button>
 			</div>
-
-			<the-button
-				class="overlay__content__the-button"
-				v-for="(trialId, index) in trialIds"
-				:key="index"
-				@click="navigateToCondition(trialId)"
-				modifier="simple-white-gradient-bg"
-			>
-				{{ $t(`titles.conditions.${trialId}`) }}
-
-				<template v-slot:rightIcon>
-					<img
-						class="overlay__content__the-button__arrow-icon"
-						src="@/assets/icons/arrow.svg"
-					/>
-				</template>
-			</the-button>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted } from 'vue';
-import { useAppStore } from '@/stores/app';
-import { useRoute, useRouter } from 'vue-router';
 import { applyElementsRippleFade } from '@/utils/animations';
-import { getKioskHomeCategories } from '@/utils/data';
-import type { ICategoriesRecords } from '@/@types/data';
+import { useAppStore } from '@/stores/app';
+import { useRouter } from 'vue-router';
 
 const store = useAppStore();
-
-const route = useRoute();
 const router = useRouter();
 
-const categoryGroupId = computed<string>(() => route.params.categoryGroupId as string);
-const categoryId = computed<string>(() => route.params.categoryId as string);
-const trialIds = computed<string[]>(() => store.get_trialIds);
+const overlayTrial = computed<any>(() => store.get_overlayTrial);
 
 onMounted(applyAnimations);
 function applyAnimations() {
@@ -52,28 +48,14 @@ function applyAnimations() {
 }
 
 function closeOverlay() {
-	store.axn_updateTrialIds([]);
-	router.push(`/`);
+	store.axn_updateOverlayTrial(null);
 }
 
-function navigateToCondition(conditionId: string) {
-	store.axn_updateTrialIds([]);
-	router.push(`/conditions/${conditionId}`);
+function navigateDse(trial: any) {
+	router.push(`/panels/dse/${overlayTrial.value.id}/${trial.id}/${trial.dse}`);
+	closeOverlay();
 }
-
-const categoryGroup = computed<ICategoriesRecords>(
-	() => getKioskHomeCategories()!.categories.find((c) => c.id === categoryGroupId.value)!,
-);
-const category = computed(
-	() => categoryGroup.value.categories.find((c) => c.id === categoryId.value)!,
-);
 </script>
-
-<style lang="scss">
-div .overlay__content__the-button .button__content {
-	justify-content: space-between;
-}
-</style>
 
 <style lang="scss" scoped>
 .overlay {
@@ -98,54 +80,17 @@ div .overlay__content__the-button .button__content {
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		overflow: auto;
 		margin: $unit * 2;
+		max-width: 900px;
 
 		background: linear-gradient(
 			166deg,
 			rgba(255, 255, 255, 0.96) 57.85%,
 			rgba(255, 255, 255, 0) 260.85%
 		);
-
 		box-shadow: 0px 55px 116px 0px #0c2561;
 
 		@include tablet {
-			padding: $unit * 14;
-		}
-
-		&__title {
-			color: #065baa;
-			text-align: center;
-			font-family: 'RobotoCondensed-Bold';
-			font-size: 3em;
-			font-style: normal;
-			font-weight: 700;
-			line-height: 40px; /* 125% */
-			text-transform: uppercase;
-			padding-bottom: 2em;
-		}
-
-		&__category-icon {
-			display: flex;
-			width: 6em !important;
-			aspect-ratio: 1;
-			margin-right: $unit * 2;
-			margin-bottom: 2em;
-			margin-top: 2em;
-
-			@include tablet {
-				width: $unit * 10;
-				margin-right: $unit * 6;
-			}
-		}
-
-		&__the-button {
-			width: 100%;
-			text-align: left;
-			background: linear-gradient(90deg, #2069e7 0%, #9f24e2 100%) !important;
-			margin-bottom: 2em;
-
-			&__arrow-icon {
-				width: 1em;
-			}
+			padding: $unit * 12;
 		}
 	}
 
@@ -153,13 +98,83 @@ div .overlay__content__the-button .button__content {
 		position: absolute;
 		top: $unit * 2;
 		right: $unit * 2;
-		width: $unit * 5;
-		margin-right: 1em;
-		margin-top: 1em;
+		width: $unit * 2;
 		aspect-ratio: 1;
 		background: url('@/assets/icons/close-icon.svg');
 		@include bg-contain();
 		cursor: pointer;
+	}
+
+	&__title {
+		color: $primary;
+		font-size: 1.3em;
+		font-weight: 800;
+		line-height: 1.2em;
+		margin: $unit * 2 0;
+		text-align: center;
+	}
+
+	&__category-icon {
+		display: flex;
+		width: $unit * 8;
+		min-width: $unit * 4;
+		aspect-ratio: 1;
+		margin-right: $unit * 2;
+	}
+
+	&__controls {
+		&-wrapper {
+			margin-top: $unit * 3;
+			width: 100%;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		margin: $unit 0;
+
+		img {
+			width: $unit * 3;
+			aspect-ratio: 1;
+			margin-left: $unit * 4;
+		}
+	}
+
+	@include k-desktop {
+		&__content {
+			max-width: 1260px;
+		}
+
+		&__close {
+			width: $unit * 5;
+			margin: $unit * 3;
+		}
+
+		&__controls {
+			&-wrapper {
+				margin-top: $unit * 8;
+			}
+			margin: $unit * 3 0;
+
+			img {
+				min-width: $unit * 5;
+			}
+		}
+
+		&__category-icon {
+			width: $unit * 15;
+		}
+	}
+}
+</style>
+
+<style lang="scss">
+.overlay__controls {
+	div.button__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 }
 </style>

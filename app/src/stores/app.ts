@@ -10,6 +10,7 @@ export const useAppStore = defineStore('appStore', {
 		externalLinkId: '',
 		linkType: undefined,
 		popup: '',
+		overlayTrial: null,
 		trialIds: [] as string[],
 	}),
 	getters: {
@@ -18,6 +19,7 @@ export const useAppStore = defineStore('appStore', {
 		get_externalLinkId: (state) => state.externalLinkId,
 		get_externalLinkType: (state) => state.linkType,
 		get_popup: (state) => state.popup,
+		get_overlayTrial: (state) => state.overlayTrial,
 		get_trialIds: (state) => state.trialIds,
 	},
 	actions: {
@@ -29,6 +31,9 @@ export const useAppStore = defineStore('appStore', {
 		},
 		axn_updateExternalLinkId(value: string) {
 			this.externalLinkId = value;
+		},
+		axn_updateOverlayTrial(value: any) {
+			this.overlayTrial = value;
 		},
 		axn_updateTrialIds(value: string[]) {
 			this.trialIds = value;

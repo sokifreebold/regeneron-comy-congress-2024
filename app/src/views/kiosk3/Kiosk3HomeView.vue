@@ -32,18 +32,24 @@
 				/>
 			</div>
 		</div>
+
+		<overlay-trial-link v-if="overlayTrial" />
 	</layout-kiosk>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
+import { useAppStore } from '@/stores/app';
 
 import { getKioskHomeCategories } from '@/utils/data';
 import type { ICategoriesKiosk } from '@/@types/data';
 
+const store = useAppStore();
+
 const activeCategory = ref('');
 
 const kioskCategoriesData = computed<ICategoriesKiosk>(() => getKioskHomeCategories()!);
+const overlayTrial = computed<any>(() => store.get_overlayTrial);
 
 function toggleActiveCategory(categoryId: string) {
 	activeCategory.value = activeCategory.value !== categoryId ? categoryId : '';
