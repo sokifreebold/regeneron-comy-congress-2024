@@ -1,7 +1,7 @@
 <template>
 	<div class="kiosk-dse-wrapper">
 		<div class="kiosk-dse-wrapper__main-menu" @click="navigateHome" />
-		<iframe :src="`/dse/${dseId}/index.html`" />
+		<iframe :src="`/dse/${dseId}/index.html?id=${dseId}`" />
 	</div>
 </template>
 

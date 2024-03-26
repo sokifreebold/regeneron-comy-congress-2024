@@ -1,5 +1,5 @@
 {
-	"name": "aacr-congress",
+	"name": "aacr-bold-panel-03",
 	"version": "1.0.0",
 	"description": "",
 	"main": "main.js",
@@ -12,7 +12,7 @@
 	},
 	"build": {
 		"appId": "com.boldsci.aacrcongress",
-		"artifactName": "AACR-Congress-${version}.${ext}",
+		"artifactName": "AACR-Panel-03-${version}.${ext}",
 		"directories": {
 			"output": "./distribution/"
 		},
