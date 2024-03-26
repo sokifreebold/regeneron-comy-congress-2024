@@ -12,9 +12,9 @@ interface IAppConfig {
 const appConfig: IAppConfig = {
 	googleAnalytics: {
 		microsite: 'G-5PFE6XXW1Q',
-		kiosk1: '',
-		kiosk2: '',
-		kiosk3: '',
+		kiosk1: 'G-8L1ERGJGFL',
+		kiosk2: 'G-63CCXP41V4',
+		kiosk3: 'G-95NKFK2BH8',
 	},
 };
 export default appConfig;

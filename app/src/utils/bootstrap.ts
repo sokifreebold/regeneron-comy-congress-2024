@@ -29,7 +29,7 @@ export function initialiseGoogleAnalytics(app: App<Element>, router: Router) {
 		return;
 	}
 
-	console.log(`[LOG]: Using GA Tag ${tag} for version ${version}`);
+	console.log(`[LOG GA]: Using GA Tag --tag=${tag} --version=${version}`);
 	app.use(
 		VueGtag,
 		{

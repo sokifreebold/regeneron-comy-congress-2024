@@ -66,6 +66,7 @@ import { useRouter } from 'vue-router';
 import type { PropType } from 'vue';
 import type { ICategories } from '@/@types/data';
 import { useAppStore } from '@/stores/app';
+import { pageview } from 'vue-gtag';
 
 const props = defineProps({
 	categories: { type: Object as PropType<any>, required: true },
@@ -84,6 +85,10 @@ function navigateToTrial(item: ICategories) {
 }
 
 function navigateToMultipleDse(item: any) {
+	pageview({
+		page_path: `/?overlay=${item.id}`,
+		page_title: 'panels-trials-overlay',
+	});
 	store.axn_updateOverlayTrial(item);
 }
 </script>
