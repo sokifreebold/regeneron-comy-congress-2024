@@ -128,7 +128,7 @@ function navigateToMultipleDse(item: any) {
 			margin-right: $unit * 2;
 		}
 		&-title {
-			font-size: 1.25em;
+			font-size: 1.5em;
 			line-height: 1.2em;
 			margin: $unit * 2 0;
 		}

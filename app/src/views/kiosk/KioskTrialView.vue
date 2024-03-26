@@ -125,6 +125,8 @@ function navigateHome() {
 .layout-trial-kiosk {
 	.layout-kiosk__main {
 		justify-content: flex-start !important;
+		margin-left: 0em;
+		margin-right: 0em;
 	}
 }
 
@@ -132,5 +134,6 @@ function navigateHome() {
 	width: 12em;
 	position: fixed;
 	left: 0;
+	z-index: 3;
 }
 </style>

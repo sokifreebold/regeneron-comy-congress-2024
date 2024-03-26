@@ -80,6 +80,7 @@ function toggleActiveCategory(categoryId: string) {
 		justify-content: space-between;
 		padding: 1em;
 		width: 100%;
+		font-size: 1.5em;
 		cursor: pointer;
 
 		&-expand {
