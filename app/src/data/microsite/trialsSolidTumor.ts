@@ -13,7 +13,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'NCT03969004 (C-POST)_R15_CEM-EM-0030_844REGN-MID',
 				recruiting: true,
 				labels: {
-					title: 'Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
+					title: '<strong>C-POST</strong> Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
 					aside: 'High-risk cutaneous squamous cell carcinoma',
 				},
 			},
@@ -177,7 +177,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				externalLink: 'https://clinicaltrials.gov/study/NCT05125016',
 				labels: {
-					title: 'PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span><br>± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or <br>PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span><br>+ PSMAxCD28 bispecific <span class="ui-one-word">(REGN5678)</span>',
+					title: 'PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span><br>± Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span><br>or <br>PSMAxCD3 bispecific <span class="ui-one-word">(REGN4336)</span><br>+ PSMAxCD28 bispecific <span class="ui-one-word">(REGN5678)</span>',
 					aside: 'Metastatic castration-resistant prostate cancer',
 				},
 			},
@@ -222,7 +222,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				trialCardPdf: 'NCT04590326_REGN4018-EM-0003',
 				labels: {
-					title: 'MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span> or <br>MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span><br>+ Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',
+					title: 'MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span><br>or <br>MUC16xCD28 bispecific <span class="ui-one-word">(REGN5668)</span><br>+ Ubamatamab <span class="ui-one-word">(MUC16xCD3 bispecific)</span>',
 					aside: 'Recurrent ovarian cancer',
 				},
 			},

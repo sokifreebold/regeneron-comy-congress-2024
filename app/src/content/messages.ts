@@ -11,7 +11,7 @@ export default {
 		},
 		footer: {
 			shared: {
-				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein for phase 1-3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country.',
+				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein for phase 1-3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country. Please see odronextamab prescribing information in your country.',
 				jobCode: 'US-UNB-EM-24-03-0001. March 2024',
 				copyright: '&copy; 2024 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
 			},
@@ -19,7 +19,7 @@ export default {
 				jobCode: 'US-UNB-EM-24-02-0009. March 2024.',
 			},
 			'hematology-oncology': {
-				copy: 'This information is intended for investigators interested in active clinical trials.<br>The uses of all agents described herein for phase 1–3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country. Please see odronextamab prescribing information in your country. ',
+				copy: 'This information is intended for investigators interested in active clinical trials.<br>The uses of all agents described herein for phase 1–3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country. Please see odronextamab prescribing information in your country.',
 			},
 		},
 		titles: {

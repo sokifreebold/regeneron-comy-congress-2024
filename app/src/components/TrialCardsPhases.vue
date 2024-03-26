@@ -7,7 +7,7 @@
 				<strong>{{ phase }}</strong>
 			</div>
 			<div class="trial-card__phase">
-				<label>{{ $t('misc.nonInterventional') }}</label>
+				<label>Non-<br />Interventional</label>
 			</div>
 		</div>
 	</div>

@@ -63,8 +63,8 @@ const trialData = computed<ITrialsRecords[]>(() => getTrialData(trialId.value, p
 	margin-bottom: $unit * 10;
 
 	&__title {
-		margin-top: $unit * 10;
-		margin-bottom: $unit * 2;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
 	}
 }
 </style>
