@@ -32,7 +32,7 @@ const datum: ITrialsRecords[] = [
 					'NCT06097364_OLYMPIA-2_ODRO-EM-0004-2',
 				],
 				labels: {
-					title: '<strong>OLYMPIA-2</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
+					title: '<strong>OLYMPIA-2</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span><br>+ Chemotherapy',
 					aside: 'Untreated or relapsed/refractory follicular lymphoma',
 				},
 			},
@@ -48,7 +48,7 @@ const datum: ITrialsRecords[] = [
 					'NCT06091865_OLYMPIA-3_ODRO-EM-0003-2',
 				],
 				labels: {
-					title: '<strong>OLYMPIA-3</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
+					title: '<strong>OLYMPIA-3</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span><br>+ Chemotherapy',
 					aside: 'Untreated diffuse large B-cell lymphoma',
 				},
 			},
@@ -74,7 +74,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: true,
 				qrCode: 'NCT06149286',
 				labels: {
-					title: '<strong>OLYMPIA-5</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span> + Chemotherapy',
+					title: '<strong>OLYMPIA-5</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span><br> + Chemotherapy',
 					aside: 'Relapsed/refractory follicular lymphoma and marginal zone lymphoma',
 				},
 			},

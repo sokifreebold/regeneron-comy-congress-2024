@@ -91,6 +91,11 @@ function navigateToTrial(parentCategory: string, item: ICategories) {
 			backdrop-filter: blur(3px);
 			margin-bottom: 20px;
 
+			opacity: 0px;
+			background: #ffffff0d;
+			border: 2px solid;
+			border-color: rgba(255, 255, 255, 0.13);
+
 			&-title {
 				@include px-to-em(30px);
 				line-height: 35px;

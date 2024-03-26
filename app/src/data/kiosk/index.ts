@@ -145,7 +145,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 						dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R10',
 					},
 				],
-				icon: 'myeloma-dark',
+				icon: 'myeloma-whi',
 			},
 			{
 				id: 'lymphoma',
@@ -162,7 +162,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 						dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R10',
 					},
 				],
-				icon: 'lymphoma-dark',
+				icon: 'lymphoma-whi',
 			},
 		],
 	},
