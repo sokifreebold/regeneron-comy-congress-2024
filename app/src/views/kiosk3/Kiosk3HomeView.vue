@@ -83,6 +83,24 @@ function toggleActiveCategory(categoryId: string) {
 		font-size: 1.5em;
 		cursor: pointer;
 
+		&-copy {
+			display: flex;
+			align-items: center;
+		}
+
+		&-icon {
+			display: flex;
+			width: $unit * 8;
+			min-width: $unit * 8;
+			aspect-ratio: 1;
+			margin-right: $unit * 2;
+
+			@include tablet {
+				width: $unit * 10;
+				margin-right: $unit * 6;
+			}
+		}
+
 		&-expand {
 			display: flex;
 			align-items: center;
@@ -115,6 +133,11 @@ function toggleActiveCategory(categoryId: string) {
 		}
 
 		&__header {
+			&-icon {
+				width: $unit * 20;
+				min-width: $unit * 20;
+				margin-right: $unit * 10;
+			}
 			&-expand {
 				width: $unit * 10;
 			}
