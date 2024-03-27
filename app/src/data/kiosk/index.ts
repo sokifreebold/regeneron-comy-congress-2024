@@ -61,7 +61,6 @@ const ovarian = {
 	title: 'titles.categories.ovarian',
 	icon: 'gynecologic-dark',
 	data: trialsOvarianCancer,
-	dse: 'REG1123083_AACR_OVARIAN_Interactive_Kiosk_R6',
 };
 
 const multipleTumors = {
