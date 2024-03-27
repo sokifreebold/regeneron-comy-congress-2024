@@ -15,8 +15,14 @@ export default {
 				jobCode: 'US-UNB-EM-24-03-0001. April 2024',
 				copyright: '&copy; 2024 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
 			},
-			kiosk: {
-				jobCode: 'US-UNB-EM-24-02-0009. March 2024.',
+			kiosk1: {
+				jobCode: 'US-UNB-EM-24-02-0009. April 2024.',
+			},
+			kiosk2: {
+				jobCode: 'US-UNB-EM-24-02-0004. April 2024.',
+			},
+			kiosk3: {
+				jobCode: 'US-UNB-EM-24-02-0012. April 2024.',
 			},
 			'hematology-oncology': {
 				copy: 'This information is intended for investigators interested in active clinical trials.<br>The uses of all agents described herein for phase 1–3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country. Please see odronextamab prescribing information in your country.',
@@ -26,6 +32,10 @@ export default {
 			conditions: {
 				bcc: 'Basal Cell Carcinoma (BCC)',
 				cscc: 'Cutaneous Squamous Cell Carcinoma (CSCC)',
+				'learn-more': {
+					bcc: 'Basal Cell Carcinoma (BCC)  Disease Information',
+					cscc: 'Cutaneous Squamous Cell Carcinoma (CSCC) Disease Information',
+				},
 			},
 			trials: {
 				'solid-tumor': 'Solid Tumor',
@@ -35,70 +45,84 @@ export default {
 			categories: {
 				mopcd: 'Myeloma and other plasma cell dyscrasias',
 				'mopcd-clinical-trial-information': {
-					'home-title': 'Clinical trial information',
+					'home-title': 'Recruiting and Ongoing Clinical Trials',
 					'trial-title': 'Myeloma and other plasma cell dyscrasias',
 				},
 				'mopcd-disease-state-education': {
-					'home-title': 'Disease State Education',
+					'home-title': 'Multiple Myeloma Disease Information',
 				},
 				'lymphoma-clinical-trial-information': {
-					'home-title': 'Clinical trial information',
+					'home-title': 'Recruiting and Ongoing Clinical Trials',
 					'trial-title': 'Lymphoma',
 				},
 				'lymphoma-disease-state-education': {
-					'home-title': 'Disease State Education',
+					'home-title': 'Non-Hodgkin Lymphoma Disease Information',
 				},
 				nsclc: {
 					'home-title': 'Non-Small cell lung cancer (NSCLC)',
 					'trial-title': 'Non-Small cell lung cancer (NSCLC)',
+					'see-pipeline': 'Recruiting and Ongoing Clinical Trials',
+					'learn-more': 'NSCLC Disease Information',
 				},
 				melanoma: {
 					'home-title': 'Melanoma',
 					'trial-title': 'Melanoma',
+					'see-pipeline': 'Recruiting and Ongoing Clinical Trials',
+					'learn-more': 'Melanoma Disease Information',
 				},
 				'non-melanoma': {
 					'home-title': 'Non-Melanoma Skin Cancer (NMSC)',
 					'trial-title': 'Non-Melanoma Skin Cancer (NMSC)',
+					'see-pipeline': 'Recruiting and Ongoing Clinical Trials',
+					'learn-more': 'NMSC Disease Information',
 				},
 				'solid-tumors': 'Solid Tumors',
 				genitourinary: {
 					'home-title': 'Genitourinary Cancer',
 					'trial-title': 'Genitourinary Cancer',
+					'see-pipeline': 'Recruiting and Ongoing Clinical Trials',
+					'learn-more': 'Prostate Disease Information',
 				},
 				ovarian: {
 					'home-title': 'Ovarian Cancer',
 					'trial-title': 'Ovarian Cancer',
+					'see-pipeline': 'Recruiting and Ongoing Clinical Trials',
 				},
 				'multiple-tumors': {
 					'home-title': 'Multiple Tumors',
 					'trial-title': 'Multiple Tumors',
+					'see-pipeline': 'Recruiting and Ongoing Clinical Trials',
 				},
 				hematology: 'Hematology',
 				myeloma: {
 					'home-title': 'Myeloma and Other Plasma Cell Dyscrasias',
 					'trial-title': 'Myeloma and Other Plasma Cell Dyscrasias',
+					'see-pipeline': 'Recruiting and Ongoing Clinical Trials',
+					'learn-more': 'Multiple Myeloma Disease Information',
 				},
 				lymphoma: {
 					'home-title': 'Lymphoma',
 					'trial-title': 'Lymphoma',
+					'see-pipeline': 'Recruiting and Ongoing Clinical Trials',
+					'learn-more': 'Non-Hodgkin Lymphoma Disease Information',
 				},
 				'our-oncology-mobile': 'Our oncology pipeline',
 				'our-oncology-desktop': 'Our oncology pipeline',
 
 				'nsclc-clinical-trial-information': {
-					'home-title': 'Clinical Trial Information',
+					'home-title': 'Recruiting and Ongoing Clinical Trials',
 					'trial-title': 'Non-Small cell lung cancer (NSCLC)',
 				},
 				'nsclc-disease-state-education': {
-					'home-title': 'Disease State Eduction',
+					'home-title': 'NSCLC Disease Information',
 					'trial-title': 'Disease State Eduction',
 				},
 				'melanoma-clinical-trial-information': {
-					'home-title': 'Clinical Trial Information',
+					'home-title': 'Recruiting and Ongoing Clinical Trials',
 					'trial-title': 'Melanoma',
 				},
 				'melanoma-disease-state-education': {
-					'home-title': 'Disease State Eduction',
+					'home-title': 'Melanoma Disease Information',
 					'trial-title': 'Disease State Eduction',
 				},
 			},

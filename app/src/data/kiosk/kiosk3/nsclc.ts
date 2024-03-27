@@ -15,7 +15,7 @@ const datum: ITrialsRecords[] = [
 				trialCardImages: ['NCT05785767_FIA-EM-0010-1', 'NCT05785767_FIA-EM-0010-2'],
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
-					aside: 'Advanced non-small cell lung cancer with PD-L1 expression > 50%',
+					aside: 'Advanced non-small cell lung cancer with PD-L1 expression &ge; 50%',
 				},
 			},
 			{

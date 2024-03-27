@@ -17,7 +17,7 @@
 					@click="navigateDse(trial)"
 					modifier="simple-white-gradient-bg-01"
 				>
-					<span>{{ $t(`titles.conditions.${trial.id}`) }}</span>
+					<span>{{ $t(`titles.conditions.learn-more.${trial.id}`) }}</span>
 
 					<template v-slot:rightIcon>
 						<img
@@ -133,6 +133,7 @@ function navigateDse(trial: any) {
 		justify-content: space-between;
 		width: 100%;
 		margin: $unit 0;
+		text-transform: uppercase;
 
 		img {
 			width: $unit * 3;

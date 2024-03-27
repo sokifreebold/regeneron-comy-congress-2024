@@ -3,15 +3,21 @@
 		<div class="footer-kiosk__copy">
 			<p v-html="$t('footer.shared.copy')" />
 			<p v-html="$t('footer.shared.copyright')" />
-			<p v-html="$t('footer.kiosk.jobCode')" />
+			<p v-html="$t(`footer.${version}.jobCode`)" />
 		</div>
 	</footer>
 </template>
 
 <script setup lang="ts">
+import { useAppStore } from '@/stores/app';
+import { computed } from 'vue';
+
 const props = defineProps({
 	modifier: { type: String, default: 'default' },
 });
+
+const store = useAppStore();
+const version = computed(() => store.get_version);
 </script>
 
 <style lang="scss" scoped>

@@ -12,27 +12,21 @@ const datum: ITrialsRecords[] = [
 				nct: 'NCT05785767',
 				recruiting: true,
 				trialCardPdf: 'NCT05785767_FIA-EM-0010',
-				trialCardImages: [
-					'NCT05785767_FIA-EM-0010-1',
-					'NCT05785767_FIA-EM-0010-2',
-				],
+				trialCardImages: ['NCT05785767_FIA-EM-0010-1', 'NCT05785767_FIA-EM-0010-2'],
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
-					aside: 'Advanced non-small cell lung cancer with PD-L1 expression > 50%',
+					aside: 'Advanced non-small cell lung cancer with PD-L1 expression &ge; 50%',
 				},
 			},
 			{
-					id: 'solid-tumor-lung-cancer-2',
+				id: 'solid-tumor-lung-cancer-2',
 				type: 'pdfCard',
 				phase: 3,
 				phaseMobile: '2/3',
 				nct: 'NCT05800015',
 				recruiting: true,
 				trialCardPdf: 'NCT05800015_FIA-EM-0011',
-				trialCardImages: [
-					'NCT05800015_FIA-EM-0011-1',
-					'NCT05800015_FIA-EM-0011-2',
-				],
+				trialCardImages: ['NCT05800015_FIA-EM-0011-1', 'NCT05800015_FIA-EM-0011-2'],
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span><br>+ Chemotherapy',
 					aside: 'Advanced non-small cell lung cancer',

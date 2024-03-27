@@ -41,7 +41,6 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 2,
 				nct: 'NCT06190951',
-				recruiting: true,
 				externalLink:
 					'https://clinicaltrials.gov/study/NCT06190951?term=NCT06190951&rank=1',
 				qrCode: 'QR_NCT06190951',

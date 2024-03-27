@@ -26,7 +26,7 @@
 						class="button-wrapper"
 						modifier="simple-white-gradient-bg"
 					>
-						{{ $t('misc.seePipelineDetails') }}
+						{{ $t(`${category.title}.see-pipeline`) }}
 						<template v-slot:rightIcon>
 							<img src="@/assets/icons/chevron-right-white.svg" />
 						</template>
@@ -38,7 +38,7 @@
 						modifier="simple-white-gradient-bg"
 						@click="navigateToDse(category)"
 					>
-						{{ $t('misc.learnMore') }}
+						{{ $t(`${category.title}.learn-more`) }}
 						<template v-slot:rightIcon>
 							<img src="@/assets/icons/chevron-right-white.svg" />
 						</template>
@@ -50,7 +50,7 @@
 						modifier="simple-white-gradient-bg"
 						@click="navigateToMultipleDse(category)"
 					>
-						{{ $t('misc.learnMore') }}
+						{{ $t(`${category.title}.learn-more`) }}
 						<template v-slot:rightIcon>
 							<img src="@/assets/icons/chevron-right-white.svg" />
 						</template>
@@ -145,6 +145,7 @@ function navigateToMultipleDse(item: any) {
 		.button-wrapper {
 			width: 100%;
 			margin: $unit * 2 0;
+			text-transform: uppercase;
 		}
 	}
 
