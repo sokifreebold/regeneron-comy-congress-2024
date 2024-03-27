@@ -9,11 +9,10 @@ const datum: ITrialsRecords[] = [
 				type: 'pdfCard',
 				phase: 3,
 				nct: 'NCT03969004',
-				trialCardPdf: 'NCT03969004 (C-POST)_R15_CEM-EM-0030_844REGN-MID',
 				recruiting: true,
 				trialCardImages: [
-					'NCT03969004 (C-POST)_R15_CEM-EM-0030_844REGN-MID (1)-1',
-					'NCT03969004 (C-POST)_R15_CEM-EM-0030_844REGN-MID (1)-2',
+					'NCT03969004 (C-POST)_US-CEM-EM-24-03-0001_L1d_front',
+					'NCT03969004 (C-POST)_US-CEM-EM-24-03-0001_L1d_back',
 				],
 				labels: {
 					title: '<strong>C-POST</strong> Adjuvant Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',

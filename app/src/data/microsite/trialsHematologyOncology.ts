@@ -32,11 +32,12 @@ const datum: ITrialsRecords[] = [
 			},
 			{
 				id: 'hematology-oncology-myeloma-3',
-				type: 'external',
+				type: 'pdfCard',
 				phase: 2,
 				phaseMobile: '1/2',
 				nct: 'NCT03761108',
 				externalLink: 'https://clinicaltrials.gov/study/NCT03761108',
+				trialCardPdf: 'Linker-MM1_PDF_03.26.24',
 				recruiting: true,
 				labels: {
 					title: '<strong>LINKER-MM1</strong> Linvoseltamab <span class="ui-one-word">(BCMAxCD3 bispecific)</span>',
