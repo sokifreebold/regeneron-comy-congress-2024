@@ -32,14 +32,15 @@ function navigateHome() {
 
 	&__main-menu {
 		position: fixed;
-		top: 0;
+		top: 0em;
 		left: 0;
 		width: 100%;
-		height: 40px;
+		height: 60px;
 		background: transparent;
+		z-index: 9;
 
 		@include k-desktop {
-			height: 200px;
+			height: 300px;
 		}
 	}
 }
