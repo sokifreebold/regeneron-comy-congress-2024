@@ -222,7 +222,7 @@
 
 				&__row {
 					&-title {
-						@include px-to-em(18px);
+						@include px-to-em(16.5px);
 						line-height: 1.2;
 						margin: $unit * 4 0;
 					}
@@ -244,6 +244,7 @@
 				&__badge {
 					padding: $unit * 2 $unit * 3;
 					line-height: 1.1;
+					border-radius: 0 16px 0 0;
 				}
 			}
 		}

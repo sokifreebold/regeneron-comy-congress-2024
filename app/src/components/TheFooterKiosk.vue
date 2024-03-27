@@ -2,8 +2,8 @@
 	<footer :class="['footer-kiosk', `footer-kiosk--${props.modifier}`]">
 		<div class="footer-kiosk__copy">
 			<p v-html="$t('footer.shared.copy')" />
-			<p v-html="$t('footer.kiosk.jobCode')" />
 			<p v-html="$t('footer.shared.copyright')" />
+			<p v-html="$t('footer.kiosk.jobCode')" />
 		</div>
 	</footer>
 </template>

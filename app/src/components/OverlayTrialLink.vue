@@ -5,7 +5,7 @@
 
 			<div :class="['overlay__category-icon', `ui-icon-${overlayTrial.icon}`]" />
 
-			<h3 class="overlay__title">
+			<h3 class="overlay__title type-font-condensed">
 				{{ $t(`titles.categories.${overlayTrial.id}.home-title`) }}
 			</h3>
 
@@ -107,7 +107,7 @@ function navigateDse(trial: any) {
 
 	&__title {
 		color: $primary;
-		font-size: 1.3em;
+		font-size: 1.5em;
 		font-weight: 800;
 		line-height: 1.2em;
 		margin: $unit * 2 0;

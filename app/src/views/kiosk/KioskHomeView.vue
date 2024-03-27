@@ -76,25 +76,23 @@ function navigateToTrial(parentCategory: string, item: ICategories) {
 <style lang="scss" scoped>
 .kiosk-home {
 	&__title {
-		font-size: 5em;
+		font-size: 4.5em;
 		line-height: 1;
 		display: inline;
 	}
 	&-links {
 		margin-top: $unit * 5;
+		padding-left: 4em;
 
 		&__item {
 			display: flex;
 			padding: 60px 40px;
 			border-radius: 20px 20px 20px 0;
-			background: rgba($white, 0.1);
-			backdrop-filter: blur(3px);
 			margin-bottom: 20px;
-
 			opacity: 0px;
-			background: #ffffff0d;
-			border: 2px solid;
-			border-color: rgba(255, 255, 255, 0.13);
+			background: rgba($white, 0.05);
+			border: 1px solid rgba($white, 0.2);
+			backdrop-filter: blur(10px);
 
 			&-title {
 				@include px-to-em(30px);
@@ -113,6 +111,11 @@ function navigateToTrial(parentCategory: string, item: ICategories) {
 					width: $unit * 10;
 					margin-right: $unit * 6;
 				}
+			}
+
+			@include k-desktop {
+				border-radius: 40px 40px 40px 0;
+				padding: 80px;
 			}
 		}
 	}

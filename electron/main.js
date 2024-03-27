@@ -6,18 +6,17 @@ const path = require('node:path');
 const express = require('express');
 const expressApp = express();
 
-const { config } = require('./electron.config');
-
 const devTools = false;
 
 // ========================================================================== //
 // CSV file creation and appending
 
 let csvFilePath;
+const name = 'AACR-Bold-Panel-01';
 
 function createNewCSVFile() {
 	const documentsPath = app.getPath('documents');
-	const adcTrackingPath = path.join(documentsPath, config.name);
+	const adcTrackingPath = path.join(documentsPath, name);
 
 	const now = new Date();
 	const dateTimeString = now.toISOString().replace(/:/g, '-').replace(/\..+/, '');
@@ -26,7 +25,7 @@ function createNewCSVFile() {
 		fs.mkdirSync(adcTrackingPath, { recursive: true });
 	}
 
-	csvFilePath = path.join(adcTrackingPath, `${config.name}-backup_${dateTimeString}.csv`);
+	csvFilePath = path.join(adcTrackingPath, `${name}-backup_${dateTimeString}.csv`);
 
 	// Create the file with the headers if required
 	const headers = 'event,page_id,page_path,timestamp\n';

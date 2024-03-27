@@ -101,7 +101,7 @@ function navigateToMultipleDse(item: any) {
 	gap: $unit * 5;
 
 	&__wrapper {
-		width: 47%;
+		width: 48%;
 	}
 
 	&__content {

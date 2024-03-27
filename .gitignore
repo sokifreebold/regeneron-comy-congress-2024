@@ -152,4 +152,6 @@ www/*
 
 electron/distribution
 electron-dse/distribution
+
+electron/.DS_STORE
 # End of https://www.toptal.com/developers/gitignore/api/node

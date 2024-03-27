@@ -1,6 +1,19 @@
 <template>
-	<layout-kiosk class="kiosk-grouped">
-		<p class="kiosk-grouped__intro">{{ $t('titles.trials.intro') }}</p>
+	<layout-kiosk :class="['kiosk-grouped', { 'is-expanded': activeCategory }]">
+		<transition name="fade">
+			<img
+				v-if="activeCategory"
+				src="@/assets/icons/main-menu-button.svg"
+				class="menu-button"
+				@click="resetLayout"
+			/>
+		</transition>
+
+		<transition name="fade">
+			<p v-if="!activeCategory" class="kiosk-grouped__intro">
+				{{ $t('titles.trials.intro') }}
+			</p>
+		</transition>
 
 		<div
 			class="kiosk-grouped__categories"
@@ -8,7 +21,10 @@
 			:key="index"
 		>
 			<!-- Header -->
-			<div class="kiosk-grouped__header" @click="toggleActiveCategory(category.id)">
+			<div
+				:class="['kiosk-grouped__header', { 'is-active': category.id === activeCategory }]"
+				@click="toggleActiveCategory(category.id)"
+			>
 				<div class="kiosk-grouped__header-copy">
 					<div :class="['kiosk-grouped__header-icon', `ui-icon-${category.icon}`]" />
 					<p
@@ -25,12 +41,14 @@
 			</div>
 
 			<!-- Categories -->
-			<div v-if="category.id === activeCategory" class="kiosk-grouped__content">
-				<landing-page-category-group
-					:categories="category.categories"
-					:parentId="activeCategory"
-				/>
-			</div>
+			<transition name="slide">
+				<div v-if="category.id === activeCategory" class="kiosk-grouped__content">
+					<landing-page-category-group
+						:categories="category.categories"
+						:parentId="activeCategory"
+					/>
+				</div>
+			</transition>
 		</div>
 
 		<overlay-trial-link v-if="overlayTrial" />
@@ -54,6 +72,10 @@ const overlayTrial = computed<any>(() => store.get_overlayTrial);
 function toggleActiveCategory(categoryId: string) {
 	activeCategory.value = activeCategory.value !== categoryId ? categoryId : '';
 }
+
+function resetLayout() {
+	activeCategory.value = '';
+}
 </script>
 
 <style lang="scss" scoped>
@@ -67,18 +89,20 @@ function toggleActiveCategory(categoryId: string) {
 	&__categories {
 		display: flex;
 		flex-direction: column;
-		padding: 3em 2em 3em 2em;
+		padding: 2em 1.5em;
 		border-radius: 20px 20px 20px 0;
-		background: rgba($white, 0.1);
-		backdrop-filter: blur(3px);
+		background: rgba($white, 0.05);
+		border: 1px solid rgba($white, 0.2);
+		backdrop-filter: blur(10px);
 		margin-bottom: 20px;
+		transition: all 0.25s ease;
 	}
 
 	&__header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1em;
+		padding: 0.5em;
 		width: 100%;
 		font-size: 1.5em;
 		cursor: pointer;
@@ -109,7 +133,6 @@ function toggleActiveCategory(categoryId: string) {
 			aspect-ratio: 1;
 			background: url(@/assets/icons/expand-more.svg);
 			@include bg-contain();
-			transition: all 0.5s ease;
 
 			&.is-active {
 				transform: rotate(-180deg);
@@ -120,6 +143,27 @@ function toggleActiveCategory(categoryId: string) {
 	&__content {
 		margin-top: $unit * 3;
 		padding: 1em;
+	}
+
+	// Expanded State
+	&.is-expanded {
+		.kiosk-grouped {
+			&__categories {
+				padding: 0.5em;
+			}
+
+			&__header {
+				&-title {
+					font-size: 1.5em;
+				}
+
+				&.is-active {
+					.kiosk-grouped__header-title {
+						font-size: 2em;
+					}
+				}
+			}
+		}
 	}
 
 	@include k-desktop {
@@ -144,8 +188,32 @@ function toggleActiveCategory(categoryId: string) {
 		}
 
 		&__content {
-			margin-top: $unit * 10;
+			margin: $unit * 5 $unit;
+			padding: 0 1em;
 		}
 	}
+}
+
+.menu-button {
+	width: 12em;
+	position: fixed;
+	left: 0;
+	top: $unit * 8;
+	z-index: 3;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+	transition: max-height 0.5s ease;
+	overflow: hidden;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+	max-height: 0;
+}
+
+.slide-enter-to {
+	max-height: 100vh;
 }
 </style>
