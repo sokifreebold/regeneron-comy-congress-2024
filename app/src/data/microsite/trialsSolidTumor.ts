@@ -86,7 +86,6 @@ const datum: ITrialsRecords[] = [
 				type: 'external',
 				phase: 2,
 				nct: 'NCT06190951',
-				recruiting: true,
 				externalLink:
 					'https://clinicaltrials.gov/study/NCT06190951?term=NCT06190951&rank=1',
 				labels: {
@@ -110,7 +109,7 @@ const datum: ITrialsRecords[] = [
 				trialCardPdf: 'NCT05785767_FIA-EM-0010',
 				labels: {
 					title: 'Fianlimab <span class="ui-one-word">(LAG-3 antibody)</span><br>+ Cemiplimab <span class="ui-one-word">(PD-1 antibody)</span>',
-					aside: 'Advanced non-small cell lung cancer with PD-L1 expression > 50%',
+					aside: 'Advanced non-small cell lung cancer with PD-L1 expression &ge; 50%',
 				},
 			},
 			{

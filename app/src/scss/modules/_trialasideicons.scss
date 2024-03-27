@@ -52,12 +52,12 @@
 		@include extraLargeIcon();
 	}
 	&--solid-tumor-lung-cancer-4 {
-		background: url('@/assets/icons/trials/trial-icon-solid-tumor-4.svg');
+		background: url('@/assets/icons/trials/solid-tumor-lung-cancer-4.svg');
 		@include bg-contain();
 		background-position: center;
 	}
 	&--solid-tumor-lung-cancer-5 {
-		background: url('@/assets/icons/trials/trial-icon-solid-tumor-5.svg');
+		background: url('@/assets/icons/trials/solid-tumor-lung-cancer-5.svg');
 		@include bg-contain();
 		background-position: center;
 	}

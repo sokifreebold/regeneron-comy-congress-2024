@@ -180,7 +180,7 @@ const datum: ITrialsRecords[] = [
 				recruiting: false,
 				labels: {
 					title: '<strong>ELM-1</strong> Odronextamab <span class="ui-one-word">(CD20xCD3 bispecific)</span>',
-					aside: 'CD20+ B-cell malignancies ',
+					aside: 'relapsed/refractory CD20+ B-cell malignancies ',
 				},
 			},
 			{
@@ -208,6 +208,6 @@ const datum: ITrialsRecords[] = [
 				},
 			},
 		],
-	}
+	},
 ];
 export default datum;

@@ -14,7 +14,6 @@
 					v-html="$t(`footer.${trialId}.copy`)"
 				/>
 				<p v-else v-html="$t('footer.shared.copy')" />
-				<p v-html="$t('footer.shared.jobCode')" />
 			</div>
 
 			<div class="footer__copy footer__copy--logo">
@@ -31,6 +30,7 @@
 					alt="Regeneron"
 				/>
 				<p v-html="$t('footer.shared.copyright')" />
+				<p v-html="$t('footer.shared.jobCode')" />
 			</div>
 		</div>
 	</footer>
