@@ -61,6 +61,7 @@ const datum: ITrialsRecords[] = [
 				id: 'solid-tumor-melanoma-1',
 				type: 'pdfCard',
 				phase: 3,
+				phaseMobile: '2/3',
 				nct: 'NCT05352672',
 				recruiting: true,
 				trialCardPdf: 'NCT05352672_FIA-EM-0003',

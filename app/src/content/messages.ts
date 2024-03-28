@@ -12,7 +12,7 @@ export default {
 		footer: {
 			shared: {
 				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein for phase 1-3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country.',
-				jobCode: 'US-UNB-EM-24-03-0001. April 2024',
+				jobCode: 'UNB-EM-0239. April 2024',
 				copyright: '&copy; 2024 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
 			},
 			kiosk1: {
@@ -38,7 +38,7 @@ export default {
 				},
 			},
 			trials: {
-				'solid-tumor': 'Solid Tumor',
+				'solid-tumor': 'Solid Tumors',
 				'hematology-oncology': 'Hematology',
 				intro: 'Please select a treatment area.',
 			},
