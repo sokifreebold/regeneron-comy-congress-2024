@@ -78,6 +78,7 @@ function closeOverlay() {
 		display: flex;
 		background: $white;
 		min-width: 330px;
+		width: 10em;
 		aspect-ratio: 1;
 
 		@media screen and (max-width: 1600px) {
