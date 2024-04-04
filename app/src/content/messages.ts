@@ -11,7 +11,7 @@ export default {
 		},
 		footer: {
 			shared: {
-				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein for phase 1-3 trials are investigational and have not been evaluated by any regulatory authority.',
+				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein for phase 1-3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country.',
 				jobCode: 'UNB-EM-0239. April 2024',
 				copyright: '&copy; 2024 Regeneron Pharmaceuticals, Inc. All Rights Reserved.',
 			},
@@ -26,6 +26,12 @@ export default {
 			},
 			'hematology-oncology': {
 				copy: 'This information is intended for investigators interested in active clinical trials.<br>The uses of all agents described herein for phase 1–3 trials are investigational and have not been evaluated by any regulatory authority. Please see cemiplimab prescribing information in your country.',
+			},
+			myeloma: {
+				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein for phase 1-3 trials are investigational and have not been evaluated by any regulatory authority.',
+			},
+			'mopcd-clinical-trial-information': {
+				copy: 'This information is intended for investigators interested in active clinical trials. The uses of all agents described herein for phase 1-3 trials are investigational and have not been evaluated by any regulatory authority.',
 			},
 		},
 		titles: {
