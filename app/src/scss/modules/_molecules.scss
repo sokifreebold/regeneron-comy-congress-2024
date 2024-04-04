@@ -56,15 +56,15 @@
 	&--kioskTopRight {
 		width: 40%;
 		aspect-ratio: 1;
-		top: 15%;
+		top: -5%;
 		right: -20%;
 	}
 
 	&--kioskCenterLeftBlur {
 		width: 20%;
-		left: -3%;
+		right: -3%;
 		top: auto;
-		bottom: 10%;
+		bottom: 20%;
 		filter: blur(2px);
 		opacity: 0.3;
 	}

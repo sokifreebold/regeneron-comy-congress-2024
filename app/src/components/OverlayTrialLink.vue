@@ -176,6 +176,10 @@ function navigateDse(trial: any) {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include k-desktop {
+			font-size: 29px !important;
+		}
 	}
 }
 </style>

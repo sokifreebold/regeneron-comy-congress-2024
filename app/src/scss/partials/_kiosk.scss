@@ -10,3 +10,11 @@
 		}
 	}
 }
+
+.layout-trial-kiosk {
+	@include k-desktop {
+		.kiosk-container {
+			padding: $unit * 8;
+		}
+	}
+}

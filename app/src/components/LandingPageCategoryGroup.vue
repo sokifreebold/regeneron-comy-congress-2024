@@ -93,7 +93,7 @@ function navigateToMultipleDse(item: any) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .kiosk-grouping-category {
 	display: flex;
 	flex-flow: row wrap;
@@ -121,9 +121,11 @@ function navigateToMultipleDse(item: any) {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
 		text-align: center;
 		width: 100%;
+		flex: 1;
+		margin-bottom: $unit * 5;
 
 		&-icon {
 			display: flex;
@@ -133,7 +135,7 @@ function navigateToMultipleDse(item: any) {
 			margin-right: $unit * 2;
 		}
 		&-title {
-			font-size: 1.5em;
+			font-size: 1.3em;
 			line-height: 1.2em;
 			margin: $unit * 2 0;
 		}
@@ -146,6 +148,12 @@ function navigateToMultipleDse(item: any) {
 			width: 100%;
 			margin: $unit * 2 0;
 			text-transform: uppercase;
+
+			@include k-desktop {
+				.button__content {
+					font-size: 29px !important;
+				}
+			}
 		}
 	}
 
