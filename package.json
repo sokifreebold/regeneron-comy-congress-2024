@@ -2,6 +2,8 @@
 	"name": "regeneron-aacr-congress-2024",
 	"version": "1.0.0",
 	"scripts": {
+		"dse:install": "cd dse && npm install",
+		"dse:build": "cd dse && npm run build",
 		"app:install": "cd app && npm install",
 		"app:dev": "cd app && npm run dev",
 		"app:build": "cd app && npm run build",
@@ -11,7 +13,7 @@
 		"post:distribute": "node post.distribution.js",
 		"install": "npm run app:install && npm run electron:install",
 		"start": "npm run app:dev",
-		"build": "npm run app:build && npm run post:distribute",
+		"build": "npm run dse:build && npm run app:build && npm run post:distribute",
 		"format": "prettier --config .prettierrc \"**/*.{js,ts,vue,json,css,scss,md}\"",
 		"package:kiosk": "node package.electron.js",
 		"package:kiosk:post": "node post.electron.js",

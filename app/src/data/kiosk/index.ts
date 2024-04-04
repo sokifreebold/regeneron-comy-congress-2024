@@ -23,11 +23,11 @@ const nonMelanoma = {
 	multipleDse: [
 		{
 			id: 'bcc',
-			dse: 'REG1123083_AACR_BCC_Interactive_Kiosk_R8',
+			dse: 'REG1123083_AACR_BCC_Interactive_Kiosk_R12',
 		},
 		{
 			id: 'cscc',
-			dse: 'REG1123083_AACR_CSCC_Interactive_Kiosk_R8',
+			dse: 'REG1123083_AACR_CSCC_Interactive_Kiosk_R9',
 		},
 	],
 };
@@ -37,7 +37,7 @@ const melanoma = {
 	title: 'titles.categories.melanoma',
 	icon: 'hand-glass-dark',
 	data: trailsMelanoma3,
-	dse: 'REG1123079_Melanoma_AACR_Kiosk_R9',
+	dse: 'REG1123083_AACR_Melanoma_Interactive_Kiosk_R10',
 };
 
 const nsclc = {
@@ -45,7 +45,7 @@ const nsclc = {
 	title: 'titles.categories.nsclc',
 	icon: 'lung-icon-dark',
 	data: trailsNsclc,
-	dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R7',
+	dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R9',
 };
 
 const genitourinaryCancer = {
@@ -53,7 +53,7 @@ const genitourinaryCancer = {
 	title: 'titles.categories.genitourinary',
 	icon: 'prostate-dark',
 	data: trialsGenitourinaryCancer,
-	dse: 'REG1123083_AACR_PROSTATE_Interactive_Kiosk_R7',
+	dse: 'REG1123083_AACR_PROSTATE_Interactive_Kiosk_R9',
 };
 
 const ovarian = {
@@ -75,7 +75,7 @@ const myeloma = {
 	title: 'titles.categories.myeloma',
 	icon: 'myeloma-dark',
 	data: trialsMyeloma,
-	dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R10',
+	dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R13',
 };
 
 const lymphoma = {
@@ -102,7 +102,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'nsclc-disease-state-education',
 						trials: 6,
-						dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R7',
+						dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R9',
 					},
 				],
 				icon: 'lung-icon',
@@ -119,7 +119,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'melanoma-disease-state-education',
 						trials: 3,
-						dse: 'REG1123079_Melanoma_AACR_Kiosk_R9',
+						dse: 'REG1123083_AACR_Melanoma_Interactive_Kiosk_R10',
 					},
 				],
 				icon: 'hand-glass',
@@ -141,7 +141,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'mopcd-disease-state-education',
 						trials: 6,
-						dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R10',
+						dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R13',
 					},
 				],
 				icon: 'myeloma-whi',

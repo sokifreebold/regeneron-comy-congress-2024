@@ -151,7 +151,7 @@ function navigateToMultipleDse(item: any) {
 
 			@include k-desktop {
 				.button__content {
-					font-size: 29px !important;
+					font-size: 27px !important;
 				}
 			}
 		}

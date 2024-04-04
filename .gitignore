@@ -144,6 +144,7 @@ dist
 
 # Custom
 app/src/version.config.ts
+app/public/dse
 www/app
 www/package
 www_bc/app

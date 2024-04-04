@@ -1,10 +1,30 @@
 [
 	{
-		"dse": "REG1123079_Melanoma_AACR_Kiosk_R9",
-		"coreId": "coreSpr_6868398"
+		"dse": "REG1123083_AACR_BCC_Interactive_Kiosk_R12",
+		"coreId": "coreSpr_6461525"
 	},
 	{
-		"dse": "REG1123083_AACR_BCC_Interactive_Kiosk_R8",
-		"coreId": "coreSpr_12460296"
+		"dse": "REG1123083_AACR_CSCC_Interactive_Kiosk_R9",
+		"coreId": "coreSpr_11580502"
+	},
+	{
+		"dse": "REG1123083_AACR_Melanoma_Interactive_Kiosk_R10",
+		"coreId": "coreSpr_15016929"
+	},
+	{
+		"dse": "REG1123083_AACR_MM_Interactive_Kiosk_R13",
+		"coreId": "coreSpr_2581976"
+	},
+	{
+		"dse": "REG1123083_AACR_NHL_Interactive_Kiosk_R10",
+		"coreId": "coreSpr_15749046"
+	},
+	{
+		"dse": "REG1123083_AACR_NSCLC_Interactive_Kiosk_R9",
+		"coreId": "coreSpr_16375995"
+	},
+	{
+		"dse": "REG1123083_AACR_PROSTATE_Interactive_Kiosk_R9",
+		"coreId": "coreSpr_2327260"
 	}
 ]

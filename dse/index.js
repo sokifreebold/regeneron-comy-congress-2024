@@ -3,12 +3,22 @@ const path = require('path');
 const data = require('./dse.config.json');
 
 async function main() {
+	const outputDsePath = path.join(__dirname, '..', 'app/public/dse');
+	const outputDsePathExists = await fs.pathExists(outputDsePath);
+	if (outputDsePathExists) {
+		await fs.remove(outputDsePath);
+		console.log('[DSE]: app/public/dse - Directory found - Deleting');
+	}
+
+	fs.mkdirSync(outputDsePath);
+	console.log('[DSE]: app/public/dse - No Directory found - Creating');
+
 	for await (const datum of data) {
 		try {
 			const { dse, coreId } = datum;
 
 			const inputPath = path.join(__dirname, 'packages', dse);
-			const outputPath = path.join(__dirname, '..', 'app/public/dse', dse);
+			const outputPath = path.join(outputDsePath, dse);
 			const exists = await fs.pathExists(outputPath);
 
 			// Copy Source
