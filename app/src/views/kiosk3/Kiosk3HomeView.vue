@@ -41,14 +41,12 @@
 			</div>
 
 			<!-- Categories -->
-			<transition name="slide">
-				<div v-if="category.id === activeCategory" class="kiosk-grouped__content">
-					<landing-page-category-group
-						:categories="category.categories"
-						:parentId="activeCategory"
-					/>
-				</div>
-			</transition>
+			<div v-if="category.id === activeCategory" class="kiosk-grouped__content">
+				<landing-page-category-group
+					:categories="category.categories"
+					:parentId="activeCategory"
+				/>
+			</div>
 		</div>
 
 		<overlay-trial-link v-if="overlayTrial" />
@@ -61,6 +59,7 @@ import { useAppStore } from '@/stores/app';
 
 import { getKioskHomeCategories } from '@/utils/data';
 import type { ICategoriesKiosk } from '@/@types/data';
+import { slideIn, slideOut } from '@/utils/animations';
 
 const store = useAppStore();
 
@@ -70,7 +69,19 @@ const kioskCategoriesData = computed<ICategoriesKiosk>(() => getKioskHomeCategor
 const overlayTrial = computed<any>(() => store.get_overlayTrial);
 
 function toggleActiveCategory(categoryId: string) {
-	activeCategory.value = activeCategory.value !== categoryId ? categoryId : '';
+	if (activeCategory.value === categoryId) {
+		slideOut('.kiosk-grouped__content', 0.75, () => {
+			activeCategory.value = '';
+		});
+
+		return;
+	}
+
+	activeCategory.value = categoryId;
+	const duration = activeCategory.value === 'solid-tumors' ? 1.25 : 2;
+	setTimeout(() => {
+		slideIn('.kiosk-grouped__content', duration);
+	}, 0);
 }
 
 function resetLayout() {
@@ -89,13 +100,13 @@ function resetLayout() {
 	&__categories {
 		display: flex;
 		flex-direction: column;
-		padding: 2em 1.5em;
+		padding: 1em 1em;
 		border-radius: 20px 20px 20px 0;
 		background: rgba($white, 0.05);
 		border: 1px solid rgba($white, 0.2);
 		backdrop-filter: blur(10px);
 		margin-bottom: 20px;
-		transition: all 0.25s ease;
+		transition: all 0.5s ease;
 	}
 
 	&__header {
@@ -143,13 +154,15 @@ function resetLayout() {
 	&__content {
 		margin-top: $unit * 3;
 		padding: 1em;
+		max-height: 0px;
+		overflow: hidden;
 	}
 
 	// Expanded State
 	&.is-expanded {
 		.kiosk-grouped {
 			&__categories {
-				padding: 0.5em;
+				padding: 1em 1em;
 			}
 
 			&__header {

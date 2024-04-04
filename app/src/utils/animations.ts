@@ -42,3 +42,21 @@ export function applyElementsRippleFade(selector: string) {
 		fadeInRipple(item, tl, index * 0.1);
 	});
 }
+
+export function slideIn(selector: string, duration = 0.5) {
+	const element = document.querySelector(selector);
+	if (!element) {
+		return;
+	}
+
+	gsap.fromTo(element, { maxHeight: 0 }, { maxHeight: '100vh', duration, ease: 'power1.out' });
+}
+
+export function slideOut(selector: string, duration = 0.5, callback: any) {
+	const element = document.querySelector(selector);
+	if (!element) {
+		return;
+	}
+
+	gsap.to(element, { maxHeight: 0, duration, ease: 'power1.out', onComplete: callback });
+}
