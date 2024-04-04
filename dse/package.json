@@ -1,0 +1,12 @@
+{
+	"name": "dse",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "node index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"fs-extra": "^11.2.0"
+	}
+}
