@@ -53,7 +53,6 @@ const genitourinaryCancer = {
 	title: 'titles.categories.genitourinary',
 	icon: 'prostate-dark',
 	data: trialsGenitourinaryCancer,
-	dse: 'REG1123083_AACR_PROSTATE_Interactive_Kiosk_R9',
 };
 
 const ovarian = {

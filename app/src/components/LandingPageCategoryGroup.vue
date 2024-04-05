@@ -20,7 +20,7 @@
 					</p>
 				</div>
 
-				<div class="kiosk-grouping-category__controls">
+				<div :class="['kiosk-grouping-category__controls', category.id]">
 					<the-button
 						@click="navigateToTrial(category)"
 						class="button-wrapper"
@@ -153,6 +153,12 @@ function navigateToMultipleDse(item: any) {
 				.button__content {
 					font-size: 27px !important;
 				}
+			}
+		}
+
+		&.genitourinary {
+			@include k-desktop {
+				min-height: 200px;
 			}
 		}
 	}

@@ -49,7 +49,7 @@ export function slideIn(selector: string, duration = 0.5) {
 		return;
 	}
 
-	gsap.fromTo(element, { maxHeight: 0 }, { maxHeight: '100vh', duration, ease: 'power1.out' });
+	gsap.fromTo(element, { maxHeight: 0 }, { maxHeight: '500vh', duration, ease: 'power1.out' });
 }
 
 export function slideOut(selector: string, duration = 0.5, callback: any) {

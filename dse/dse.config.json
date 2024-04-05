@@ -22,9 +22,5 @@
 	{
 		"dse": "REG1123083_AACR_NSCLC_Interactive_Kiosk_R9",
 		"coreId": "coreSpr_16375995"
-	},
-	{
-		"dse": "REG1123083_AACR_PROSTATE_Interactive_Kiosk_R9",
-		"coreId": "coreSpr_2327260"
 	}
 ]
