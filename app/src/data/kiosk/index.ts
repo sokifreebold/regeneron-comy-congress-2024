@@ -83,7 +83,7 @@ const lymphoma = {
 	title: 'titles.categories.lymphoma',
 	icon: 'lymphoma-dark',
 	data: trialsLymphoma,
-	dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R10',
+	dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R16',
 };
 
 export const categoriesKiosk: ICategoriesKiosk[] = [
@@ -158,7 +158,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'lymphoma-disease-state-education',
 						trials: 3,
-						dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R10',
+						dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R16',
 					},
 				],
 				icon: 'lymphoma-whi',
