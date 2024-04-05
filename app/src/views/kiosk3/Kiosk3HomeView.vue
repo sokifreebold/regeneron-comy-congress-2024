@@ -141,6 +141,10 @@ function resetLayout() {
 			}
 		}
 
+		&-title {
+			transition: all 0.5s ease;
+		}
+
 		&-expand {
 			display: flex;
 			align-items: center;
@@ -173,6 +177,7 @@ function resetLayout() {
 			&__header {
 				&-title {
 					font-size: 1.5em;
+					transition: all 0.5s ease;
 				}
 
 				&.is-active {
