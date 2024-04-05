@@ -78,12 +78,24 @@ function toggleActiveCategory(categoryId: string) {
 		return;
 	}
 
-	activeCategory.value = categoryId;
-	const duration = activeCategory.value === 'solid-tumors' ? 2 : 4.5;
-	setTimeout(() => {
-		slideIn('.kiosk-grouped__content', duration);
-		kiosk3HomeAnimations();
-	}, 0);
+	if (activeCategory.value) {
+		slideOut('.kiosk-grouped__content', 0.75, () => {
+			console.log('here');
+			activeCategory.value = categoryId;
+			const duration = activeCategory.value === 'solid-tumors' ? 2 : 4.5;
+			setTimeout(() => {
+				slideIn('.kiosk-grouped__content', duration);
+				kiosk3HomeAnimations();
+			}, 0);
+		});
+	} else {
+		activeCategory.value = categoryId;
+		const duration = activeCategory.value === 'solid-tumors' ? 2 : 4.5;
+		setTimeout(() => {
+			slideIn('.kiosk-grouped__content', duration);
+			kiosk3HomeAnimations();
+		}, 0);
+	}
 }
 
 function resetLayout() {
