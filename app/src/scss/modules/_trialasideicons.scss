@@ -10,7 +10,10 @@
 @mixin extraLargeIcon {
 	width: 140px;
 	@include k-desktop {
-		width: 300px !important;
+		.kiosk & {
+			width: 300px !important;
+			aspect-ratio: 1;
+		}
 	}
 	aspect-ratio: auto;
 }
