@@ -60,3 +60,27 @@ export function slideOut(selector: string, duration = 0.5, callback: any) {
 
 	gsap.to(element, { maxHeight: 0, duration, ease: 'power1.out', onComplete: callback });
 }
+
+export function kiosk3HomeAnimations() {
+	const title = document.querySelector('.kiosk3-home-title');
+	if (title) {
+		gsap.to(title, { opacity: 0, duration: 0.75, ease: 'power1.out' });
+	}
+
+	const mainMenu = document.querySelector('.kiosk3-home-menu-button');
+	if (mainMenu) {
+		gsap.to(mainMenu, { x: 0, opacity: 1, duration: 0.5, ease: 'power1.out' });
+	}
+}
+
+export function kiosk3HomeAnimationsReverse() {
+	const title = document.querySelector('.kiosk3-home-title');
+	if (title) {
+		gsap.to(title, { opacity: 1, duration: 0.75, ease: 'power1.out' });
+	}
+
+	const mainMenu = document.querySelector('.kiosk3-home-menu-button');
+	if (mainMenu) {
+		gsap.to(mainMenu, { x: -1000, opacity: 0, duration: 0.5, ease: 'power1.out' });
+	}
+}

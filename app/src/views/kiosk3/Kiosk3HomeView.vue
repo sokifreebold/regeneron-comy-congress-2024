@@ -1,19 +1,14 @@
 <template>
 	<layout-kiosk :class="['kiosk-grouped', { 'is-expanded': activeCategory }]">
-		<transition name="fade">
-			<img
-				v-if="activeCategory"
-				src="@/assets/icons/main-menu-button.svg"
-				class="menu-button"
-				@click="resetLayout"
-			/>
-		</transition>
+		<img
+			src="@/assets/icons/main-menu-button.svg"
+			class="menu-button kiosk3-home-menu-button"
+			@click="resetLayout"
+		/>
 
-		<transition name="fade">
-			<p v-if="!activeCategory" class="kiosk-grouped__intro">
-				{{ $t('titles.trials.intro') }}
-			</p>
-		</transition>
+		<p class="kiosk-grouped__intro kiosk3-home-title">
+			{{ $t('titles.trials.intro') }}
+		</p>
 
 		<div
 			class="kiosk-grouped__categories"
@@ -59,7 +54,12 @@ import { useAppStore } from '@/stores/app';
 
 import { getKioskHomeCategories } from '@/utils/data';
 import type { ICategoriesKiosk } from '@/@types/data';
-import { slideIn, slideOut } from '@/utils/animations';
+import {
+	slideIn,
+	slideOut,
+	kiosk3HomeAnimations,
+	kiosk3HomeAnimationsReverse,
+} from '@/utils/animations';
 
 const store = useAppStore();
 
@@ -72,6 +72,7 @@ function toggleActiveCategory(categoryId: string) {
 	if (activeCategory.value === categoryId) {
 		slideOut('.kiosk-grouped__content', 0.75, () => {
 			activeCategory.value = '';
+			kiosk3HomeAnimationsReverse();
 		});
 
 		return;
@@ -81,11 +82,15 @@ function toggleActiveCategory(categoryId: string) {
 	const duration = activeCategory.value === 'solid-tumors' ? 1.25 : 2;
 	setTimeout(() => {
 		slideIn('.kiosk-grouped__content', duration);
+		kiosk3HomeAnimations();
 	}, 0);
 }
 
 function resetLayout() {
-	activeCategory.value = '';
+	slideOut('.kiosk-grouped__content', 0.75, () => {
+		activeCategory.value = '';
+		kiosk3HomeAnimationsReverse();
+	});
 }
 </script>
 
@@ -213,20 +218,20 @@ function resetLayout() {
 	left: 0;
 	top: $unit * 8;
 	z-index: 3;
+	opacity: 0;
+	transform: translateX(-500px);
 }
 
-.slide-enter-active,
-.slide-leave-active {
-	transition: max-height 0.5s ease;
-	overflow: hidden;
+.longfade-enter-active,
+.longfade-leave-active {
+	transition: all 0.4s ease;
+}
+.longfade-enter-from,
+.longfade-leave-to {
+	opacity: 0;
 }
 
-.slide-enter-from,
-.slide-leave-to {
-	max-height: 0;
-}
-
-.slide-enter-to {
-	max-height: 100vh;
+.longfade-enter-to {
+	opacity: 1;
 }
 </style>
