@@ -79,7 +79,7 @@ function toggleActiveCategory(categoryId: string) {
 	}
 
 	activeCategory.value = categoryId;
-	const duration = activeCategory.value === 'solid-tumors' ? 1.25 : 2;
+	const duration = activeCategory.value === 'solid-tumors' ? 2 : 4.5;
 	setTimeout(() => {
 		slideIn('.kiosk-grouped__content', duration);
 		kiosk3HomeAnimations();
