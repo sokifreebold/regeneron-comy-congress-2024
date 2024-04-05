@@ -80,7 +80,6 @@ function toggleActiveCategory(categoryId: string) {
 
 	if (activeCategory.value) {
 		slideOut('.kiosk-grouped__content', 0.75, () => {
-			console.log('here');
 			activeCategory.value = categoryId;
 			const duration = activeCategory.value === 'solid-tumors' ? 2 : 4.5;
 			setTimeout(() => {
