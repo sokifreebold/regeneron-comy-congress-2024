@@ -1,26 +1,26 @@
 [
 	{
-		"dse": "REG1123083_AACR_BCC_Interactive_Kiosk_R12",
-		"coreId": "coreSpr_6461525"
+		"dse": "REG1123083_AACR_BCC_Interactive_Kiosk_R13",
+		"coreId": "coreSpr_2387458"
 	},
 	{
-		"dse": "REG1123083_AACR_CSCC_Interactive_Kiosk_R9",
-		"coreId": "coreSpr_11580502"
+		"dse": "REG1123083_AACR_CSCC_Interactive_Kiosk_R10",
+		"coreId": "coreSpr_2796989"
 	},
 	{
-		"dse": "REG1123083_AACR_Melanoma_Interactive_Kiosk_R10",
-		"coreId": "coreSpr_15016929"
+		"dse": "REG1123083_AACR_Melanoma_Interactive_Kiosk_R11",
+		"coreId": "coreSpr_4559708"
 	},
 	{
-		"dse": "REG1123083_AACR_MM_Interactive_Kiosk_R13",
-		"coreId": "coreSpr_2581976"
+		"dse": "REG1123083_AACR_MM_Interactive_Kiosk_R14",
+		"coreId": "coreSpr_1785724"
 	},
 	{
-		"dse": "REG1123083_AACR_NHL_Interactive_Kiosk_R16",
-		"coreId": "coreSpr_8345247"
+		"dse": "REG1123083_AACR_NHL_Interactive_Kiosk_R17",
+		"coreId": "coreSpr_1160005"
 	},
 	{
-		"dse": "REG1123083_AACR_NSCLC_Interactive_Kiosk_R9",
-		"coreId": "coreSpr_16375995"
+		"dse": "REG1123083_AACR_NSCLC_Interactive_Kiosk_R11",
+		"coreId": "coreSpr_4976474"
 	}
 ]

@@ -23,11 +23,11 @@ const nonMelanoma = {
 	multipleDse: [
 		{
 			id: 'bcc',
-			dse: 'REG1123083_AACR_BCC_Interactive_Kiosk_R12',
+			dse: 'REG1123083_AACR_BCC_Interactive_Kiosk_R13',
 		},
 		{
 			id: 'cscc',
-			dse: 'REG1123083_AACR_CSCC_Interactive_Kiosk_R9',
+			dse: 'REG1123083_AACR_CSCC_Interactive_Kiosk_R10',
 		},
 	],
 };
@@ -37,7 +37,7 @@ const melanoma = {
 	title: 'titles.categories.melanoma',
 	icon: 'hand-glass-dark',
 	data: trailsMelanoma3,
-	dse: 'REG1123083_AACR_Melanoma_Interactive_Kiosk_R10',
+	dse: 'REG1123083_AACR_Melanoma_Interactive_Kiosk_R11',
 };
 
 const nsclc = {
@@ -45,7 +45,7 @@ const nsclc = {
 	title: 'titles.categories.nsclc',
 	icon: 'lung-icon-dark',
 	data: trailsNsclc,
-	dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R9',
+	dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R11',
 };
 
 const genitourinaryCancer = {
@@ -74,7 +74,7 @@ const myeloma = {
 	title: 'titles.categories.myeloma',
 	icon: 'myeloma-dark',
 	data: trialsMyeloma,
-	dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R13',
+	dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R14',
 };
 
 const lymphoma = {
@@ -82,7 +82,7 @@ const lymphoma = {
 	title: 'titles.categories.lymphoma',
 	icon: 'lymphoma-dark',
 	data: trialsLymphoma,
-	dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R16',
+	dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R17',
 };
 
 export const categoriesKiosk: ICategoriesKiosk[] = [
@@ -101,7 +101,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'nsclc-disease-state-education',
 						trials: 6,
-						dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R9',
+						dse: 'REG1123083_AACR_NSCLC_Interactive_Kiosk_R11',
 					},
 				],
 				icon: 'lung-icon',
@@ -118,7 +118,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'melanoma-disease-state-education',
 						trials: 3,
-						dse: 'REG1123083_AACR_Melanoma_Interactive_Kiosk_R10',
+						dse: 'REG1123083_AACR_Melanoma_Interactive_Kiosk_R11',
 					},
 				],
 				icon: 'hand-glass',
@@ -140,7 +140,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'mopcd-disease-state-education',
 						trials: 6,
-						dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R13',
+						dse: 'REG1123083_AACR_MM_Interactive_Kiosk_R14',
 					},
 				],
 				icon: 'myeloma-whi',
@@ -157,7 +157,7 @@ export const categoriesKiosk: ICategoriesKiosk[] = [
 					{
 						id: 'lymphoma-disease-state-education',
 						trials: 3,
-						dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R16',
+						dse: 'REG1123083_AACR_NHL_Interactive_Kiosk_R17',
 					},
 				],
 				icon: 'lymphoma-whi',
