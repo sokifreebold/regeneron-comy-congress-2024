@@ -19,7 +19,7 @@ export default {
 				jobCode: 'US-UNB-EM-24-02-0009. April 2024.',
 			},
 			kiosk2: {
-				jobCode: 'US-UNB-EM-24-02-0004. April 2024.',
+				jobCode: 'US-UNB-EM-24-03-0004. April 2024.',
 			},
 			kiosk3: {
 				jobCode: 'US-UNB-EM-24-02-0012. April 2024.',
